@@ -74,23 +74,9 @@
       name="twitter:image"
       content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
     />
-    <!-- Stylesheet externe -->
+    <!-- Stylesheets externes -->
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
-
-    <!-- Styles additionnels pour intégrations MM-4 -->
-    <style>
-      /* Effet hover sur la carte livre Fnac */
-      a[href*="fnac.com"]:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(87, 112, 134, 0.25) !important;
-      }
-
-      /* Effet hover sur le badge Trustpilot */
-      a.footer-badge:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(87, 112, 134, 0.2);
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/integrations.min.css" />
 
     <!-- Favicons multi-plateformes -->
     <link
@@ -1442,271 +1428,81 @@
     </div>
 
     <!-- Section Nos Publications -->
-    <section
-      style="
-        padding: 4rem 2rem;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        text-align: center;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto">
-        <h2
-          style="
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 700;
-          "
-        >
-          Nos Publications
-        </h2>
-        <p
-          style="
-            font-size: 1.1rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 3rem auto;
-            line-height: 1.8;
-          "
-        >
-          Découvrez nos ouvrages de référence pour réussir votre parcours
-          académique
+    <section class="publications-section">
+      <div class="publications-container">
+        <h2 class="publications-title">Nos Publications</h2>
+        <p class="publications-subtitle">
+          Découvrez nos ouvrages de référence pour réussir votre parcours académique
         </p>
 
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-          "
-        >
+        <div class="publications-content">
           <!-- Livre Fnac -->
           <a
             href="https://www.fnac.com/livre-numerique/a16201306/Charles-Tate-Le-guide-ultime-de-la-redaction-et-de-la-correction-de-manuscrits#FORMAT=ebook%20(ePub)"
             target="_blank"
             rel="noopener noreferrer"
-            style="
-              display: block;
-              text-decoration: none;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              border-radius: var(--radius-lg);
-              overflow: hidden;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-              max-width: 280px;
-              background: white;
-            "
+            class="book-card"
           >
             <img
               src="/assets/images/livre.webp"
               alt="Le guide ultime de la rédaction et de la correction de manuscrits - Charles Tate - Collection Staka"
-              style="width: 100%; height: auto; display: block"
               loading="lazy"
             />
-            <div style="padding: 1.5rem; text-align: center">
-              <h3
-                style="
-                  font-size: 1.25rem;
-                  color: var(--dark);
-                  margin-bottom: 0.5rem;
-                  font-weight: 600;
-                "
-              >
-                Le Guide Ultime de la Rédaction
-              </h3>
-              <p
-                style="
-                  font-size: 0.95rem;
-                  color: var(--gray);
-                  margin-bottom: 1rem;
-                "
-              >
-                Charles Tate - Collection Staka
-              </p>
-              <div
-                style="
-                  display: inline-block;
-                  padding: 0.75rem 1.5rem;
-                  background: linear-gradient(
-                    135deg,
-                    var(--primary) 0%,
-                    var(--secondary) 100%
-                  );
-                  color: white;
-                  border-radius: var(--radius-md);
-                  font-weight: 600;
-                  font-size: 0.95rem;
-                "
-              >
-                Disponible sur Fnac.com
-              </div>
+            <div class="book-card-content">
+              <h3 class="book-card-title">Le Guide Ultime de la Rédaction</h3>
+              <p class="book-card-author">Charles Tate - Collection Staka</p>
+              <div class="book-card-cta">Disponible sur Fnac.com</div>
             </div>
           </a>
 
           <!-- Informations livre -->
-          <div style="max-width: 550px; text-align: left">
-            <div
-              style="
-                display: flex;
-                gap: 0.5rem;
-                margin-bottom: 1rem;
-                flex-wrap: wrap;
-              "
-            >
-              <span
-                style="
-                  padding: 0.5rem 1rem;
-                  background: var(--primary);
-                  color: white;
-                  border-radius: var(--radius-sm);
-                  font-size: 0.85rem;
-                  font-weight: 600;
-                "
-              >
-                📖 UPPR Editions
-              </span>
+          <div class="book-info">
+            <div class="book-badges">
+              <span class="book-badge book-badge-primary">📖 UPPR Editions</span>
             </div>
 
-            <h4
-              style="
-                font-size: 1.5rem;
-                color: var(--dark);
-                margin-bottom: 1rem;
-                font-weight: 600;
-                line-height: 1.3;
-              "
-            >
-              Le guide complet pour réussir tous vos écrits académiques et
-              professionnels
+            <h4 class="book-info-title">
+              Le guide complet pour réussir tous vos écrits académiques et professionnels
             </h4>
 
-            <p
-              style="
-                color: var(--gray);
-                line-height: 1.8;
-                margin-bottom: 1.5rem;
-                font-size: 0.95rem;
-              "
-            >
-              Que ce soit pour rédiger un
-              <strong>mémoire, une thèse, un rapport de stage</strong> ou même
-              un <strong>roman</strong>, ce guide vous accompagne dans le
-              processus d'écriture et répond à toutes vos questions.
+            <p class="book-info-description">
+              Que ce soit pour rédiger un <strong>mémoire, une thèse, un rapport de stage</strong>
+              ou même un <strong>roman</strong>, ce guide vous accompagne dans le processus
+              d'écriture et répond à toutes vos questions.
             </p>
 
-            <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0">
-              <li
-                style="
-                  display: flex;
-                  align-items: start;
-                  gap: 0.75rem;
-                  margin-bottom: 0.75rem;
-                  color: var(--gray);
-                  line-height: 1.6;
-                "
-              >
-                <span
-                  style="
-                    color: var(--accent);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                  "
-                  >✓</span
-                >
+            <ul class="book-features">
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
                 <span
                   >Les <strong>facteurs clés de réussite</strong> de la
                   rédaction</span
                 >
               </li>
-              <li
-                style="
-                  display: flex;
-                  align-items: start;
-                  gap: 0.75rem;
-                  margin-bottom: 0.75rem;
-                  color: var(--gray);
-                  line-height: 1.6;
-                "
-              >
-                <span
-                  style="
-                    color: var(--accent);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                  "
-                  >✓</span
-                >
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
                 <span
                   >Comment <strong>structurer et organiser</strong> vos idées
                   efficacement</span
                 >
               </li>
-              <li
-                style="
-                  display: flex;
-                  align-items: start;
-                  gap: 0.75rem;
-                  margin-bottom: 0.75rem;
-                  color: var(--gray);
-                  line-height: 1.6;
-                "
-              >
-                <span
-                  style="
-                    color: var(--accent);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                  "
-                  >✓</span
-                >
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
                 <span
                   >Outils de
                   <strong>mise en page et corrections</strong>
                   professionnelles</span
                 >
               </li>
-              <li
-                style="
-                  display: flex;
-                  align-items: start;
-                  gap: 0.75rem;
-                  margin-bottom: 0.75rem;
-                  color: var(--gray);
-                  line-height: 1.6;
-                "
-              >
-                <span
-                  style="
-                    color: var(--accent);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                  "
-                  >✓</span
-                >
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
                 <span
                   >Techniques pour <strong>éviter le plagiat</strong> et
                   respecter l'intégrité académique</span
                 >
               </li>
-              <li
-                style="
-                  display: flex;
-                  align-items: start;
-                  gap: 0.75rem;
-                  margin-bottom: 0.75rem;
-                  color: var(--gray);
-                  line-height: 1.6;
-                "
-              >
-                <span
-                  style="
-                    color: var(--accent);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                  "
-                  >✓</span
-                >
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
                 <span
                   ><strong>Format numérique sans DRM</strong> : lecture
                   immédiate sur tous vos appareils</span
@@ -1714,37 +1510,11 @@
               </li>
             </ul>
 
-            <div
-              style="
-                margin-top: 1.5rem;
-                padding: 1.25rem;
-                background: linear-gradient(
-                  135deg,
-                  rgba(87, 112, 134, 0.08) 0%,
-                  rgba(87, 112, 134, 0.12) 100%
-                );
-                border-left: 4px solid var(--primary);
-                border-radius: var(--radius-sm);
-              "
-            >
-              <p
-                style="
-                  font-size: 0.9rem;
-                  color: var(--dark);
-                  margin: 0 0 0.5rem 0;
-                  font-weight: 600;
-                "
-              >
+            <div class="book-author-box">
+              <p class="book-author-label">
                 À propos de l'auteur
               </p>
-              <p
-                style="
-                  font-size: 0.95rem;
-                  color: var(--gray);
-                  margin: 0;
-                  line-height: 1.6;
-                "
-              >
+              <p class="book-author-text">
                 <strong>Charles Tate</strong>, titulaire d'un Master en
                 linguistique, s'appuie sur sa solide expérience dans
                 l'enseignement et la correction pour diriger aujourd'hui
@@ -1757,24 +1527,10 @@
     </section>
 
     <!-- Section Trustpilot -->
-    <section
-      style="
-        padding: 3rem 2rem;
-        background: white;
-        text-align: center;
-        border-top: 1px solid #e9ecef;
-      "
-    >
-      <div style="max-width: 900px; margin: 0 auto">
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-          "
-        >
-          <div style="display: flex; align-items: center; gap: 1rem">
+    <section class="trustpilot-section">
+      <div class="trustpilot-container">
+        <div class="trustpilot-content">
+          <div class="trustpilot-logo-wrapper">
             <svg
               width="120"
               height="28"
@@ -1803,42 +1559,18 @@
             </svg>
           </div>
 
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-              flex-wrap: wrap;
-              justify-content: center;
-            "
-          >
-            <div style="display: flex; gap: 0.25rem">
-              <span style="color: #00b67a; font-size: 1.8rem">★</span>
-              <span style="color: #00b67a; font-size: 1.8rem">★</span>
-              <span style="color: #00b67a; font-size: 1.8rem">★</span>
-              <span style="color: #00b67a; font-size: 1.8rem">★</span>
-              <span style="color: #00b67a; font-size: 1.8rem">★</span>
+          <div class="trustpilot-rating">
+            <div class="trustpilot-stars">
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
             </div>
-            <span
-              style="
-                font-size: 1.5rem;
-                font-weight: 700;
-                color: var(--dark);
-              "
-            >
-              4.8 / 5
-            </span>
+            <span class="trustpilot-score">4.8 / 5</span>
           </div>
 
-          <p
-            style="
-              font-size: 1.1rem;
-              color: var(--gray);
-              max-width: 600px;
-              line-height: 1.6;
-              margin: 0;
-            "
-          >
+          <p class="trustpilot-text">
             <strong>Plus de 500 étudiants nous font confiance</strong> pour leur
             accompagnement académique. Découvrez leurs avis authentiques sur
             notre plateforme Trustpilot.
@@ -1848,26 +1580,7 @@
             href="https://fr.trustpilot.com/review/staka.fr"
             target="_blank"
             rel="noopener noreferrer"
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 0.75rem;
-              padding: 0.875rem 1.75rem;
-              background: linear-gradient(
-                135deg,
-                var(--primary) 0%,
-                var(--secondary) 100%
-              );
-              color: white;
-              text-decoration: none;
-              border-radius: var(--radius-md);
-              font-weight: 600;
-              font-size: 1rem;
-              transition: transform 0.2s ease, box-shadow 0.2s ease;
-              box-shadow: 0 2px 8px rgba(87, 112, 134, 0.2);
-            "
-            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(87, 112, 134, 0.3)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(87, 112, 134, 0.2)'"
+            class="trustpilot-cta"
           >
             <span>Voir tous les avis</span>
             <svg
