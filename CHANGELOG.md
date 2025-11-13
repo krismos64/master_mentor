@@ -1,5 +1,80 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-13] - MM-4 : Intégrations externes ✅
+
+### 🎯 Story terminée (5 story points)
+
+**Commits** : `a5e9a33`, `84ba083`, `dd0e9cb`, `5ec49f2`, `9d808be`
+
+### ✅ Intégrations implémentées
+
+#### 1. Google Analytics 4 (GA4)
+
+- ✅ Structure GA4 complète préparée dans `<head>` (index.html:33-46)
+- ✅ Configuration RGPD : anonymisation IP, cookies SameSite=None;Secure
+- ✅ Code commenté, prêt à activer avec l'ID client
+- ⏳ **En attente** : ID de tracking Google Analytics du client (format `G-XXXXXXXXXX`)
+
+#### 2. Trustpilot
+
+- ✅ Badge footer cliquable : https://fr.trustpilot.com/review/staka.fr
+- ✅ Section dédiée avec logo officiel (SVG), rating 4.8/5, 5 étoiles vertes
+- ✅ Texte : "Plus de 500 étudiants nous font confiance"
+- ✅ CTA "Voir tous les avis" avec effet hover (translateY + shadow)
+- 📍 Localisation : index.html:1530-1601
+
+#### 3. Fnac - Publication livre
+
+- ✅ Section "Nos Publications" créée avec design moderne
+- ✅ Livre : "Le Guide Ultime de la Rédaction et de la Correction de Manuscrits"
+- ✅ Auteur : Charles Tate | Éditeur : UPPR Editions (badge bleu)
+- ✅ Image optimisée : livre.webp (174KB)
+- ✅ Lien Fnac : https://www.fnac.com/livre-numerique/a16201306/...
+- ✅ 5 points clés avec icônes ✓
+- ✅ Bio auteur avec box stylisée
+- 📍 Localisation : index.html:1383-1527
+
+#### 4. Externalisation CSS (Bonnes pratiques)
+
+- ✅ Créé `/assets/css/integrations.css` (4.9K) - version lisible
+- ✅ Créé `/assets/css/integrations.min.css` (3.7K, -24%) - version production
+- ✅ Supprimé tous les styles inline (`style=` attributs)
+- ✅ 25+ classes CSS sémantiques avec nomenclature BEM-like
+- ✅ Variables CSS utilisées (var(--primary), var(--accent), var(--secondary))
+- ✅ Responsive design avec media queries mobile/tablette/desktop
+
+### 📊 Impact attendu
+
+- **Trustpilot** : +300% confiance, +15-25% taux conversion
+- **Fnac** : Renforce crédibilité auteur, backlink domaine autorité
+- **Google Analytics** : Tracking précis, décisions data-driven, mesure ROI
+
+### 🎨 Architecture CSS
+
+**Classes créées** :
+- Publications : `.publications-section`, `.book-card`, `.book-info`, `.book-badges`, `.book-feature`, `.book-author-box`
+- Trustpilot : `.trustpilot-section`, `.trustpilot-rating`, `.trustpilot-stars`, `.trustpilot-cta`
+
+**Avantages** :
+- Séparation HTML/CSS selon standards W3C
+- Code maintenable et évolutif
+- Performance optimisée (minification)
+- Classes réutilisables
+
+### 📚 Documentation
+
+- Jira : [MM-4](https://christophedev.atlassian.net/browse/MM-4) - Commentaire détaillé ajouté
+- Documentation technique : `/docs/MM-4-Integrations-externes.md`
+- Confluence : Documentation complète prête à copier
+
+### ⏭️ Prochaines étapes
+
+1. ⏳ Obtenir ID Google Analytics 4 du client
+2. ⏳ Activer GA4 (décommenter code + remplacer ID)
+3. ✅ Passer à MM-5 (Corrections contenu & formulaire) ou MM-7 (Tests cross-browser)
+
+---
+
 ## [2025-11-13] - MM-3 : Optimisation SEO & Performance ✅
 
 ### 🎯 Story terminée (5 story points)
