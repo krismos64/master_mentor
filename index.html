@@ -2224,39 +2224,71 @@
           jusqu'à votre réussite. Satisfait ou remboursé.
         </p>
 
-        <!-- Image hero responsive -->
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
-              /assets/images/hero/hero-400.webp   400w,
-              /assets/images/hero/hero-800.webp   800w,
-              /assets/images/hero/hero-1200.webp 1200w
-            "
-            sizes="(min-width: 1024px) 800px, 100vw"
-          />
-          <img
-            src="/assets/images/hero/hero-800.jpg"
-            srcset="
-              /assets/images/hero/hero-400.jpg   400w,
-              /assets/images/hero/hero-800.jpg   800w,
-              /assets/images/hero/hero-1200.jpg 1200w
-            "
-            sizes="(min-width: 1024px) 800px, 100vw"
-            alt="Enseignant-chercheur docteur accompagnant un étudiant pour son mémoire de Master 2"
-            width="1200"
-            height="800"
-            loading="eager"
-            fetchpriority="high"
-            style="
-              max-width: 100%;
-              height: auto;
-              border-radius: 16px;
-              margin: 2rem 0;
-              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            "
-          />
-        </picture>
+        <!-- Images hero responsive -->
+        <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin: 2rem 0;">
+          <picture style="flex: 1; min-width: 280px; max-width: 480px;">
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/hero-400.webp   400w,
+                /assets/images/hero/hero-800.webp   800w,
+                /assets/images/hero/hero-1200.webp 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+            />
+            <img
+              src="/assets/images/hero/hero-800.jpg"
+              srcset="
+                /assets/images/hero/hero-400.jpg   400w,
+                /assets/images/hero/hero-800.jpg   800w,
+                /assets/images/hero/hero-1200.jpg 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+              alt="Enseignant-chercheur docteur accompagnant un étudiant pour son mémoire de Master 2"
+              width="1200"
+              height="800"
+              loading="eager"
+              fetchpriority="high"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </picture>
+
+          <picture style="flex: 1; min-width: 280px; max-width: 480px;">
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/hero1-400.webp   400w,
+                /assets/images/hero/hero1-800.webp   800w,
+                /assets/images/hero/hero1-1200.webp 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+            />
+            <img
+              src="/assets/images/hero/hero1-800.jpg"
+              srcset="
+                /assets/images/hero/hero1-400.jpg   400w,
+                /assets/images/hero/hero1-800.jpg   800w,
+                /assets/images/hero/hero1-1200.jpg 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+              alt="Étudiante en Master 2 travaillant avec succès sur son mémoire grâce à l'accompagnement personnalisé"
+              width="1200"
+              height="800"
+              loading="eager"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </picture>
+        </div>
 
         <div class="hero-features">
           <div class="hero-feature">
