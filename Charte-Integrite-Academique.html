@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charte d'Intégrité Académique - MasterMentor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #577086;
+            --secondary: #0F52AA;
+            --success: #25D366;
+            --error: #BF0446;
+            --white: #FFFFFF;
+            --dark: #577086;
+            --gray: #6B7280;
+            --light-bg: #F9FAFB;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light-bg);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(87, 112, 134, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .logo span {
+            color: var(--success);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        .date {
+            margin-top: 1rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .important {
+            background: rgba(15, 82, 170, 0.05);
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: rgba(37, 211, 102, 0.05);
+            padding: 1.5rem;
+            border-left: 4px solid var(--success);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: rgba(191, 4, 70, 0.05);
+            padding: 1.5rem;
+            border-left: 4px solid var(--error);
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .principle {
+            background: var(--light-bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .principle-title {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .signature-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light-bg);
+        }
+
+        .signature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .signature-box {
+            text-align: center;
+        }
+
+        .signature-line {
+            border-top: 2px solid var(--dark);
+            margin: 3rem 0 0.5rem 0;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-bg);
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .signature-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Master<span>Mentor</span></div>
+            <h1>Charte d'Intégrité Académique</h1>
+            <p class="subtitle">Engagement de qualité, d'éthique et de respect des normes universitaires</p>
+        </div>
+
+        <div class="important">
+            <strong>Préambule</strong><br>
+            MasterMentor s'engage à respecter les plus hauts standards d'intégrité académique dans l'accompagnement des étudiants de Master. Cette charte définit nos principes éthiques, nos engagements et les limites de notre intervention pour garantir un accompagnement conforme aux règles universitaires françaises et européennes.
+        </div>
+
+        <h2>Article 1 - Notre Mission</h2>
+        
+        <h3>1.1 Définition du service</h3>
+        <p>MasterMentor propose un <strong>service de coaching méthodologique et d'accompagnement académique</strong> pour les étudiants en Master 2. Notre mission est de <strong>développer les compétences de recherche</strong> de l'étudiant, non de se substituer à son travail personnel.</p>
+
+        <div class="principle">
+            <div class="principle-title">✓ Ce que nous FAISONS :</div>
+            <ul>
+                <li>Former à la méthodologie de recherche</li>
+                <li>Guider dans la structuration du mémoire</li>
+                <li>Enseigner les techniques de recherche bibliographique</li>
+                <li>Corriger et améliorer les productions de l'étudiant</li>
+                <li>Préparer à la soutenance orale</li>
+                <li>Développer l'esprit critique et l'autonomie</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <div class="principle-title">✗ Ce que nous NE FAISONS PAS :</div>
+            <ul>
+                <li>Rédiger le mémoire à la place de l'étudiant</li>
+                <li>Produire des contenus clés en main</li>
+                <li>Utiliser l'intelligence artificielle pour générer du contenu</li>
+                <li>Falsifier des données ou des résultats</li>
+                <li>Inventer des sources bibliographiques</li>
+            </ul>
+        </div>
+
+        <h2>Article 2 - Nos Engagements Éthiques</h2>
+
+        <h3>2.1 Accompagnement 100% humain</h3>
+        <p>Nous garantissons un accompagnement exclusivement réalisé par des <strong>enseignants-chercheurs docteurs</strong> en exercice. Aucune intelligence artificielle générative (ChatGPT, Claude, etc.) n'est utilisée pour produire du contenu destiné au mémoire de l'étudiant.</p>
+
+        <div class="success-box">
+            <strong>Garantie Sans IA :</strong> Tous nos accompagnements sont vérifiés par Compilatio (détection IA) et certifiés par Lucide.ai pour garantir l'authenticité du travail de l'étudiant.
+        </div>
+
+        <h3>2.2 Respect de l'autonomie intellectuelle</h3>
+        <p>Le mémoire doit refléter la <strong>pensée personnelle</strong>, le <strong>positionnement critique</strong> et les <strong>capacités d'analyse</strong> de l'étudiant. Notre rôle est de révéler et structurer ces capacités, jamais de s'y substituer.</p>
+
+        <h2>Article 3 - Principes d'Intervention</h2>
+
+        <div class="principle">
+            <div class="principle-title">Principe 1 : Pédagogie avant production</div>
+            <p>Chaque intervention vise à <strong>enseigner</strong> une compétence, non à livrer un produit fini. L'étudiant doit comprendre et maîtriser chaque élément de son mémoire.</p>
+        </div>
+
+        <div class="principle">
+            <div class="principle-title">Principe 2 : Traçabilité des contributions</div>
+            <p>Nous documentons toutes nos interventions pour distinguer clairement le travail de l'étudiant de nos recommandations méthodologiques.</p>
+        </div>
+
+        <div class="principle">
+            <div class="principle-title">Principe 3 : Développement de l'autonomie</div>
+            <p>Notre accompagnement diminue progressivement pour rendre l'étudiant <strong>autonome</strong> dans sa démarche de recherche.</p>
+        </div>
+
+        <div class="principle">
+            <div class="principle-title">Principe 4 : Respect des spécificités disciplinaires</div>
+            <p>Nous adaptons notre méthodologie aux exigences spécifiques de chaque discipline et aux attentes de chaque université.</p>
+        </div>
+
+        <div class="principle">
+            <div class="principle-title">Principe 5 : Transparence totale</div>
+            <p>L'étudiant et son directeur de mémoire peuvent à tout moment consulter nos échanges et comprendre notre accompagnement.</p>
+        </div>
+
+        <h2>Article 4 - Méthodologie d'Accompagnement</h2>
+
+        <h3>4.1 Phase de diagnostic</h3>
+        <p>Évaluation initiale du niveau de l'étudiant, de sa problématique et de ses besoins spécifiques. Élaboration d'un plan d'accompagnement personnalisé.</p>
+
+        <h3>4.2 Formation méthodologique</h3>
+        <p>Transmission des <strong>outils et méthodes</strong> essentiels :</p>
+        <ul>
+            <li>Construction d'une problématique scientifique</li>
+            <li>Recherche bibliographique systématique (Web of Science, Scopus, etc.)</li>
+            <li>Méthodologie de recherche (IMRAD, PRISMA, méthodes inductives/déductives)</li>
+            <li>Analyse critique de la littérature</li>
+            <li>Protocole de collecte et d'analyse de données</li>
+            <li>Rédaction académique et argumentation</li>
+        </ul>
+
+        <h3>4.3 Accompagnement itératif</h3>
+        <p>Nous travaillons en <strong>cycles de feedback</strong> : l'étudiant produit, nous commentons et guidons, l'étudiant améliore. Ce processus itératif développe ses compétences.</p>
+
+        <h3>4.4 Vérification systématique</h3>
+        <p>Chaque production est vérifiée via <strong>Compilatio</strong> pour détecter :</p>
+        <ul>
+            <li>Le plagiat (similarité avec des sources existantes)</li>
+            <li>L'utilisation d'intelligence artificielle</li>
+            <li>Les problèmes de citations</li>
+        </ul>
+
+        <h2>Article 5 - Garanties Offertes</h2>
+
+        <h3>5.1 Garantie d'authenticité</h3>
+        <div class="success-box">
+            Le travail final est <strong>authentiquement celui de l'étudiant</strong>. Nous certifions que notre accompagnement respecte l'intégrité académique et que l'étudiant est capable de défendre intégralement son mémoire en soutenance.
+        </div>
+
+        <h3>5.2 Garantie de qualité méthodologique</h3>
+        <p>Nos enseignants-chercheurs garantissent la <strong>rigueur scientifique</strong> de la démarche et le respect des standards académiques en vigueur.</p>
+
+        <h3>5.3 Garantie de conformité</h3>
+        <p>Notre accompagnement est conforme aux règlements des établissements d'enseignement supérieur français et européens.</p>
+
+        <h3>5.4 Garantie de confidentialité</h3>
+        <p>Tous les échanges et documents sont strictement <strong>confidentiels</strong> et ne sont jamais réutilisés ou partagés sans accord explicite de l'étudiant.</p>
+
+        <h2>Article 6 - Responsabilités de l'Étudiant</h2>
+
+        <h3>6.1 Engagement de travail personnel</h3>
+        <p>L'étudiant s'engage à :</p>
+        <ul>
+            <li>Produire personnellement les éléments de son mémoire</li>
+            <li>Participer activement aux séances d'accompagnement</li>
+            <li>Appliquer les méthodologies enseignées</li>
+            <li>Respecter les échéances convenues</li>
+            <li>Citer correctement toutes ses sources</li>
+        </ul>
+
+        <h3>6.2 Interdiction d'usage frauduleux</h3>
+        <p>L'étudiant s'interdit formellement de :</p>
+        <ul>
+            <li>Présenter comme sien un travail qu'il n'aurait pas produit</li>
+            <li>Utiliser l'intelligence artificielle pour générer du contenu</li>
+            <li>Plagier des sources sans citation appropriée</li>
+            <li>Falsifier des données ou résultats</li>
+        </ul>
+
+        <h2>Article 7 - Prévention de la Fraude Académique</h2>
+
+        <h3>7.1 Détection et sensibilisation</h3>
+        <p>Nous formons systématiquement les étudiants aux risques du plagiat et de l'usage de l'IA, et aux conséquences académiques graves de ces pratiques.</p>
+
+        <h3>7.2 Outils de vérification</h3>
+        <div class="important">
+            <strong>Technologies utilisées :</strong>
+            <ul>
+                <li><strong>Compilatio :</strong> Détection de plagiat et d'IA</li>
+                <li><strong>Lucide.ai :</strong> Certification d'authenticité</li>
+                <li><strong>Vérification manuelle :</strong> Contrôle humain systématique</li>
+            </ul>
+        </div>
+
+        <h3>7.3 Refus d'accompagnement</h3>
+        <p>MasterMentor se réserve le droit de <strong>refuser ou interrompre</strong> un accompagnement si l'étudiant :</p>
+        <ul>
+            <li>Demande explicitement une rédaction à sa place</li>
+            <li>Souhaite utiliser l'IA de manière frauduleuse</li>
+            <li>Ne respecte pas les principes d'intégrité académique</li>
+            <li>Tente de contourner les règles universitaires</li>
+        </ul>
+
+        <h2>Article 8 - Cadre Légal et Réglementaire</h2>
+
+        <h3>8.1 Références juridiques</h3>
+        <ul>
+            <li>Règlement Général sur la Protection des Données (RGPD)</li>
+        </ul>
+
+        <h3>8.2 Nature du service</h3>
+        <p>MasterMentor propose un <strong>service de formation professionnelle continue</strong> destiné aux étudiants. Notre activité relève du coaching académique et de la formation méthodologique, activités parfaitement légales en France.</p>
+
+        <h2>Article 9 - Protection des Données</h2>
+
+        <h3>9.1 Conformité RGPD</h3>
+        <p>Toutes les données personnelles et académiques sont traitées conformément au RGPD. Les étudiants disposent d'un droit d'accès, de rectification et de suppression de leurs données.</p>
+
+        <h3>9.2 Conservation des données</h3>
+        <p>Les documents de travail sont conservés pendant la durée de l'accompagnement puis archivés de manière sécurisée pendant 3 ans à des fins de preuve de notre méthodologie.</p>
+
+        <h2>Article 10 - Évolution de la Charte</h2>
+
+        <p>Cette charte est régulièrement mise à jour pour refléter :</p>
+        <ul>
+            <li>Les évolutions du cadre réglementaire</li>
+            <li>Les nouvelles technologies (IA notamment)</li>
+            <li>Les retours d'expérience et bonnes pratiques</li>
+            <li>Les recommandations des établissements d'enseignement supérieur</li>
+        </ul>
+
+        <div class="important">
+            <strong>Engagement qualité :</strong> MasterMentor s'engage à maintenir et améliorer continuellement ses standards d'intégrité académique et à former régulièrement ses enseignants-chercheurs aux évolutions du secteur.
+        </div>
+
+        <h2>Article 11 - Médiation et Résolution de Conflits</h2>
+
+        <h3>11.1 Procédure de réclamation</h3>
+        <p>En cas de désaccord sur l'application de cette charte, l'étudiant peut saisir notre service qualité : <strong>integrite@mastermentor.fr</strong></p>
+
+        <h3>11.2 Médiation</h3>
+        <p>En cas de litige persistant, les parties peuvent recourir à une médiation amiable avant toute action contentieuse.</p>
+
+        <div class="signature-section">
+            <h2>Consentement et Acceptation</h2>
+            
+            <div class="important">
+                <p><strong>En utilisant les services de MasterMentor, l'étudiant déclare avoir :</strong></p>
+                <ul>
+                    <li>Lu et compris l'intégralité de cette Charte d'Intégrité Académique</li>
+                    <li>Accepté sans réserve l'ensemble des principes et engagements énoncés</li>
+                    <li>Pris connaissance des garanties offertes et des responsabilités qui lui incombent</li>
+                    <li>Compris que l'accompagnement vise à développer ses propres compétences de recherche</li>
+                    <li>Reconnu que le travail final doit être authentiquement le sien</li>
+                </ul>
+            </div>
+
+            <div class="warning-box" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Décharge de Responsabilité</h3>
+                <p><strong>L'étudiant décharge expressément MasterMentor de toute responsabilité concernant :</strong></p>
+                <ul>
+                    <li>L'utilisation qu'il fait de l'accompagnement reçu</li>
+                    <li>Les décisions prises dans le cadre de son travail académique</li>
+                    <li>Les conséquences résultant d'un non-respect de sa part des principes énoncés dans cette charte</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>L'étudiant reconnaît être le seul responsable de son travail académique et de ses choix méthodologiques.</strong> MasterMentor ne peut être tenu responsable de l'évaluation finale du mémoire, de la note obtenue, ou de toute décision prise par le jury ou l'établissement d'enseignement.</p>
+            </div>
+
+            <div class="success-box" style="margin-top: 2rem;">
+                <p style="font-size: 1.1rem; text-align: center;"><strong>Je consens à respecter cette charte d'intégrité académique et à travailler dans le respect de l'éthique universitaire.</strong></p>
+                <p style="text-align: center; margin-top: 1rem; color: var(--gray);">Le consentement est matérialisé par la signature du contrat d'accompagnement.</p>
+            </div>
+
+            <div class="warning-box" style="margin-top: 2rem;">
+                <strong>⚠️ Important :</strong> Le non-respect de cette charte peut entraîner l'interruption immédiate de l'accompagnement sans remboursement et, le cas échéant, la notification des autorités académiques compétentes.
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h3>Contact</h3>
+            <p><strong>MasterMentor</strong></p>
+            <p>Email : contact@mastermentor.fr</p>
+            <p>WhatsApp : +33 6 15 07 81 52</p>
+            <p>Service Intégrité Académique : integrite@mastermentor.fr</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>MasterMentor © 2024 - Tous droits réservés</strong></p>
+            <p>Charte d'Intégrité Académique - Document confidentiel</p>
+            <p>Ce document constitue un engagement contractuel entre MasterMentor et l'étudiant accompagné.</p>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour imprimer la charte
+        function printCharter() {
+            window.print();
+        }
+
+        // Ajouter la date du jour automatiquement si besoin
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toLocaleDateString('fr-FR');
+            console.log('Charte chargée le : ' + today);
+        });
+    </script>
+</body>
+</html>

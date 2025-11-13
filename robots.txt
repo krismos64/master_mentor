@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mastermentor.fr/sitemap.xml
+
+# Bloquer pages de démonstration
+Disallow: /popup-demo.html
+Disallow: /tarifs-old.html
+Disallow: /quiz-methodologie.html

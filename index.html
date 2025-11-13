@@ -1,0 +1,3349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMentor | Coaching Master 2 par des Docteurs</title>
+    <meta name="description" content="Coaching personnalisé pour votre Master 2 par des enseignants-chercheurs docteurs. Paiement à la réussite. Garantie sans IA ni plagiat.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #577086;
+            --primary-light: #6B7899;
+            --secondary: #0F52AA;
+            --success: #577086;
+            --dark: #577086;
+            --gray: #6B7280;
+            --light-bg: #FFFFFF;
+            --white: #FFFFFF;
+            --icon-red: #BF0446;
+            --icon-blue: #022F6B;
+            
+            /* Design 2026 - Variables fluides */
+            --radius-sm: 16px;
+            --radius-md: 24px;
+            --radius-lg: 32px;
+            --radius-xl: 48px;
+            --shadow-soft: 0 8px 32px rgba(87, 112, 134, 0.08);
+            --shadow-medium: 0 12px 48px rgba(87, 112, 134, 0.12);
+            --shadow-strong: 0 20px 64px rgba(87, 112, 134, 0.16);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-soft);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-weight: normal;
+            display: block;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: var(--white);
+            color: var(--dark);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .hero-highlight {
+            color: var(--secondary);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(15, 82, 170, 0.2);
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-xl);
+            color: var(--dark);
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-feature:hover {
+            transform: translateY(-2px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .hero-feature svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--icon-blue);
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 1.25rem 3.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            color: var(--dark);
+            padding: 0.625rem 1.25rem;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(107, 114, 128, 0.1);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .trust-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Boutons flottants WhatsApp et Rappel */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .phone-btn {
+            background: var(--icon-blue);
+            color: white;
+        }
+
+        .floating-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .floating-btn-tooltip {
+            position: absolute;
+            right: 70px;
+            background: var(--dark);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .floating-btn:hover .floating-btn-tooltip {
+            opacity: 1;
+        }
+
+        .floating-btn-tooltip:after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 8px solid transparent;
+            border-left-color: var(--dark);
+        }
+
+        /* Badge Ekomi */
+        .ekomi-badge {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 0 0.5rem;
+        }
+
+        .ekomi-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .ekomi-text {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+
+        /* Badges de confiance par section */
+        .section-trust-badge {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--white);
+            border-left: 4px solid var(--secondary);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            border: 2px solid var(--secondary);
+        }
+
+        /* Section Vidéo */
+        .video-section {
+            background: linear-gradient(135deg, rgba(15, 82, 170, 0.03) 0%, rgba(2, 47, 107, 0.03) 100%);
+            padding: 5rem 2rem;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .video-intro h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .video-intro p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 1rem;
+            box-shadow: var(--shadow-strong);
+            border: 2px solid rgba(15, 82, 170, 0.1);
+            transition: var(--transition);
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 80px rgba(15, 82, 170, 0.2);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            background: #000;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--radius-lg);
+        }
+
+        .video-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .video-benefit {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+            transition: var(--transition);
+        }
+
+        .video-benefit:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .video-benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .video-benefit:nth-child(1) .video-benefit-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .video-benefit:nth-child(2) .video-benefit-icon {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .video-benefit:nth-child(3) .video-benefit-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .video-benefit h3 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-benefit p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .video-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .video-cta-text {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Section Équipe */
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 2.5rem;
+            background: var(--light-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* Section Quiz Teaser */
+        .quiz-teaser {
+            background: linear-gradient(135deg, rgba(15, 82, 170, 0.03) 0%, rgba(2, 47, 107, 0.03) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        /* Quiz Embedded Styles */
+        .question-card-quiz {
+            display: none;
+            animation: fadeInQuiz 0.5s ease;
+        }
+
+        .question-card-quiz.active {
+            display: block;
+        }
+
+        @keyframes fadeInQuiz {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question-number-quiz {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text-quiz {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        .answers-quiz {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .answer-btn-quiz {
+            background: var(--white);
+            border: 2px solid #E5E7EB;
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .answer-btn-quiz:hover {
+            border-color: var(--icon-blue);
+            transform: translateX(5px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .answer-btn-quiz.selected {
+            border-color: var(--icon-blue);
+            background: rgba(2, 47, 107, 0.05);
+        }
+
+        .answer-btn-quiz.correct {
+            border-color: #25D366;
+            background: rgba(37, 211, 102, 0.1);
+        }
+
+        .answer-btn-quiz.incorrect {
+            border-color: var(--icon-red);
+            background: rgba(191, 4, 70, 0.1);
+        }
+
+        .answer-btn-quiz.disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .answer-letter-quiz {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #F3F4F6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--dark);
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .answer-btn-quiz.selected .answer-letter-quiz {
+            background: var(--icon-blue);
+            color: var(--white);
+        }
+
+        .answer-btn-quiz.correct .answer-letter-quiz {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .answer-btn-quiz.incorrect .answer-letter-quiz {
+            background: var(--icon-red);
+            color: var(--white);
+        }
+
+        .explanation-quiz {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: rgba(2, 47, 107, 0.05);
+            border-left: 4px solid var(--icon-blue);
+            border-radius: var(--radius-md);
+            display: none;
+        }
+
+        .explanation-quiz.show {
+            display: block;
+            animation: fadeInQuiz 0.5s ease;
+        }
+
+        .explanation-quiz h4 {
+            color: var(--icon-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .explanation-quiz p {
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .quiz-navigation-embedded {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .btn-next-quiz {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-next-quiz:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-next-quiz:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .score-circle-quiz {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .score-circle-quiz.excellent {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .score-circle-quiz.good {
+            background: linear-gradient(135deg, var(--icon-blue), #1E73E8);
+        }
+
+        .score-circle-quiz.average {
+            background: linear-gradient(135deg, #F59E0B, #FBBF24);
+        }
+
+        .score-circle-quiz.poor {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .score-label-quiz {
+            font-size: 0.9rem;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .results-message-quiz {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .results-detail-quiz {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .review-answers-quiz {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-restart-quiz {
+            background: linear-gradient(135deg, var(--primary), #6B7899);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-restart-quiz:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-whatsapp-quiz {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp-quiz:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Chatbot WhatsApp Flottant */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+        }
+
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #BF0446, #D91656);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4);
+            animation: chatbotPulse 2s infinite;
+            transition: var(--transition);
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(191, 4, 70, 0.5);
+        }
+
+        .whatsapp-button svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @keyframes chatbotPulse {
+            0%, 100% {
+                box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4), 0 0 0 0 rgba(191, 4, 70, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4), 0 0 0 15px rgba(191, 4, 70, 0);
+            }
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-strong);
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid white;
+        }
+
+        .whatsapp-tooltip-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .whatsapp-tooltip-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .whatsapp-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: white;
+            color: var(--error);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            animation: badgePulse 1.5s infinite;
+            border: 2px solid var(--error);
+        }
+
+        @keyframes badgePulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-button {
+                width: 56px;
+                height: 56px;
+            }
+
+            .whatsapp-button svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .whatsapp-tooltip {
+                min-width: 240px;
+                padding: 0.875rem 1.25rem;
+                bottom: 65px;
+                left: -10px;
+            }
+
+            .whatsapp-tooltip-title {
+                font-size: 0.875rem;
+            }
+
+            .whatsapp-tooltip-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Popup Urgence */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+            animation: fadeInOverlay 0.3s ease;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .popup-container {
+            position: relative;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            max-width: 500px;
+            width: 90%;
+            padding: 3rem 2rem;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+            animation: popupSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        @keyframes popupSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: var(--light-bg);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--gray);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-close:hover {
+            background: var(--error);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+
+        .popup-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--error), #D91656);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            animation: pulseIcon 2s infinite;
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(191, 4, 70, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(191, 4, 70, 0);
+            }
+        }
+
+        .popup-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .popup-subtitle {
+            font-size: 1rem;
+            color: var(--error);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .popup-message {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .popup-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+        }
+
+        .popup-footer {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .popup-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .popup-title {
+                font-size: 1.5rem;
+            }
+
+            .popup-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+        }
+
+        /* Section FAQ */
+        .faq-section {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+
+        .faq-item {
+            background: var(--light-bg);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(15, 82, 170, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.75rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            background: var(--light-bg);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: rgba(15, 82, 170, 0.05);
+        }
+
+        .faq-question h3 {
+            font-size: 1.15rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--icon-blue), #1E73E8);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 800px;
+        }
+
+        .faq-answer-content {
+            padding: 0 2rem 2rem 2rem;
+        }
+
+        .faq-answer-content p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer-content strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .faq-highlight {
+            background: rgba(37, 211, 102, 0.1);
+            padding: 1.25rem;
+            border-left: 4px solid var(--success);
+            border-radius: var(--radius-md);
+            margin-top: 1rem;
+        }
+
+        .faq-highlight strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-benefits {
+            margin-top: 1rem;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .faq-benefits li {
+            padding: 0.5rem 0;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .faq-benefits li::before {
+            content: "✅";
+            margin-right: 0.75rem;
+        }
+
+        .faq-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(18, 140, 126, 0.05));
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(37, 211, 102, 0.2);
+        }
+
+        .faq-cta h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .faq-cta p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .faq-header h2 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                padding: 1.5rem;
+            }
+
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+
+            .faq-answer-content {
+                padding: 0 1.5rem 1.5rem 1.5rem;
+            }
+        }
+
+        .quiz-teaser h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .quiz-teaser-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+        }
+
+        .quiz-highlight {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .quiz-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .quiz-topic {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .quiz-topic:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+
+        .quiz-topic-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .quiz-topic:nth-child(odd) .quiz-topic-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .quiz-topic:nth-child(even) .quiz-topic-icon {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .quiz-topic h3 {
+            font-size: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .quiz-cta-container {
+            margin: 3rem 0;
+        }
+
+        .quiz-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quiz-benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .quiz-benefit-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--success), #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .team-intro h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .team-intro p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .team-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .team-stat {
+            text-align: center;
+        }
+
+        .team-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--icon-blue);
+            display: block;
+        }
+
+        .team-stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .team-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: var(--radius-lg);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .team-member:hover .team-avatar {
+            transform: scale(1.05) rotate(-3deg);
+        }
+
+        .team-member:nth-child(odd) .team-avatar {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .team-member:nth-child(even) .team-avatar {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--icon-blue);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-expertise {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .team-credentials {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .credential {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .credential svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .team-member:nth-child(odd) .credential svg {
+            fill: var(--icon-red);
+        }
+
+        .team-member:nth-child(even) .credential svg {
+            fill: var(--icon-blue);
+        }
+
+        /* Section commune */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Problème/Solution */
+        .problem-solution {
+            background: var(--white);
+        }
+
+        .ps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .ps-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .ps-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .ps-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ps-card.problem h3 {
+            color: var(--icon-red);
+        }
+
+        .ps-card.solution h3 {
+            color: var(--dark);
+        }
+
+        .ps-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ps-card li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .ps-card li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .ps-card.problem li:before {
+            color: var(--icon-red);
+        }
+
+        .ps-card.solution li:before {
+            content: "✓";
+            color: var(--secondary);
+        }
+
+        /* Disciplines */
+        .disciplines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .discipline-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .discipline-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.3);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .discipline-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .discipline-card:hover .discipline-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .discipline-card:nth-child(odd) .discipline-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .discipline-card:nth-child(even) .discipline-icon {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .discipline-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .discipline-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Différenciateurs */
+        .differentiators {
+            background: var(--white);
+            color: var(--dark);
+            border-top: 3px solid var(--secondary);
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .diff-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #E5E7EB;
+            text-align: center;
+        }
+
+        .diff-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .diff-card:nth-child(odd) .diff-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .diff-card:nth-child(even) .diff-icon {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .diff-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .diff-card p {
+            color: var(--gray);
+        }
+
+        /* Processus */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .step {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            color: var(--white);
+        }
+
+        .step:nth-child(odd) .step-number {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .step:nth-child(even) .step-number {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        /* Témoignages */
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-strong);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .testimonial-rating {
+            color: var(--icon-red);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card:nth-child(odd) .testimonial-avatar {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .testimonial-card:nth-child(even) .testimonial-avatar {
+            background: linear-gradient(135deg, var(--icon-blue), #0047AB);
+        }
+
+        .testimonial-info strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        .testimonial-info span {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Final */
+        .final-cta {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--white);
+            color: var(--dark);
+            padding: 3.5rem;
+            border-radius: var(--radius-xl);
+            max-width: 650px;
+            margin: 2rem auto 0;
+            box-shadow: var(--shadow-strong);
+            border: 1px solid rgba(229, 231, 235, 0.3);
+        }
+
+        .cta-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .cta-box p {
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1rem;
+            border: 1.5px solid rgba(229, 231, 235, 0.8);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 1.125rem 2.5rem;
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .privacy-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: left;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .footer-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .footer-badge-stars {
+            color: #FFD700;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-badge-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .footer-badge-score {
+            color: var(--icon-blue);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .footer-tools {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-tool {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-tool:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-tool img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .footer-tool span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .footer-values {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .ps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                Master<span>Mentor</span>
+                <span class="logo-subtitle">by Redaxio - 17 ans d'expérience</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#disciplines">Disciplines</a></li>
+                <li><a href="#equipe">L'Équipe</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="#methode">Notre Méthode</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+            </ul>
+            <a href="#contact" class="cta-nav">Diagnostic Gratuit</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>
+                Réussissez votre mémoire de master 
+                <span class="hero-highlight">avec des enseignants à vos côtés</span>
+            </h1>
+            <p>Un accompagnement personnalisé par des enseignants-chercheurs docteurs jusqu'à votre réussite. Satisfait ou remboursé.</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>100% Docteurs</span>
+                </div>
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Sans IA ni plagiat</span>
+                </div>
+                <div class="hero-feature">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Satisfait ou remboursé</span>
+                </div>
+            </div>
+
+            <a href="#contact" class="cta-primary">Demander un diagnostic gratuit</a>
+
+            <div class="trust-badges">
+                <div class="trust-badge">9 disciplines</div>
+                <div class="trust-badge">17 ans d'expérience</div>
+                <div class="trust-badge">100% Français</div>
+                <div class="trust-badge">Paiement en 10 fois</div>
+                <div class="ekomi-badge">
+                    <div class="ekomi-stars">★★★★★</div>
+                    <div class="ekomi-text">Certifié eKomi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="problem-solution">
+        <h2 class="section-title">Vous préparez votre mémoire de master et vous sentez...</h2>
+        <div class="ps-grid">
+            <div class="ps-card problem">
+                <h3>Les défis du M2</h3>
+                <ul>
+                    <li>La pression du mémoire qui s'accumule</li>
+                    <li>L'angoisse de la méthodologie universitaire</li>
+                    <li>La solitude face à vos questionnements</li>
+                    <li>Le stress des attentes académiques</li>
+                    <li>La peur de ne pas être à la hauteur</li>
+                    <li>Le manque de retours constructifs</li>
+                </ul>
+            </div>
+            <div class="ps-card solution">
+                <h3>Notre accompagnement</h3>
+                <ul>
+                    <li>Un docteur expert dans votre domaine</li>
+                    <li>Un suivi personnalisé hebdomadaire</li>
+                    <li>Des méthodologies scientifiques éprouvées</li>
+                    <li>Un encadrement jusqu'à votre réussite</li>
+                    <li>Des retours détaillés et constructifs</li>
+                    <li>Une garantie 100% sans IA ni plagiat</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-trust-badge">
+            ✓ 100% Confidentiel - Vos données et votre travail restent strictement privés
+        </div>
+    </section>
+
+    <!-- Section Vidéo -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-intro">
+                <h2>Un accompagnement efficace par enseignants chercheurs depuis 2007</h2>
+                <p>Un coaching académique sérieux, exigeant et éthique qui transforme votre mémoire en réussite.</p>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-embed">
+                    <iframe 
+                        src="https://www.youtube.com/embed/K8LmYdEqHrc?autoplay=0&rel=0&modestbranding=1&showinfo=0" 
+                        title="MasterMentor - Notre Méthode d'Accompagnement"
+                        frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="video-benefits">
+                <div class="video-benefit">
+                    <div class="video-benefit-icon">👁</div>
+                    <h3>Transparence Totale</h3>
+                    <p>Découvrez notre méthode d'accompagnement et rencontrez nos enseignants-chercheurs</p>
+                </div>
+
+                <div class="video-benefit">
+                    <div class="video-benefit-icon">🎓</div>
+                    <h3>Expertise Visible</h3>
+                    <p>Constatez par vous-même le niveau d'excellence de nos docteurs</p>
+                </div>
+
+                <div class="video-benefit">
+                    <div class="video-benefit-icon">✓</div>
+                    <h3>Résultats Concrets</h3>
+                    <p>Témoignages réels et exemples de réussites de nos étudiants</p>
+                </div>
+            </div>
+
+            <div class="video-cta">
+                <p class="video-cta-text">Prêt à bénéficier du même accompagnement ?</p>
+                <a href="#contact" class="cta-primary">Réserver mon diagnostic gratuit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disciplines -->
+    <section id="disciplines">
+        <h2 class="section-title">Nos Domaines d'Excellence</h2>
+        <p class="section-subtitle">Chaque discipline est encadrée par des docteurs spécialisés, enseignants-chercheurs en activité</p>
+        
+        <div class="disciplines-grid">
+            <div class="discipline-card">
+                <div class="discipline-icon">∞</div>
+                <h3>Marketing</h3>
+                <p>Stratégie digitale, comportement consommateur, études de marché, branding et communication marketing.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">ψ</div>
+                <h3>Ressources Humaines</h3>
+                <p>Gestion des talents, GPEC, recrutement, formation, management RH et droit social.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">Σ</div>
+                <h3>Finance</h3>
+                <p>Finance d'entreprise, marchés financiers, analyse financière, gestion de portefeuille et risques.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">Φ</div>
+                <h3>Psychologie</h3>
+                <p>Psychologie clinique, sociale, du travail, cognitive et méthodologie de la recherche.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">Ω</div>
+                <h3>Management</h3>
+                <p>Leadership, stratégie d'entreprise, gestion de projet, innovation et transformation digitale.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">λ</div>
+                <h3>Communication</h3>
+                <p>Communication corporate, relations publiques, médias sociaux, communication de crise.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">π</div>
+                <h3>Économie</h3>
+                <p>Macroéconomie, microéconomie, économétrie, politiques économiques et développement.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">§</div>
+                <h3>Droit</h3>
+                <p>Droit des affaires, droit social, droit public, contentieux et méthodologie juridique.</p>
+            </div>
+            
+            <div class="discipline-card">
+                <div class="discipline-icon">∫</div>
+                <h3>Informatique</h3>
+                <p>Développement logiciel, intelligence artificielle, systèmes d'information, cybersécurité et data science.</p>
+            </div>
+        </div>
+        <div class="section-trust-badge">
+            ✓ Site 100% Français - Équipe et valeurs ancrées en France
+        </div>
+    </section>
+
+    <!-- Équipe -->
+    <section id="equipe">
+        <h2 class="section-title">Notre Équipe d'Excellence</h2>
+        <p class="section-subtitle">Des enseignants-chercheurs docteurs reconnus dans leur domaine</p>
+        
+        <div class="team-intro">
+            <h3>Une Expertise Académique de Premier Plan</h3>
+            <p>Tous nos mentors sont titulaires d'un doctorat et exercent comme enseignants-chercheurs dans les universités et grandes écoles françaises. Ils combinent excellence académique, expérience pédagogique et connaissance approfondie des exigences universitaires.</p>
+            
+            <div class="team-stats">
+                <div class="team-stat">
+                    <span class="team-stat-number">100%</span>
+                    <span class="team-stat-label">Docteurs</span>
+                </div>
+                <div class="team-stat">
+                    <span class="team-stat-number">15+</span>
+                    <span class="team-stat-label">Années d'enseignement</span>
+                </div>
+                <div class="team-stat">
+                    <span class="team-stat-number">500+</span>
+                    <span class="team-stat-label">Étudiants accompagnés</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-avatar">MD</div>
+                <h3>Marketing & Communication</h3>
+                <div class="team-role">Docteure en Sciences de Gestion</div>
+                <p class="team-expertise">Spécialiste en marketing digital, stratégies de communication et comportement du consommateur.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignante-chercheuse</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>18 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">PL</div>
+                <h3>Finance & Économie</h3>
+                <div class="team-role">Docteur en Sciences Économiques</div>
+                <p class="team-expertise">Expert en finance de marché, économétrie et analyse financière approfondie.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignant-chercheur</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>20 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">SC</div>
+                <h3>Psychologie</h3>
+                <div class="team-role">Docteure en Psychologie</div>
+                <p class="team-expertise">Spécialiste en psychologie clinique, méthodologie de recherche et statistiques appliquées.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignante-chercheuse</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>16 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">JB</div>
+                <h3>Management & RH</h3>
+                <div class="team-role">Docteur en Sciences de Gestion</div>
+                <p class="team-expertise">Expert en management stratégique, GRH et transformation organisationnelle.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignant-chercheur</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>22 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">AM</div>
+                <h3>Droit</h3>
+                <div class="team-role">Docteure en Droit</div>
+                <p class="team-expertise">Spécialiste en droit des affaires, droit social et méthodologie de recherche juridique.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignante-chercheuse</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>19 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-avatar">TR</div>
+                <h3>Informatique & Data Science</h3>
+                <div class="team-role">Docteur en Informatique</div>
+                <p class="team-expertise">Expert en intelligence artificielle, systèmes d'information et méthodologie quantitative.</p>
+                <div class="team-credentials">
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Enseignant-chercheur</span>
+                    </div>
+                    <div class="credential">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>15 ans d'expérience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-trust-badge">
+            ✓ Équipe Certifiée - Tous nos docteurs sont vérifiés et en exercice dans l'enseignement supérieur
+        </div>
+    </section>
+
+    <!-- Section Quiz Intégré -->
+    <section id="quiz" style="padding: 5rem 2rem; background: linear-gradient(135deg, rgba(15, 82, 170, 0.03) 0%, rgba(2, 47, 107, 0.03) 100%);">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem;">Testez vos connaissances en méthodologie</h2>
+                <p style="font-size: 1.2rem; color: var(--gray);">Quiz de 2 minutes • <span style="color: #25D366; font-weight: 600;">Gagnez une consultation gratuite !</span></p>
+            </div>
+
+            <div class="quiz-container-embedded" style="max-width: 800px; margin: 0 auto; background: var(--white); border-radius: var(--radius-xl); box-shadow: var(--shadow-strong); overflow: hidden;">
+                <div class="quiz-header-embedded" style="background: linear-gradient(135deg, var(--primary) 0%, #6B7899 100%); color: var(--white); padding: 2rem; text-align: center;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Quiz Méthodologie de Recherche</h3>
+                    <p style="font-size: 1rem; opacity: 0.9;">6 questions sur les fondamentaux</p>
+                    <div class="progress-bar-quiz" style="height: 8px; background: rgba(255, 255, 255, 0.2); border-radius: 4px; margin-top: 1.5rem; overflow: hidden;">
+                        <div class="progress-fill-quiz" id="progressBarQuiz" style="height: 100%; background: #25D366; border-radius: 4px; width: 0%; transition: width 0.5s ease;"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-content-embedded" id="quizContentEmbedded" style="padding: 2.5rem 2rem;">
+                    <!-- Questions will be inserted here by JavaScript -->
+                </div>
+
+                <div class="results-container-embedded" id="resultsContainerEmbedded" style="display: none; text-align: center; padding: 2rem;">
+                    <!-- Results will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Différenciateurs -->
+    <section class="differentiators">
+        <h2 class="section-title">Ce qui nous rend uniques</h2>
+        <p class="section-subtitle">Des garanties que vous ne trouverez nulle part ailleurs</p>
+        
+        <div class="diff-grid">
+            <div class="diff-card">
+                <div class="diff-icon">∂</div>
+                <h3>100% Docteurs</h3>
+                <p>Tous nos mentors sont titulaires d'un doctorat et enseignants-chercheurs en activité dans les universités françaises.</p>
+            </div>
+            
+            <div class="diff-card">
+                <div class="diff-icon">√</div>
+                <h3>Satisfait ou remboursé</h3>
+                <p>Garantie satisfaction totale. Si vous n'êtes pas satisfait de notre accompagnement, vous êtes intégralement remboursé.</p>
+            </div>
+            
+            <div class="diff-card">
+                <div class="diff-icon">≠</div>
+                <h3>Garantie sans IA</h3>
+                <p>Accompagnement 100% humain, sans IA ni plagiat. Votre travail reste authentique et personnel.</p>
+            </div>
+            
+            <div class="diff-card">
+                <div class="diff-icon">∞</div>
+                <h3>Suivi illimité</h3>
+                <p>Nous vous accompagnons jusqu'à votre réussite, sans limitation de durée. Votre succès est notre engagement.</p>
+            </div>
+        </div>
+        <div class="section-trust-badge">
+            ✓ Éthique & Exigeant - Des standards académiques rigoureux et déontologiques
+        </div>
+    </section>
+
+    <!-- Processus -->
+    <section id="methode">
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <p class="section-subtitle">Un processus simple et efficace en 4 étapes</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Diagnostic gratuit</h3>
+                <p>Échange de 30 minutes pour comprendre vos besoins, votre projet et vos défis spécifiques.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Mise en relation avec un enseignant</h3>
+                <p>Nous vous mettons en relation avec un enseignant-chercheur expert dans votre domaine.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Accompagnement personnalisé</h3>
+                <p>Séances régulières, retours détaillés, et disponibilité pour toutes vos questions.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Réussite garantie</h3>
+                <p>Nous restons à vos côtés jusqu'à l'obtention de votre diplôme.</p>
+            </div>
+        </div>
+        <div class="section-trust-badge">
+            ✓ Méthodologie Éprouvée - 17 ans d'expérience et des centaines d'étudiants accompagnés
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Questions Fréquentes</h2>
+                <p class="faq-subtitle">Pourquoi l'IA ne peut pas faire votre mémoire</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(0)">
+                        <h3>1. L'IA peut-elle être détectée dans un mémoire ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Oui, facilement.</strong> Les logiciels comme Turnitin, Compilatio et GPTZero détectent le contenu généré par IA avec plus de 90% de fiabilité. Les enseignants reconnaissent également le style générique et trop lisse de l'IA.</p>
+                            <div class="faq-highlight">
+                                <strong>MasterMentor garantit</strong>
+                                <p style="margin: 0;">Un travail 100% humain, vérifié par Compilatio et certifié par Lucide.ai.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(1)">
+                        <h3>2. Pourquoi le style de l'IA trahit-il son utilisation ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>L'IA produit un style reconnaissable :</strong> transitions parfaites mais artificielles, formulations génériques sans positionnement personnel, manque de profondeur analytique, et absence d'aspérités naturelles. Les jurys détectent immédiatement l'absence de voix personnelle et de pensée critique authentique.</p>
+                            <div class="faq-highlight">
+                                <strong>MasterMentor développe VOTRE voix académique</strong>
+                                <p style="margin: 0;">Avec un accompagnement personnalisé qui respecte votre style et votre réflexion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(2)">
+                        <h3>3. Qu'est-ce qu'une "hallucination" de l'IA et pourquoi est-ce grave ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Les hallucinations sont des inventions :</strong> l'IA fabrique de fausses citations, invente des auteurs inexistants, crée des statistiques imaginaires. <strong>Exemple :</strong> "L'étude de Martin & Dupont (2019)" qui n'existe pas. Citer ces sources = plagiat involontaire et discréditation totale de votre mémoire.</p>
+                            <div class="faq-highlight">
+                                <strong>MasterMentor vérifie chaque source</strong>
+                                <p style="margin: 0;">Et vous forme à la recherche bibliographique rigoureuse avec de vraies bases de données (Web of Science, Scopus).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(3)">
+                        <h3>4. Puis-je soutenir un mémoire rédigé par l'IA ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Non.</strong> Lors de la soutenance, vous devrez expliquer vos choix méthodologiques, justifier votre analyse, et répondre aux questions du jury. Si l'IA a rédigé, vous ne pourrez ni défendre vos positions, ni démontrer votre maîtrise du sujet. <strong>Votre imposture sera évidente</strong> et le jury refusera votre mémoire.</p>
+                            <div class="faq-highlight">
+                                <strong>MasterMentor vous prépare à la soutenance</strong>
+                                <p style="margin: 0;">Avec des simulations et vous aide à maîtriser parfaitement VOTRE recherche.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(4)">
+                        <h3>5. Pourquoi choisir MasterMentor plutôt que l'IA ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Parce que MasterMentor est :</strong></p>
+                            <ul class="faq-benefits">
+                                <li><strong>Pertinent</strong> : Enseignants-chercheurs experts dans VOTRE discipline spécifique</li>
+                                <li><strong>Accessible</strong> : Accompagnement personnalisé, disponible et pédagogique</li>
+                                <li><strong>Éthique</strong> : 100% sans IA, méthodologie rigoureuse, respect des règles universitaires</li>
+                                <li><strong>Intègre</strong> : Garantie d'authenticité académique, vérification anti-plagiat, certification Lucide.ai</li>
+                            </ul>
+                            <p style="margin-top: 1rem;"><strong>Nous développons VOS compétences</strong> de chercheur, pas votre dépendance à l'IA. C'est VOTRE mémoire, VOTRE réussite, VOTRE diplôme.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(5)">
+                        <h3>6. Et si mon mémoire est déjà avancé ou en retard ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Nous intervenons à tout moment !</strong> Peu importe le stade d'avancement de votre mémoire, nos mentors peuvent intervenir pour améliorer sa qualité et le structurer. Que vous soyez en retard, bloqué, ou que vous ayez juste besoin d'une relecture finale : nous sommes là.</p>
+                            <div class="faq-highlight">
+                                <strong>Nos mentors aiment la recherche</strong>
+                                <p style="margin: 0;">Et seront ravis de vous faire progresser, quel que soit votre point de départ. Sans jugement, avec bienveillance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(6)">
+                        <h3>7. Concrètement, quel est le budget à prévoir ?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Cela dépend de vos besoins :</strong></p>
+                            <ul class="faq-benefits">
+                                <li><strong>Relecture experte :</strong> Dès 2€ la page (ex: 80 pages = 160€ minimum)</li>
+                                <li><strong>Accompagnement ponctuel :</strong> 280€ pour un projet de recherche complet (problématique, méthodologie, plan)</li>
+                                <li><strong>Accompagnement long terme :</strong> Devis personnalisé selon durée et intensité</li>
+                            </ul>
+                            <p style="margin-top: 1rem;">Le diagnostic gratuit de 30 minutes nous permet d'établir un devis précis adapté à votre situation. <strong>Paiement en 10 fois sans frais.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <h3>Prêt à réussir avec un accompagnement humain et éthique ?</h3>
+                <p>Parlons de votre projet académique dès maintenant</p>
+                <a href="#contact" class="cta-primary">Demander un diagnostic gratuit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA Tarifs -->
+    <section style="padding: 4rem 2rem; background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(18, 140, 126, 0.05)); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2.2rem; color: var(--dark); margin-bottom: 1rem;">Découvrez Nos Formules d'Accompagnement</h2>
+            <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem;">
+                Accompagnement ponctuel, relecture experte, préparation soutenance ou accompagnement complet.<br>
+                <strong style="color: var(--success);">À partir de 35€/heure</strong> - Devis personnalisé gratuit
+            </p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tarifs.html" class="cta-primary" style="background: linear-gradient(135deg, var(--icon-blue), #1E73E8);">
+                    📋 Voir les formules et tarifs
+                </a>
+                <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20personnalis%C3%A9%20pour%20mon%20m%C3%A9moire.%20Merci." target="_blank" class="cta-primary">
+                    💬 Demander un devis gratuit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages" class="testimonials">
+        <h2 class="section-title">Ils ont réussi avec MasterMentor</h2>
+        <p class="section-subtitle">Découvrez les témoignages de nos étudiants</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"Grâce à l'accompagnement de ma mentor docteure en marketing, j'ai obtenu 16/20 à mon mémoire. Son expertise et sa disponibilité ont fait toute la différence. L'absence de paiement d'avance m'a vraiment rassuré."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SM</div>
+                    <div class="testimonial-info">
+                        <strong>Sarah M.</strong>
+                        <span>Master 2 Marketing Digital, Paris Dauphine</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"J'étais complètement perdu avec ma méthodologie de recherche en psychologie. Mon accompagnateur m'a non seulement aidé à structurer mon travail, mais m'a aussi redonné confiance. Mention Bien obtenue !"</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">TL</div>
+                    <div class="testimonial-info">
+                        <strong>Thomas L.</strong>
+                        <span>Master 2 Psychologie Clinique, Lyon 2</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-text">"L'expertise académique de mon mentor en finance a été précieuse. Des retours toujours constructifs, une vraie pédagogie, et surtout un accompagnement authentique sans aucune IA. Je recommande à 100%."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AL</div>
+                    <div class="testimonial-info">
+                        <strong>Antoine L.</strong>
+                        <span>Master 2 Finance de Marché, HEC Paris</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-trust-badge">
+            ✓ Témoignages Vérifiés - Avis authentiques certifiés par eKomi
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contact" class="final-cta">
+        <h2 class="section-title">Prêt à réussir votre Master 2 ?</h2>
+        <p class="section-subtitle">Commencez par un diagnostic gratuit de 30 minutes, sans engagement</p>
+        
+        <div class="cta-box">
+            <h3>Demandez votre diagnostic gratuit</h3>
+            <p>Échangeons sur votre projet et voyons comment nous pouvons vous accompagner vers la réussite.</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nom et Prénom *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="discipline">Discipline *</label>
+                    <select id="discipline" name="discipline" required>
+                        <option value="">Sélectionnez votre discipline</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="rh">Ressources Humaines</option>
+                        <option value="finance">Finance</option>
+                        <option value="psychologie">Psychologie</option>
+                        <option value="management">Management</option>
+                        <option value="communication">Communication</option>
+                        <option value="economie">Économie</option>
+                        <option value="droit">Droit</option>
+                        <option value="informatique">Informatique</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Parlez-nous de votre projet</label>
+                    <textarea id="message" name="message" placeholder="Décrivez brièvement votre sujet de mémoire, vos défis actuels, vos objectifs..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Obtenir mon diagnostic gratuit</button>
+                
+                <p class="privacy-note">Vos données sont confidentielles et ne seront jamais partagées. En soumettant ce formulaire, vous acceptez d'être contacté par MasterMentor.</p>
+            </form>
+        </div>
+        <div class="section-trust-badge">
+            ✓ Protection Totale - Engagement de confidentialité absolue sur vos projets et données
+        </div>
+    </section>
+
+    <!-- Boutons flottants WhatsApp et Rappel -->
+    <div class="floating-buttons">
+        <a href="tel:+33615078152" class="floating-btn phone-btn" aria-label="Rappel immédiat">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+            <span class="floating-btn-tooltip">Rappel immédiat</span>
+        </a>
+        
+        <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20consultation%20gratuite%20pour%20mon%20m%C3%A9moire.%20Bien%20%C3%A0%20vous" target="_blank" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="floating-btn-tooltip">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 1.5rem; text-align: left;">
+                        Master<span>Mentor</span>
+                        <span class="logo-subtitle">by Redaxio</span>
+                    </div>
+                    <p>Master Mentor au service de la réussite de votre mémoire depuis 2007. Méthodologie, structuration, soutenance : un accompagnement complet et personnalisé.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="#disciplines" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Disciplines</a>
+                        <a href="#equipe" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">L'Équipe</a>
+                        <a href="tarifs.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Tarifs</a>
+                        <a href="#methode" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Notre Méthode</a>
+                        <a href="#temoignages" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Témoignages</a>
+                        <a href="#contact" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Nos Garanties</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">
+                        <div>✓ 100% Docteurs</div>
+                        <div>✓ Satisfait ou remboursé</div>
+                        <div>✓ Sans IA ni plagiat</div>
+                        <div>✓ 100% Confidentiel</div>
+                        <div>✓ 17 ans d'expérience</div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Certifications</h4>
+                    <div class="footer-badges">
+                        <div class="footer-badge">
+                            <span class="footer-badge-stars">★★★★★</span>
+                            <div class="footer-badge-text">Trustpilot</div>
+                            <div class="footer-badge-score">4.8/5</div>
+                        </div>
+                        <div class="footer-badge">
+                            <span class="footer-badge-stars">★★★★★</span>
+                            <div class="footer-badge-text">eKomi</div>
+                            <div class="footer-badge-score">4.9/5</div>
+                        </div>
+                    </div>
+                    <h4 style="margin-top: 2rem;">Nos Outils de Garantie</h4>
+                    <div class="footer-tools">
+                        <a href="https://lucide.ai/" target="_blank" rel="noopener noreferrer" class="footer-tool">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' fill='none'%3E%3Crect width='200' height='60' rx='8' fill='%23ffffff'/%3E%3Ctext x='100' y='35' font-family='Arial, sans-serif' font-size='20' font-weight='bold' fill='%23022F6B' text-anchor='middle'%3ELucide.ai%3C/text%3E%3C/svg%3E" alt="Lucide.ai - Certification sans IA" style="width: 100%; height: auto;">
+                            <span>Certification sans IA</span>
+                        </a>
+                        <a href="https://www.compilatio.net/" target="_blank" rel="noopener noreferrer" class="footer-tool">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' fill='none'%3E%3Crect width='200' height='60' rx='8' fill='%23ffffff'/%3E%3Ctext x='100' y='35' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23BF0446' text-anchor='middle'%3ECompilatio%3C/text%3E%3C/svg%3E" alt="Compilatio - Détection du plagiat" style="width: 100%; height: auto;">
+                            <span>Détection plagiat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="Charte-Integrite-Academique.html" target="_blank">Charte d'Intégrité Académique</a>
+                <a href="#">Mentions Légales</a>
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">CGV</a>
+                <a href="#">CGU</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2007-2024 MasterMentor - Un site du groupe Redaxio. Tous droits réservés.</p>
+                <p style="margin-top: 1rem;">Coaching académique par des enseignants-chercheurs docteurs français</p>
+                <p class="footer-values">100% Français • Éthique • Exigeant • 100% Confidentiel</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot WhatsApp Flottant -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-tooltip">
+            <div class="whatsapp-tooltip-title">💬 Besoin d'aide pour votre mémoire ?</div>
+            <div class="whatsapp-tooltip-text">Un enseignant-chercheur vous répond en 5 min.</div>
+        </div>
+        <a href="https://wa.me/33615078152?text=Bonjour%2C%20j'ai%20besoin%20d'aide%20pour%20mon%20m%C3%A9moire.%20Pouvez-vous%20m'aider%20%3F" 
+           target="_blank" 
+           class="whatsapp-button"
+           aria-label="Contacter sur WhatsApp">
+            <span class="whatsapp-badge">!</span>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.125c2.355 1.288 5.012 1.975 7.862 1.975 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.5c-2.547 0-5.025-0.725-7.163-2.088l-0.513-0.3-5.313 1.388 1.413-5.263-0.325-0.538c-1.5-2.4-2.287-5.163-2.287-8.013 0-7.725 6.287-14.012 14.012-14.012s14.012 6.287 14.012 14.012-6.287 14.012-14.012 14.012zM23.537 19.488c-0.4-0.2-2.363-1.163-2.738-1.3-0.363-0.138-0.625-0.2-0.888 0.2s-1.025 1.3-1.263 1.563c-0.225 0.263-0.45 0.3-0.85 0.1s-1.65-0.612-3.138-1.937c-1.163-1.038-1.95-2.313-2.175-2.713s-0.025-0.613 0.175-0.813c0.188-0.175 0.4-0.462 0.6-0.688 0.2-0.238 0.263-0.4 0.4-0.663 0.138-0.262 0.063-0.487-0.025-0.687s-0.888-2.137-1.213-2.925c-0.325-0.775-0.65-0.663-0.888-0.675-0.225-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.388-1.387 1.35-1.387 3.3s1.413 3.825 1.613 4.088c0.2 0.262 2.8 4.275 6.788 5.988 0.95 0.412 1.688 0.65 2.263 0.838 0.95 0.3 1.813 0.262 2.5 0.162 0.763-0.113 2.363-0.962 2.7-1.887 0.338-0.938 0.338-1.738 0.238-1.888-0.1-0.175-0.363-0.275-0.763-0.475z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Popup Urgence -->
+    <div class="popup-overlay" id="popupUrgence">
+        <div class="popup-container">
+            <button class="popup-close" onclick="closePopup()" aria-label="Fermer">×</button>
+            
+            <div class="popup-icon">⚡</div>
+            
+            <p class="popup-subtitle">Votre réussite commence maintenant</p>
+            
+            <h2 class="popup-title">Contactez nos mentors pour faire avancer votre mémoire</h2>
+            
+            <p class="popup-message">
+                <strong>Contactez nos mentors dès aujourd'hui</strong> pour faire avancer votre mémoire.<br>
+                Diagnostic gratuit en 30 minutes par un enseignant-chercheur docteur.
+            </p>
+            
+            <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20un%20diagnostic%20gratuit%20pour%20faire%20avancer%20mon%20m%C3%A9moire.%20Merci." 
+               target="_blank" 
+               class="popup-cta" 
+               onclick="closePopup()">
+                Contacter un mentor maintenant
+            </a>
+            
+            <p class="popup-footer">
+                Réponse immédiate • Sans engagement • Inscriptions limitées
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Gestion du formulaire
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Récupération des données du formulaire
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Simulation d'envoi (à remplacer par votre système backend)
+            console.log('Données du formulaire:', data);
+            
+            // Message de confirmation
+            alert('Merci pour votre demande ! Nous vous contactons sous 24h pour planifier votre diagnostic gratuit.');
+            
+            // Réinitialisation du formulaire
+            event.target.reset();
+            
+            // Tracking conversion (à intégrer avec votre outil analytics)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'VOTRE_ID_CONVERSION',
+                    'value': 1.0,
+                    'currency': 'EUR'
+                });
+            }
+        }
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.discipline-card, .diff-card, .step, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header sticky avec effet
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <script>
+        // Quiz intégré
+        const quizDataEmbedded = [
+            {
+                question: "Qu'est-ce que la méthode inductive en recherche ?",
+                answers: [
+                    "Partir d'une théorie pour tester des hypothèses spécifiques",
+                    "Partir d'observations spécifiques pour construire une théorie générale",
+                    "Utiliser des méthodes quantitatives uniquement",
+                    "Analyser des données secondaires exclusivement"
+                ],
+                correct: 1,
+                explanation: "La méthode inductive consiste à partir d'observations empiriques spécifiques pour élaborer progressivement une théorie générale. C'est une approche ascendante (bottom-up) qui va du particulier au général, contrairement à la méthode déductive qui part de la théorie vers le terrain."
+            },
+            {
+                question: "Qu'est-ce qu'une scoping review (revue exploratoire) ?",
+                answers: [
+                    "Une revue systématique avec méta-analyse quantitative",
+                    "Une cartographie exploratoire de la littérature pour identifier l'étendue des connaissances",
+                    "Une simple liste de références bibliographiques",
+                    "Une analyse critique d'un seul article"
+                ],
+                correct: 1,
+                explanation: "La scoping review est une méthode systématique pour cartographier les concepts clés, les types de preuves et les lacunes dans un domaine de recherche. Elle permet d'avoir une vue d'ensemble exploratoire de la littérature disponible sans nécessairement évaluer la qualité des études comme dans une revue systématique."
+            },
+            {
+                question: "Qu'est-ce que le diagramme PRISMA en recherche ?",
+                answers: [
+                    "Un logiciel d'analyse statistique",
+                    "Un outil visuel documentant les étapes d'une revue systématique de manière transparente",
+                    "Une méthode de collecte de données qualitatives",
+                    "Un type de questionnaire pour les études"
+                ],
+                correct: 1,
+                explanation: "Le diagramme de flux PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) est un outil visuel servant à documenter et présenter de manière transparente les étapes d'une revue systématique, depuis l'identification des sources initiales jusqu'à l'inclusion finale des études. Il montre le nombre d'études à chaque étape (identification, screening, éligibilité, inclusion) et les raisons d'exclusion."
+            },
+            {
+                question: "Que représente l'acronyme IMRAD dans la structure d'un article scientifique ?",
+                answers: [
+                    "Introduction, Méthodologie, Résultats, Analyse, Discussion",
+                    "Introduction, Methods, Results, And Discussion",
+                    "Investigation, Méthode, Recherche, Analyse, Données",
+                    "Index, Méta-analyse, Références, Annexes, Données"
+                ],
+                correct: 1,
+                explanation: "IMRAD signifie Introduction, Methods (Méthodes), Results (Résultats), And Discussion. C'est la structure standard des articles scientifiques : l'Introduction pose le contexte et la problématique, Methods décrit la méthodologie, Results présente les résultats, et Discussion interprète les résultats et leurs implications."
+            },
+            {
+                question: "Quelle est la principale fonction d'une base de données documentaire ?",
+                answers: [
+                    "Stocker uniquement des documents personnels",
+                    "Indexer et permettre la recherche systématique de publications scientifiques",
+                    "Créer des bibliographies automatiques",
+                    "Publier de nouveaux articles"
+                ],
+                correct: 1,
+                explanation: "Une base de données documentaire (comme Web of Science, Scopus, PubMed) permet d'indexer, organiser et rechercher systématiquement des publications scientifiques. Elle offre des outils de recherche avancée, des filtres, et des métadonnées essentielles pour identifier la littérature pertinente dans un domaine de recherche."
+            },
+            {
+                question: "Comment sont classées les revues scientifiques ?",
+                answers: [
+                    "Uniquement par ordre alphabétique",
+                    "Par facteur d'impact, quartiles (Q1-Q4) et indexation dans des bases",
+                    "Par couleur de couverture",
+                    "Par nombre de pages publiées"
+                ],
+                correct: 1,
+                explanation: "Les revues scientifiques sont classées selon plusieurs critères : le facteur d'impact (nombre moyen de citations), les quartiles (Q1 = top 25%, Q2, Q3, Q4), l'indexation dans des bases prestigieuses (Web of Science, Scopus), le processus de révision par les pairs, et parfois des classements spécifiques par discipline (liste FNEGE, CNRS, etc.)."
+            }
+        ];
+
+        let currentQuestionQuiz = 0;
+        let scoreQuiz = 0;
+        let selectedAnswerQuiz = null;
+
+        function initQuizEmbedded() {
+            showQuestionEmbedded(0);
+            updateProgressQuiz();
+        }
+
+        function showQuestionEmbedded(index) {
+            const quizContent = document.getElementById('quizContentEmbedded');
+            const question = quizDataEmbedded[index];
+            
+            quizContent.innerHTML = `
+                <div class="question-card-quiz active">
+                    <div class="question-number-quiz">Question ${index + 1} sur ${quizDataEmbedded.length}</div>
+                    <h3 class="question-text-quiz">${question.question}</h3>
+                    <div class="answers-quiz" id="answersQuiz">
+                        ${question.answers.map((answer, i) => `
+                            <button class="answer-btn-quiz" onclick="selectAnswerQuiz(${i})" data-index="${i}">
+                                <span class="answer-letter-quiz">${String.fromCharCode(65 + i)}</span>
+                                <span>${answer}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="explanation-quiz" id="explanationQuiz">
+                        <h4>💡 Explication</h4>
+                        <p>${question.explanation}</p>
+                    </div>
+                    <div class="quiz-navigation-embedded">
+                        <button class="btn-next-quiz" id="nextBtnQuiz" onclick="nextQuestionQuiz()" disabled>
+                            ${index === quizDataEmbedded.length - 1 ? 'Voir les résultats' : 'Question suivante →'}
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectAnswerQuiz(index) {
+            if (selectedAnswerQuiz !== null) return;
+            
+            selectedAnswerQuiz = index;
+            const buttons = document.querySelectorAll('.answer-btn-quiz');
+            const correctAnswer = quizDataEmbedded[currentQuestionQuiz].correct;
+            
+            buttons.forEach((btn, i) => {
+                btn.classList.add('disabled');
+                if (i === correctAnswer) {
+                    btn.classList.add('correct');
+                }
+                if (i === index && i !== correctAnswer) {
+                    btn.classList.add('incorrect');
+                }
+                if (i === index) {
+                    btn.classList.add('selected');
+                }
+            });
+            
+            document.getElementById('explanationQuiz').classList.add('show');
+            document.getElementById('nextBtnQuiz').disabled = false;
+            
+            if (index === correctAnswer) {
+                scoreQuiz++;
+            }
+        }
+
+        function nextQuestionQuiz() {
+            currentQuestionQuiz++;
+            selectedAnswerQuiz = null;
+            
+            if (currentQuestionQuiz < quizDataEmbedded.length) {
+                showQuestionEmbedded(currentQuestionQuiz);
+                updateProgressQuiz();
+            } else {
+                showResultsQuiz();
+            }
+        }
+
+        function updateProgressQuiz() {
+            const progress = ((currentQuestionQuiz) / quizDataEmbedded.length) * 100;
+            document.getElementById('progressBarQuiz').style.width = progress + '%';
+        }
+
+        function showResultsQuiz() {
+            document.getElementById('quizContentEmbedded').style.display = 'none';
+            const resultsContainer = document.getElementById('resultsContainerEmbedded');
+            resultsContainer.style.display = 'block';
+            
+            const percentage = (scoreQuiz / quizDataEmbedded.length) * 100;
+            let scoreClass, message, detail;
+            
+            if (percentage >= 80) {
+                scoreClass = 'excellent';
+                message = 'Excellent ! 🎓';
+                detail = 'Vous maîtrisez parfaitement les méthodologies de recherche. Vous êtes prêt pour votre mémoire !<br><br><strong style="color: #25D366; font-size: 1.1rem;">🎁 Félicitations ! Vous avez gagné une consultation gratuite avec un enseignant-chercheur !</strong>';
+            } else if (percentage >= 60) {
+                scoreClass = 'good';
+                message = 'Bien joué ! 📚';
+                detail = 'Vous avez de bonnes bases. Un accompagnement vous aidera à perfectionner votre méthodologie.<br><br><strong style="color: #25D366; font-size: 1.1rem;">🎁 Bravo ! Vous avez gagné une consultation gratuite avec un enseignant-chercheur !</strong>';
+            } else if (percentage >= 40) {
+                scoreClass = 'average';
+                message = 'À améliorer 📖';
+                detail = 'Vous avez des lacunes méthodologiques. Un coaching adapté vous permettra de progresser rapidement.<br><br><strong style="color: #25D366; font-size: 1.1rem;">🎁 Bonne nouvelle ! Vous avez gagné une consultation gratuite avec un enseignant-chercheur !</strong>';
+            } else {
+                scoreClass = 'poor';
+                message = 'Besoin d\'aide ? 🆘';
+                detail = 'Les méthodologies de recherche nécessitent un apprentissage. Nos enseignants-chercheurs sont là pour vous guider.<br><br><strong style="color: #25D366; font-size: 1.1rem;">🎁 Pas d\'inquiétude ! Vous avez gagné une consultation gratuite avec un enseignant-chercheur !</strong>';
+            }
+            
+            resultsContainer.innerHTML = `
+                <div class="score-circle-quiz ${scoreClass}">
+                    <div>
+                        <span>${scoreQuiz}</span>
+                        <span class="score-label-quiz">/6</span>
+                    </div>
+                </div>
+                <h3 class="results-message-quiz">${message}</h3>
+                <p class="results-detail-quiz">${detail}</p>
+                <div class="review-answers-quiz">
+                    <button class="btn-restart-quiz" onclick="restartQuizEmbedded()">Recommencer le quiz</button>
+                    <a href="https://wa.me/33615078152?text=Bonsoir%2C%20j%27ai%20gagn%C3%A9%20une%20consultation%20gratuite%20pour%20mon%20projet.%20Merci%20Master%20Mentor%20de%20me%20contacter.%20Bien%20%C3%A0%20vous%2C" target="_blank" class="btn-whatsapp-quiz">
+                        <span style="margin-right: 8px;">📱</span> Réclamer ma consultation gratuite
+                    </a>
+                </div>
+            `;
+            
+            document.getElementById('progressBarQuiz').style.width = '100%';
+        }
+
+        function restartQuizEmbedded() {
+            currentQuestionQuiz = 0;
+            scoreQuiz = 0;
+            selectedAnswerQuiz = null;
+            document.getElementById('resultsContainerEmbedded').style.display = 'none';
+            document.getElementById('quizContentEmbedded').style.display = 'block';
+            initQuizEmbedded();
+        }
+
+        // Initialiser le quiz au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            initQuizEmbedded();
+        });
+
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const clickedItem = faqItems[index];
+            const isActive = clickedItem.classList.contains('active');
+            
+            // Fermer tous les items
+            faqItems.forEach(item => item.classList.remove('active'));
+            
+            // Ouvrir l'item cliqué si il n'était pas déjà ouvert
+            if (!isActive) {
+                clickedItem.classList.add('active');
+            }
+        }
+
+        // Popup Urgence
+        function showPopup() {
+            document.getElementById('popupUrgence').classList.add('show');
+            document.body.style.overflow = 'hidden'; // Bloquer le scroll
+        }
+
+        function closePopup() {
+            document.getElementById('popupUrgence').classList.remove('show');
+            document.body.style.overflow = ''; // Réactiver le scroll
+            localStorage.setItem('popupShown', 'true'); // Marquer comme vu
+        }
+
+        // Fermer le popup si on clique sur l'overlay
+        document.getElementById('popupUrgence').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        // Fermer avec la touche Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Afficher le popup selon différents triggers
+        let popupShown = false;
+        const popupAlreadySeen = localStorage.getItem('popupShown');
+
+        // Ne pas afficher si déjà vu dans cette session
+        if (!popupAlreadySeen) {
+            // Trigger 1 : Après 15 secondes sur la page
+            setTimeout(function() {
+                if (!popupShown) {
+                    showPopup();
+                    popupShown = true;
+                }
+            }, 15000); // 15 secondes
+
+            // Trigger 2 : Intention de sortie (mouvement vers le haut)
+            let exitIntentTriggered = false;
+            document.addEventListener('mousemove', function(e) {
+                if (!popupShown && !exitIntentTriggered && e.clientY < 50) {
+                    exitIntentTriggered = true;
+                    setTimeout(function() {
+                        showPopup();
+                        popupShown = true;
+                    }, 500);
+                }
+            });
+
+            // Trigger 3 : Après avoir scrollé 50% de la page
+            let scrollTriggered = false;
+            window.addEventListener('scroll', function() {
+                if (!popupShown && !scrollTriggered) {
+                    const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                    if (scrollPercent > 50) {
+                        scrollTriggered = true;
+                        showPopup();
+                        popupShown = true;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

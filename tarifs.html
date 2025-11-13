@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Tarifs - MasterMentor</title>
+    <meta name="description" content="Accompagnement académique sur mesure à partir de 35€/heure. Choisissez la formule adaptée à vos besoins.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #577086;
+            --secondary: #0F52AA;
+            --success: #25D366;
+            --error: #BF0446;
+            --white: #FFFFFF;
+            --dark: #577086;
+            --gray: #6B7280;
+            --light-bg: #F9FAFB;
+            --icon-red: #BF0446;
+            --icon-blue: #022F6B;
+            --radius-sm: 16px;
+            --radius-md: 24px;
+            --radius-lg: 32px;
+            --radius-xl: 48px;
+            --shadow-soft: 0 8px 32px rgba(87, 112, 134, 0.08);
+            --shadow-medium: 0 12px 48px rgba(87, 112, 134, 0.12);
+            --shadow-strong: 0 20px 64px rgba(87, 112, 134, 0.16);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, #6B7899 100%);
+            padding: 2rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .logo span {
+            color: var(--success);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: -3rem auto 3rem;
+            padding: 0 2rem;
+        }
+
+        .intro-box {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-strong);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro-box h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .rate-highlight {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--success);
+            margin: 1.5rem 0;
+        }
+
+        .rate-highlight span {
+            font-size: 1.2rem;
+            color: var(--gray);
+            font-weight: normal;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--success);
+        }
+
+        .pricing-card.featured::before {
+            content: "⭐ POPULAIRE";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--success), #128C7E);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-bottom-left-radius: var(--radius-md);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .pricing-card:nth-child(1) .card-icon {
+            background: linear-gradient(135deg, var(--icon-blue), #1E73E8);
+        }
+
+        .pricing-card:nth-child(2) .card-icon {
+            background: linear-gradient(135deg, var(--icon-red), #D91656);
+        }
+
+        .pricing-card:nth-child(3) .card-icon {
+            background: linear-gradient(135deg, #F59E0B, #FBBF24);
+        }
+
+        .pricing-card:nth-child(4) .card-icon {
+            background: linear-gradient(135deg, var(--success), #128C7E);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .card-subtitle {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .card-features li {
+            padding: 0.6rem 0;
+            color: var(--dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .card-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        .card-note {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .card-cta {
+            width: 100%;
+            padding: 1.25rem;
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            background: linear-gradient(135deg, var(--success), #128C7E);
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .card-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .back-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link a:hover {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary) 0%, #6B7899 100%);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--success);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--success);
+        }
+
+        /* Chatbot WhatsApp Flottant */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+        }
+
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #BF0446, #D91656);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4);
+            animation: chatbotPulse 2s infinite;
+            transition: var(--transition);
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(191, 4, 70, 0.5);
+        }
+
+        .whatsapp-button svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @keyframes chatbotPulse {
+            0%, 100% {
+                box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4), 0 0 0 0 rgba(191, 4, 70, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 24px rgba(191, 4, 70, 0.4), 0 0 0 15px rgba(191, 4, 70, 0);
+            }
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-strong);
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid white;
+        }
+
+        .whatsapp-tooltip-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .whatsapp-tooltip-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .whatsapp-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: white;
+            color: var(--error);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            animation: badgePulse 1.5s infinite;
+            border: 2px solid var(--error);
+        }
+
+        @keyframes badgePulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rate-highlight {
+                font-size: 2rem;
+            }
+
+            .pricing-card {
+                min-height: auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-button {
+                width: 56px;
+                height: 56px;
+            }
+
+            .whatsapp-button svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .whatsapp-tooltip {
+                min-width: 240px;
+                padding: 0.875rem 1.25rem;
+                bottom: 65px;
+                left: -10px;
+            }
+
+            .whatsapp-tooltip-title {
+                font-size: 0.875rem;
+            }
+
+            .whatsapp-tooltip-text {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Master<span>Mentor</span></div>
+        <h1>Nos Tarifs Transparents</h1>
+    </div>
+
+    <div class="container">
+        <div class="intro-box">
+            <h2>Tarification Simple et Transparente</h2>
+            <p>Nous vous accompagnons sur la base de :</p>
+            <div class="rate-highlight">
+                35€ <span>par heure</span>
+            </div>
+            <p style="color: var(--gray); max-width: 600px; margin: 0 auto;">
+                Choisissez la formule qui correspond le mieux à vos besoins et à votre budget. 
+                Tous nos accompagnements sont assurés par des enseignants-chercheurs docteurs.
+            </p>
+        </div>
+
+        <!-- Facilités de Paiement -->
+        <div style="background: var(--white); padding: 2.5rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-medium); margin-bottom: 3rem;">
+            <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Facilités de Paiement</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; padding: 1.5rem; background: var(--light-bg); border-radius: var(--radius-md);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💳</div>
+                    <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Paiement en 10 fois</h4>
+                    <p style="color: var(--gray); font-size: 0.95rem;">Sans frais pour toutes les formules</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: var(--light-bg); border-radius: var(--radius-md);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📅</div>
+                    <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Paiement échelonné</h4>
+                    <p style="color: var(--gray); font-size: 0.95rem;">Au fur et à mesure de l'avancement</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: var(--light-bg); border-radius: var(--radius-md);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔒</div>
+                    <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Paiement sécurisé</h4>
+                    <p style="color: var(--gray); font-size: 0.95rem;">Virement bancaire ou paiement en ligne</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: var(--light-bg); border-radius: var(--radius-md);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📄</div>
+                    <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Facture fournie</h4>
+                    <p style="color: var(--gray); font-size: 0.95rem;">Facture officielle pour tous vos paiements</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Formule 1 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Accompagnement Ponctuel</h3>
+                    <p class="card-subtitle">Aide ciblée sur un point précis</p>
+                </div>
+
+                <ul class="card-features">
+                    <li>Diagnostic de votre problématique</li>
+                    <li>Coaching individuel personnalisé</li>
+                    <li>Aide méthodologique ciblée</li>
+                    <li>Correction et feedback détaillés</li>
+                </ul>
+
+                <div class="card-footer">
+                    <p class="card-note">Chaque travail est spécifique, contactez-nous.</p>
+                    <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Ponctuel." target="_blank" class="card-cta">
+                        Demander un devis WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formule 2 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">📝</div>
+                    <h3 class="card-title">Relecture Experte</h3>
+                    <p class="card-subtitle">Validation et amélioration</p>
+                </div>
+
+                <ul class="card-features">
+                    <li>Analyse complète de votre mémoire</li>
+                    <li>Relecture approfondie personnalisée</li>
+                    <li>Corrections méthodologiques</li>
+                    <li>Rapport détaillé des améliorations</li>
+                </ul>
+
+                <div class="card-footer">
+                    <p class="card-note">Chaque travail est spécifique, contactez-nous.</p>
+                    <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Relecture%20Experte." target="_blank" class="card-cta">
+                        Demander un devis WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formule 3 -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="card-icon">🎤</div>
+                    <h3 class="card-title">Préparation Soutenance</h3>
+                    <p class="card-subtitle">Maîtrisez votre présentation</p>
+                </div>
+
+                <ul class="card-features">
+                    <li>Structuration de votre présentation</li>
+                    <li>Simulations de soutenance</li>
+                    <li>Préparation aux questions du jury</li>
+                    <li>Gestion du stress et du temps</li>
+                </ul>
+
+                <div class="card-footer">
+                    <p class="card-note">Chaque travail est spécifique, contactez-nous.</p>
+                    <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Pr%C3%A9paration%20Soutenance." target="_blank" class="card-cta">
+                        Demander un devis WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formule 4 -->
+            <div class="pricing-card featured">
+                <div class="card-header">
+                    <div class="card-icon">🏆</div>
+                    <h3 class="card-title">Accompagnement Complet</h3>
+                    <p class="card-subtitle">Du début à la soutenance</p>
+                </div>
+
+                <ul class="card-features">
+                    <li>Diagnostic initial approfondi</li>
+                    <li>Coaching personnalisé intensif</li>
+                    <li>Construction de la problématique</li>
+                    <li>Méthodologie de recherche complète</li>
+                    <li>Suivi du développement complet</li>
+                    <li>Préparation à la soutenance</li>
+                    <li>Suivi illimité par email</li>
+                </ul>
+
+                <div class="card-footer">
+                    <p class="card-note">Chaque travail est spécifique, contactez-nous.</p>
+                    <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Complet." target="_blank" class="card-cta">
+                        Demander un devis WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Questions Fréquentes -->
+        <div style="background: var(--white); padding: 2.5rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-medium); margin-bottom: 3rem;">
+            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Questions Fréquentes</h3>
+
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--light-bg);">
+                <div style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">📊 Comment sont établis les tarifs ?</div>
+                <div style="color: var(--gray); line-height: 1.8;">
+                    Nos tarifs sont basés sur 35€ de l'heure et sont établis après un diagnostic gratuit de votre projet. 
+                    Chaque mémoire est unique : la complexité du sujet, l'avancement actuel, les besoins spécifiques et 
+                    les délais influencent le nombre d'heures nécessaires et donc le tarif final.
+                    <p style="margin-top: 0.75rem;">
+                        <strong>À titre indicatif, le budget d'un accompagnement ponctuel est de 280€.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--light-bg);">
+                <div style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">💰 Puis-je combiner plusieurs formules ?</div>
+                <div style="color: var(--gray); line-height: 1.8;">
+                    Absolument ! Vous pouvez commencer par un Accompagnement Ponctuel, puis ajouter une Relecture Experte 
+                    ou une Préparation Soutenance selon vos besoins. Les heures précédentes seront déduites si vous passez 
+                    à la formule Complète.
+                </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--light-bg);">
+                <div style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">📅 Combien de temps dure l'accompagnement ?</div>
+                <div style="color: var(--gray); line-height: 1.8;">
+                    La durée dépend de la formule choisie et de vos disponibilités. Nous nous adaptons à votre calendrier 
+                    universitaire et établissons ensemble un planning réaliste lors du diagnostic initial. La flexibilité 
+                    est au cœur de notre accompagnement.
+                </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--light-bg);">
+                <div style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">🎓 Comment obtenir un devis personnalisé ?</div>
+                <div style="color: var(--gray); line-height: 1.8;">
+                    Contactez-nous via WhatsApp en cliquant sur le bouton de la formule qui vous intéresse. Nous organisons 
+                    ensuite un diagnostic gratuit de 30 minutes pour analyser votre projet, vos besoins et vous proposer 
+                    un devis détaillé et personnalisé.
+                </div>
+            </div>
+
+            <div style="margin-bottom: 0;">
+                <div style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">💳 Quels sont les moyens de paiement acceptés ?</div>
+                <div style="color: var(--gray); line-height: 1.8;">
+                    Nous acceptons le virement bancaire et le paiement en ligne sécurisé. Des facilités de paiement 
+                    (paiement en 10 fois ou paiement échelonné) sont disponibles selon la formule choisie et seront 
+                    discutées lors de l'établissement du devis.
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="mastermentor.html">← Retour au site principal</a>
+        </div>
+    </div>
+
+    <!-- Chatbot WhatsApp Flottant -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-tooltip">
+            <div class="whatsapp-tooltip-title">💬 Besoin d'aide pour votre mémoire ?</div>
+            <div class="whatsapp-tooltip-text">Un enseignant-chercheur vous répond en 5 min.</div>
+        </div>
+        <a href="https://wa.me/33615078152?text=Bonjour%2C%20j'ai%20besoin%20d'aide%20pour%20mon%20m%C3%A9moire.%20Pouvez-vous%20m'aider%20%3F" 
+           target="_blank" 
+           class="whatsapp-button"
+           aria-label="Contacter sur WhatsApp">
+            <span class="whatsapp-badge">!</span>
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.125c2.355 1.288 5.012 1.975 7.862 1.975 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.5c-2.547 0-5.025-0.725-7.163-2.088l-0.513-0.3-5.313 1.388 1.413-5.263-0.325-0.538c-1.5-2.4-2.287-5.163-2.287-8.013 0-7.725 6.287-14.012 14.012-14.012s14.012 6.287 14.012 14.012-6.287 14.012-14.012 14.012zM23.537 19.488c-0.4-0.2-2.363-1.163-2.738-1.3-0.363-0.138-0.625-0.2-0.888 0.2s-1.025 1.3-1.263 1.563c-0.225 0.263-0.45 0.3-0.85 0.1s-1.65-0.612-3.138-1.937c-1.163-1.038-1.95-2.313-2.175-2.713s-0.025-0.613 0.175-0.813c0.188-0.175 0.4-0.462 0.6-0.688 0.2-0.238 0.263-0.4 0.4-0.663 0.138-0.262 0.063-0.487-0.025-0.687s-0.888-2.137-1.213-2.925c-0.325-0.775-0.65-0.663-0.888-0.675-0.225-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.388-1.387 1.35-1.387 3.3s1.413 3.825 1.613 4.088c0.2 0.262 2.8 4.275 6.788 5.988 0.95 0.412 1.688 0.65 2.263 0.838 0.95 0.3 1.813 0.262 2.5 0.162 0.763-0.113 2.363-0.962 2.7-1.887 0.338-0.938 0.338-1.738 0.238-1.888-0.1-0.175-0.363-0.275-0.763-0.475z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">Master<span>Mentor</span></div>
+                <p>Accompagnement académique de qualité par des enseignants-chercheurs docteurs.</p>
+                <p style="margin-top: 1rem;">
+                    <strong>📞 +33 6 15 07 81 52</strong><br>
+                    <strong>📧 contact@mastermentor.fr</strong>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="mastermentor.html#disciplines">Disciplines</a>
+                <a href="mastermentor.html#equipe">L'Équipe</a>
+                <a href="tarifs.html">Tarifs</a>
+                <a href="mastermentor.html#methode">Notre Méthode</a>
+                <a href="mastermentor.html#temoignages">Témoignages</a>
+                <a href="mastermentor.html#contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Nos Services</h4>
+                <a href="#formules">Accompagnement Ponctuel</a>
+                <a href="#formules">Relecture Experte</a>
+                <a href="#formules">Préparation Soutenance</a>
+                <a href="#formules">Accompagnement Complet</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Informations Légales</h4>
+                <a href="Charte-Integrite-Academique.html">Charte d'Intégrité Académique</a>
+                <a href="#mentions">Mentions Légales</a>
+                <a href="#confidentialite">Politique de Confidentialité</a>
+                <a href="#cgv">CGV</a>
+                <a href="#cgu">CGU</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 MasterMentor. Tous droits réservés. | Accompagnement académique éthique et humain.</p>
+        </div>
+    </footer>
+</body>
+</html>
