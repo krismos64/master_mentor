@@ -3,14 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite</title>
+
+    <!-- Google Analytics 4 (GA4) -->
+    <!-- TODO: Remplacer G-XXXXXXXXXX par l'ID de tracking fourni par le client -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,  // RGPD : Anonymisation IP
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    -->
+
+    <title>
+      MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite
+    </title>
     <meta
       name="description"
       content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
     />
-    <meta name="keywords" content="coaching mémoire master 2, accompagnement académique, docteurs enseignants-chercheurs, méthodologie recherche, soutenance master, rédaction mémoire" />
+    <meta
+      name="keywords"
+      content="coaching mémoire master 2, accompagnement académique, docteurs enseignants-chercheurs, méthodologie recherche, soutenance master, rédaction mémoire"
+    />
     <meta name="author" content="MasterMentor by Staka" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.mastermentor.fr/" />
@@ -19,9 +43,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.mastermentor.fr/" />
     <meta property="og:site_name" content="MasterMentor" />
-    <meta property="og:title" content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite" />
-    <meta property="og:description" content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite." />
-    <meta property="og:image" content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg" />
+    <meta
+      property="og:title"
+      content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite"
+    />
+    <meta
+      property="og:description"
+      content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
+    />
+    <meta
+      property="og:image"
+      content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
@@ -29,11 +62,35 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.mastermentor.fr/" />
-    <meta name="twitter:title" content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite" />
-    <meta name="twitter:description" content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite." />
-    <meta name="twitter:image" content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg" />
+    <meta
+      name="twitter:title"
+      content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite"
+    />
+    <meta
+      name="twitter:description"
+      content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
+    />
     <!-- Stylesheet externe -->
-    <link rel="stylesheet" href="/assets/css/styles.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
+
+    <!-- Styles additionnels pour intégrations MM-4 -->
+    <style>
+      /* Effet hover sur la carte livre Fnac */
+      a[href*="fnac.com"]:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(87, 112, 134, 0.25) !important;
+      }
+
+      /* Effet hover sur le badge Trustpilot */
+      a.footer-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(87, 112, 134, 0.2);
+      }
+    </style>
 
     <!-- Favicons multi-plateformes -->
     <link
@@ -60,118 +117,118 @@
 
     <!-- JSON-LD Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "EducationalOrganization",
-          "@id": "https://www.mastermentor.fr/#organization",
-          "name": "MasterMentor by Staka",
-          "url": "https://www.mastermentor.fr/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.mastermentor.fr/assets/logos/logo-mastermentor.png",
-            "width": 250,
-            "height": 60
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://www.mastermentor.fr/#organization",
+            "name": "MasterMentor by Staka",
+            "url": "https://www.mastermentor.fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.mastermentor.fr/assets/logos/logo-mastermentor.png",
+              "width": 250,
+              "height": 60
+            },
+            "description": "Coaching académique pour étudiants en Master 2 par des enseignants-chercheurs docteurs avec 17 ans d'expérience",
+            "foundingDate": "2007",
+            "areaServed": {
+              "@type": "Country",
+              "name": "France"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/staka",
+              "https://www.facebook.com/staka"
+            ],
+            "telephone": "+33615078152",
+            "email": "contact@staka.fr",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "FR",
+              "addressLocality": "France"
+            }
           },
-          "description": "Coaching académique pour étudiants en Master 2 par des enseignants-chercheurs docteurs avec 17 ans d'expérience",
-          "foundingDate": "2007",
-          "areaServed": {
-            "@type": "Country",
-            "name": "France"
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.mastermentor.fr/#service",
+            "name": "Coaching Mémoire Master 2",
+            "provider": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "serviceType": "Accompagnement académique",
+            "description": "Coaching personnalisé pour la rédaction de mémoires de Master 2, accompagnement méthodologique, préparation à la soutenance par des docteurs",
+            "areaServed": {
+              "@type": "Country",
+              "name": "France"
+            },
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": "student"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Formules d'accompagnement",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Mini",
+                    "description": "5 heures d'accompagnement personnalisé"
+                  },
+                  "price": "175",
+                  "priceCurrency": "EUR"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Médium",
+                    "description": "10 heures d'accompagnement structuré"
+                  },
+                  "price": "350",
+                  "priceCurrency": "EUR"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Premium",
+                    "description": "20 heures d'accompagnement complet"
+                  },
+                  "price": "700",
+                  "priceCurrency": "EUR"
+                }
+              ]
+            }
           },
-          "sameAs": [
-            "https://www.linkedin.com/company/staka",
-            "https://www.facebook.com/staka"
-          ],
-          "telephone": "+33615078152",
-          "email": "contact@staka.fr",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "FR",
-            "addressLocality": "France"
+          {
+            "@type": "WebSite",
+            "@id": "https://www.mastermentor.fr/#website",
+            "url": "https://www.mastermentor.fr/",
+            "name": "MasterMentor",
+            "publisher": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.mastermentor.fr/#webpage",
+            "url": "https://www.mastermentor.fr/",
+            "name": "MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite",
+            "isPartOf": {
+              "@id": "https://www.mastermentor.fr/#website"
+            },
+            "about": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "description": "Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite.",
+            "inLanguage": "fr-FR"
           }
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://www.mastermentor.fr/#service",
-          "name": "Coaching Mémoire Master 2",
-          "provider": {
-            "@id": "https://www.mastermentor.fr/#organization"
-          },
-          "serviceType": "Accompagnement académique",
-          "description": "Coaching personnalisé pour la rédaction de mémoires de Master 2, accompagnement méthodologique, préparation à la soutenance par des docteurs",
-          "areaServed": {
-            "@type": "Country",
-            "name": "France"
-          },
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": "student"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Formules d'accompagnement",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Formule Mini",
-                  "description": "5 heures d'accompagnement personnalisé"
-                },
-                "price": "175",
-                "priceCurrency": "EUR"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Formule Médium",
-                  "description": "10 heures d'accompagnement structuré"
-                },
-                "price": "350",
-                "priceCurrency": "EUR"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Formule Premium",
-                  "description": "20 heures d'accompagnement complet"
-                },
-                "price": "700",
-                "priceCurrency": "EUR"
-              }
-            ]
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.mastermentor.fr/#website",
-          "url": "https://www.mastermentor.fr/",
-          "name": "MasterMentor",
-          "publisher": {
-            "@id": "https://www.mastermentor.fr/#organization"
-          },
-          "inLanguage": "fr-FR"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://www.mastermentor.fr/#webpage",
-          "url": "https://www.mastermentor.fr/",
-          "name": "MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite",
-          "isPartOf": {
-            "@id": "https://www.mastermentor.fr/#website"
-          },
-          "about": {
-            "@id": "https://www.mastermentor.fr/#organization"
-          },
-          "description": "Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite.",
-          "inLanguage": "fr-FR"
-        }
-      ]
-    }
+        ]
+      }
     </script>
   </head>
   <body>
@@ -182,7 +239,11 @@
           Master<span>Mentor</span>
           <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -212,8 +273,17 @@
         </p>
 
         <!-- Images hero responsive -->
-        <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin: 2rem 0;">
-          <picture style="flex: 1; min-width: 280px; max-width: 480px;">
+        <div
+          style="
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+          "
+        >
+          <picture style="flex: 1; min-width: 280px; max-width: 480px">
             <source
               type="image/webp"
               srcset="
@@ -245,7 +315,7 @@
             />
           </picture>
 
-          <picture style="flex: 1; min-width: 280px; max-width: 480px;">
+          <picture style="flex: 1; min-width: 280px; max-width: 480px">
             <source
               type="image/webp"
               srcset="
@@ -374,7 +444,7 @@
             <iframe
               src="https://www.youtube.com/embed/K8LmYdEqHrc?autoplay=0&rel=0&modestbranding=1&showinfo=0"
               title="MasterMentor - Notre Méthode d'Accompagnement"
-              style="border: 0;"
+              style="border: 0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
@@ -1371,13 +1441,82 @@
       </a>
     </div>
 
+    <!-- Section Nos Publications -->
+    <section style="padding: 4rem 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); text-align: center;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; font-weight: 700;">
+          📚 Nos Publications
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--gray); max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.8;">
+          Découvrez nos ouvrages de référence pour réussir votre parcours académique
+        </p>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap;">
+          <!-- Livre Fnac -->
+          <a href="https://www.fnac.com/livre-numerique/a16201306/Charles-Tate-Le-guide-ultime-de-la-redaction-et-de-la-correction-de-manuscrits#FORMAT=ebook%20(ePub)"
+             target="_blank"
+             rel="noopener noreferrer"
+             style="display: block; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 280px; background: white;">
+            <img src="/assets/images/livre.webp"
+                 alt="Le guide ultime de la rédaction et de la correction de manuscrits - Charles Tate - Collection Staka"
+                 style="width: 100%; height: auto; display: block;"
+                 loading="lazy" />
+            <div style="padding: 1.5rem; text-align: center;">
+              <h3 style="font-size: 1.25rem; color: var(--dark); margin-bottom: 0.5rem; font-weight: 600;">
+                Le Guide Ultime de la Rédaction
+              </h3>
+              <p style="font-size: 0.95rem; color: var(--gray); margin-bottom: 1rem;">
+                Charles Tate - Collection Staka
+              </p>
+              <div style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem;">
+                Disponible sur Fnac.com
+              </div>
+            </div>
+          </a>
+
+          <!-- Informations livre -->
+          <div style="max-width: 500px; text-align: left;">
+            <div style="display: inline-block; padding: 0.5rem 1rem; background: var(--accent); color: white; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+              ⭐ Bestseller académique
+            </div>
+            <h4 style="font-size: 1.5rem; color: var(--dark); margin-bottom: 1rem; font-weight: 600;">
+              Les clés du succès de la rédaction et de la correction de mémoires
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--gray); line-height: 1.6;">
+                <span style="color: var(--accent); font-size: 1.2rem;">✓</span>
+                <span><strong>Méthodologie complète</strong> : De la problématique à la soutenance</span>
+              </li>
+              <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--gray); line-height: 1.6;">
+                <span style="color: var(--accent); font-size: 1.2rem;">✓</span>
+                <span><strong>Techniques professionnelles</strong> : Conseils d'enseignants-chercheurs docteurs</span>
+              </li>
+              <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--gray); line-height: 1.6;">
+                <span style="color: var(--accent); font-size: 1.2rem;">✓</span>
+                <span><strong>Guide pratique</strong> : Exercices et exemples concrets</span>
+              </li>
+              <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--gray); line-height: 1.6;">
+                <span style="color: var(--accent); font-size: 1.2rem;">✓</span>
+                <span><strong>Format numérique</strong> : Accessible immédiatement en ePub</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(87, 112, 134, 0.1); border-left: 4px solid var(--primary); border-radius: var(--radius-sm);">
+              <p style="font-size: 0.95rem; color: var(--gray); margin: 0; font-style: italic;">
+                <strong>Recommandé par nos mentors</strong> pour tous les étudiants en Master 2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-top">
           <div class="footer-section">
             <div class="logo" style="margin-bottom: 1.5rem; text-align: left">
-              Master<span>Mentor</span>
+              Master<span>Master Mentor</span>
               <span class="logo-subtitle">by Staka</span>
             </div>
             <p>
@@ -1445,11 +1584,11 @@
           <div class="footer-section">
             <h4>Certifications</h4>
             <div class="footer-badges">
-              <div class="footer-badge">
+              <a href="https://fr.trustpilot.com/review/staka.fr" target="_blank" rel="noopener noreferrer" class="footer-badge" style="text-decoration: none; color: inherit; display: block; transition: transform 0.2s ease;">
                 <span class="footer-badge-stars">★★★★★</span>
                 <div class="footer-badge-text">Trustpilot</div>
                 <div class="footer-badge-score">4.8/5</div>
-              </div>
+              </a>
               <div class="footer-badge">
                 <span class="footer-badge-stars">★★★★★</span>
                 <div class="footer-badge-text">eKomi</div>
@@ -1500,8 +1639,8 @@
 
         <div class="footer-bottom">
           <p>
-            &copy; 2007-2024 MasterMentor - Un site du groupe Staka. Tous
-            droits réservés.
+            &copy; 2007-2025 MasterMentor - Un site du groupe Staka. Tous droits
+            réservés.
           </p>
           <p style="margin-top: 1rem">
             Coaching académique par des enseignants-chercheurs docteurs français
