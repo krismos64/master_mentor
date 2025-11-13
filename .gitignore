@@ -1,0 +1,164 @@
+# ==========================================
+# .gitignore - MasterMentor Project
+# ==========================================
+
+# ==========================================
+# Claude Code / AI Assistants
+# ==========================================
+.claude/
+.cursor/
+.continue/
+.aider/
+
+# ==========================================
+# Secrets & Credentials (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+secrets.json
+config.local.js
+*-credentials.*
+
+# API Keys
+*apikey*
+*api_key*
+*api-key*
+
+# ==========================================
+# Node.js / NPM
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ==========================================
+# IDEs & Editors
+# ==========================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PhpStorm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==========================================
+# Build & Cache
+# ==========================================
+dist/
+build/
+out/
+.cache/
+.temp/
+.tmp/
+*.log
+
+# ==========================================
+# PHP / Composer (si utilisé)
+# ==========================================
+vendor/
+composer.phar
+composer.lock
+
+# ==========================================
+# Databases
+# ==========================================
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Backups
+# ==========================================
+*.bak
+*.backup
+*.old
+*-backup.*
+backup/
+backups/
+
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# Testing
+# ==========================================
+coverage/
+.nyc_output/
+.jest/
+
+# ==========================================
+# Project Specific
+# ==========================================
+# Fichiers temporaires d'optimisation
+*.tmp
+*.temp
+
+# Versions non-minifiées si on ne veut que les minifiées
+# (Décommenter si nécessaire)
+# assets/css/*.css
+# !assets/css/*.min.css
+# assets/js/*.js
+# !assets/js/*.min.js
+
+# Documentation temporaire
+docs/temp/
+
+# ==========================================
+# Optional: Development Files
+# ==========================================
+# README-DEV.md
+# NOTES.md
+# TODO-LOCAL.md
