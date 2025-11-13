@@ -43,6 +43,7 @@ master_mentor/
 ## ✨ Fonctionnalités
 
 ### 🎨 Design & UX
+
 - **Design moderne** : Interface épurée et professionnelle
 - **Responsive** : Optimisé mobile/tablette/desktop
 - **Menu burger** : Navigation mobile avec overlay
@@ -50,12 +51,14 @@ master_mentor/
 - **Smooth scroll** : Défilement doux vers les ancres
 
 ### 📊 Modules Interactifs
+
 - **Quiz** : Quiz de 6 questions avec feedback et résultats
 - **Formulaire de contact** : Validation côté client
 - **Popup urgence** : Déclenchement automatique (timer, scroll, exit intent)
 - **FAQ** : Accordéon interactif
 
 ### ⚡ Performance
+
 - **CSS minifié** : 40K → 32K (-20%)
 - **JavaScript minifié** : 19.1K → 12.1K (-36%)
 - **Images optimisées** : 2.98MB → 750KB (-75%)
@@ -63,6 +66,7 @@ master_mentor/
 - **Lazy loading** : Images chargées à la demande
 
 ### ♿ Accessibilité
+
 - **HTML sémantique** : Structure claire (header, nav, main, section, footer)
 - **ARIA labels** : Attributs pour lecteurs d'écran
 - **Navigation clavier** : Support complet (Tab, Enter, Escape)
@@ -72,12 +76,14 @@ master_mentor/
 ## 🚀 Installation & Utilisation
 
 ### Prérequis
+
 - Serveur web (Apache, Nginx) ou Live Server
 - Navigateur moderne (Chrome, Firefox, Safari, Edge)
 
 ### Lancement Local
 
 **Option 1 : Serveur local simple (Python)**
+
 ```bash
 # Python 3
 python3 -m http.server 8000
@@ -86,12 +92,14 @@ python3 -m http.server 8000
 ```
 
 **Option 2 : Live Server (VSCode)**
+
 ```bash
 # Installer Live Server extension
 # Clic droit sur index.html → "Open with Live Server"
 ```
 
 **Option 3 : Serveur PHP**
+
 ```bash
 php -S localhost:8000
 ```
@@ -99,6 +107,7 @@ php -S localhost:8000
 ### Production
 
 **Upload FTP** :
+
 1. Uploader tous les fichiers sur le serveur
 2. Configurer `.htaccess` pour compression gzip et cache
 3. Vérifier certificat SSL (HTTPS)
@@ -107,6 +116,7 @@ php -S localhost:8000
 ## 🧪 Tests
 
 ### Tests Fonctionnels
+
 - ✅ Navigation (menu burger mobile, liens ancres)
 - ✅ Formulaire de contact
 - ✅ Quiz interactif (6 questions + résultats)
@@ -114,16 +124,19 @@ php -S localhost:8000
 - ✅ Animations au scroll
 
 ### Tests Responsive
+
 - ✅ Mobile (320px - 767px)
 - ✅ Tablette (768px - 1023px)
 - ✅ Desktop (1024px+)
 
 ### Tests Cross-Browser
+
 - ✅ Chrome / Edge
 - ✅ Firefox
 - ✅ Safari (macOS / iOS)
 
 ### Tests Performance (Lighthouse)
+
 - **Performance** : 85-92
 - **Accessibility** : 90+
 - **Best Practices** : 90+
@@ -132,12 +145,14 @@ php -S localhost:8000
 ## 📦 Build & Optimisation
 
 ### Minification CSS
+
 ```bash
 # Minification avec Python
 python3 -c "import re; css = open('assets/css/styles.css').read(); [...] open('assets/css/styles.min.css', 'w').write(css)"
 ```
 
 ### Minification JavaScript
+
 ```bash
 # Minification avec Terser (npm)
 npm install terser
@@ -169,16 +184,10 @@ Projet privé. Contact : Voir propriétaire du repository.
 ## 📝 Changelog
 
 ### Version 1.0 (Nov 2025)
+
 - ✅ MM-2 : Configuration assets (images optimisées, favicons)
 - ✅ MM-6 : Nettoyage code (CSS/JS externalisés, minifiés)
 - ✅ MM-6.14 : Menu burger mobile (fix UX critique)
 - ✅ .gitignore complet
-- ⏳ MM-3 : SEO & Performance (à venir)
-
-## 📄 License
-
-Tous droits réservés © 2024
-
----
-
-**Site vitrine moderne, performant et accessible.** 🚀
+- ✅ MM-3 : SEO & Performance (Meta tags, Open Graph, JSON-LD Schema.org)
+- ⏳ MM-4 : Intégrations externes (Google Analytics, Trustpilot, Fnac)
