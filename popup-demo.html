@@ -53,25 +53,27 @@
     </div>
 
     <script>
-        function showPopup() {
-            document.getElementById('popupUrgence').classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
+        const popup = document.getElementById('popupUrgence');
 
-        function closePopup() {
-            document.getElementById('popupUrgence').classList.remove('show');
+        const showPopup = () => {
+            popup.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closePopup = () => {
+            popup.classList.remove('show');
             document.body.style.overflow = '';
-        }
+        };
 
         // Fermer le popup si on clique sur l'overlay
-        document.getElementById('popupUrgence').addEventListener('click', function(e) {
-            if (e.target === this) {
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
                 closePopup();
             }
         });
 
         // Fermer avec la touche Escape
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closePopup();
             }
