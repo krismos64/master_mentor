@@ -1,9 +1,10 @@
+# MasterMentor - Robots.txt
+# Hébergement: OVH - mastermentor.fr
+# Date: 14 novembre 2025
+
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /merci.html
 
 Sitemap: https://mastermentor.fr/sitemap.xml
-
-# Bloquer pages de démonstration
-Disallow: /popup-demo.html
-Disallow: /tarifs-old.html
-Disallow: /quiz-methodologie.html

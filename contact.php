@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // Configuration email
 define('EMAIL_TO', 'c.mostefaoui@yahoo.fr');
 define('EMAIL_SUBJECT', '🎓 Nouveau diagnostic MasterMentor');
-define('EMAIL_FROM', 'noreply@mastermentor.fr'); 
+define('EMAIL_FROM', 'c.mostefaoui@yahoo.fr'); 
 // Rate limiting : 1 envoi par minute par IP
 $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $rateLimitFile = sys_get_temp_dir() . '/mm_ratelimit_' . md5($ipAddress) . '.txt';
