@@ -156,6 +156,9 @@ coverage/
 # Documentation temporaire
 docs/temp/
 
+# Documentation contenant credentials (NE PAS COMMITER)
+docs/MM-8-Deploiement-OVH.md
+
 # ==========================================
 # Optional: Development Files
 # ==========================================
