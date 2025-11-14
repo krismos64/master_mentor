@@ -1,5 +1,7 @@
-      // Validation du formulaire de contact
-      function validateForm() {
+      // Soumission AJAX du formulaire de contact
+      function submitFormAjax(event) {
+        event.preventDefault();
+
         // Réinitialiser toutes les erreurs
         const errorMessages = document.querySelectorAll('.error-message');
         errorMessages.forEach(error => {
@@ -36,17 +38,18 @@
           isValid = false;
         }
 
-        // Validation Téléphone
+        // Validation Téléphone (International)
         const phone = document.getElementById('phone');
         const phoneError = document.getElementById('phone-error');
-        const phoneRegex = /^(0[6-7]\d{8}|(\+33|0033)[6-7]\d{8})$/;
-        const phoneClean = phone.value.replace(/[\s\-\.]/g, '');
-        if (!phone.value.trim()) {
+        // Accepte tous formats internationaux : +33, +1, 01, 06, etc. (8-20 caractères)
+        const phoneRegex = /^[0-9\s\+\-\.\(\)]{8,20}$/;
+        const phoneValue = phone.value.trim();
+        if (!phoneValue) {
           phoneError.textContent = 'Le téléphone est requis';
           phoneError.style.display = 'block';
           isValid = false;
-        } else if (!phoneRegex.test(phoneClean)) {
-          phoneError.textContent = 'Numéro invalide (format: 06/07 ou +33)';
+        } else if (!phoneRegex.test(phoneValue)) {
+          phoneError.textContent = 'Numéro invalide (minimum 8 chiffres)';
           phoneError.style.display = 'block';
           isValid = false;
         }
@@ -60,23 +63,61 @@
           isValid = false;
         }
 
-        // Si validation réussie, améliorer UX pendant soumission
-        if (isValid) {
-          const submitBtn = document.getElementById('submit-btn');
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Envoi en cours...';
-
-          // Tracking conversion Google Analytics si disponible
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'conversion', {
-              send_to: 'VOTRE_ID_CONVERSION',
-              value: 1.0,
-              currency: 'EUR',
-            });
-          }
+        // Si erreurs, arrêter
+        if (!isValid) {
+          return false;
         }
 
-        return isValid;
+        // UX pendant envoi
+        const submitBtn = document.getElementById('submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+
+        // Préparation des données
+        const formData = new FormData(event.target);
+
+        // Envoi AJAX vers contact.php
+        fetch('contact.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur réseau');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.success) {
+            // Tracking conversion Google Analytics si disponible
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'conversion', {
+                send_to: 'VOTRE_ID_CONVERSION',
+                value: 1.0,
+                currency: 'EUR',
+                event_category: 'Form',
+                event_label: 'Contact Form Submitted'
+              });
+            }
+
+            // Redirection vers page de remerciement
+            window.location.href = 'merci.html';
+          } else {
+            // Afficher le message d'erreur du serveur
+            alert(data.message || 'Erreur lors de l\'envoi. Veuillez réessayer.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+        })
+        .catch(error => {
+          console.error('Erreur:', error);
+          alert('Erreur de connexion. Veuillez vérifier votre connexion internet et réessayer.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        });
+
+        return false;
       }
 
       // Animation au scroll

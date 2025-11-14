@@ -1341,19 +1341,15 @@
 
         <form
           class="contact-form"
-          action="https://formsubmit.co/c.mostefaoui@yahoo.fr"
-          method="POST"
-          onsubmit="return validateForm()">
+          id="contact-form"
+          onsubmit="return submitFormAjax(event)">
 
-          <!-- Champs cachés FormSubmit -->
-          <input type="hidden" name="_subject" value="Nouveau diagnostic MasterMentor">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://www.mastermentor.fr/#contact">
+          <!-- Honeypot anti-spam (caché, si rempli = bot) -->
+          <input type="text" name="website" id="website" style="display:none !important; position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
 
           <div class="form-group">
             <label for="name">Nom et Prénom *</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="nom" required />
             <span class="error-message" id="name-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
@@ -1365,7 +1361,7 @@
 
           <div class="form-group">
             <label for="phone">Téléphone *</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input type="tel" id="phone" name="telephone" required />
             <span class="error-message" id="phone-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
@@ -1373,16 +1369,16 @@
             <label for="discipline">Discipline *</label>
             <select id="discipline" name="discipline" required>
               <option value="">Sélectionnez votre discipline</option>
-              <option value="marketing">Marketing</option>
-              <option value="rh">Ressources Humaines</option>
-              <option value="finance">Finance</option>
-              <option value="psychologie">Psychologie</option>
-              <option value="management">Management</option>
-              <option value="communication">Communication</option>
-              <option value="economie">Économie</option>
-              <option value="droit">Droit</option>
-              <option value="informatique">Informatique</option>
-              <option value="autre">Autre</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Ressources Humaines">Ressources Humaines</option>
+              <option value="Finance">Finance</option>
+              <option value="Psychologie">Psychologie</option>
+              <option value="Management">Management</option>
+              <option value="Communication">Communication</option>
+              <option value="Économie">Économie</option>
+              <option value="Droit">Droit</option>
+              <option value="Informatique">Informatique</option>
+              <option value="Autre">Autre</option>
             </select>
             <span class="error-message" id="discipline-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>

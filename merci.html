@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="5;url=index.html" />
+
+    <title>Demande Reçue - MasterMentor</title>
+    <meta
+      name="description"
+      content="Votre demande de diagnostic gratuit a été reçue. Nous vous contactons sous 24h."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/x-icon"
+      href="/favicon.ico"
+    />
+
+    <!-- Google Analytics 4 (GA4) - Tracking conversion -->
+    <script>
+      // Si GA4 est configuré, tracker la conversion
+      if (typeof gtag !== "undefined") {
+        gtag("event", "conversion", {
+          send_to: "VOTRE_ID_CONVERSION",
+          value: 1.0,
+          currency: "EUR",
+          event_category: "Form",
+          event_label: "Contact Form Submitted",
+        });
+      }
+    </script>
+
+    <style>
+      /* Styles spécifiques page merci */
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .merci-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        width: 100%;
+        padding: 60px 40px;
+        text-align: center;
+        animation: slideUp 0.6s ease-out;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .checkmark {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: scaleIn 0.5s ease-out 0.2s both;
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .checkmark svg {
+        width: 50px;
+        height: 50px;
+        stroke: white;
+        stroke-width: 3;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: drawCheck 0.5s ease-out 0.5s both;
+      }
+
+      @keyframes drawCheck {
+        from {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 100;
+        }
+        to {
+          stroke-dasharray: 100;
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .merci-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 20px;
+      }
+
+      .merci-subtitle {
+        font-size: 1.25rem;
+        color: #4a5568;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .info-box {
+        background: #f7fafc;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        margin: 30px 0;
+        text-align: left;
+        border-radius: 8px;
+      }
+
+      .info-box h3 {
+        color: #667eea;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .info-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .info-box li {
+        padding: 8px 0;
+        color: #4a5568;
+        display: flex;
+        align-items: center;
+      }
+
+      .info-box li::before {
+        content: "✓";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+      }
+
+      .btn-secondary:hover {
+        background: #f7fafc;
+        transform: translateY(-2px);
+      }
+
+      .redirect-notice {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #e2e8f0;
+        color: #718096;
+        font-size: 0.9rem;
+      }
+
+      .redirect-notice strong {
+        color: #667eea;
+      }
+
+      @media (max-width: 768px) {
+        .merci-container {
+          padding: 40px 20px;
+        }
+
+        .merci-title {
+          font-size: 2rem;
+        }
+
+        .merci-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="merci-container">
+      <!-- Checkmark animé -->
+      <div class="checkmark">
+        <svg viewBox="0 0 52 52">
+          <polyline points="14,27 22,35 38,19" />
+        </svg>
+      </div>
+
+      <!-- Titre principal -->
+      <h1 class="merci-title">Demande Bien Reçue !</h1>
+
+      <p class="merci-subtitle">
+        Merci pour votre confiance. Votre demande de diagnostic gratuit a été
+        envoyée avec succès.
+      </p>
+
+      <!-- Informations prochaines étapes -->
+      <div class="info-box">
+        <h3>📅 Prochaines Étapes</h3>
+        <ul>
+          <li>Nous vous contactons sous 24 heures</li>
+          <li>Consultation gratuite de 30 minutes</li>
+          <li>Diagnostic personnalisé de votre projet</li>
+          <li>Plan d'accompagnement sur mesure</li>
+        </ul>
+      </div>
+
+      <!-- Boutons d'action -->
+      <div class="cta-buttons">
+        <a href="index.html" class="btn btn-primary"> Retour à l'Accueil </a>
+        <a
+          href="https://wa.me/33615078152?text=Bonjour%2C%20je%20viens%20de%20soumettre%20une%20demande%20de%20diagnostic."
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          💬 WhatsApp Immédiat
+        </a>
+      </div>
+
+      <!-- Notice de redirection automatique -->
+      <p class="redirect-notice">
+        Vous serez automatiquement redirigé vers la page d'accueil dans
+        <strong id="countdown">10</strong> secondes...
+      </p>
+    </div>
+
+    <!-- Script countdown -->
+    <script>
+      let seconds = 10;
+      const countdownEl = document.getElementById("countdown");
+
+      const countdown = setInterval(() => {
+        seconds--;
+        if (countdownEl) {
+          countdownEl.textContent = seconds;
+        }
+        if (seconds <= 0) {
+          clearInterval(countdown);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
