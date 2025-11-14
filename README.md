@@ -21,21 +21,28 @@ master_mentor/
 ├── tarifs.html                         # Page tarifs
 ├── popup-demo.html                     # Démo popup
 ├── Charte-Integrite-Academique.html    # Page charte
+├── contact.php                         # Backend formulaire (sécurisé)
+├── merci.html                          # Page confirmation après soumission
 ├── assets/
 │   ├── css/
 │   │   ├── styles.css                  # CSS principal
 │   │   ├── styles.min.css              # Version minifiée
+│   │   ├── integrations.css            # CSS intégrations externes
+│   │   ├── integrations.min.css        # Version minifiée
 │   │   ├── tarifs.css                  # CSS page tarifs
 │   │   ├── charte.css                  # CSS page charte
 │   │   └── popup-demo.css              # CSS popup démo
 │   ├── js/
-│   │   ├── main.js                     # Core UI (formulaire, animations, menu)
+│   │   ├── main.js                     # Core UI (formulaire AJAX, animations, menu)
 │   │   ├── main.min.js                 # Version minifiée
 │   │   ├── quiz.js                     # Module quiz interactif
 │   │   └── quiz.min.js                 # Version minifiée
 │   ├── images/                         # Images optimisées (WebP + JPEG)
 │   ├── icons/                          # Favicons multi-plateformes
 │   └── logos/                          # Logos et branding
+├── docs/                               # Documentation technique
+│   ├── MM-4-Integrations-externes.md
+│   └── MM-5-Formulaire-contact-FormSubmit.md
 ├── .gitignore                          # Fichiers exclus du versioning
 └── README.md                           # Documentation
 ```
@@ -53,7 +60,7 @@ master_mentor/
 ### 📊 Modules Interactifs
 
 - **Quiz** : Quiz de 6 questions avec feedback et résultats
-- **Formulaire de contact** : Validation côté client
+- **Formulaire de contact** : Validation côté client + serveur, envoi AJAX, backend PHP sécurisé
 - **Popup urgence** : Déclenchement automatique (timer, scroll, exit intent)
 - **FAQ** : Accordéon interactif
 
@@ -164,24 +171,38 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 - ✅ `.gitignore` configuré (secrets, credentials, .env)
 - ✅ Pas de données sensibles dans le code
-- ✅ Validation formulaire côté client
-- ✅ Protection CSRF (à implémenter backend)
+- ✅ Validation formulaire côté client + serveur (double validation)
+- ✅ Sanitization XSS (htmlspecialchars ENT_QUOTES)
+- ✅ Rate limiting (1 envoi/minute par IP)
+- ✅ Honeypot anti-bots (champ caché)
+- ✅ Headers sécurisés (X-Frame-Options, X-XSS-Protection)
+- ✅ Protection CSRF (basique, à améliorer)
 
 ## 📊 Statistiques Projet
 
-- **4 pages HTML** (index, tarifs, popup-demo, charte)
-- **4 fichiers CSS** + versions minifiées
+- **6 pages HTML/PHP** (index, tarifs, popup-demo, charte, merci, contact.php)
+- **5 fichiers CSS** + versions minifiées (styles, integrations, tarifs, charte, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
 - **~1435 lignes** index.html (optimisé -22%)
-- **11.2K JavaScript** minifié total
-- **32K CSS** minifié total
+- **241 lignes** contact.php (backend sécurisé)
+- **220 lignes** merci.html (page confirmation)
+- **7.6K JavaScript** main.js (3.7K minifié)
+- **36K CSS** minifié total
+- **906 lignes** documentation MM-5
 
 ## 🤝 Contribution
 
 Projet privé. Contact : Voir propriétaire du repository.
 
 ## 📝 Changelog
+
+### Version 1.1 (Nov 2025) - MM-5 v2.1
+
+- ✅ **MM-5 v2.1** : Validation téléphone internationale (tous pays, fixes + mobiles)
+  - Regex flexible : `/^[0-9\s\+\-\.\(\)]{8,20}$/`
+  - Support formats : +33, +1, 01, 06, (555) 123-4567, etc.
+  - Validation côté client (main.js) + serveur (contact.php) synchronisées
 
 ### Version 1.0 (Nov 2025)
 
@@ -191,4 +212,12 @@ Projet privé. Contact : Voir propriétaire du repository.
 - ✅ .gitignore complet
 - ✅ MM-3 : SEO & Performance (Meta tags, Open Graph, JSON-LD Schema.org)
 - ✅ MM-4 : Intégrations externes (Google Analytics, Trustpilot, Fnac)
-- ✅ MM-5 : Formulaire contact avec validation + FormSubmit.co (voir [docs/MM-5-Formulaire-contact-FormSubmit.md](docs/MM-5-Formulaire-contact-FormSubmit.md))
+- ✅ **MM-5 v2.0** : Migration PHP Custom (voir [docs/MM-5-Formulaire-contact-FormSubmit.md](docs/MM-5-Formulaire-contact-FormSubmit.md))
+  - Backend PHP sécurisé (`contact.php` - 241 lignes)
+  - Page confirmation custom (`merci.html` - 220 lignes)
+  - Validation serveur complète + Sanitization XSS
+  - Rate limiting (1 envoi/min par IP)
+  - Honeypot anti-bots
+  - Email HTML professionnel responsive
+  - Email confirmation automatique client
+  - Zéro dépendance externe (abandon FormSubmit.co)
