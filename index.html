@@ -1339,20 +1339,34 @@
           accompagner vers la réussite.
         </p>
 
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/c.mostefaoui@yahoo.fr"
+          method="POST"
+          onsubmit="return validateForm()">
+
+          <!-- Champs cachés FormSubmit -->
+          <input type="hidden" name="_subject" value="Nouveau diagnostic MasterMentor">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://www.mastermentor.fr/#contact">
+
           <div class="form-group">
             <label for="name">Nom et Prénom *</label>
             <input type="text" id="name" name="name" required />
+            <span class="error-message" id="name-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
           <div class="form-group">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" required />
+            <span class="error-message" id="email-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
           <div class="form-group">
             <label for="phone">Téléphone *</label>
             <input type="tel" id="phone" name="phone" required />
+            <span class="error-message" id="phone-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
           <div class="form-group">
@@ -1368,7 +1382,9 @@
               <option value="economie">Économie</option>
               <option value="droit">Droit</option>
               <option value="informatique">Informatique</option>
+              <option value="autre">Autre</option>
             </select>
+            <span class="error-message" id="discipline-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
           </div>
 
           <div class="form-group">
@@ -1380,7 +1396,7 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">
+          <button type="submit" class="submit-btn" id="submit-btn">
             Obtenir mon diagnostic gratuit
           </button>
 

@@ -190,4 +190,5 @@ Projet privé. Contact : Voir propriétaire du repository.
 - ✅ MM-6.14 : Menu burger mobile (fix UX critique)
 - ✅ .gitignore complet
 - ✅ MM-3 : SEO & Performance (Meta tags, Open Graph, JSON-LD Schema.org)
-- ⏳ MM-4 : Intégrations externes (Google Analytics, Trustpilot, Fnac)
+- ✅ MM-4 : Intégrations externes (Google Analytics, Trustpilot, Fnac)
+- ✅ MM-5 : Formulaire contact avec validation + FormSubmit.co (voir [docs/MM-5-Formulaire-contact-FormSubmit.md](docs/MM-5-Formulaire-contact-FormSubmit.md))

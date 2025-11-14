@@ -1,30 +1,82 @@
-      // Gestion du formulaire
-      function handleSubmit(event) {
-        event.preventDefault();
+      // Validation du formulaire de contact
+      function validateForm() {
+        // Réinitialiser toutes les erreurs
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(error => {
+          error.style.display = 'none';
+          error.textContent = '';
+        });
 
-        // Récupération des données du formulaire
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData);
+        let isValid = true;
 
-        // Simulation d'envoi (à remplacer par votre système backend)
-        // TODO: Intégrer système backend
-
-        // Message de confirmation
-        alert(
-          "Merci pour votre demande ! Nous vous contactons sous 24h pour planifier votre diagnostic gratuit."
-        );
-
-        // Réinitialisation du formulaire
-        event.target.reset();
-
-        // Tracking conversion (à intégrer avec votre outil analytics)
-        if (typeof gtag !== "undefined") {
-          gtag("event", "conversion", {
-            send_to: "VOTRE_ID_CONVERSION",
-            value: 1.0,
-            currency: "EUR",
-          });
+        // Validation Nom et Prénom
+        const name = document.getElementById('name');
+        const nameError = document.getElementById('name-error');
+        if (!name.value.trim()) {
+          nameError.textContent = 'Le nom et prénom sont requis';
+          nameError.style.display = 'block';
+          isValid = false;
+        } else if (name.value.trim().length < 2) {
+          nameError.textContent = 'Le nom doit contenir au moins 2 caractères';
+          nameError.style.display = 'block';
+          isValid = false;
         }
+
+        // Validation Email
+        const email = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.value.trim()) {
+          emailError.textContent = 'L\'email est requis';
+          emailError.style.display = 'block';
+          isValid = false;
+        } else if (!emailRegex.test(email.value.trim())) {
+          emailError.textContent = 'Veuillez entrer un email valide';
+          emailError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Validation Téléphone
+        const phone = document.getElementById('phone');
+        const phoneError = document.getElementById('phone-error');
+        const phoneRegex = /^(0[6-7]\d{8}|(\+33|0033)[6-7]\d{8})$/;
+        const phoneClean = phone.value.replace(/[\s\-\.]/g, '');
+        if (!phone.value.trim()) {
+          phoneError.textContent = 'Le téléphone est requis';
+          phoneError.style.display = 'block';
+          isValid = false;
+        } else if (!phoneRegex.test(phoneClean)) {
+          phoneError.textContent = 'Numéro invalide (format: 06/07 ou +33)';
+          phoneError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Validation Discipline
+        const discipline = document.getElementById('discipline');
+        const disciplineError = document.getElementById('discipline-error');
+        if (!discipline.value) {
+          disciplineError.textContent = 'Veuillez sélectionner une discipline';
+          disciplineError.style.display = 'block';
+          isValid = false;
+        }
+
+        // Si validation réussie, améliorer UX pendant soumission
+        if (isValid) {
+          const submitBtn = document.getElementById('submit-btn');
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Envoi en cours...';
+
+          // Tracking conversion Google Analytics si disponible
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+              send_to: 'VOTRE_ID_CONVERSION',
+              value: 1.0,
+              currency: 'EUR',
+            });
+          }
+        }
+
+        return isValid;
       }
 
       // Animation au scroll
