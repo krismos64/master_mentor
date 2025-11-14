@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // Configuration email
 define('EMAIL_TO', 'c.mostefaoui@yahoo.fr');
 define('EMAIL_SUBJECT', '🎓 Nouveau diagnostic MasterMentor');
-define('EMAIL_FROM', 'c.mostefaoui@yahoo.fr'); 
+define('EMAIL_FROM', 'noreply@mastermentor.fr'); 
 // Rate limiting : 1 envoi par minute par IP
 $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $rateLimitFile = sys_get_temp_dir() . '/mm_ratelimit_' . md5($ipAddress) . '.txt';
@@ -226,10 +226,13 @@ $emailBody = "
 $headers = [
     'MIME-Version: 1.0',
     'Content-Type: text/html; charset=UTF-8',
-    'From: ' . EMAIL_FROM,
+    'From: MasterMentor <' . EMAIL_FROM . '>',
     'Reply-To: ' . $email,
     'X-Mailer: PHP/' . phpversion(),
-    'X-Priority: 1'
+    'Message-ID: <' . md5(uniqid(time())) . '@mastermentor.fr>',
+    'List-Unsubscribe: <mailto:' . EMAIL_FROM . '?subject=unsubscribe>',
+    'Precedence: bulk',
+    'X-Auto-Response-Suppress: All'
 ];
 
 // Envoi de l'email
