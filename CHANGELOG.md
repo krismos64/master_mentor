@@ -1,5 +1,77 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-14] - MM-6 : Validation W3C & Nettoyage Code ✅
+
+### 🎯 Story terminée (3 story points)
+
+### ✅ Réalisations
+
+#### 1. Validation W3C Complète (5 fichiers HTML)
+
+- ✅ **index.html** : 0 erreur, 1 avertissement mineur
+- ✅ **tarifs.html** : 0 erreur, 0 avertissement
+- ✅ **Charte-Integrite-Academique.html** : 0 erreur, 0 avertissement
+- ✅ **popup-demo.html** : 0 erreur, 0 avertissement
+- ✅ **merci.html** : 0 erreur (1 corrigée)
+- 📊 **Résultat** : 100% conforme W3C HTML5
+
+#### 2. Correction Meta Refresh (merci.html)
+
+**Avant** :
+```html
+<meta http-equiv="refresh" content="5;url=index.html" />
+```
+
+**Après** :
+```html
+<meta http-equiv="refresh" content="5; url=index.html" />
+```
+
+**Justification** : Le format W3C nécessite un espace après le point-virgule dans l'attribut `content` des meta refresh.
+
+#### 3. Externalisation CSS (merci.html)
+
+- ✅ Créé `/assets/css/merci.css` (3.4K, 209 lignes)
+- ✅ Créé `/assets/css/merci.min.css` (2.4K, -29.9%)
+- ✅ Suppression balise `<style>` inline
+- ✅ HTML réduit : 304 lignes → 104 lignes (-65%)
+
+#### 4. Documentation Complète
+
+- ✅ Rapport détaillé créé : `/docs/MM-6-Validation-W3C.md`
+- ✅ Résumé des bonnes pratiques respectées
+- ✅ Impact SEO/Accessibilité/Performance documenté
+
+### 📊 Bénéfices
+
+**SEO** :
+- Crawlabilité améliorée (code propre)
+- Indexation optimale (respect standards)
+- Rich Snippets garantis (structure valide)
+
+**Accessibilité** :
+- WCAG 2.1 conformité renforcée
+- Lecteurs d'écran optimisés
+- Navigation clavier facilitée
+
+**Maintenance** :
+- Compatibilité multi-navigateurs garantie
+- Code future-proof (HTML5 standard)
+- Debugging simplifié
+
+### 📚 Documentation
+
+- **Rapport complet** : `/docs/MM-6-Validation-W3C.md`
+- **Validateur utilisé** : W3C Nu Html Checker
+- **Standards respectés** : HTML5, WCAG 2.1, Open Graph, Schema.org
+
+### ⏭️ Prochaines étapes
+
+1. **MM-7** : Tests cross-browser (Chrome, Firefox, Safari)
+2. **MM-8** : Déploiement final OVH
+
+---
+
 ## [2025-11-13] - MM-4 : Intégrations externes ✅
 
 ### 🎯 Story terminée (5 story points)

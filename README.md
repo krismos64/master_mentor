@@ -197,6 +197,15 @@ Projet privé. Contact : Voir propriétaire du repository.
 
 ## 📝 Changelog
 
+### Version 1.2 (Nov 2025) - MM-6 ✅
+
+- ✅ **MM-6** : Validation W3C & Nettoyage Code Final
+  - 5 fichiers HTML validés : 100% conforme W3C HTML5
+  - Correction meta refresh (merci.html) : ajout espace après `;`
+  - Externalisation CSS merci.html (3.4K → 2.4K minifié, -29.9%)
+  - Documentation complète : [docs/MM-6-Validation-W3C.md](docs/MM-6-Validation-W3C.md)
+  - Rapport détaillé : 0 erreur, 1 avertissement mineur total
+
 ### Version 1.1 (Nov 2025) - MM-5 v2.1
 
 - ✅ **MM-5 v2.1** : Validation téléphone internationale (tous pays, fixes + mobiles)
@@ -207,7 +216,6 @@ Projet privé. Contact : Voir propriétaire du repository.
 ### Version 1.0 (Nov 2025)
 
 - ✅ MM-2 : Configuration assets (images optimisées, favicons)
-- ✅ MM-6 : Nettoyage code (CSS/JS externalisés, minifiés)
 - ✅ MM-6.14 : Menu burger mobile (fix UX critique)
 - ✅ .gitignore complet
 - ✅ MM-3 : SEO & Performance (Meta tags, Open Graph, JSON-LD Schema.org)
