@@ -10,7 +10,7 @@
   --secondary: #0f52aa;
   --success: #577086;
   --dark: #577086;
-  --gray: #6b7280;
+  --gray: #4b5563; /* Contraste amélioré : #6b7280 → #4b5563 (WCAG AA) */
   --light-bg: #ffffff;
   --white: #ffffff;
   --icon-red: #bf0446;
@@ -154,6 +154,11 @@ nav {
   padding: 6rem 2rem;
   text-align: center;
   border-bottom: 3px solid var(--secondary);
+  /* CLS Fix: Réservation espace pour éviter layout shift */
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-content {
@@ -2222,6 +2227,11 @@ footer {
 
   body.menu-open {
     overflow: hidden;
+  }
+
+  .hero {
+    /* CLS Fix mobile: min-height réduit pour petits écrans */
+    min-height: 500px;
   }
 
   .hero h1 {
