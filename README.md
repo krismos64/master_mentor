@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/badge/Status-En%20Production-success?style=for-the-badge)](https://mastermentor.fr)
 [![SSL](https://img.shields.io/badge/SSL-Let's%20Encrypt-blue?style=for-the-badge&logo=letsencrypt)](https://mastermentor.fr)
 [![W3C](https://img.shields.io/badge/W3C-100%25%20Valid-green?style=for-the-badge&logo=w3c)](https://validator.w3.org/)
+[![PageSpeed](https://img.shields.io/badge/PageSpeed-100%2F100%2F100-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://pagespeed.web.dev/)
 
 Site vitrine moderne pour accompagnement académique destiné aux étudiants en Master 2.
 
@@ -160,12 +161,31 @@ php -S localhost:8000
 - ✅ Firefox
 - ✅ Safari (macOS / iOS)
 
-### Tests Performance (Lighthouse)
+### Tests Performance (PageSpeed Insights)
 
-- **Performance** : 85-92
-- **Accessibility** : 90+
-- **Best Practices** : 90+
-- **SEO** : 85+
+**🏆 Scores Parfaits - Version 1.4 (15 Nov 2025)**
+
+**Mobile** :
+- ✅ **Performance** : 100/100
+- ✅ **Accessibilité** : 100/100
+- ✅ **Bonnes pratiques** : 100/100
+- ✅ **SEO** : 100/100
+
+**Desktop** :
+- ✅ **Performance** : 100/100
+- ✅ **Accessibilité** : 100/100
+- ✅ **Bonnes pratiques** : 100/100
+- ✅ **SEO** : 100/100
+
+**Optimisations clés** :
+- CLS < 0.1 (min-height hero, layout stability)
+- Contraste WCAG AA (#4b5563)
+- Landmark sémantique `<main>`
+- CSS critique inline + lazy loading
+- Images optimisées WebP + preload
+- YouTube facade (lazy iframe)
+- RequestAnimationFrame scroll
+- Compression Gzip + Cache 1 an
 
 ## 📦 Build & Optimisation
 
@@ -214,6 +234,20 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 Projet privé. Contact : Voir propriétaire du repository.
 
 ## 📝 Changelog
+
+### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
+
+- ✅ **MM-11 Phase 6** : Correction CLS Desktop + Accessibilité 100%
+  - **Résultats** : Mobile 100/100/100 | Desktop 100/100/100
+  - CLS Fix : `min-height: 700px` (desktop), `min-height: 500px` (mobile)
+  - Layout stability : `display: flex; flex-direction: column; justify-content: center;`
+  - Contraste WCAG AA : `--gray: #6b7280` → `#4b5563` (ratio 4.5:1)
+  - Landmark sémantique : `<section class="hero">` → `<main class="hero">`
+  - CSS critique inline mis à jour avec min-height
+  - **Performance Desktop** : 76 → 100 (+24 points)
+  - **Performance Mobile** : 94 → 100 (+6 points)
+  - **Accessibilité Desktop** : 94 → 100 (+6 points)
+  - Documentation : [docs/MM-11-Optimisation-Performance.md](docs/MM-11-Optimisation-Performance.md)
 
 ### Version 1.3 (15 Nov 2025) - 🚀 PRODUCTION LIVE ✅
 
