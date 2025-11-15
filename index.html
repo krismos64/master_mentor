@@ -74,6 +74,29 @@
       name="twitter:image"
       content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
     />
+    <!-- Preload image hero (LCP optimization) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-1200.webp"
+      fetchpriority="high"
+      media="(min-width: 1024px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-800.webp"
+      fetchpriority="high"
+      media="(min-width: 768px) and (max-width: 1023px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-400.webp"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+
     <!-- Stylesheets externes -->
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
     <link rel="stylesheet" href="/assets/css/integrations.min.css" />
@@ -292,6 +315,7 @@
               height="800"
               loading="eager"
               fetchpriority="high"
+              decoding="async"
               style="
                 width: 100%;
                 height: auto;
@@ -323,6 +347,7 @@
               width="1200"
               height="800"
               loading="eager"
+              decoding="async"
               style="
                 width: 100%;
                 height: auto;
@@ -586,6 +611,7 @@
           width="800"
           height="533"
           loading="lazy"
+          decoding="async"
           style="
             max-width: 100%;
             height: auto;
@@ -1458,7 +1484,10 @@
             <img
               src="/assets/images/livre.webp"
               alt="Le guide ultime de la rédaction et de la correction de manuscrits - Charles Tate - Collection Staka"
+              width="438"
+              height="672"
               loading="lazy"
+              decoding="async"
             />
             <div class="book-card-content">
               <h3 class="book-card-title">Le Guide Ultime de la Rédaction</h3>
