@@ -1,6 +1,13 @@
 # MasterMentor
 
+[![Live](https://img.shields.io/badge/Live-mastermentor.fr-brightgreen?style=for-the-badge&logo=google-chrome)](https://mastermentor.fr)
+[![Status](https://img.shields.io/badge/Status-En%20Production-success?style=for-the-badge)](https://mastermentor.fr)
+[![SSL](https://img.shields.io/badge/SSL-Let's%20Encrypt-blue?style=for-the-badge&logo=letsencrypt)](https://mastermentor.fr)
+[![W3C](https://img.shields.io/badge/W3C-100%25%20Valid-green?style=for-the-badge&logo=w3c)](https://validator.w3.org/)
+
 Site vitrine moderne pour accompagnement académique destiné aux étudiants en Master 2.
+
+**🌐 Site en ligne** : [https://mastermentor.fr](https://mastermentor.fr)
 
 ## 🎯 Objectif
 
@@ -113,12 +120,23 @@ php -S localhost:8000
 
 ### Production
 
-**Upload FTP** :
+**✅ Site déployé en production** : https://mastermentor.fr
 
-1. Uploader tous les fichiers sur le serveur
-2. Configurer `.htaccess` pour compression gzip et cache
-3. Vérifier certificat SSL (HTTPS)
-4. Tester sur mobile/tablette/desktop
+**Environnement** :
+- **Hébergement** : OVH Mutualisé (Cluster 121)
+- **Serveur** : ftp.cluster121.hosting.ovh.net
+- **SSL** : Let's Encrypt (actif)
+- **Compression** : Gzip activé
+- **Cache** : Headers optimisés (1 an images)
+
+**Déploiement** :
+1. Upload via SFTP (lftp mirror -R)
+2. Configuration multisite OVH
+3. Certificat SSL Let's Encrypt
+4. Redirection HTTP → HTTPS automatique
+5. Tests production validés
+
+**Voir** : `/docs/MM-8-Deploiement-OVH.md` pour guide complet
 
 ## 🧪 Tests
 
@@ -197,7 +215,28 @@ Projet privé. Contact : Voir propriétaire du repository.
 
 ## 📝 Changelog
 
-### Version 1.2 (Nov 2025) - MM-6 ✅
+### Version 1.3 (15 Nov 2025) - 🚀 PRODUCTION LIVE ✅
+
+- ✅ **MM-8** : Déploiement Production OVH
+  - Site accessible : https://mastermentor.fr
+  - 61 fichiers uploadés (~200 KB optimisés)
+  - SSL Let's Encrypt actif (HTTPS)
+  - Configuration multisite OVH complète
+  - Compression Gzip + Cache navigateur actifs
+  - Documentation : [docs/MM-8-Deploiement-OVH.md](docs/MM-8-Deploiement-OVH.md)
+
+- ✅ **MM-7** : Tests Production Validés
+  - Tests accessibilité (HTTPS, SSL, redirections)
+  - Tests fonctionnels (formulaire, quiz, navigation)
+  - Tests responsive (mobile/tablette/desktop)
+  - Tests SEO (robots.txt, sitemap.xml)
+
+- 🆕 **MM-10** : Configuration Email Anti-Spam (En cours)
+  - Headers email améliorés (Message-ID, List-Unsubscribe)
+  - Configuration DNS DKIM/DMARC à finaliser
+  - Documentation : [docs/MM-9-Configuration-Email-Anti-Spam.md](docs/MM-9-Configuration-Email-Anti-Spam.md)
+
+### Version 1.2 (14 Nov 2025) - MM-6 ✅
 
 - ✅ **MM-6** : Validation W3C & Nettoyage Code Final
   - 5 fichiers HTML validés : 100% conforme W3C HTML5
