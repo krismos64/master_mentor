@@ -160,11 +160,12 @@
         });
       });
 
-      // Header sticky avec effet
+      // Header sticky avec effet (optimisé avec requestAnimationFrame)
       let lastScroll = 0;
+      let ticking = false;
       const header = document.querySelector("header");
 
-      window.addEventListener("scroll", () => {
+      const updateHeader = () => {
         const currentScroll = window.pageYOffset;
 
         if (currentScroll > 100) {
@@ -174,7 +175,15 @@
         }
 
         lastScroll = currentScroll;
-      });
+        ticking = false;
+      };
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
+      }, { passive: true });
 
       // Menu burger mobile
       const menuToggle = document.querySelector('.menu-toggle');
