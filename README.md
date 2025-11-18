@@ -232,10 +232,6 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 - **36K CSS** minifié total
 - **906 lignes** documentation MM-5
 
-## 🤝 Contribution
-
-Projet privé. Contact : Voir propriétaire du repository.
-
 ## 📝 Changelog
 
 ### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
