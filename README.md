@@ -124,6 +124,7 @@ php -S localhost:8000
 **✅ Site déployé en production** : https://mastermentor.fr
 
 **Environnement** :
+
 - **Hébergement** : OVH Mutualisé (Cluster 121)
 - **Serveur** : ftp.cluster121.hosting.ovh.net
 - **SSL** : Let's Encrypt (actif)
@@ -131,13 +132,12 @@ php -S localhost:8000
 - **Cache** : Headers optimisés (1 an images)
 
 **Déploiement** :
+
 1. Upload via SFTP (lftp mirror -R)
 2. Configuration multisite OVH
 3. Certificat SSL Let's Encrypt
 4. Redirection HTTP → HTTPS automatique
 5. Tests production validés
-
-**Voir** : `/docs/MM-8-Deploiement-OVH.md` pour guide complet
 
 ## 🧪 Tests
 
@@ -166,18 +166,21 @@ php -S localhost:8000
 **🏆 Scores Parfaits - Version 1.4 (15 Nov 2025)**
 
 **Mobile** :
+
 - ✅ **Performance** : 100/100
 - ✅ **Accessibilité** : 100/100
 - ✅ **Bonnes pratiques** : 100/100
 - ✅ **SEO** : 100/100
 
 **Desktop** :
+
 - ✅ **Performance** : 100/100
 - ✅ **Accessibilité** : 100/100
 - ✅ **Bonnes pratiques** : 100/100
 - ✅ **SEO** : 100/100
 
 **Optimisations clés** :
+
 - CLS < 0.1 (min-height hero, layout stability)
 - Contraste WCAG AA (#4b5563)
 - Landmark sémantique `<main>`
@@ -252,6 +255,7 @@ Projet privé. Contact : Voir propriétaire du repository.
 ### Version 1.3 (15 Nov 2025) - 🚀 PRODUCTION LIVE ✅
 
 - ✅ **MM-8** : Déploiement Production OVH
+
   - Site accessible : https://mastermentor.fr
   - 61 fichiers uploadés (~200 KB optimisés)
   - SSL Let's Encrypt actif (HTTPS)
@@ -260,6 +264,7 @@ Projet privé. Contact : Voir propriétaire du repository.
   - Documentation : [docs/MM-8-Deploiement-OVH.md](docs/MM-8-Deploiement-OVH.md)
 
 - ✅ **MM-7** : Tests Production Validés
+
   - Tests accessibilité (HTTPS, SSL, redirections)
   - Tests fonctionnels (formulaire, quiz, navigation)
   - Tests responsive (mobile/tablette/desktop)
