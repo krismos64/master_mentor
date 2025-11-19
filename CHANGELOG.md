@@ -1,5 +1,77 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-19] - Version 1.5 : 🔧 CORRECTIONS RETOUR CLIENT ✅
+
+### 🎉 Sprint MM-13 Terminé !
+
+**Statut** : 6/6 sous-tâches complétées
+**Story points** : 8 pts
+**Commits** : 11 au total
+
+---
+
+### ✅ MM-16 : Favicon fond transparent
+
+- **Problème** : Favicon sur fond blanc au lieu de transparent
+- **Solution** : Régénération avec ImageMagick
+- **Fichiers** : favicon.ico (16/32/48px), favicon-192.png, favicon-512.png, apple-touch-icon.png
+- **Commits** : `9504ba6`, `dbffa00`
+
+### ✅ MM-17 : Footer tarifs uniformisé
+
+- **Problème** : Footer tarifs.html différent de index.html
+- **Solution** :
+  - Copie footer complet de index.html vers tarifs.html
+  - Ajout CSS footer à tarifs.css (165 lignes)
+  - Suppression anciens styles conflictuels
+- **Commits** : `7a0b7c4`, `473a9b2`, `a1a866f`
+
+### ✅ MM-18 : Suppression mentions écoles témoignages
+
+- **Problème** : Noms d'écoles visibles dans témoignages
+- **Solution** : Suppression Paris Dauphine, Lyon 2, HEC Paris
+- **Résultat** : Seul niveau d'études conservé (Master 2 + spécialité)
+- **Commit** : `960ad37`
+
+### ✅ MM-19 : Fix quiz interactif
+
+- **Problème** : Quiz ne fonctionnait pas
+- **Cause** : `requestIdleCallback` s'exécute après `DOMContentLoaded`
+- **Solution** : Chargement direct avec `<script defer>`
+- **Commits** : `ecfa32a`, `babcecd`
+
+### ✅ MM-20 : Fix popup CTA
+
+- **Problème** : Popup n'apparaissait plus
+- **Cause** : Code popup dans quiz.js non chargé
+- **Solution** : Timer 5s (au lieu de 15s), affichage à chaque visite
+- **Commit** : `babcecd`
+
+### ✅ MM-21 : Changement vidéo YouTube
+
+- **Ancien ID** : K8LmYdEqHrc
+- **Nouveau ID** : zxiQNT0CwK0
+- **Commit** : `5854357`
+
+### 📊 Résumé Sprint
+
+| Métrique | Valeur |
+|----------|--------|
+| Sous-tâches | 6/6 ✅ |
+| Commits | 11 |
+| Fichiers modifiés | index.html, tarifs.html, tarifs.css, quiz.js, favicons |
+
+### ⏭️ Prochaines étapes
+
+- **MM-14** : Logos & Certifications (3 pts)
+  - MM-22 : Logo Staka.fr
+  - MM-23 : Logos certifications
+  - MM-24 : Icônes paiement
+- **MM-15** : Mentions Légales (2 pts)
+  - MM-25-26 : Page mentions légales
+
+---
+
 ## [2025-11-15] - Version 1.4 : 🏆 PERFECTION PAGESPEED 100/100 ✅
 
 ### 🎉 Scores Parfaits Atteints !
