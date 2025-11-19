@@ -2193,27 +2193,33 @@ footer {
 .payment-icons picture {
   display: flex;
   align-items: center;
-}
-
-.payment-icons img {
-  height: 32px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
+  background: var(--white);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   transition: var(--transition);
 }
 
-.payment-icons img:hover {
-  opacity: 1;
+.payment-icons picture:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.payment-icons img {
+  height: 28px;
+  width: auto;
 }
 
 @media (max-width: 768px) {
   .payment-icons {
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .payment-icons picture {
+    padding: 0.4rem 0.6rem;
   }
 
   .payment-icons img {
-    height: 24px;
+    height: 22px;
   }
 }
 
