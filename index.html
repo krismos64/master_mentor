@@ -2009,9 +2009,9 @@
     <script>
       if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-          if (document.querySelector('.quiz-container')) {
+          if (document.querySelector('.quiz-container-embedded')) {
             const script = document.createElement('script');
-            script.src = '/assets/js/quiz.min.js';
+            script.src = 'assets/js/quiz.min.js';
             script.defer = true;
             document.body.appendChild(script);
           }
@@ -2019,9 +2019,9 @@
       } else {
         // Fallback pour navigateurs sans requestIdleCallback
         setTimeout(() => {
-          if (document.querySelector('.quiz-container')) {
+          if (document.querySelector('.quiz-container-embedded')) {
             const script = document.createElement('script');
-            script.src = '/assets/js/quiz.min.js';
+            script.src = 'assets/js/quiz.min.js';
             script.defer = true;
             document.body.appendChild(script);
           }
