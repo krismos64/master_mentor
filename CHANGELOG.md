@@ -61,14 +61,64 @@
 | Commits | 11 |
 | Fichiers modifiés | index.html, tarifs.html, tarifs.css, quiz.js, favicons |
 
+---
+
+### 🎉 Sprint MM-14 Terminé !
+
+**Statut** : 3/3 sous-tâches complétées
+**Story points** : 3 pts
+**Commits** : 8 au total
+
+---
+
+### ✅ MM-22 : Logo Staka.fr (header + footer)
+
+- **Objectif** : Intégrer le logo comme sur staka.fr
+- **Réalisations** :
+  - Logo MasterMentor dans header (index.html + tarifs.html)
+  - Subtitle "by Staka - 17 ans d'expérience" sous le logo
+  - Navbar complète et identique sur les deux pages
+  - Menu burger fonctionnel sur mobile
+  - Logo blanc dans footer avec filtre CSS `brightness(0) invert(1)`
+- **Commits** : `29062f6`, `d9445c1`, `b7f87fc`, `4195d50`, `e4c5142`
+
+### ✅ MM-23 : Logos certifications
+
+- **Objectif** : Ajouter eKomi, Trustpilot, Compilatio, Lucide.ai
+- **Réalisations** :
+  - 4 logos intégrés dans le footer avec liens
+  - Format WebP + PNG fallback (element `<picture>`)
+  - Images optimisées 80px hauteur (réduction 95%)
+  - Alt text accessibles WCAG 2.2
+  - CSS Grid responsive 2x2
+- **Fichiers** : `assets/logos/certifications/` (8 fichiers)
+- **Commit** : `e7dd1ea`
+
+### ✅ MM-24 : Icônes moyens de paiement
+
+- **Objectif** : Ajouter Visa, Mastercard, PayPal
+- **Réalisations** :
+  - 3 icônes dans section "Moyens de paiement acceptés"
+  - Images optimisées 40px (121KB → 6KB, réduction 95%)
+  - Couleurs originales sur fond blanc
+  - Effet hover avec shadow
+  - Responsive : 28px desktop, 22px mobile
+- **Fichiers** : `assets/logos/paiement/` (6 fichiers)
+- **Commits** : `6164444`, `46cbc82`
+
+### 📊 Résumé Sprint MM-14
+
+| Métrique | Valeur |
+|----------|--------|
+| Sous-tâches | 3/3 ✅ |
+| Commits | 8 |
+| Fichiers créés | 14 images optimisées |
+| Dossiers | certifications/, paiement/ |
+
 ### ⏭️ Prochaines étapes
 
-- **MM-14** : Logos & Certifications (3 pts)
-  - MM-22 : Logo Staka.fr
-  - MM-23 : Logos certifications
-  - MM-24 : Icônes paiement
 - **MM-15** : Mentions Légales (2 pts)
-  - MM-25-26 : Page mentions légales
+  - En attente du contenu client
 
 ---
 

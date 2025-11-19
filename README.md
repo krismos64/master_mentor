@@ -271,6 +271,22 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
   - 4 sections : Logo, Navigation, Garanties, Certifications
   - Liens adaptés pour tarifs.html (index.html#...)
 
+- ✅ **MM-14** : Logos & Certifications (Epic)
+  - **MM-22** : Logo Staka.fr intégré
+    - Header et footer de toutes les pages
+    - Format optimisé : WebP + PNG fallback
+    - 6 fichiers créés dans `assets/logos/staka/`
+  - **MM-23** : Logos certifications
+    - 4 logos : eKomi, Trustpilot, Compilatio, Lucide.ai
+    - Liens vers sites respectifs + alt text WCAG
+    - 8 fichiers dans `assets/logos/certifications/`
+    - Grid 2x2 avec hover effects
+  - **MM-24** : Icônes moyens de paiement
+    - 3 logos : Visa, Mastercard, PayPal
+    - 6 fichiers dans `assets/logos/paiement/`
+    - Couleurs originales sur fond blanc
+    - Optimisation : 121KB → 6KB (-95%)
+
 ### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
 
 - ✅ **MM-11 Phase 6** : Correction CLS Desktop + Accessibilité 100%
