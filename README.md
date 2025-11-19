@@ -266,6 +266,11 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
   - favicon.ico (16/32/48px), favicon-192.png, favicon-512.png, apple-touch-icon.png
   - Fond blanc supprimé sur tous les formats
 
+- ✅ **MM-17** : Footer tarifs uniformisé
+  - Footer complet copié de index.html vers tarifs.html
+  - 4 sections : Logo, Navigation, Garanties, Certifications
+  - Liens adaptés pour tarifs.html (index.html#...)
+
 ### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
 
 - ✅ **MM-11 Phase 6** : Correction CLS Desktop + Accessibilité 100%
