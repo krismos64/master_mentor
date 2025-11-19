@@ -64,9 +64,15 @@ nav {
   align-items: flex-start;
 }
 
-.logo a {
+.logo a,
+.logo a:hover,
+.logo a:visited,
+.logo a span {
   text-decoration: none;
   color: inherit;
+}
+
+.logo a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
