@@ -31,6 +31,7 @@
     <meta name="twitter:image" content="https://www.mastermentor.fr/assets/images/og-tarifs-mastermentor.jpg" />
 
     <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
     <link rel="stylesheet" href="/assets/css/tarifs.min.css">
 
     <!-- Favicons multi-plateformes -->
@@ -193,11 +194,37 @@
     </script>
 </head>
 <body>
-    <div class="header">
+    <!-- Header -->
+    <header>
+      <nav>
         <div class="logo">
           <img src="assets/logos/logo-main.png" alt="MasterMentor" class="logo-img" width="180" height="auto">
           <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
         </div>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#disciplines">Disciplines</a></li>
+          <li><a href="index.html#equipe">L'Équipe</a></li>
+          <li><a href="index.html#quiz">Quiz</a></li>
+          <li><a href="tarifs.html" class="active">Tarifs</a></li>
+          <li><a href="index.html#methode">Notre Méthode</a></li>
+          <li><a href="index.html#temoignages">Témoignages</a></li>
+        </ul>
+        <a href="index.html#contact" class="cta-nav">Diagnostic Gratuit</a>
+      </nav>
+    </header>
+    <div class="menu-overlay"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-section">
         <h1>Nos Tarifs Transparents</h1>
     </div>
 
@@ -568,5 +595,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>
