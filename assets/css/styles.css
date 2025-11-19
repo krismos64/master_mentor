@@ -71,6 +71,14 @@ nav {
   object-fit: contain;
 }
 
+.logo-img-footer {
+  height: 50px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .logo-subtitle {
   font-size: 0.7rem;
   color: var(--gray);
