@@ -64,6 +64,19 @@ nav {
   align-items: flex-start;
 }
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  opacity: 0.8;
+}
+
 .logo-img {
   height: 60px;
   width: auto;
