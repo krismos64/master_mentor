@@ -2003,30 +2003,7 @@
       }
     </script>
 
-    <script defer src="/assets/js/main.min.js"></script>
-
-    <!-- Lazy load quiz.js uniquement si présent sur la page -->
-    <script>
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          if (document.querySelector('.quiz-container-embedded')) {
-            const script = document.createElement('script');
-            script.src = 'assets/js/quiz.min.js';
-            script.defer = true;
-            document.body.appendChild(script);
-          }
-        });
-      } else {
-        // Fallback pour navigateurs sans requestIdleCallback
-        setTimeout(() => {
-          if (document.querySelector('.quiz-container-embedded')) {
-            const script = document.createElement('script');
-            script.src = 'assets/js/quiz.min.js';
-            script.defer = true;
-            document.body.appendChild(script);
-          }
-        }, 1000);
-      }
-    </script>
+    <script defer src="assets/js/main.min.js"></script>
+    <script defer src="assets/js/quiz.min.js"></script>
   </body>
 </html>

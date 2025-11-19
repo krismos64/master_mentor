@@ -262,7 +262,6 @@
       function closePopup() {
         document.getElementById("popupUrgence").classList.remove("show");
         document.body.style.overflow = ""; // Réactiver le scroll
-        localStorage.setItem("popupShown", "true"); // Marquer comme vu
       }
 
       // Fermer le popup si on clique sur l'overlay
@@ -283,43 +282,39 @@
 
       // Afficher le popup selon différents triggers
       let popupShown = false;
-      const popupAlreadySeen = localStorage.getItem("popupShown");
 
-      // Ne pas afficher si déjà vu dans cette session
-      if (!popupAlreadySeen) {
-        // Trigger 1 : Après 15 secondes sur la page
-        setTimeout(function () {
-          if (!popupShown) {
+      // Trigger 1 : Après 5 secondes sur la page (à chaque visite)
+      setTimeout(function () {
+        if (!popupShown) {
+          showPopup();
+          popupShown = true;
+        }
+      }, 5000); // 5 secondes
+
+      // Trigger 2 : Intention de sortie (mouvement vers le haut)
+      let exitIntentTriggered = false;
+      document.addEventListener("mousemove", function (e) {
+        if (!popupShown && !exitIntentTriggered && e.clientY < 50) {
+          exitIntentTriggered = true;
+          setTimeout(function () {
+            showPopup();
+            popupShown = true;
+          }, 500);
+        }
+      });
+
+      // Trigger 3 : Après avoir scrollé 50% de la page
+      let scrollTriggered = false;
+      window.addEventListener("scroll", function () {
+        if (!popupShown && !scrollTriggered) {
+          const scrollPercent =
+            (window.scrollY /
+              (document.body.scrollHeight - window.innerHeight)) *
+            100;
+          if (scrollPercent > 50) {
+            scrollTriggered = true;
             showPopup();
             popupShown = true;
           }
-        }, 15000); // 15 secondes
-
-        // Trigger 2 : Intention de sortie (mouvement vers le haut)
-        let exitIntentTriggered = false;
-        document.addEventListener("mousemove", function (e) {
-          if (!popupShown && !exitIntentTriggered && e.clientY < 50) {
-            exitIntentTriggered = true;
-            setTimeout(function () {
-              showPopup();
-              popupShown = true;
-            }, 500);
-          }
-        });
-
-        // Trigger 3 : Après avoir scrollé 50% de la page
-        let scrollTriggered = false;
-        window.addEventListener("scroll", function () {
-          if (!popupShown && !scrollTriggered) {
-            const scrollPercent =
-              (window.scrollY /
-                (document.body.scrollHeight - window.innerHeight)) *
-              100;
-            if (scrollPercent > 50) {
-              scrollTriggered = true;
-              showPopup();
-              popupShown = true;
-            }
-          }
-        });
-      }
+        }
+      });
