@@ -41,13 +41,17 @@
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-bottom: 1rem;
         }
 
-        .logo span {
-            color: var(--success);
+        .logo-img {
+            height: 70px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
         }
 
         .header h1 {

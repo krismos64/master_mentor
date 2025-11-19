@@ -59,13 +59,16 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.logo span {
-  color: var(--secondary);
+.logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
 }
 
 .logo-subtitle {
@@ -73,7 +76,7 @@ nav {
   color: var(--gray);
   font-weight: normal;
   display: block;
-  margin-top: -5px;
+  margin-top: 2px;
 }
 
 .nav-links {
