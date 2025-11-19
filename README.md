@@ -234,6 +234,27 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
+### Version 1.5 (19 Nov 2025) - 🔧 CORRECTIONS RETOUR CLIENT ✅
+
+- ✅ **MM-19** : Quiz interactif corrigé
+  - **Problème** : Quiz ne fonctionnait pas (script non chargé)
+  - **Cause racine** : `requestIdleCallback` s'exécutait après `DOMContentLoaded`, empêchant l'initialisation
+  - **Solution** : Chargement direct avec `<script defer>` au lieu du lazy loading complexe
+  - Correction du sélecteur `.quiz-container` → `.quiz-container-embedded`
+
+- ✅ **MM-20** : Popup CTA restauré
+  - **Problème** : Popup n'apparaissait plus
+  - **Cause** : Code popup dans quiz.js qui ne se chargeait pas
+  - **Modifications** :
+    - Timer réduit : 15s → 5s
+    - Suppression localStorage : popup à chaque visite (demande client)
+    - Triggers conservés : timer 5s, exit intent, scroll 50%
+
+- ✅ **MM-21** : Vidéo YouTube mise à jour
+  - Ancien ID : `K8LmYdEqHrc`
+  - Nouveau ID : `zxiQNT0CwK0`
+  - Facade lazy loading préservée
+
 ### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
 
 - ✅ **MM-11 Phase 6** : Correction CLS Desktop + Accessibilité 100%
