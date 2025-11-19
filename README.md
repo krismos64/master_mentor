@@ -255,6 +255,12 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
   - Nouveau ID : `zxiQNT0CwK0`
   - Facade lazy loading préservée
 
+- ✅ **MM-18** : Suppression mentions écoles témoignages
+  - Sarah M. : Paris Dauphine supprimé
+  - Thomas L. : Lyon 2 supprimé
+  - Antoine L. : HEC Paris supprimé
+  - Seul le niveau d'études conservé (Master 2 + spécialité)
+
 ### Version 1.4 (15 Nov 2025) - 🏆 PERFECTION PAGESPEED 100/100 ✅
 
 - ✅ **MM-11 Phase 6** : Correction CLS Desktop + Accessibilité 100%
