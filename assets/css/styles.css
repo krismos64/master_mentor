@@ -87,6 +87,10 @@ nav {
   margin-top: 2px;
 }
 
+footer .logo-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
