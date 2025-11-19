@@ -596,7 +596,53 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.min.js" defer></script>
+    <!-- Critical JavaScript inline (menu burger) -->
+    <script>
+      // Menu burger mobile
+      (function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        const toggleMenu = () => {
+          menuToggle.classList.toggle('active');
+          navLinks.classList.toggle('active');
+          body.classList.toggle('menu-open');
+          const isExpanded = menuToggle.classList.contains('active');
+          menuToggle.setAttribute('aria-expanded', isExpanded);
+        };
+
+        const closeMenu = () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          body.classList.remove('menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        if (menuToggle) {
+          menuToggle.addEventListener('click', toggleMenu);
+        }
+
+        if (navLinks) {
+          navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+          });
+        }
+
+        body.addEventListener('click', (e) => {
+          if (body.classList.contains('menu-open') &&
+              !navLinks.contains(e.target) &&
+              !menuToggle.contains(e.target)) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && body.classList.contains('menu-open')) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
 </body>
 </html>

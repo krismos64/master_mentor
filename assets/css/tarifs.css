@@ -565,7 +565,7 @@ footer {
   font-weight: 500;
 }
 
-.logo-subtitle {
+footer .logo-subtitle {
   display: block;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
