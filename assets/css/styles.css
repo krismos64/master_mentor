@@ -2167,6 +2167,56 @@ footer {
   text-align: center;
 }
 
+/* Payment methods section */
+.footer-payment {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.payment-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.payment-icons picture {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icons img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.payment-icons img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .payment-icons {
+    gap: 1rem;
+  }
+
+  .payment-icons img {
+    height: 24px;
+  }
+}
+
 .footer-links {
   display: flex;
   justify-content: center;

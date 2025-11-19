@@ -132,10 +132,379 @@
 
     <!-- Critical CSS inline (above-the-fold) pour optimiser FCP -->
     <style>
-      *{margin:0;padding:0;box-sizing:border-box;}
-      .skip-link{position:absolute;top:-40px;left:0;background:#0f52aa;color:#fff;padding:8px 16px;text-decoration:none;z-index:9999;transition:top 0.3s;}.skip-link:focus{top:0;}
-      a:focus,button:focus,input:focus,textarea:focus,select:focus{outline:2px solid #0f52aa;outline-offset:2px;}.menu-toggle:focus{outline:2px solid #0f52aa;outline-offset:4px;border-radius:4px;}
-      @media (max-width:768px){.menu-toggle{display:flex;}.nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;flex-direction:column;padding:5rem 0 2rem;box-shadow:-4px 0 20px rgba(0,0,0,0.1);transition:right 0.3s ease;z-index:1000;overflow-y:auto;}.nav-links.active{right:0;}body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);opacity:0;visibility:hidden;transition:all 0.3s ease;z-index:999;}body.menu-open::before{opacity:1;visibility:visible;}body.menu-open{overflow:hidden;}.hero{min-height:500px;}}:root{--primary:#577086;--primary-light:#6b7899;--secondary:#0f52aa;--success:#577086;--dark:#577086;--gray:#4b5563;--light-bg:#ffffff;--white:#ffffff;--icon-red:#bf0446;--icon-blue:#022f6b;--radius-sm:16px;--radius-md:24px;--radius-lg:32px;--radius-xl:48px;--shadow-soft:0 8px 32px rgba(87,112,134,0.08);--shadow-medium:0 12px 48px rgba(87,112,134,0.12);--shadow-strong:0 20px 64px rgba(87,112,134,0.16);--transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.6;color:var(--dark);overflow-x:hidden;background:var(--white);}header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--shadow-soft);z-index:1000;transition:var(--transition);}nav{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;}.logo{font-size:1.5rem;font-weight:bold;color:var(--dark);}.logo span{color:var(--secondary);}.logo-subtitle{font-size:0.7rem;color:var(--gray);font-weight:normal;display:block;margin-top:-5px;}.nav-links{display:flex;gap:2rem;list-style:none;}.nav-links a{text-decoration:none;color:var(--dark);font-weight:500;transition:color 0.3s;}.nav-links a:hover{color:var(--secondary);}.cta-nav{background:linear-gradient(135deg,#25d366,#128c7e);color:var(--white);padding:0.875rem 1.75rem;border-radius:var(--radius-xl);font-weight:600;text-decoration:none;transition:var(--transition);box-shadow:var(--shadow-soft);}.cta-nav:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.35);}.menu-toggle{display:none;flex-direction:column;justify-content:space-around;width:2rem;height:2rem;background:transparent;border:none;cursor:pointer;padding:0;z-index:1001;}.menu-toggle span{width:2rem;height:0.25rem;background:var(--secondary);border-radius:10px;transition:all 0.3s linear;position:relative;transform-origin:1px;}.menu-toggle.active span:nth-child(1){transform:rotate(45deg);}.menu-toggle.active span:nth-child(2){opacity:0;transform:translateX(20px);}.menu-toggle.active span:nth-child(3){transform:rotate(-45deg);}.hero{margin-top:80px;background:var(--white);color:var(--dark);padding:6rem 2rem;text-align:center;border-bottom:3px solid var(--secondary);min-height:700px;display:flex;flex-direction:column;justify-content:center;}.hero-content{max-width:800px;margin:0 auto;}.hero h1{font-size:3rem;margin-bottom:1.5rem;line-height:1.2;color:var(--dark);}.hero-highlight{color:var(--secondary);display:block;}.hero p{font-size:1.3rem;margin-bottom:2rem;color:var(--gray);}.hero-features{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:2rem 0;}.hero-feature{display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);border:1.5px solid rgba(15,82,170,0.2);padding:0.875rem 1.75rem;border-radius:var(--radius-xl);color:var(--dark);transition:var(--transition);box-shadow:var(--shadow-soft);}.hero-feature:hover{transform:translateY(-2px);border-color:var(--secondary);box-shadow:var(--shadow-medium);}.hero-feature svg{width:24px;height:24px;fill:var(--icon-blue);}.cta-primary{display:inline-block;background:linear-gradient(135deg,#25d366,#128c7e);color:var(--white);padding:1.25rem 3.5rem;border-radius:var(--radius-xl);font-size:1.2rem;font-weight:600;text-decoration:none;transition:var(--transition);box-shadow:var(--shadow-medium);position:relative;overflow:hidden;}.cta-primary::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.6s;}.cta-primary:hover::before{left:100%;}.cta-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:var(--shadow-strong);}.trust-badges{display:flex;justify-content:center;gap:1rem;margin-top:2rem;flex-wrap:wrap;}.trust-badge{background:rgba(255,255,255,0.8);backdrop-filter:blur(10px);color:var(--dark);padding:0.625rem 1.25rem;border-radius:var(--radius-md);font-size:0.9rem;font-weight:600;border:1px solid rgba(107,114,128,0.1);box-shadow:var(--shadow-soft);transition:var(--transition);}.trust-badge:hover{transform:translateY(-2px);box-shadow:var(--shadow-medium);}.floating-buttons{position:fixed;bottom:30px;right:30px;display:flex;flex-direction:column;gap:15px;z-index:999;}.floating-btn{width:64px;height:64px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:var(--shadow-medium);transition:var(--transition);cursor:pointer;position:relative;}.floating-btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:var(--shadow-strong);}.whatsapp-btn{background:#25d366;color:white;}.phone-btn{background:var(--icon-blue);color:white;}.floating-btn svg{width:32px;height:32px;fill:white;}.floating-btn-tooltip{position:absolute;right:70px;background:var(--dark);color:white;padding:8px 15px;border-radius:8px;white-space:nowrap;font-size:0.9rem;opacity:0;pointer-events:none;transition:opacity 0.3s;}.floating-btn:hover .floating-btn-tooltip{opacity:1;}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #0f52aa;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 9999;
+        transition: top 0.3s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+      a:focus,
+      button:focus,
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 2px solid #0f52aa;
+        outline-offset: 2px;
+      }
+      .menu-toggle:focus {
+        outline: 2px solid #0f52aa;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 280px;
+          height: 100vh;
+          background: #fff;
+          flex-direction: column;
+          padding: 5rem 0 2rem;
+          box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+          transition: right 0.3s ease;
+          z-index: 1000;
+          overflow-y: auto;
+        }
+        .nav-links.active {
+          right: 0;
+        }
+        body::before {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 999;
+        }
+        body.menu-open::before {
+          opacity: 1;
+          visibility: visible;
+        }
+        body.menu-open {
+          overflow: hidden;
+        }
+        .hero {
+          min-height: 500px;
+        }
+      }
+      :root {
+        --primary: #577086;
+        --primary-light: #6b7899;
+        --secondary: #0f52aa;
+        --success: #577086;
+        --dark: #577086;
+        --gray: #4b5563;
+        --light-bg: #ffffff;
+        --white: #ffffff;
+        --icon-red: #bf0446;
+        --icon-blue: #022f6b;
+        --radius-sm: 16px;
+        --radius-md: 24px;
+        --radius-lg: 32px;
+        --radius-xl: 48px;
+        --shadow-soft: 0 8px 32px rgba(87, 112, 134, 0.08);
+        --shadow-medium: 0 12px 48px rgba(87, 112, 134, 0.12);
+        --shadow-strong: 0 20px 64px rgba(87, 112, 134, 0.16);
+        --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        overflow-x: hidden;
+        background: var(--white);
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: var(--shadow-soft);
+        z-index: 1000;
+        transition: var(--transition);
+      }
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.25rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--dark);
+      }
+      .logo span {
+        color: var(--secondary);
+      }
+      .logo-subtitle {
+        font-size: 0.7rem;
+        color: var(--gray);
+        font-weight: normal;
+        display: block;
+        margin-top: -5px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+      .cta-nav {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: var(--white);
+        padding: 0.875rem 1.75rem;
+        border-radius: var(--radius-xl);
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        box-shadow: var(--shadow-soft);
+      }
+      .cta-nav:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      }
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+      }
+      .menu-toggle span {
+        width: 2rem;
+        height: 0.25rem;
+        background: var(--secondary);
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+      }
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      .hero {
+        margin-top: 80px;
+        background: var(--white);
+        color: var(--dark);
+        padding: 6rem 2rem;
+        text-align: center;
+        border-bottom: 3px solid var(--secondary);
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: var(--dark);
+      }
+      .hero-highlight {
+        color: var(--secondary);
+        display: block;
+      }
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        color: var(--gray);
+      }
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+      }
+      .hero-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1.5px solid rgba(15, 82, 170, 0.2);
+        padding: 0.875rem 1.75rem;
+        border-radius: var(--radius-xl);
+        color: var(--dark);
+        transition: var(--transition);
+        box-shadow: var(--shadow-soft);
+      }
+      .hero-feature:hover {
+        transform: translateY(-2px);
+        border-color: var(--secondary);
+        box-shadow: var(--shadow-medium);
+      }
+      .hero-feature svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--icon-blue);
+      }
+      .cta-primary {
+        display: inline-block;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: var(--white);
+        padding: 1.25rem 3.5rem;
+        border-radius: var(--radius-xl);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        box-shadow: var(--shadow-medium);
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.6s;
+      }
+      .cta-primary:hover::before {
+        left: 100%;
+      }
+      .cta-primary:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: var(--shadow-strong);
+      }
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      .trust-badge {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        color: var(--dark);
+        padding: 0.625rem 1.25rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid rgba(107, 114, 128, 0.1);
+        box-shadow: var(--shadow-soft);
+        transition: var(--transition);
+      }
+      .trust-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-medium);
+      }
+      .floating-buttons {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 999;
+      }
+      .floating-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: var(--shadow-medium);
+        transition: var(--transition);
+        cursor: pointer;
+        position: relative;
+      }
+      .floating-btn:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: var(--shadow-strong);
+      }
+      .whatsapp-btn {
+        background: #25d366;
+        color: white;
+      }
+      .phone-btn {
+        background: var(--icon-blue);
+        color: white;
+      }
+      .floating-btn svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+      }
+      .floating-btn-tooltip {
+        position: absolute;
+        right: 70px;
+        background: var(--dark);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .floating-btn:hover .floating-btn-tooltip {
+        opacity: 1;
+      }
     </style>
 
     <!-- Stylesheets externes (lazy loaded - non-blocking) -->
@@ -145,7 +514,9 @@
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
-    <noscript><link rel="stylesheet" href="/assets/css/styles.min.css" /></noscript>
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/styles.min.css"
+    /></noscript>
 
     <link
       rel="stylesheet"
@@ -153,7 +524,9 @@
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
-    <noscript><link rel="stylesheet" href="/assets/css/integrations.min.css" /></noscript>
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/integrations.min.css"
+    /></noscript>
 
     <!-- Favicons multi-plateformes -->
     <link
@@ -302,7 +675,13 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="assets/logos/logo-main.png" alt="MasterMentor" class="logo-img" width="180" height="auto">
+          <img
+            src="assets/logos/logo-main.png"
+            alt="MasterMentor"
+            class="logo-img"
+            width="180"
+            height="auto"
+          />
           <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
         </div>
         <button
@@ -513,7 +892,12 @@
             class="video-embed youtube-facade"
             data-youtube-id="zxiQNT0CwK0"
             onclick="loadYouTubeVideo(this)"
-            style="cursor: pointer; position: relative; background: #000; aspect-ratio: 16/9;"
+            style="
+              cursor: pointer;
+              position: relative;
+              background: #000;
+              aspect-ratio: 16/9;
+            "
           >
             <!-- Thumbnail YouTube -->
             <img
@@ -522,12 +906,35 @@
               width="1280"
               height="720"
               loading="lazy"
-              style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
             />
             <!-- Bouton Play -->
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: rgba(255,0,0,0.8); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 68px;
+                height: 48px;
+                background: rgba(255, 0, 0, 0.8);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+              "
+            >
               <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                <path
+                  d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                  fill="#f00"
+                ></path>
                 <path d="M 45,24 27,14 27,34" fill="#fff"></path>
               </svg>
             </div>
@@ -1438,27 +1845,61 @@
         <form
           class="contact-form"
           id="contact-form"
-          onsubmit="return submitFormAjax(event)">
-
+          onsubmit="return submitFormAjax(event)"
+        >
           <!-- Honeypot anti-spam (caché, si rempli = bot) -->
-          <input type="text" name="website" id="website" style="display:none !important; position:absolute; left:-9999px;" tabindex="-1" autocomplete="off">
+          <input
+            type="text"
+            name="website"
+            id="website"
+            style="display: none !important; position: absolute; left: -9999px"
+            tabindex="-1"
+            autocomplete="off"
+          />
 
           <div class="form-group">
             <label for="name">Nom et Prénom *</label>
             <input type="text" id="name" name="nom" required />
-            <span class="error-message" id="name-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
+            <span
+              class="error-message"
+              id="name-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
           </div>
 
           <div class="form-group">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" required />
-            <span class="error-message" id="email-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
+            <span
+              class="error-message"
+              id="email-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
           </div>
 
           <div class="form-group">
             <label for="phone">Téléphone *</label>
             <input type="tel" id="phone" name="telephone" required />
-            <span class="error-message" id="phone-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
+            <span
+              class="error-message"
+              id="phone-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
           </div>
 
           <div class="form-group">
@@ -1476,7 +1917,16 @@
               <option value="Informatique">Informatique</option>
               <option value="Autre">Autre</option>
             </select>
-            <span class="error-message" id="discipline-error" style="display:none; color:#dc3545; font-size:0.875rem; margin-top:0.25rem;"></span>
+            <span
+              class="error-message"
+              id="discipline-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
           </div>
 
           <div class="form-group">
@@ -1540,7 +1990,8 @@
       <div class="publications-container">
         <h2 class="publications-title">Nos Publications</h2>
         <p class="publications-subtitle">
-          Découvrez nos ouvrages de référence pour réussir votre parcours académique
+          Découvrez nos ouvrages de référence pour réussir votre parcours
+          académique
         </p>
 
         <div class="publications-content">
@@ -1569,17 +2020,21 @@
           <!-- Informations livre -->
           <div class="book-info">
             <div class="book-badges">
-              <span class="book-badge book-badge-primary">📖 UPPR Editions</span>
+              <span class="book-badge book-badge-primary"
+                >📖 UPPR Editions</span
+              >
             </div>
 
             <h4 class="book-info-title">
-              Le guide complet pour réussir tous vos écrits académiques et professionnels
+              Le guide complet pour réussir tous vos écrits académiques et
+              professionnels
             </h4>
 
             <p class="book-info-description">
-              Que ce soit pour rédiger un <strong>mémoire, une thèse, un rapport de stage</strong>
-              ou même un <strong>roman</strong>, ce guide vous accompagne dans le processus
-              d'écriture et répond à toutes vos questions.
+              Que ce soit pour rédiger un
+              <strong>mémoire, une thèse, un rapport de stage</strong> ou même
+              un <strong>roman</strong>, ce guide vous accompagne dans le
+              processus d'écriture et répond à toutes vos questions.
             </p>
 
             <ul class="book-features">
@@ -1622,9 +2077,7 @@
             </ul>
 
             <div class="book-author-box">
-              <p class="book-author-label">
-                À propos de l'auteur
-              </p>
+              <p class="book-author-label">À propos de l'auteur</p>
               <p class="book-author-text">
                 <strong>Charles Tate</strong>, titulaire d'un Master en
                 linguistique, s'appuie sur sa solide expérience dans
@@ -1649,10 +2102,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M28 0H0v28h28V0z"
-                fill="#00B67A"
-              />
+              <path d="M28 0H0v28h28V0z" fill="#00B67A" />
               <path
                 d="M14 8.5l1.8 5.5h5.8l-4.7 3.4 1.8 5.5L14 19.5l-4.7 3.4 1.8-5.5-4.7-3.4h5.8L14 8.5z"
                 fill="#fff"
@@ -1717,7 +2167,11 @@
         <div class="footer-top">
           <div class="footer-section">
             <div class="logo" style="margin-bottom: 1.5rem; text-align: left">
-              <img src="assets/logos/logo-main.png" alt="MasterMentor" class="logo-img-footer">
+              <img
+                src="assets/logos/logo-main.png"
+                alt="MasterMentor"
+                class="logo-img-footer"
+              />
               <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
             </div>
             <p>
@@ -1783,7 +2237,7 @@
           </div>
 
           <div class="footer-section">
-            <h4>Certifications & Outils</h4>
+            <h4>Certifications et nos outils de garantie</h4>
             <div class="footer-certifications">
               <a
                 href="https://www.ekomi.de/"
@@ -1793,14 +2247,17 @@
                 title="eKomi - Avis clients vérifiés"
               >
                 <picture>
-                  <source srcset="assets/logos/certifications/ekomi.webp" type="image/webp">
+                  <source
+                    srcset="assets/logos/certifications/ekomi.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="assets/logos/certifications/ekomi.png"
                     alt="eKomi - Avis clients vérifiés - Note 4.9/5"
                     loading="lazy"
                     width="80"
                     height="80"
-                  >
+                  />
                 </picture>
               </a>
               <a
@@ -1811,14 +2268,17 @@
                 title="Trustpilot - Notation publique"
               >
                 <picture>
-                  <source srcset="assets/logos/certifications/trustpilot.webp" type="image/webp">
+                  <source
+                    srcset="assets/logos/certifications/trustpilot.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="assets/logos/certifications/trustpilot.png"
                     alt="Trustpilot - Notation publique - Note 4.8/5"
                     loading="lazy"
                     width="326"
                     height="80"
-                  >
+                  />
                 </picture>
               </a>
               <a
@@ -1829,14 +2289,17 @@
                 title="Compilatio - Détection plagiat"
               >
                 <picture>
-                  <source srcset="assets/logos/certifications/compilatio.webp" type="image/webp">
+                  <source
+                    srcset="assets/logos/certifications/compilatio.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="assets/logos/certifications/compilatio.png"
                     alt="Compilatio - Logiciel de détection de plagiat"
                     loading="lazy"
                     width="171"
                     height="80"
-                  >
+                  />
                 </picture>
               </a>
               <a
@@ -1847,17 +2310,56 @@
                 title="Lucide.ai - Technologie IA"
               >
                 <picture>
-                  <source srcset="assets/logos/certifications/lucide.webp" type="image/webp">
+                  <source
+                    srcset="assets/logos/certifications/lucide.webp"
+                    type="image/webp"
+                  />
                   <img
                     src="assets/logos/certifications/lucide.png"
                     alt="Lucide.ai - Certification contenu sans IA générative"
                     loading="lazy"
                     width="302"
                     height="80"
-                  >
+                  />
                 </picture>
               </a>
             </div>
+          </div>
+        </div>
+
+        <div class="footer-payment">
+          <p class="payment-title">Moyens de paiement acceptés</p>
+          <div class="payment-icons">
+            <picture>
+              <source srcset="assets/logos/paiement/visa.webp" type="image/webp">
+              <img
+                src="assets/logos/paiement/visa.png"
+                alt="Visa"
+                loading="lazy"
+                width="87"
+                height="40"
+              >
+            </picture>
+            <picture>
+              <source srcset="assets/logos/paiement/mastercard.webp" type="image/webp">
+              <img
+                src="assets/logos/paiement/mastercard.png"
+                alt="Mastercard"
+                loading="lazy"
+                width="71"
+                height="40"
+              >
+            </picture>
+            <picture>
+              <source srcset="assets/logos/paiement/paypal.webp" type="image/webp">
+              <img
+                src="assets/logos/paiement/paypal.png"
+                alt="PayPal"
+                loading="lazy"
+                width="53"
+                height="40"
+              >
+            </picture>
           </div>
         </div>
 
@@ -1865,10 +2367,26 @@
           <a href="Charte-Integrite-Academique.html" target="_blank"
             >Charte d'Intégrité Académique</a
           >
-          <span style="color: #999; cursor: not-allowed; opacity: 0.6;" aria-disabled="true">Mentions Légales</span>
-          <span style="color: #999; cursor: not-allowed; opacity: 0.6;" aria-disabled="true">Politique de Confidentialité</span>
-          <span style="color: #999; cursor: not-allowed; opacity: 0.6;" aria-disabled="true">CGV</span>
-          <span style="color: #999; cursor: not-allowed; opacity: 0.6;" aria-disabled="true">CGU</span>
+          <span
+            style="color: #999; cursor: not-allowed; opacity: 0.6"
+            aria-disabled="true"
+            >Mentions Légales</span
+          >
+          <span
+            style="color: #999; cursor: not-allowed; opacity: 0.6"
+            aria-disabled="true"
+            >Politique de Confidentialité</span
+          >
+          <span
+            style="color: #999; cursor: not-allowed; opacity: 0.6"
+            aria-disabled="true"
+            >CGV</span
+          >
+          <span
+            style="color: #999; cursor: not-allowed; opacity: 0.6"
+            aria-disabled="true"
+            >CGU</span
+          >
         </div>
 
         <div class="footer-bottom">
@@ -1950,46 +2468,48 @@
     <!-- Critical JavaScript inline (menu burger + smooth scroll) -->
     <script>
       // Menu burger mobile (Critical pour UX)
-      (function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+      (function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
         const body = document.body;
 
         const toggleMenu = () => {
-          menuToggle.classList.toggle('active');
-          navLinks.classList.toggle('active');
-          body.classList.toggle('menu-open');
-          const isExpanded = menuToggle.classList.contains('active');
-          menuToggle.setAttribute('aria-expanded', isExpanded);
+          menuToggle.classList.toggle("active");
+          navLinks.classList.toggle("active");
+          body.classList.toggle("menu-open");
+          const isExpanded = menuToggle.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
         };
 
         const closeMenu = () => {
-          menuToggle.classList.remove('active');
-          navLinks.classList.remove('active');
-          body.classList.remove('menu-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
+          body.classList.remove("menu-open");
+          menuToggle.setAttribute("aria-expanded", "false");
         };
 
         if (menuToggle) {
-          menuToggle.addEventListener('click', toggleMenu);
+          menuToggle.addEventListener("click", toggleMenu);
         }
 
         if (navLinks) {
-          navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
           });
         }
 
-        body.addEventListener('click', (e) => {
-          if (body.classList.contains('menu-open') &&
-              !navLinks.contains(e.target) &&
-              !menuToggle.contains(e.target)) {
+        body.addEventListener("click", (e) => {
+          if (
+            body.classList.contains("menu-open") &&
+            !navLinks.contains(e.target) &&
+            !menuToggle.contains(e.target)
+          ) {
             closeMenu();
           }
         });
 
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && body.classList.contains('menu-open')) {
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && body.classList.contains("menu-open")) {
             closeMenu();
           }
         });
@@ -2003,7 +2523,7 @@
           if (target) {
             target.scrollIntoView({
               behavior: "smooth",
-              block: "start"
+              block: "start",
             });
           }
         });
@@ -2011,16 +2531,29 @@
 
       // YouTube facade lazy load
       function loadYouTubeVideo(element) {
-        const videoId = element.getAttribute('data-youtube-id');
-        const iframe = document.createElement('iframe');
-        iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`);
-        iframe.setAttribute('title', 'MasterMentor - Notre Méthode d\'Accompagnement');
-        iframe.setAttribute('frameborder', '0');
-        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-        iframe.style.cssText = 'width: 100%; height: 100%; position: absolute; top: 0; left: 0;';
-        element.innerHTML = '';
+        const videoId = element.getAttribute("data-youtube-id");
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute(
+          "src",
+          `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
+        );
+        iframe.setAttribute(
+          "title",
+          "MasterMentor - Notre Méthode d'Accompagnement"
+        );
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute(
+          "allow",
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        );
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute(
+          "referrerpolicy",
+          "strict-origin-when-cross-origin"
+        );
+        iframe.style.cssText =
+          "width: 100%; height: 100%; position: absolute; top: 0; left: 0;";
+        element.innerHTML = "";
         element.appendChild(iframe);
       }
     </script>
