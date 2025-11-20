@@ -208,17 +208,6 @@ npx terser assets/js/main.js -o assets/js/main.min.js -c -m
 npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 ```
 
-## 🔒 Sécurité
-
-- ✅ `.gitignore` configuré (secrets, credentials, .env)
-- ✅ Pas de données sensibles dans le code
-- ✅ Validation formulaire côté client + serveur (double validation)
-- ✅ Sanitization XSS (htmlspecialchars ENT_QUOTES)
-- ✅ Rate limiting (1 envoi/minute par IP)
-- ✅ Honeypot anti-bots (champ caché)
-- ✅ Headers sécurisés (X-Frame-Options, X-XSS-Protection)
-- ✅ Protection CSRF (basique, à améliorer)
-
 ## 📊 Statistiques Projet
 
 - **6 pages HTML/PHP** (index, tarifs, popup-demo, charte, merci, contact.php)
@@ -237,12 +226,14 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 ### Version 1.5 (19 Nov 2025) - 🔧 CORRECTIONS RETOUR CLIENT ✅
 
 - ✅ **MM-19** : Quiz interactif corrigé
+
   - **Problème** : Quiz ne fonctionnait pas (script non chargé)
   - **Cause racine** : `requestIdleCallback` s'exécutait après `DOMContentLoaded`, empêchant l'initialisation
   - **Solution** : Chargement direct avec `<script defer>` au lieu du lazy loading complexe
   - Correction du sélecteur `.quiz-container` → `.quiz-container-embedded`
 
 - ✅ **MM-20** : Popup CTA restauré
+
   - **Problème** : Popup n'apparaissait plus
   - **Cause** : Code popup dans quiz.js qui ne se chargeait pas
   - **Modifications** :
@@ -251,22 +242,26 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
     - Triggers conservés : timer 5s, exit intent, scroll 50%
 
 - ✅ **MM-21** : Vidéo YouTube mise à jour
+
   - Ancien ID : `K8LmYdEqHrc`
   - Nouveau ID : `zxiQNT0CwK0`
   - Facade lazy loading préservée
 
 - ✅ **MM-18** : Suppression mentions écoles témoignages
+
   - Sarah M. : Paris Dauphine supprimé
   - Thomas L. : Lyon 2 supprimé
   - Antoine L. : HEC Paris supprimé
   - Seul le niveau d'études conservé (Master 2 + spécialité)
 
 - ✅ **MM-16** : Favicon fond transparent
+
   - 5 fichiers régénérés avec ImageMagick
   - favicon.ico (16/32/48px), favicon-192.png, favicon-512.png, apple-touch-icon.png
   - Fond blanc supprimé sur tous les formats
 
 - ✅ **MM-17** : Footer tarifs uniformisé
+
   - Footer complet copié de index.html vers tarifs.html
   - 4 sections : Logo, Navigation, Garanties, Certifications
   - Liens adaptés pour tarifs.html (index.html#...)
