@@ -192,10 +192,10 @@
         .hero-image {
           order: -1;
           margin-bottom: 2rem;
+          padding: 1rem;
         }
-        .hero-image-wrapper {
+        .hero-image picture {
           max-width: 400px;
-          margin: 0 auto;
         }
         .hero-image::before,
         .hero-image::after {
@@ -356,61 +356,73 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 2rem;
       }
-      .hero-image-wrapper {
+      .hero-image picture {
         position: relative;
+        display: block;
         width: 100%;
-        max-width: 600px;
-        aspect-ratio: 1 / 1;
+        max-width: 500px;
       }
       .hero-image img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
-        box-shadow:
-          0 25px 70px rgba(87, 112, 134, 0.18),
-          0 12px 35px rgba(87, 112, 134, 0.12),
-          0 5px 15px rgba(87, 112, 134, 0.08);
-        transition: all 0.4s ease;
-      }
-      .hero-image img:hover {
-        transform: translateY(-8px);
-        border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
+        border-radius: 48% 52% 60% 40% / 45% 55% 45% 55%;
         box-shadow:
           0 30px 80px rgba(87, 112, 134, 0.2),
-          0 15px 40px rgba(87, 112, 134, 0.15);
+          0 15px 40px rgba(87, 112, 134, 0.15),
+          0 8px 20px rgba(87, 112, 134, 0.1);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .hero-image img:hover {
+        border-radius: 52% 48% 45% 55% / 55% 45% 55% 45%;
+        transform: translateY(-10px) scale(1.02);
+        box-shadow:
+          0 40px 100px rgba(87, 112, 134, 0.25),
+          0 20px 50px rgba(87, 112, 134, 0.18),
+          0 10px 25px rgba(87, 112, 134, 0.12);
       }
       .hero-image::before {
         content: '';
         position: absolute;
-        top: -5%;
-        right: -5%;
-        width: 40%;
-        height: 40%;
-        background: linear-gradient(135deg, rgba(191, 4, 70, 0.15), rgba(217, 22, 86, 0.15));
-        border-radius: 50% 40% 60% 50% / 45% 55% 45% 55%;
+        top: -3%;
+        right: -3%;
+        width: 35%;
+        height: 35%;
+        background: linear-gradient(135deg,
+          rgba(255, 182, 193, 0.3),
+          rgba(255, 105, 180, 0.2));
+        border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
         z-index: -1;
-        animation: float 6s ease-in-out infinite;
+        animation: float 7s ease-in-out infinite;
+        filter: blur(40px);
       }
       .hero-image::after {
         content: '';
         position: absolute;
-        bottom: -8%;
-        left: -8%;
-        width: 35%;
-        height: 35%;
-        background: linear-gradient(135deg, rgba(15, 82, 170, 0.12), rgba(2, 47, 107, 0.12));
-        border-radius: 40% 60% 50% 50% / 55% 45% 55% 45%;
+        bottom: -5%;
+        left: -5%;
+        width: 40%;
+        height: 40%;
+        background: linear-gradient(135deg,
+          rgba(173, 216, 230, 0.3),
+          rgba(135, 206, 250, 0.2));
+        border-radius: 50% 50% 45% 55% / 45% 55% 45% 55%;
         z-index: -1;
         animation: float 8s ease-in-out infinite reverse;
+        filter: blur(40px);
       }
       @keyframes float {
         0%, 100% {
-          transform: translateY(0px) rotate(0deg);
+          transform: translate(0, 0) rotate(0deg);
         }
-        50% {
-          transform: translateY(-20px) rotate(5deg);
+        33% {
+          transform: translate(-15px, -15px) rotate(3deg);
+        }
+        66% {
+          transform: translate(10px, 10px) rotate(-3deg);
         }
       }
       .hero h1 {
@@ -803,17 +815,15 @@
         </div>
 
         <div class="hero-image">
-          <div class="hero-image-wrapper">
-            <picture>
-              <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
-              <img src="assets/images/hero/hero-new.jpg"
-                   alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
-                   width="600"
-                   height="600"
-                   loading="eager"
-                   fetchpriority="high">
-            </picture>
-          </div>
+          <picture>
+            <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
+            <img src="assets/images/hero/hero-new.jpg"
+                 alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
+                 width="600"
+                 height="600"
+                 loading="eager"
+                 fetchpriority="high">
+          </picture>
         </div>
       </div>
     </main>
