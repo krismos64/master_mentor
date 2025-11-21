@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tarifs Coaching Master 2 - MasterMentor | 35€/h - Paiement Flexible
+    </title>
+    <meta
+      name="description"
+      content="Tarifs coaching mémoire Master 2 : 35€/h - Formules de 5h à 40h. Paiement en 10 fois sans frais. Accompagnement par docteurs. Devis gratuit sous 24h."
+    />
+    <meta
+      name="keywords"
+      content="tarifs coaching master 2, prix accompagnement mémoire, 35 euros heure, paiement flexible, formules coaching"
+    />
+    <meta name="author" content="MasterMentor by Staka" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mastermentor.fr/tarifs.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mastermentor.fr/tarifs.html" />
+    <meta property="og:site_name" content="MasterMentor" />
+    <meta
+      property="og:title"
+      content="Tarifs Coaching Master 2 - MasterMentor | 35€/h - Paiement Flexible"
+    />
+    <meta
+      property="og:description"
+      content="Tarifs coaching mémoire Master 2 : 35€/h - Formules de 5h à 40h. Paiement en 10 fois sans frais. Accompagnement par docteurs. Devis gratuit sous 24h."
+    />
+    <meta
+      property="og:image"
+      content="https://www.mastermentor.fr/assets/images/og-tarifs-mastermentor.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://www.mastermentor.fr/tarifs.html"
+    />
+    <meta
+      name="twitter:title"
+      content="Tarifs Coaching Master 2 - MasterMentor | 35€/h - Paiement Flexible"
+    />
+    <meta
+      name="twitter:description"
+      content="Tarifs coaching mémoire Master 2 : 35€/h - Formules de 5h à 40h. Paiement en 10 fois sans frais. Accompagnement par docteurs. Devis gratuit sous 24h."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.mastermentor.fr/assets/images/og-tarifs-mastermentor.jpg"
+    />
+
+    <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="/assets/css/tarifs.min.css" />
+
+    <!-- Favicons multi-plateformes -->
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/x-icon"
+      href="/favicon.ico"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/favicon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/favicon-512.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#577086" />
+
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.mastermentor.fr/tarifs.html#webpage",
+            "url": "https://www.mastermentor.fr/tarifs.html",
+            "name": "Tarifs Coaching Master 2 - MasterMentor",
+            "description": "Tarifs coaching mémoire Master 2 : 35€/h - Formules de 5h à 40h. Paiement en 10 fois sans frais.",
+            "isPartOf": {
+              "@id": "https://www.mastermentor.fr/#website"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.mastermentor.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Tarifs",
+                  "item": "https://www.mastermentor.fr/tarifs.html"
+                }
+              ]
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "OfferCatalog",
+            "@id": "https://www.mastermentor.fr/tarifs.html#offers",
+            "name": "Formules d'accompagnement MasterMentor",
+            "description": "Coaching académique pour Master 2 à partir de 35€/heure",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Accompagnement Ponctuel",
+                "description": "Aide ciblée sur un point précis : diagnostic, coaching individuel personnalisé, aide méthodologique, correction et feedback détaillés",
+                "category": "Coaching académique",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "280",
+                  "priceCurrency": "EUR",
+                  "description": "À partir de 280€ - Budget indicatif"
+                },
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Accompagnement Ponctuel",
+                  "provider": {
+                    "@id": "https://www.mastermentor.fr/#organization"
+                  }
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Ponctuel."
+              },
+              {
+                "@type": "Offer",
+                "name": "Relecture Experte",
+                "description": "Validation et amélioration : analyse complète, relecture approfondie personnalisée, corrections méthodologiques, rapport détaillé",
+                "category": "Coaching académique",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "35",
+                  "priceCurrency": "EUR",
+                  "unitText": "heure"
+                },
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Relecture Experte",
+                  "provider": {
+                    "@id": "https://www.mastermentor.fr/#organization"
+                  }
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Relecture%20Experte."
+              },
+              {
+                "@type": "Offer",
+                "name": "Préparation Soutenance",
+                "description": "Maîtrisez votre présentation : structuration, simulations, préparation questions jury, gestion stress et temps",
+                "category": "Coaching académique",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "35",
+                  "priceCurrency": "EUR",
+                  "unitText": "heure"
+                },
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Préparation Soutenance",
+                  "provider": {
+                    "@id": "https://www.mastermentor.fr/#organization"
+                  }
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Pr%C3%A9paration%20Soutenance."
+              },
+              {
+                "@type": "Offer",
+                "name": "Accompagnement Complet",
+                "description": "Du début à la soutenance : diagnostic, coaching intensif, problématique, méthodologie, développement, soutenance, suivi email illimité",
+                "category": "Coaching académique",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "35",
+                  "priceCurrency": "EUR",
+                  "unitText": "heure"
+                },
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Accompagnement Complet",
+                  "provider": {
+                    "@id": "https://www.mastermentor.fr/#organization"
+                  }
+                },
+                "availability": "https://schema.org/InStock",
+                "url": "https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Complet."
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.mastermentor.fr/tarifs.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Comment sont établis les tarifs ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nos tarifs sont basés sur 35€ de l'heure et sont établis après un diagnostic gratuit de votre projet. Chaque mémoire est unique : la complexité du sujet, l'avancement actuel, les besoins spécifiques et les délais influencent le nombre d'heures nécessaires et donc le tarif final. À titre indicatif, le budget d'un accompagnement ponctuel est de 280€."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je combiner plusieurs formules ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolument ! Vous pouvez commencer par un Accompagnement Ponctuel, puis ajouter une Relecture Experte ou une Préparation Soutenance selon vos besoins. Nous adaptons notre accompagnement à l'évolution de votre projet."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <?php include 'includes/header.php'; ?>
+    <div class="menu-overlay"></div>
+
+    <!-- Page Title -->
+    <div class="page-title-section">
+      <h1>Nos Tarifs Transparents</h1>
+    </div>
+
+    <div class="container">
+      <div class="intro-box">
+        <h2>Tarification Simple et Transparente</h2>
+        <p>Nous vous accompagnons sur la base de :</p>
+        <div class="rate-highlight">35€ <span>par heure</span></div>
+        <p style="color: var(--gray); max-width: 600px; margin: 0 auto">
+          Choisissez la formule qui correspond le mieux à vos besoins et à votre
+          budget. Tous nos accompagnements sont assurés par des
+          enseignants-chercheurs docteurs.
+        </p>
+      </div>
+
+      <!-- Facilités de Paiement -->
+      <div
+        style="
+          background: var(--white);
+          padding: 2.5rem;
+          border-radius: var(--radius-xl);
+          box-shadow: var(--shadow-medium);
+          margin-bottom: 3rem;
+        "
+      >
+        <h3
+          style="
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+          "
+        >
+          Facilités de Paiement
+        </h3>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              padding: 1.5rem;
+              background: var(--light-bg);
+              border-radius: var(--radius-md);
+            "
+          >
+            <div style="font-size: 2rem; margin-bottom: 1rem">💳</div>
+            <h4 style="color: var(--dark); margin-bottom: 0.5rem">
+              Paiement en 10 fois
+            </h4>
+            <p style="color: var(--gray); font-size: 0.95rem">
+              Sans frais pour toutes les formules
+            </p>
+          </div>
+
+          <div
+            style="
+              text-align: center;
+              padding: 1.5rem;
+              background: var(--light-bg);
+              border-radius: var(--radius-md);
+            "
+          >
+            <div style="font-size: 2rem; margin-bottom: 1rem">📅</div>
+            <h4 style="color: var(--dark); margin-bottom: 0.5rem">
+              Paiement échelonné
+            </h4>
+            <p style="color: var(--gray); font-size: 0.95rem">
+              Au fur et à mesure de l'avancement
+            </p>
+          </div>
+
+          <div
+            style="
+              text-align: center;
+              padding: 1.5rem;
+              background: var(--light-bg);
+              border-radius: var(--radius-md);
+            "
+          >
+            <div style="font-size: 2rem; margin-bottom: 1rem">🔒</div>
+            <h4 style="color: var(--dark); margin-bottom: 0.5rem">
+              Paiement sécurisé
+            </h4>
+            <p style="color: var(--gray); font-size: 0.95rem">
+              Virement bancaire ou paiement en ligne
+            </p>
+          </div>
+
+          <div
+            style="
+              text-align: center;
+              padding: 1.5rem;
+              background: var(--light-bg);
+              border-radius: var(--radius-md);
+            "
+          >
+            <div style="font-size: 2rem; margin-bottom: 1rem">📄</div>
+            <h4 style="color: var(--dark); margin-bottom: 0.5rem">
+              Facture fournie
+            </h4>
+            <p style="color: var(--gray); font-size: 0.95rem">
+              Facture officielle pour tous vos paiements
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Formule 1 -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <div class="card-icon">🎯</div>
+            <h3 class="card-title">Accompagnement Ponctuel</h3>
+            <p class="card-subtitle">Aide ciblée sur un point précis</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Diagnostic de votre problématique</li>
+            <li>Coaching individuel personnalisé</li>
+            <li>Aide méthodologique ciblée</li>
+            <li>Correction et feedback détaillés</li>
+          </ul>
+
+          <div class="card-footer">
+            <p class="card-note">
+              Chaque travail est spécifique, contactez-nous.
+            </p>
+            <a
+              href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Ponctuel."
+              target="_blank"
+              class="card-cta"
+            >
+              Demander un devis WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Formule 2 -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <div class="card-icon">📝</div>
+            <h3 class="card-title">Relecture Experte</h3>
+            <p class="card-subtitle">Validation et amélioration</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Analyse complète de votre mémoire</li>
+            <li>Relecture approfondie personnalisée</li>
+            <li>Corrections méthodologiques</li>
+            <li>Rapport détaillé des améliorations</li>
+          </ul>
+
+          <div class="card-footer">
+            <p class="card-note">
+              Chaque travail est spécifique, contactez-nous.
+            </p>
+            <a
+              href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Relecture%20Experte."
+              target="_blank"
+              class="card-cta"
+            >
+              Demander un devis WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Formule 3 -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <div class="card-icon">🎤</div>
+            <h3 class="card-title">Préparation Soutenance</h3>
+            <p class="card-subtitle">Maîtrisez votre présentation</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Structuration de votre présentation</li>
+            <li>Simulations de soutenance</li>
+            <li>Préparation aux questions du jury</li>
+            <li>Gestion du stress et du temps</li>
+          </ul>
+
+          <div class="card-footer">
+            <p class="card-note">
+              Chaque travail est spécifique, contactez-nous.
+            </p>
+            <a
+              href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Pr%C3%A9paration%20Soutenance."
+              target="_blank"
+              class="card-cta"
+            >
+              Demander un devis WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Formule 4 -->
+        <div class="pricing-card featured">
+          <div class="card-header">
+            <div class="card-icon">🏆</div>
+            <h3 class="card-title">Accompagnement Complet</h3>
+            <p class="card-subtitle">Du début à la soutenance</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Diagnostic initial approfondi</li>
+            <li>Coaching personnalisé intensif</li>
+            <li>Construction de la problématique</li>
+            <li>Méthodologie de recherche complète</li>
+            <li>Suivi du développement complet</li>
+            <li>Préparation à la soutenance</li>
+            <li>Suivi illimité par email</li>
+          </ul>
+
+          <div class="card-footer">
+            <p class="card-note">
+              Chaque travail est spécifique, contactez-nous.
+            </p>
+            <a
+              href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20la%20formule%20Accompagnement%20Complet."
+              target="_blank"
+              class="card-cta"
+            >
+              Demander un devis WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Questions Fréquentes -->
+      <div
+        style="
+          background: var(--white);
+          padding: 2.5rem;
+          border-radius: var(--radius-xl);
+          box-shadow: var(--shadow-medium);
+          margin-bottom: 3rem;
+        "
+      >
+        <h3
+          style="
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+          "
+        >
+          Questions Fréquentes
+        </h3>
+
+        <div
+          style="
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+          "
+        >
+          <div
+            style="
+              font-weight: 600;
+              color: var(--dark);
+              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+            "
+          >
+            📊 Comment sont établis les tarifs ?
+          </div>
+          <div style="color: var(--gray); line-height: 1.8">
+            Nos tarifs sont basés sur 35€ de l'heure et sont établis après un
+            diagnostic gratuit de votre projet. Chaque mémoire est unique : la
+            complexité du sujet, l'avancement actuel, les besoins spécifiques et
+            les délais influencent le nombre d'heures nécessaires et donc le
+            tarif final.
+            <p style="margin-top: 0.75rem">
+              <strong
+                >À titre indicatif, le budget d'un accompagnement ponctuel est
+                de 280€.</strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+          "
+        >
+          <div
+            style="
+              font-weight: 600;
+              color: var(--dark);
+              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+            "
+          >
+            💰 Puis-je combiner plusieurs formules ?
+          </div>
+          <div style="color: var(--gray); line-height: 1.8">
+            Absolument ! Vous pouvez commencer par un Accompagnement Ponctuel,
+            puis ajouter une Relecture Experte ou une Préparation Soutenance
+            selon vos besoins. Les heures précédentes seront déduites si vous
+            passez à la formule Complète.
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+          "
+        >
+          <div
+            style="
+              font-weight: 600;
+              color: var(--dark);
+              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+            "
+          >
+            📅 Combien de temps dure l'accompagnement ?
+          </div>
+          <div style="color: var(--gray); line-height: 1.8">
+            La durée dépend de la formule choisie et de vos disponibilités. Nous
+            nous adaptons à votre calendrier universitaire et établissons
+            ensemble un planning réaliste lors du diagnostic initial. La
+            flexibilité est au cœur de notre accompagnement.
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+          "
+        >
+          <div
+            style="
+              font-weight: 600;
+              color: var(--dark);
+              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+            "
+          >
+            🎓 Comment obtenir un devis personnalisé ?
+          </div>
+          <div style="color: var(--gray); line-height: 1.8">
+            Contactez-nous via WhatsApp en cliquant sur le bouton de la formule
+            qui vous intéresse. Nous organisons ensuite un diagnostic gratuit de
+            30 minutes pour analyser votre projet, vos besoins et vous proposer
+            un devis détaillé et personnalisé.
+          </div>
+        </div>
+
+        <div style="margin-bottom: 0">
+          <div
+            style="
+              font-weight: 600;
+              color: var(--dark);
+              margin-bottom: 0.5rem;
+              font-size: 1.1rem;
+            "
+          >
+            💳 Quels sont les moyens de paiement acceptés ?
+          </div>
+          <div style="color: var(--gray); line-height: 1.8">
+            Nous acceptons le virement bancaire et le paiement en ligne
+            sécurisé. Des facilités de paiement (paiement en 10 fois ou paiement
+            échelonné) sont disponibles selon la formule choisie et seront
+            discutées lors de l'établissement du devis.
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link">
+        <a href="index.php">← Retour à la page d'accueil</a>
+      </div>
+    </div>
+
+    <!-- Chatbot WhatsApp Flottant -->
+    <div class="whatsapp-float">
+      <div class="whatsapp-tooltip">
+        <div class="whatsapp-tooltip-title">
+          💬 Besoin d'aide pour votre mémoire ?
+        </div>
+        <div class="whatsapp-tooltip-text">
+          Un enseignant-chercheur vous répond en 5 min.
+        </div>
+      </div>
+      <a
+        href="https://wa.me/33615078152?text=Bonjour%2C%20j'ai%20besoin%20d'aide%20pour%20mon%20m%C3%A9moire.%20Pouvez-vous%20m'aider%20%3F"
+        target="_blank"
+        class="whatsapp-button"
+        aria-label="Contacter sur WhatsApp"
+      >
+        <span class="whatsapp-badge">!</span>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.125c2.355 1.288 5.012 1.975 7.862 1.975 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.5c-2.547 0-5.025-0.725-7.163-2.088l-0.513-0.3-5.313 1.388 1.413-5.263-0.325-0.538c-1.5-2.4-2.287-5.163-2.287-8.013 0-7.725 6.287-14.012 14.012-14.012s14.012 6.287 14.012 14.012-6.287 14.012-14.012 14.012zM23.537 19.488c-0.4-0.2-2.363-1.163-2.738-1.3-0.363-0.138-0.625-0.2-0.888 0.2s-1.025 1.3-1.263 1.563c-0.225 0.263-0.45 0.3-0.85 0.1s-1.65-0.612-3.138-1.937c-1.163-1.038-1.95-2.313-2.175-2.713s-0.025-0.613 0.175-0.813c0.188-0.175 0.4-0.462 0.6-0.688 0.2-0.238 0.263-0.4 0.4-0.663 0.138-0.262 0.063-0.487-0.025-0.687s-0.888-2.137-1.213-2.925c-0.325-0.775-0.65-0.663-0.888-0.675-0.225-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.388-1.387 1.35-1.387 3.3s1.413 3.825 1.613 4.088c0.2 0.262 2.8 4.275 6.788 5.988 0.95 0.412 1.688 0.65 2.263 0.838 0.95 0.3 1.813 0.262 2.5 0.162 0.763-0.113 2.363-0.962 2.7-1.887 0.338-0.938 0.338-1.738 0.238-1.888-0.1-0.175-0.363-0.275-0.763-0.475z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <?php include 'includes/footer.php'; ?>
+
+    <!-- Critical JavaScript inline (menu burger) -->
+    <script>
+      // Menu burger mobile
+      (function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        const body = document.body;
+
+        const toggleMenu = () => {
+          menuToggle.classList.toggle("active");
+          navLinks.classList.toggle("active");
+          body.classList.toggle("menu-open");
+          const isExpanded = menuToggle.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        };
+
+        const closeMenu = () => {
+          menuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
+          body.classList.remove("menu-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        };
+
+        if (menuToggle) {
+          menuToggle.addEventListener("click", toggleMenu);
+        }
+
+        if (navLinks) {
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+        }
+
+        body.addEventListener("click", (e) => {
+          if (
+            body.classList.contains("menu-open") &&
+            !navLinks.contains(e.target) &&
+            !menuToggle.contains(e.target)
+          ) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && body.classList.contains("menu-open")) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

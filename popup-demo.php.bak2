@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Urgence - Démo Technique | MasterMentor</title>
+    <meta name="description" content="Page de démonstration du popup d'urgence MasterMentor. Test de l'affichage et des déclenchements (timer, scroll, exit intent)." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mastermentor.fr/popup-demo.html" />
+
+    <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/popup-demo.min.css">
+
+    <!-- Favicons multi-plateformes -->
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/favicon-512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#577086">
+</head>
+<body>
+    <div class="demo-container">
+        <h1 class="demo-title">🎯 Démo Popup Urgence</h1>
+        <p class="demo-subtitle">Cliquez sur le bouton pour voir le popup en action</p>
+        <button class="demo-button" onclick="showPopup()">Afficher le Popup</button>
+    </div>
+
+    <!-- Popup Urgence -->
+    <div class="popup-overlay" id="popupUrgence">
+        <div class="popup-container">
+            <button class="popup-close" onclick="closePopup()" aria-label="Fermer">×</button>
+            
+            <div class="popup-icon">⚡</div>
+            
+            <p class="popup-subtitle">Votre réussite commence maintenant</p>
+            
+            <h2 class="popup-title">Contactez nos mentors pour faire avancer votre mémoire</h2>
+            
+            <p class="popup-message">
+                <strong>Contactez nos mentors dès aujourd'hui</strong> pour faire avancer votre mémoire.<br>
+                Diagnostic gratuit en 30 minutes par un enseignant-chercheur docteur.
+            </p>
+            
+            <a href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20un%20diagnostic%20gratuit%20pour%20faire%20avancer%20mon%20m%C3%A9moire.%20Merci." 
+               target="_blank" 
+               class="popup-cta" 
+               onclick="closePopup()">
+                Contacter un mentor maintenant
+            </a>
+            
+            <p class="popup-footer">
+                Réponse immédiate • Sans engagement • Inscriptions limitées
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('popupUrgence');
+
+        const showPopup = () => {
+            popup.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closePopup = () => {
+            popup.classList.remove('show');
+            document.body.style.overflow = '';
+        };
+
+        // Fermer le popup si on clique sur l'overlay
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+
+        // Fermer avec la touche Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+    </script>
+</body>
+</html>

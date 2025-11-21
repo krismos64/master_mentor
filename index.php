@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics 4 (GA4) - Lazy loaded via requestIdleCallback -->
+    <!-- TODO: Remplacer G-XXXXXXXXXX par l'ID de tracking fourni par le client -->
+    <!--
+    <script>
+      // Lazy load GA4 pour optimiser performance (FCP, TBT)
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+          document.head.appendChild(script);
+
+          script.onload = () => {
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+              'anonymize_ip': true,
+              'cookie_flags': 'SameSite=None;Secure'
+            });
+          };
+        });
+      } else {
+        // Fallback pour anciens navigateurs
+        setTimeout(() => {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+          document.head.appendChild(script);
+
+          script.onload = () => {
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+              'anonymize_ip': true,
+              'cookie_flags': 'SameSite=None;Secure'
+            });
+          };
+        }, 2000);
+      }
+    </script>
+    -->
+
+    <title>
+      MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite
+    </title>
+    <meta
+      name="description"
+      content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
+    />
+    <meta
+      name="keywords"
+      content="coaching mémoire master 2, accompagnement académique, docteurs enseignants-chercheurs, méthodologie recherche, soutenance master, rédaction mémoire"
+    />
+    <meta name="author" content="MasterMentor by Staka" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mastermentor.fr/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mastermentor.fr/" />
+    <meta property="og:site_name" content="MasterMentor" />
+    <meta
+      property="og:title"
+      content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite"
+    />
+    <meta
+      property="og:description"
+      content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
+    />
+    <meta
+      property="og:image"
+      content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.mastermentor.fr/" />
+    <meta
+      name="twitter:title"
+      content="MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite"
+    />
+    <meta
+      name="twitter:description"
+      content="Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
+    />
+
+    <!-- Preconnect domaines externes pour optimiser chargement -->
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin />
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
+
+    <!-- Preload image hero (LCP optimization) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-1200.webp"
+      fetchpriority="high"
+      media="(min-width: 1024px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-800.webp"
+      fetchpriority="high"
+      media="(min-width: 768px) and (max-width: 1023px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/hero/hero-400.webp"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+
+    <!-- Critical CSS inline (above-the-fold) pour optimiser FCP -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #0f52aa;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        z-index: 9999;
+        transition: top 0.3s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+      a:focus,
+      button:focus,
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 2px solid #0f52aa;
+        outline-offset: 2px;
+      }
+      .menu-toggle:focus {
+        outline: 2px solid #0f52aa;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 280px;
+          height: 100vh;
+          background: #fff;
+          flex-direction: column;
+          padding: 5rem 0 2rem;
+          box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+          transition: right 0.3s ease;
+          z-index: 1000;
+          overflow-y: auto;
+        }
+        .nav-links.active {
+          right: 0;
+        }
+        body::before {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 999;
+        }
+        body.menu-open::before {
+          opacity: 1;
+          visibility: visible;
+        }
+        body.menu-open {
+          overflow: hidden;
+        }
+        .hero {
+          min-height: 500px;
+        }
+      }
+      :root {
+        --primary: #577086;
+        --primary-light: #6b7899;
+        --secondary: #0f52aa;
+        --success: #577086;
+        --dark: #577086;
+        --gray: #4b5563;
+        --light-bg: #ffffff;
+        --white: #ffffff;
+        --icon-red: #bf0446;
+        --icon-blue: #022f6b;
+        --radius-sm: 16px;
+        --radius-md: 24px;
+        --radius-lg: 32px;
+        --radius-xl: 48px;
+        --shadow-soft: 0 8px 32px rgba(87, 112, 134, 0.08);
+        --shadow-medium: 0 12px 48px rgba(87, 112, 134, 0.12);
+        --shadow-strong: 0 20px 64px rgba(87, 112, 134, 0.16);
+        --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        overflow-x: hidden;
+        background: var(--white);
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: var(--shadow-soft);
+        z-index: 1000;
+        transition: var(--transition);
+      }
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.25rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--dark);
+      }
+      .logo span {
+        color: var(--secondary);
+      }
+      .logo-subtitle {
+        font-size: 0.7rem;
+        color: var(--gray);
+        font-weight: normal;
+        display: block;
+        margin-top: -5px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+      .cta-nav {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: var(--white);
+        padding: 0.875rem 1.75rem;
+        border-radius: var(--radius-xl);
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        box-shadow: var(--shadow-soft);
+      }
+      .cta-nav:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      }
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+      }
+      .menu-toggle span {
+        width: 2rem;
+        height: 0.25rem;
+        background: var(--secondary);
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+      }
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      .hero {
+        margin-top: 80px;
+        background: var(--white);
+        color: var(--dark);
+        padding: 6rem 2rem;
+        text-align: center;
+        border-bottom: 3px solid var(--secondary);
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: var(--dark);
+      }
+      .hero-highlight {
+        color: var(--secondary);
+        display: block;
+      }
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        color: var(--gray);
+      }
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+      }
+      .hero-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1.5px solid rgba(15, 82, 170, 0.2);
+        padding: 0.875rem 1.75rem;
+        border-radius: var(--radius-xl);
+        color: var(--dark);
+        transition: var(--transition);
+        box-shadow: var(--shadow-soft);
+      }
+      .hero-feature:hover {
+        transform: translateY(-2px);
+        border-color: var(--secondary);
+        box-shadow: var(--shadow-medium);
+      }
+      .hero-feature svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--icon-blue);
+      }
+      .cta-primary {
+        display: inline-block;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: var(--white);
+        padding: 1.25rem 3.5rem;
+        border-radius: var(--radius-xl);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        box-shadow: var(--shadow-medium);
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.6s;
+      }
+      .cta-primary:hover::before {
+        left: 100%;
+      }
+      .cta-primary:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: var(--shadow-strong);
+      }
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      .trust-badge {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        color: var(--dark);
+        padding: 0.625rem 1.25rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid rgba(107, 114, 128, 0.1);
+        box-shadow: var(--shadow-soft);
+        transition: var(--transition);
+      }
+      .trust-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-medium);
+      }
+      .floating-buttons {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 999;
+      }
+      .floating-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: var(--shadow-medium);
+        transition: var(--transition);
+        cursor: pointer;
+        position: relative;
+      }
+      .floating-btn:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: var(--shadow-strong);
+      }
+      .whatsapp-btn {
+        background: #25d366;
+        color: white;
+      }
+      .phone-btn {
+        background: var(--icon-blue);
+        color: white;
+      }
+      .floating-btn svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+      }
+      .floating-btn-tooltip {
+        position: absolute;
+        right: 70px;
+        background: var(--dark);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .floating-btn:hover .floating-btn-tooltip {
+        opacity: 1;
+      }
+    </style>
+
+    <!-- Stylesheets externes (lazy loaded - non-blocking) -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/styles.min.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/styles.min.css"
+    /></noscript>
+
+    <link
+      rel="stylesheet"
+      href="/assets/css/integrations.min.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/assets/css/integrations.min.css"
+    /></noscript>
+
+    <!-- Favicons multi-plateformes -->
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/x-icon"
+      href="/favicon.ico"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/favicon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/favicon-512.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#577086" />
+
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://www.mastermentor.fr/#organization",
+            "name": "MasterMentor by Staka",
+            "url": "https://www.mastermentor.fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.mastermentor.fr/assets/logos/logo-mastermentor.png",
+              "width": 250,
+              "height": 60
+            },
+            "description": "Coaching académique pour étudiants en Master 2 par des enseignants-chercheurs docteurs avec 17 ans d'expérience",
+            "foundingDate": "2007",
+            "areaServed": {
+              "@type": "Country",
+              "name": "France"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/staka",
+              "https://www.facebook.com/staka"
+            ],
+            "telephone": "+33615078152",
+            "email": "contact@staka.fr",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "FR",
+              "addressLocality": "France"
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.mastermentor.fr/#service",
+            "name": "Coaching Mémoire Master 2",
+            "provider": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "serviceType": "Accompagnement académique",
+            "description": "Coaching personnalisé pour la rédaction de mémoires de Master 2, accompagnement méthodologique, préparation à la soutenance par des docteurs",
+            "areaServed": {
+              "@type": "Country",
+              "name": "France"
+            },
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": "student"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Formules d'accompagnement",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Mini",
+                    "description": "5 heures d'accompagnement personnalisé"
+                  },
+                  "price": "175",
+                  "priceCurrency": "EUR"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Médium",
+                    "description": "10 heures d'accompagnement structuré"
+                  },
+                  "price": "350",
+                  "priceCurrency": "EUR"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Formule Premium",
+                    "description": "20 heures d'accompagnement complet"
+                  },
+                  "price": "700",
+                  "priceCurrency": "EUR"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.mastermentor.fr/#website",
+            "url": "https://www.mastermentor.fr/",
+            "name": "MasterMentor",
+            "publisher": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.mastermentor.fr/#webpage",
+            "url": "https://www.mastermentor.fr/",
+            "name": "MasterMentor | Coaching Mémoire Master 2 par Docteurs - 98% Réussite",
+            "isPartOf": {
+              "@id": "https://www.mastermentor.fr/#website"
+            },
+            "about": {
+              "@id": "https://www.mastermentor.fr/#organization"
+            },
+            "description": "Coaching mémoire Master 2 par docteurs avec 17 ans d'expérience. Accompagnement académique personnalisé, méthodologie, soutenance. Paiement à la réussite.",
+            "inLanguage": "fr-FR"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip link pour accessibilité clavier -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <?php include 'includes/header.php'; ?>
+
+    <!-- Hero Section -->
+    <main class="hero" id="main-content">
+      <div class="hero-content fade-in-up">
+        <h1>
+          Réussissez votre mémoire de master
+          <span class="hero-highlight">avec des enseignants à vos côtés</span>
+        </h1>
+        <p>
+          Un accompagnement personnalisé par des enseignants-chercheurs docteurs
+          jusqu'à votre réussite. Satisfait ou remboursé.
+        </p>
+
+        <!-- Images hero responsive -->
+        <div
+          style="
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+          "
+        >
+          <picture style="flex: 1; min-width: 280px; max-width: 480px">
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/hero-400.webp   400w,
+                /assets/images/hero/hero-800.webp   800w,
+                /assets/images/hero/hero-1200.webp 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+            />
+            <img
+              src="/assets/images/hero/hero-800.jpg"
+              srcset="
+                /assets/images/hero/hero-400.jpg   400w,
+                /assets/images/hero/hero-800.jpg   800w,
+                /assets/images/hero/hero-1200.jpg 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+              alt="Enseignant-chercheur docteur accompagnant un étudiant pour son mémoire de Master 2"
+              width="1200"
+              height="800"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </picture>
+
+          <picture style="flex: 1; min-width: 280px; max-width: 480px">
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/hero1-400.webp   400w,
+                /assets/images/hero/hero1-800.webp   800w,
+                /assets/images/hero/hero1-1200.webp 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+            />
+            <img
+              src="/assets/images/hero/hero1-800.jpg"
+              srcset="
+                /assets/images/hero/hero1-400.jpg   400w,
+                /assets/images/hero/hero1-800.jpg   800w,
+                /assets/images/hero/hero1-1200.jpg 1200w
+              "
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
+              alt="Étudiante en Master 2 travaillant avec succès sur son mémoire grâce à l'accompagnement personnalisé"
+              width="1200"
+              height="800"
+              loading="eager"
+              decoding="async"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </picture>
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            <span>100% Docteurs</span>
+          </div>
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            <span>Sans IA ni plagiat</span>
+          </div>
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            <span>Satisfait ou remboursé</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="cta-primary"
+          >Demander un diagnostic gratuit</a
+        >
+
+        <div class="trust-badges">
+          <div class="trust-badge">9 disciplines</div>
+          <div class="trust-badge">17 ans d'expérience</div>
+          <div class="trust-badge">100% Français</div>
+          <div class="trust-badge">Paiement en 10 fois</div>
+          <div class="ekomi-badge">
+            <div class="ekomi-stars">★★★★★</div>
+            <div class="ekomi-text">Certifié eKomi</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Problème / Solution -->
+    <section class="problem-solution">
+      <h2 class="section-title">
+        Vous préparez votre mémoire de master et vous sentez...
+      </h2>
+      <div class="ps-grid">
+        <div class="ps-card problem">
+          <h3>Les défis du M2</h3>
+          <ul>
+            <li>La pression du mémoire qui s'accumule</li>
+            <li>L'angoisse de la méthodologie universitaire</li>
+            <li>La solitude face à vos questionnements</li>
+            <li>Le stress des attentes académiques</li>
+            <li>La peur de ne pas être à la hauteur</li>
+            <li>Le manque de retours constructifs</li>
+          </ul>
+        </div>
+        <div class="ps-card solution">
+          <h3>Notre accompagnement</h3>
+          <ul>
+            <li>Un docteur expert dans votre domaine</li>
+            <li>Un suivi personnalisé hebdomadaire</li>
+            <li>Des méthodologies scientifiques éprouvées</li>
+            <li>Un encadrement jusqu'à votre réussite</li>
+            <li>Des retours détaillés et constructifs</li>
+            <li>Une garantie 100% sans IA ni plagiat</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-trust-badge">
+        ✓ 100% Confidentiel - Vos données et votre travail restent strictement
+        privés
+      </div>
+    </section>
+
+    <!-- Section Vidéo -->
+    <section class="video-section">
+      <div class="video-container">
+        <div class="video-intro">
+          <h2>
+            Un accompagnement efficace par enseignants chercheurs depuis 2007
+          </h2>
+          <p>
+            Un coaching académique sérieux, exigeant et éthique qui transforme
+            votre mémoire en réussite.
+          </p>
+        </div>
+
+        <div class="video-wrapper">
+          <!-- Facade YouTube (lazy load) -->
+          <div
+            class="video-embed youtube-facade"
+            data-youtube-id="zxiQNT0CwK0"
+            onclick="loadYouTubeVideo(this)"
+            style="
+              cursor: pointer;
+              position: relative;
+              background: #000;
+              aspect-ratio: 16/9;
+            "
+          >
+            <!-- Thumbnail YouTube -->
+            <img
+              src="https://i.ytimg.com/vi/zxiQNT0CwK0/maxresdefault.jpg"
+              alt="MasterMentor - Notre Méthode d'Accompagnement"
+              width="1280"
+              height="720"
+              loading="lazy"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
+            <!-- Bouton Play -->
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 68px;
+                height: 48px;
+                background: rgba(255, 0, 0, 0.8);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+              "
+            >
+              <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+                <path
+                  d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                  fill="#f00"
+                ></path>
+                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-benefits">
+          <div class="video-benefit">
+            <div class="video-benefit-icon">👁</div>
+            <h3>Transparence Totale</h3>
+            <p>
+              Découvrez notre méthode d'accompagnement et rencontrez nos
+              enseignants-chercheurs
+            </p>
+          </div>
+
+          <div class="video-benefit">
+            <div class="video-benefit-icon">🎓</div>
+            <h3>Expertise Visible</h3>
+            <p>
+              Constatez par vous-même le niveau d'excellence de nos docteurs
+            </p>
+          </div>
+
+          <div class="video-benefit">
+            <div class="video-benefit-icon">✓</div>
+            <h3>Résultats Concrets</h3>
+            <p>Témoignages réels et exemples de réussites de nos étudiants</p>
+          </div>
+        </div>
+
+        <div class="video-cta">
+          <p class="video-cta-text">
+            Prêt à bénéficier du même accompagnement ?
+          </p>
+          <a href="#contact" class="cta-primary"
+            >Réserver mon diagnostic gratuit</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Disciplines -->
+    <section id="disciplines">
+      <h2 class="section-title">Nos Domaines d'Excellence</h2>
+      <p class="section-subtitle">
+        Chaque discipline est encadrée par des docteurs spécialisés,
+        enseignants-chercheurs en activité
+      </p>
+
+      <div class="disciplines-grid">
+        <div class="discipline-card">
+          <div class="discipline-icon">∞</div>
+          <h3>Marketing</h3>
+          <p>
+            Stratégie digitale, comportement consommateur, études de marché,
+            branding et communication marketing.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">ψ</div>
+          <h3>Ressources Humaines</h3>
+          <p>
+            Gestion des talents, GPEC, recrutement, formation, management RH et
+            droit social.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">Σ</div>
+          <h3>Finance</h3>
+          <p>
+            Finance d'entreprise, marchés financiers, analyse financière,
+            gestion de portefeuille et risques.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">Φ</div>
+          <h3>Psychologie</h3>
+          <p>
+            Psychologie clinique, sociale, du travail, cognitive et méthodologie
+            de la recherche.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">Ω</div>
+          <h3>Management</h3>
+          <p>
+            Leadership, stratégie d'entreprise, gestion de projet, innovation et
+            transformation digitale.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">λ</div>
+          <h3>Communication</h3>
+          <p>
+            Communication corporate, relations publiques, médias sociaux,
+            communication de crise.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">π</div>
+          <h3>Économie</h3>
+          <p>
+            Macroéconomie, microéconomie, économétrie, politiques économiques et
+            développement.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">§</div>
+          <h3>Droit</h3>
+          <p>
+            Droit des affaires, droit social, droit public, contentieux et
+            méthodologie juridique.
+          </p>
+        </div>
+
+        <div class="discipline-card">
+          <div class="discipline-icon">∫</div>
+          <h3>Informatique</h3>
+          <p>
+            Développement logiciel, intelligence artificielle, systèmes
+            d'information, cybersécurité et data science.
+          </p>
+        </div>
+      </div>
+      <div class="section-trust-badge">
+        ✓ Site 100% Français - Équipe et valeurs ancrées en France
+      </div>
+    </section>
+
+    <!-- Équipe -->
+    <section id="equipe">
+      <h2 class="section-title">Notre Équipe d'Excellence</h2>
+      <p class="section-subtitle">
+        Des enseignants-chercheurs docteurs reconnus dans leur domaine
+      </p>
+
+      <!-- Photo d'équipe -->
+      <picture style="display: block; max-width: 800px; margin: 2rem auto">
+        <source type="image/webp" srcset="/assets/images/team/team-800.webp" />
+        <img
+          src="/assets/images/team/team-800.jpg"
+          alt="Équipe de docteurs enseignants-chercheurs spécialisés dans l'accompagnement de mémoires de Master"
+          width="800"
+          height="533"
+          loading="lazy"
+          decoding="async"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+          "
+        />
+      </picture>
+
+      <div class="team-intro">
+        <h3>Une Expertise Académique de Premier Plan</h3>
+        <p>
+          Tous nos mentors sont titulaires d'un doctorat et exercent comme
+          enseignants-chercheurs dans les universités et grandes écoles
+          françaises. Ils combinent excellence académique, expérience
+          pédagogique et connaissance approfondie des exigences universitaires.
+        </p>
+
+        <div class="team-stats">
+          <div class="team-stat">
+            <span class="team-stat-number">100%</span>
+            <span class="team-stat-label">Docteurs</span>
+          </div>
+          <div class="team-stat">
+            <span class="team-stat-number">15+</span>
+            <span class="team-stat-label">Années d'enseignement</span>
+          </div>
+          <div class="team-stat">
+            <span class="team-stat-number">500+</span>
+            <span class="team-stat-label">Étudiants accompagnés</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-avatar">MD</div>
+          <h3>Marketing & Communication</h3>
+          <div class="team-role">Docteure en Sciences de Gestion</div>
+          <p class="team-expertise">
+            Spécialiste en marketing digital, stratégies de communication et
+            comportement du consommateur.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignante-chercheuse</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>18 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">PL</div>
+          <h3>Finance & Économie</h3>
+          <div class="team-role">Docteur en Sciences Économiques</div>
+          <p class="team-expertise">
+            Expert en finance de marché, économétrie et analyse financière
+            approfondie.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignant-chercheur</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>20 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">SC</div>
+          <h3>Psychologie</h3>
+          <div class="team-role">Docteure en Psychologie</div>
+          <p class="team-expertise">
+            Spécialiste en psychologie clinique, méthodologie de recherche et
+            statistiques appliquées.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignante-chercheuse</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>16 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">JB</div>
+          <h3>Management & RH</h3>
+          <div class="team-role">Docteur en Sciences de Gestion</div>
+          <p class="team-expertise">
+            Expert en management stratégique, GRH et transformation
+            organisationnelle.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignant-chercheur</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>22 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">AM</div>
+          <h3>Droit</h3>
+          <div class="team-role">Docteure en Droit</div>
+          <p class="team-expertise">
+            Spécialiste en droit des affaires, droit social et méthodologie de
+            recherche juridique.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignante-chercheuse</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>19 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">TR</div>
+          <h3>Informatique & Data Science</h3>
+          <div class="team-role">Docteur en Informatique</div>
+          <p class="team-expertise">
+            Expert en intelligence artificielle, systèmes d'information et
+            méthodologie quantitative.
+          </p>
+          <div class="team-credentials">
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>Enseignant-chercheur</span>
+            </div>
+            <div class="credential">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+              <span>15 ans d'expérience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-trust-badge">
+        ✓ Équipe Certifiée - Tous nos docteurs sont vérifiés et en exercice dans
+        l'enseignement supérieur
+      </div>
+    </section>
+
+    <!-- Section Quiz Intégré -->
+    <section
+      id="quiz"
+      style="
+        padding: 5rem 2rem;
+        background: linear-gradient(
+          135deg,
+          rgba(15, 82, 170, 0.03) 0%,
+          rgba(2, 47, 107, 0.03) 100%
+        );
+      "
+    >
+      <div style="max-width: 900px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 3rem">
+          <h2
+            style="font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem"
+          >
+            Testez vos connaissances en méthodologie
+          </h2>
+          <p style="font-size: 1.2rem; color: var(--gray)">
+            Quiz de 2 minutes •
+            <span style="color: #25d366; font-weight: 600"
+              >Gagnez une consultation gratuite !</span
+            >
+          </p>
+        </div>
+
+        <div
+          class="quiz-container-embedded"
+          style="
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+          "
+        >
+          <div
+            class="quiz-header-embedded"
+            style="
+              background: linear-gradient(
+                135deg,
+                var(--primary) 0%,
+                #6b7899 100%
+              );
+              color: var(--white);
+              padding: 2rem;
+              text-align: center;
+            "
+          >
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">
+              Quiz Méthodologie de Recherche
+            </h3>
+            <p style="font-size: 1rem; opacity: 0.9">
+              6 questions sur les fondamentaux
+            </p>
+            <div
+              class="progress-bar-quiz"
+              style="
+                height: 8px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+                margin-top: 1.5rem;
+                overflow: hidden;
+              "
+            >
+              <div
+                class="progress-fill-quiz"
+                id="progressBarQuiz"
+                style="
+                  height: 100%;
+                  background: #25d366;
+                  border-radius: 4px;
+                  width: 0%;
+                  transition: width 0.5s ease;
+                "
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="quiz-content-embedded"
+            id="quizContentEmbedded"
+            style="padding: 2.5rem 2rem"
+          >
+            <!-- Questions will be inserted here by JavaScript -->
+          </div>
+
+          <div
+            class="results-container-embedded"
+            id="resultsContainerEmbedded"
+            style="display: none; text-align: center; padding: 2rem"
+          >
+            <!-- Results will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Différenciateurs -->
+    <section class="differentiators">
+      <h2 class="section-title">Ce qui nous rend uniques</h2>
+      <p class="section-subtitle">
+        Des garanties que vous ne trouverez nulle part ailleurs
+      </p>
+
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">∂</div>
+          <h3>100% Docteurs</h3>
+          <p>
+            Tous nos mentors sont titulaires d'un doctorat et
+            enseignants-chercheurs en activité dans les universités françaises.
+          </p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">√</div>
+          <h3>Satisfait ou remboursé</h3>
+          <p>
+            Garantie satisfaction totale. Si vous n'êtes pas satisfait de notre
+            accompagnement, vous êtes intégralement remboursé.
+          </p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">≠</div>
+          <h3>Garantie sans IA</h3>
+          <p>
+            Accompagnement 100% humain, sans IA ni plagiat. Votre travail reste
+            authentique et personnel.
+          </p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">∞</div>
+          <h3>Suivi illimité</h3>
+          <p>
+            Nous vous accompagnons jusqu'à votre réussite, sans limitation de
+            durée. Votre succès est notre engagement.
+          </p>
+        </div>
+      </div>
+      <div class="section-trust-badge">
+        ✓ Éthique & Exigeant - Des standards académiques rigoureux et
+        déontologiques
+      </div>
+    </section>
+
+    <!-- Processus -->
+    <section id="methode">
+      <h2 class="section-title">Comment ça marche ?</h2>
+      <p class="section-subtitle">
+        Un processus simple et efficace en 4 étapes
+      </p>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Diagnostic gratuit</h3>
+          <p>
+            Échange de 30 minutes pour comprendre vos besoins, votre projet et
+            vos défis spécifiques.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Mise en relation avec un enseignant</h3>
+          <p>
+            Nous vous mettons en relation avec un enseignant-chercheur expert
+            dans votre domaine.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Accompagnement personnalisé</h3>
+          <p>
+            Séances régulières, retours détaillés, et disponibilité pour toutes
+            vos questions.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Réussite garantie</h3>
+          <p>Nous restons à vos côtés jusqu'à l'obtention de votre diplôme.</p>
+        </div>
+      </div>
+      <div class="section-trust-badge">
+        ✓ Méthodologie Éprouvée - 17 ans d'expérience et des centaines
+        d'étudiants accompagnés
+      </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="faq-header">
+          <h2>Questions Fréquentes</h2>
+          <p class="faq-subtitle">
+            Pourquoi l'IA ne peut pas faire votre mémoire
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(0)">
+              <h3>1. L'IA peut-elle être détectée dans un mémoire ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  <strong>Oui, facilement.</strong> Les logiciels comme
+                  Turnitin, Compilatio et GPTZero détectent le contenu généré
+                  par IA avec plus de 90% de fiabilité. Les enseignants
+                  reconnaissent également le style générique et trop lisse de
+                  l'IA.
+                </p>
+                <div class="faq-highlight">
+                  <strong>MasterMentor garantit</strong>
+                  <p style="margin: 0">
+                    Un travail 100% humain, vérifié par Compilatio et certifié
+                    par Lucide.ai.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(1)">
+              <h3>2. Pourquoi le style de l'IA trahit-il son utilisation ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  <strong>L'IA produit un style reconnaissable :</strong>
+                  transitions parfaites mais artificielles, formulations
+                  génériques sans positionnement personnel, manque de profondeur
+                  analytique, et absence d'aspérités naturelles. Les jurys
+                  détectent immédiatement l'absence de voix personnelle et de
+                  pensée critique authentique.
+                </p>
+                <div class="faq-highlight">
+                  <strong>MasterMentor développe VOTRE voix académique</strong>
+                  <p style="margin: 0">
+                    Avec un accompagnement personnalisé qui respecte votre style
+                    et votre réflexion.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(2)">
+              <h3>
+                3. Qu'est-ce qu'une "hallucination" de l'IA et pourquoi est-ce
+                grave ?
+              </h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  <strong>Les hallucinations sont des inventions :</strong> l'IA
+                  fabrique de fausses citations, invente des auteurs
+                  inexistants, crée des statistiques imaginaires.
+                  <strong>Exemple :</strong> "L'étude de Martin & Dupont (2019)"
+                  qui n'existe pas. Citer ces sources = plagiat involontaire et
+                  discréditation totale de votre mémoire.
+                </p>
+                <div class="faq-highlight">
+                  <strong>MasterMentor vérifie chaque source</strong>
+                  <p style="margin: 0">
+                    Et vous forme à la recherche bibliographique rigoureuse avec
+                    de vraies bases de données (Web of Science, Scopus).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(3)">
+              <h3>4. Puis-je soutenir un mémoire rédigé par l'IA ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  <strong>Non.</strong> Lors de la soutenance, vous devrez
+                  expliquer vos choix méthodologiques, justifier votre analyse,
+                  et répondre aux questions du jury. Si l'IA a rédigé, vous ne
+                  pourrez ni défendre vos positions, ni démontrer votre maîtrise
+                  du sujet. <strong>Votre imposture sera évidente</strong> et le
+                  jury refusera votre mémoire.
+                </p>
+                <div class="faq-highlight">
+                  <strong>MasterMentor vous prépare à la soutenance</strong>
+                  <p style="margin: 0">
+                    Avec des simulations et vous aide à maîtriser parfaitement
+                    VOTRE recherche.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(4)">
+              <h3>5. Pourquoi choisir MasterMentor plutôt que l'IA ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>Parce que MasterMentor est :</strong></p>
+                <ul class="faq-benefits">
+                  <li>
+                    <strong>Pertinent</strong> : Enseignants-chercheurs experts
+                    dans VOTRE discipline spécifique
+                  </li>
+                  <li>
+                    <strong>Accessible</strong> : Accompagnement personnalisé,
+                    disponible et pédagogique
+                  </li>
+                  <li>
+                    <strong>Éthique</strong> : 100% sans IA, méthodologie
+                    rigoureuse, respect des règles universitaires
+                  </li>
+                  <li>
+                    <strong>Intègre</strong> : Garantie d'authenticité
+                    académique, vérification anti-plagiat, certification
+                    Lucide.ai
+                  </li>
+                </ul>
+                <p style="margin-top: 1rem">
+                  <strong>Nous développons VOS compétences</strong> de
+                  chercheur, pas votre dépendance à l'IA. C'est VOTRE mémoire,
+                  VOTRE réussite, VOTRE diplôme.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(5)">
+              <h3>6. Et si mon mémoire est déjà avancé ou en retard ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>
+                  <strong>Nous intervenons à tout moment !</strong> Peu importe
+                  le stade d'avancement de votre mémoire, nos mentors peuvent
+                  intervenir pour améliorer sa qualité et le structurer. Que
+                  vous soyez en retard, bloqué, ou que vous ayez juste besoin
+                  d'une relecture finale : nous sommes là.
+                </p>
+                <div class="faq-highlight">
+                  <strong>Nos mentors aiment la recherche</strong>
+                  <p style="margin: 0">
+                    Et seront ravis de vous faire progresser, quel que soit
+                    votre point de départ. Sans jugement, avec bienveillance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(6)">
+              <h3>7. Concrètement, quel est le budget à prévoir ?</h3>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>Cela dépend de vos besoins :</strong></p>
+                <ul class="faq-benefits">
+                  <li>
+                    <strong>Relecture experte :</strong> Dès 2€ la page (ex: 80
+                    pages = 160€ minimum)
+                  </li>
+                  <li>
+                    <strong>Accompagnement ponctuel :</strong> 280€ pour un
+                    projet de recherche complet (problématique, méthodologie,
+                    plan)
+                  </li>
+                  <li>
+                    <strong>Accompagnement long terme :</strong> Devis
+                    personnalisé selon durée et intensité
+                  </li>
+                </ul>
+                <p style="margin-top: 1rem">
+                  Le diagnostic gratuit de 30 minutes nous permet d'établir un
+                  devis précis adapté à votre situation.
+                  <strong>Paiement en 10 fois sans frais.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cta">
+          <h3>Prêt à réussir avec un accompagnement humain et éthique ?</h3>
+          <p>Parlons de votre projet académique dès maintenant</p>
+          <a href="#contact" class="cta-primary"
+            >Demander un diagnostic gratuit</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Section CTA Tarifs -->
+    <section
+      style="
+        padding: 4rem 2rem;
+        background: linear-gradient(
+          135deg,
+          rgba(37, 211, 102, 0.05),
+          rgba(18, 140, 126, 0.05)
+        );
+        text-align: center;
+      "
+    >
+      <div style="max-width: 800px; margin: 0 auto">
+        <h2 style="font-size: 2.2rem; color: var(--dark); margin-bottom: 1rem">
+          Découvrez Nos Formules d'Accompagnement
+        </h2>
+        <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem">
+          Accompagnement ponctuel, relecture experte, préparation soutenance ou
+          accompagnement complet.<br />
+          <strong style="color: var(--success)">À partir de 35€/heure</strong> -
+          Devis personnalisé gratuit
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="tarifs.php"
+            class="cta-primary"
+            style="
+              background: linear-gradient(135deg, var(--icon-blue), #1e73e8);
+            "
+          >
+            📋 Voir les formules et tarifs
+          </a>
+          <a
+            href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20personnalis%C3%A9%20pour%20mon%20m%C3%A9moire.%20Merci."
+            target="_blank"
+            class="cta-primary"
+          >
+            💬 Demander un devis gratuit
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="temoignages" class="testimonials">
+      <h2 class="section-title">Ils ont réussi avec MasterMentor</h2>
+      <p class="section-subtitle">Découvrez les témoignages de nos étudiants</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">
+            "Grâce à l'accompagnement de ma mentor docteure en marketing, j'ai
+            obtenu 16/20 à mon mémoire. Son expertise et sa disponibilité ont
+            fait toute la différence. L'absence de paiement d'avance m'a
+            vraiment rassuré."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div class="testimonial-info">
+              <strong>Sarah M.</strong>
+              <span>Master 2 Marketing Digital</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">
+            "J'étais complètement perdu avec ma méthodologie de recherche en
+            psychologie. Mon accompagnateur m'a non seulement aidé à structurer
+            mon travail, mais m'a aussi redonné confiance. Mention Bien obtenue
+            !"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TL</div>
+            <div class="testimonial-info">
+              <strong>Thomas L.</strong>
+              <span>Master 2 Psychologie Clinique</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">
+            "L'expertise académique de mon mentor en finance a été précieuse.
+            Des retours toujours constructifs, une vraie pédagogie, et surtout
+            un accompagnement authentique sans aucune IA. Je recommande à 100%."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AL</div>
+            <div class="testimonial-info">
+              <strong>Antoine L.</strong>
+              <span>Master 2 Finance de Marché</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-trust-badge">
+        ✓ Témoignages Vérifiés - Avis authentiques certifiés par eKomi
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contact" class="final-cta">
+      <h2 class="section-title">Prêt à réussir votre Master 2 ?</h2>
+      <p class="section-subtitle">
+        Commencez par un diagnostic gratuit de 30 minutes, sans engagement
+      </p>
+
+      <div class="cta-box">
+        <h3>Demandez votre diagnostic gratuit</h3>
+        <p>
+          Échangeons sur votre projet et voyons comment nous pouvons vous
+          accompagner vers la réussite.
+        </p>
+
+        <form
+          class="contact-form"
+          id="contact-form"
+          onsubmit="return submitFormAjax(event)"
+        >
+          <!-- Honeypot anti-spam (caché, si rempli = bot) -->
+          <input
+            type="text"
+            name="website"
+            id="website"
+            style="display: none !important; position: absolute; left: -9999px"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="form-group">
+            <label for="name">Nom et Prénom *</label>
+            <input type="text" id="name" name="nom" required />
+            <span
+              class="error-message"
+              id="name-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+            <span
+              class="error-message"
+              id="email-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="telephone" required />
+            <span
+              class="error-message"
+              id="phone-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="discipline">Discipline *</label>
+            <select id="discipline" name="discipline" required>
+              <option value="">Sélectionnez votre discipline</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Ressources Humaines">Ressources Humaines</option>
+              <option value="Finance">Finance</option>
+              <option value="Psychologie">Psychologie</option>
+              <option value="Management">Management</option>
+              <option value="Communication">Communication</option>
+              <option value="Économie">Économie</option>
+              <option value="Droit">Droit</option>
+              <option value="Informatique">Informatique</option>
+              <option value="Autre">Autre</option>
+            </select>
+            <span
+              class="error-message"
+              id="discipline-error"
+              style="
+                display: none;
+                color: #dc3545;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+              "
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Parlez-nous de votre projet</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Décrivez brièvement votre sujet de mémoire, vos défis actuels, vos objectifs..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            Obtenir mon diagnostic gratuit
+          </button>
+
+          <p class="privacy-note">
+            Vos données sont confidentielles et ne seront jamais partagées. En
+            soumettant ce formulaire, vous acceptez d'être contacté par
+            MasterMentor.
+          </p>
+        </form>
+      </div>
+      <div class="section-trust-badge">
+        ✓ Protection Totale - Engagement de confidentialité absolue sur vos
+        projets et données
+      </div>
+    </section>
+
+    <!-- Boutons flottants WhatsApp et Rappel -->
+    <div class="floating-buttons">
+      <a
+        href="tel:+33615078152"
+        class="floating-btn phone-btn"
+        aria-label="Rappel immédiat"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+          />
+        </svg>
+        <span class="floating-btn-tooltip">Rappel immédiat</span>
+      </a>
+
+      <a
+        href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20consultation%20gratuite%20pour%20mon%20m%C3%A9moire.%20Bien%20%C3%A0%20vous"
+        target="_blank"
+        class="floating-btn whatsapp-btn"
+        aria-label="WhatsApp"
+      >
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+        <span class="floating-btn-tooltip">WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Section Nos Publications -->
+    <section class="publications-section">
+      <div class="publications-container">
+        <h2 class="publications-title">Nos Publications</h2>
+        <p class="publications-subtitle">
+          Découvrez nos ouvrages de référence pour réussir votre parcours
+          académique
+        </p>
+
+        <div class="publications-content">
+          <!-- Livre Fnac -->
+          <a
+            href="https://www.fnac.com/livre-numerique/a16201306/Charles-Tate-Le-guide-ultime-de-la-redaction-et-de-la-correction-de-manuscrits#FORMAT=ebook%20(ePub)"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="book-card"
+          >
+            <img
+              src="/assets/images/livre.webp"
+              alt="Le guide ultime de la rédaction et de la correction de manuscrits - Charles Tate - Collection Staka"
+              width="438"
+              height="672"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="book-card-content">
+              <h3 class="book-card-title">Le Guide Ultime de la Rédaction</h3>
+              <p class="book-card-author">Charles Tate - Collection Staka</p>
+              <div class="book-card-cta">Disponible sur Fnac.com</div>
+            </div>
+          </a>
+
+          <!-- Informations livre -->
+          <div class="book-info">
+            <div class="book-badges">
+              <span class="book-badge book-badge-primary"
+                >📖 UPPR Editions</span
+              >
+            </div>
+
+            <h4 class="book-info-title">
+              Le guide complet pour réussir tous vos écrits académiques et
+              professionnels
+            </h4>
+
+            <p class="book-info-description">
+              Que ce soit pour rédiger un
+              <strong>mémoire, une thèse, un rapport de stage</strong> ou même
+              un <strong>roman</strong>, ce guide vous accompagne dans le
+              processus d'écriture et répond à toutes vos questions.
+            </p>
+
+            <ul class="book-features">
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
+                <span
+                  >Les <strong>facteurs clés de réussite</strong> de la
+                  rédaction</span
+                >
+              </li>
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
+                <span
+                  >Comment <strong>structurer et organiser</strong> vos idées
+                  efficacement</span
+                >
+              </li>
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
+                <span
+                  >Outils de
+                  <strong>mise en page et corrections</strong>
+                  professionnelles</span
+                >
+              </li>
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
+                <span
+                  >Techniques pour <strong>éviter le plagiat</strong> et
+                  respecter l'intégrité académique</span
+                >
+              </li>
+              <li class="book-feature">
+                <span class="book-feature-icon">✓</span>
+                <span
+                  ><strong>Format numérique sans DRM</strong> : lecture
+                  immédiate sur tous vos appareils</span
+                >
+              </li>
+            </ul>
+
+            <div class="book-author-box">
+              <p class="book-author-label">À propos de l'auteur</p>
+              <p class="book-author-text">
+                <strong>Charles Tate</strong>, titulaire d'un Master en
+                linguistique, s'appuie sur sa solide expérience dans
+                l'enseignement et la correction pour diriger aujourd'hui
+                <strong>Staka.fr</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Trustpilot -->
+    <section class="trustpilot-section">
+      <div class="trustpilot-container">
+        <div class="trustpilot-content">
+          <div class="trustpilot-logo-wrapper">
+            <svg
+              width="120"
+              height="28"
+              viewBox="0 0 120 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M28 0H0v28h28V0z" fill="#00B67A" />
+              <path
+                d="M14 8.5l1.8 5.5h5.8l-4.7 3.4 1.8 5.5L14 19.5l-4.7 3.4 1.8-5.5-4.7-3.4h5.8L14 8.5z"
+                fill="#fff"
+              />
+              <text
+                x="35"
+                y="20"
+                font-family="Arial, sans-serif"
+                font-size="18"
+                font-weight="700"
+                fill="#191919"
+              >
+                Trustpilot
+              </text>
+            </svg>
+          </div>
+
+          <div class="trustpilot-rating">
+            <div class="trustpilot-stars">
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+              <span class="trustpilot-star">★</span>
+            </div>
+            <span class="trustpilot-score">4.8 / 5</span>
+          </div>
+
+          <p class="trustpilot-text">
+            <strong>Plus de 500 étudiants nous font confiance</strong> pour leur
+            accompagnement académique. Découvrez leurs avis authentiques sur
+            notre plateforme Trustpilot.
+          </p>
+
+          <a
+            href="https://fr.trustpilot.com/review/staka.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="trustpilot-cta"
+          >
+            <span>Voir tous les avis</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 0L10.163 5.163L16 5.163L11.418 8.332L13.582 13.5L8 10.332L2.418 13.5L4.582 8.332L0 5.163L5.837 5.163L8 0Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <?php include 'includes/footer.php'; ?>
+
+    <!-- Chatbot WhatsApp Flottant -->
+    <div class="whatsapp-float">
+      <div class="whatsapp-tooltip">
+        <div class="whatsapp-tooltip-title">
+          💬 Besoin d'aide pour votre mémoire ?
+        </div>
+        <div class="whatsapp-tooltip-text">
+          Un enseignant-chercheur vous répond en 5 min.
+        </div>
+      </div>
+      <a
+        href="https://wa.me/33615078152?text=Bonjour%2C%20j'ai%20besoin%20d'aide%20pour%20mon%20m%C3%A9moire.%20Pouvez-vous%20m'aider%20%3F"
+        target="_blank"
+        class="whatsapp-button"
+        aria-label="Contacter sur WhatsApp"
+      >
+        <span class="whatsapp-badge">!</span>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.138-2.125c2.355 1.288 5.012 1.975 7.862 1.975 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.5c-2.547 0-5.025-0.725-7.163-2.088l-0.513-0.3-5.313 1.388 1.413-5.263-0.325-0.538c-1.5-2.4-2.287-5.163-2.287-8.013 0-7.725 6.287-14.012 14.012-14.012s14.012 6.287 14.012 14.012-6.287 14.012-14.012 14.012zM23.537 19.488c-0.4-0.2-2.363-1.163-2.738-1.3-0.363-0.138-0.625-0.2-0.888 0.2s-1.025 1.3-1.263 1.563c-0.225 0.263-0.45 0.3-0.85 0.1s-1.65-0.612-3.138-1.937c-1.163-1.038-1.95-2.313-2.175-2.713s-0.025-0.613 0.175-0.813c0.188-0.175 0.4-0.462 0.6-0.688 0.2-0.238 0.263-0.4 0.4-0.663 0.138-0.262 0.063-0.487-0.025-0.687s-0.888-2.137-1.213-2.925c-0.325-0.775-0.65-0.663-0.888-0.675-0.225-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.388-1.387 1.35-1.387 3.3s1.413 3.825 1.613 4.088c0.2 0.262 2.8 4.275 6.788 5.988 0.95 0.412 1.688 0.65 2.263 0.838 0.95 0.3 1.813 0.262 2.5 0.162 0.763-0.113 2.363-0.962 2.7-1.887 0.338-0.938 0.338-1.738 0.238-1.888-0.1-0.175-0.363-0.275-0.763-0.475z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Popup Urgence -->
+    <div class="popup-overlay" id="popupUrgence">
+      <div class="popup-container">
+        <button class="popup-close" onclick="closePopup()" aria-label="Fermer">
+          ×
+        </button>
+
+        <div class="popup-icon">⚡</div>
+
+        <p class="popup-subtitle">Votre réussite commence maintenant</p>
+
+        <h2 class="popup-title">
+          Contactez nos mentors pour faire avancer votre mémoire
+        </h2>
+
+        <p class="popup-message">
+          <strong>Contactez nos mentors dès aujourd'hui</strong> pour faire
+          avancer votre mémoire.<br />
+          Diagnostic gratuit en 30 minutes par un enseignant-chercheur docteur.
+        </p>
+
+        <a
+          href="https://wa.me/33615078152?text=Bonjour%2C%20je%20souhaite%20un%20diagnostic%20gratuit%20pour%20faire%20avancer%20mon%20m%C3%A9moire.%20Merci."
+          target="_blank"
+          class="popup-cta"
+          onclick="closePopup()"
+        >
+          Contacter un mentor maintenant
+        </a>
+
+        <p class="popup-footer">
+          Réponse immédiate • Sans engagement • Inscriptions limitées
+        </p>
+      </div>
+    </div>
+
+    <!-- Critical JavaScript inline (menu burger + smooth scroll) -->
+    <script>
+      // Menu burger mobile (Critical pour UX)
+      (function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        const body = document.body;
+
+        const toggleMenu = () => {
+          menuToggle.classList.toggle("active");
+          navLinks.classList.toggle("active");
+          body.classList.toggle("menu-open");
+          const isExpanded = menuToggle.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        };
+
+        const closeMenu = () => {
+          menuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
+          body.classList.remove("menu-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        };
+
+        if (menuToggle) {
+          menuToggle.addEventListener("click", toggleMenu);
+        }
+
+        if (navLinks) {
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+          });
+        }
+
+        body.addEventListener("click", (e) => {
+          if (
+            body.classList.contains("menu-open") &&
+            !navLinks.contains(e.target) &&
+            !menuToggle.contains(e.target)
+          ) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && body.classList.contains("menu-open")) {
+            closeMenu();
+          }
+        });
+      })();
+
+      // Smooth scroll pour les liens d'ancrage
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // YouTube facade lazy load
+      function loadYouTubeVideo(element) {
+        const videoId = element.getAttribute("data-youtube-id");
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute(
+          "src",
+          `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
+        );
+        iframe.setAttribute(
+          "title",
+          "MasterMentor - Notre Méthode d'Accompagnement"
+        );
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute(
+          "allow",
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        );
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute(
+          "referrerpolicy",
+          "strict-origin-when-cross-origin"
+        );
+        iframe.style.cssText =
+          "width: 100%; height: 100%; position: absolute; top: 0; left: 0;";
+        element.innerHTML = "";
+        element.appendChild(iframe);
+      }
+    </script>
+
+    <script defer src="assets/js/main.min.js"></script>
+    <script defer src="assets/js/quiz.min.js"></script>
+  </body>
+</html>

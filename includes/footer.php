@@ -1,0 +1,233 @@
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-section">
+        <div class="logo" style="margin-bottom: 1.5rem; text-align: left">
+          <img
+            src="assets/logos/logo-main.png"
+            alt="MasterMentor"
+            class="logo-img-footer"
+          />
+          <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
+        </div>
+        <p>
+          Master Mentor au service de la réussite de votre mémoire depuis
+          2007. Méthodologie, structuration, soutenance : un accompagnement
+          complet et personnalisé.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem">
+          <a
+            href="#disciplines"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >Disciplines</a
+          >
+          <a
+            href="#equipe"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >L'Équipe</a
+          >
+          <a
+            href="tarifs.php"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >Tarifs</a
+          >
+          <a
+            href="#methode"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >Notre Méthode</a
+          >
+          <a
+            href="#temoignages"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >Témoignages</a
+          >
+          <a
+            href="#contact"
+            style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Nos Garanties</h4>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+          "
+        >
+          <div>✓ 100% Docteurs</div>
+          <div>✓ Satisfait ou remboursé</div>
+          <div>✓ Sans IA ni plagiat</div>
+          <div>✓ 100% Confidentiel</div>
+          <div>✓ 17 ans d'expérience</div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Certifications et nos outils de garantie</h4>
+        <div class="footer-certifications">
+          <a
+            href="https://www.ekomi.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="certification-logo"
+            title="eKomi - Avis clients vérifiés"
+          >
+            <picture>
+              <source
+                srcset="assets/logos/certifications/ekomi.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/logos/certifications/ekomi.png"
+                alt="eKomi - Avis clients vérifiés - Note 4.9/5"
+                loading="lazy"
+                width="80"
+                height="80"
+              />
+            </picture>
+          </a>
+          <a
+            href="https://fr.trustpilot.com/review/staka.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="certification-logo"
+            title="Trustpilot - Notation publique"
+          >
+            <picture>
+              <source
+                srcset="assets/logos/certifications/trustpilot.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/logos/certifications/trustpilot.png"
+                alt="Trustpilot - Notation publique - Note 4.8/5"
+                loading="lazy"
+                width="326"
+                height="80"
+              />
+            </picture>
+          </a>
+          <a
+            href="https://www.compilatio.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="certification-logo"
+            title="Compilatio - Détection plagiat"
+          >
+            <picture>
+              <source
+                srcset="assets/logos/certifications/compilatio.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/logos/certifications/compilatio.png"
+                alt="Compilatio - Logiciel de détection de plagiat"
+                loading="lazy"
+                width="171"
+                height="80"
+              />
+            </picture>
+          </a>
+          <a
+            href="https://lucide.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="certification-logo"
+            title="Lucide.ai - Technologie IA"
+          >
+            <picture>
+              <source
+                srcset="assets/logos/certifications/lucide.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/logos/certifications/lucide.png"
+                alt="Lucide.ai - Certification contenu sans IA générative"
+                loading="lazy"
+                width="302"
+                height="80"
+              />
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-payment">
+      <p class="payment-title">Moyens de paiement acceptés</p>
+      <div class="payment-icons">
+        <picture>
+          <source srcset="assets/logos/paiement/visa.webp" type="image/webp">
+          <img
+            src="assets/logos/paiement/visa.png"
+            alt="Visa"
+            loading="lazy"
+            width="87"
+            height="40"
+          >
+        </picture>
+        <picture>
+          <source srcset="assets/logos/paiement/mastercard.webp" type="image/webp">
+          <img
+            src="assets/logos/paiement/mastercard.png"
+            alt="Mastercard"
+            loading="lazy"
+            width="71"
+            height="40"
+          >
+        </picture>
+        <picture>
+          <source srcset="assets/logos/paiement/paypal.webp" type="image/webp">
+          <img
+            src="assets/logos/paiement/paypal.png"
+            alt="PayPal"
+            loading="lazy"
+            width="53"
+            height="40"
+          >
+        </picture>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="Charte-Integrite-Academique.php"
+        >Charte d'Intégrité Académique</a
+      >
+      <a href="mentions-legales.php">Mentions Légales</a>
+      <span
+        style="color: #999; cursor: not-allowed; opacity: 0.6"
+        aria-disabled="true"
+        >Politique de Confidentialité</span
+      >
+      <span
+        style="color: #999; cursor: not-allowed; opacity: 0.6"
+        aria-disabled="true"
+        >CGU</span
+      >
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2007-2025 MasterMentor - Un site du groupe Staka. Tous droits
+        réservés.
+      </p>
+      <p style="margin-top: 1rem">
+        Coaching académique par des enseignants-chercheurs docteurs français
+      </p>
+      <p class="footer-values">
+        100% Français • Éthique • Exigeant • 100% Confidentiel
+      </p>
+    </div>
+  </div>
+</footer>

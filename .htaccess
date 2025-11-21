@@ -19,7 +19,13 @@ RewriteCond %{HTTP_HOST} ^www\.mastermentor\.fr$ [NC]
 RewriteRule ^(.*)$ https://mastermentor.fr/$1 [L,R=301]
 
 # ========================================
-# 3. COMPRESSION GZIP
+# 3. REDIRECTION .html → .php (301 Permanent)
+# ========================================
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)\.html$ $1.php [L,R=301]
+
+# ========================================
+# 4. COMPRESSION GZIP
 # ========================================
 <IfModule mod_deflate.c>
     # Compression HTML, CSS, JavaScript, JSON, XML
