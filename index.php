@@ -183,31 +183,64 @@
           overflow: hidden;
         }
         .hero {
-          min-height: 500px;
+          padding: 2.5rem 1.5rem;
         }
         .hero-container {
           grid-template-columns: 1fr;
-          gap: 3rem;
+          gap: 2rem;
         }
         .hero-image {
           order: -1;
-          margin-bottom: 2rem;
-          padding: 1rem;
+          padding: 0;
+          max-width: 280px;
+          margin: 0 auto 1.5rem;
         }
         .hero-image picture {
-          max-width: 400px;
+          max-width: 100%;
+        }
+        .hero-image img {
+          max-height: 280px;
         }
         .hero-image::before,
         .hero-image::after {
-          width: 30%;
-          height: 30%;
+          width: 25%;
+          height: 25%;
+          opacity: 0.3;
+          filter: blur(60px);
         }
         .hero-content {
           padding-right: 0;
           text-align: center;
         }
+        .hero h1 {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
         .hero-features {
           justify-content: center;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero {
+          padding: 2rem 1rem;
+        }
+        .hero-image {
+          max-width: 240px;
+        }
+        .hero-image img {
+          max-height: 240px;
+        }
+        .hero-image::before,
+        .hero-image::after {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 1.6rem;
+        }
+        .hero p {
+          font-size: 0.95rem;
         }
       }
       :root {
@@ -353,76 +386,78 @@
       .hero-image {
         position: relative;
         width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
       }
       .hero-image picture {
         position: relative;
         display: block;
         width: 100%;
-        max-width: 500px;
       }
       .hero-image img {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 48% 52% 60% 40% / 45% 55% 45% 55%;
+        border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
         box-shadow:
-          0 30px 80px rgba(87, 112, 134, 0.2),
-          0 15px 40px rgba(87, 112, 134, 0.15),
-          0 8px 20px rgba(87, 112, 134, 0.1);
+          0 25px 65px rgba(87, 112, 134, 0.16),
+          0 12px 32px rgba(87, 112, 134, 0.12),
+          0 6px 16px rgba(87, 112, 134, 0.08);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .hero-image img:hover {
-        border-radius: 52% 48% 45% 55% / 55% 45% 55% 45%;
-        transform: translateY(-10px) scale(1.02);
+        border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
+        transform: translateY(-8px);
         box-shadow:
-          0 40px 100px rgba(87, 112, 134, 0.25),
-          0 20px 50px rgba(87, 112, 134, 0.18),
-          0 10px 25px rgba(87, 112, 134, 0.12);
+          0 35px 85px rgba(87, 112, 134, 0.2),
+          0 18px 42px rgba(87, 112, 134, 0.15),
+          0 8px 20px rgba(87, 112, 134, 0.1);
       }
       .hero-image::before {
         content: '';
         position: absolute;
-        top: -3%;
-        right: -3%;
-        width: 35%;
-        height: 35%;
+        top: -5%;
+        right: -5%;
+        width: 30%;
+        height: 30%;
         background: linear-gradient(135deg,
-          rgba(255, 182, 193, 0.3),
-          rgba(255, 105, 180, 0.2));
+          rgba(255, 192, 203, 0.15),
+          rgba(255, 182, 193, 0.1));
         border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
         z-index: -1;
-        animation: float 7s ease-in-out infinite;
-        filter: blur(40px);
+        filter: blur(50px);
+        animation: float 8s ease-in-out infinite;
+        opacity: 0.6;
       }
       .hero-image::after {
         content: '';
         position: absolute;
-        bottom: -5%;
-        left: -5%;
-        width: 40%;
-        height: 40%;
+        bottom: -8%;
+        left: -8%;
+        width: 35%;
+        height: 35%;
         background: linear-gradient(135deg,
-          rgba(173, 216, 230, 0.3),
-          rgba(135, 206, 250, 0.2));
+          rgba(200, 230, 255, 0.15),
+          rgba(173, 216, 230, 0.1));
         border-radius: 50% 50% 45% 55% / 45% 55% 45% 55%;
         z-index: -1;
-        animation: float 8s ease-in-out infinite reverse;
-        filter: blur(40px);
+        filter: blur(50px);
+        animation: float 10s ease-in-out infinite reverse;
+        opacity: 0.6;
       }
       @keyframes float {
         0%, 100% {
           transform: translate(0, 0) rotate(0deg);
         }
         33% {
-          transform: translate(-15px, -15px) rotate(3deg);
+          transform: translate(-10px, -10px) rotate(2deg);
         }
         66% {
-          transform: translate(10px, 10px) rotate(-3deg);
+          transform: translate(8px, 8px) rotate(-2deg);
         }
       }
       .hero h1 {
