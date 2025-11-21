@@ -1,3 +1,9 @@
+<?php
+// Détecter la page courante pour adapter les liens de navigation
+$current_page = basename($_SERVER['PHP_SELF']);
+$is_index = ($current_page === 'index.php');
+$prefix = $is_index ? '#' : 'index.php#';
+?>
 <!-- Header -->
 <header>
   <nav>
@@ -23,13 +29,13 @@
       <span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="#disciplines">Disciplines</a></li>
-      <li><a href="#equipe">L'Équipe</a></li>
-      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="<?php echo $prefix; ?>disciplines">Disciplines</a></li>
+      <li><a href="<?php echo $prefix; ?>equipe">L'Équipe</a></li>
+      <li><a href="<?php echo $prefix; ?>quiz">Quiz</a></li>
       <li><a href="tarifs.php">Tarifs</a></li>
-      <li><a href="#methode">Notre Méthode</a></li>
-      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="<?php echo $prefix; ?>methode">Notre Méthode</a></li>
+      <li><a href="<?php echo $prefix; ?>temoignages">Témoignages</a></li>
     </ul>
-    <a href="#contact" class="cta-nav">Diagnostic Gratuit</a>
+    <a href="<?php echo $prefix; ?>contact" class="cta-nav">Diagnostic Gratuit</a>
   </nav>
 </header>

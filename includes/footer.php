@@ -1,3 +1,9 @@
+<?php
+// Détecter la page courante pour adapter les liens de navigation
+$current_page = basename($_SERVER['PHP_SELF']);
+$is_index = ($current_page === 'index.php');
+$prefix = $is_index ? '#' : 'index.php#';
+?>
 <!-- Footer -->
 <footer>
   <div class="footer-content">
@@ -22,12 +28,12 @@
         <h4>Navigation</h4>
         <div style="display: flex; flex-direction: column; gap: 0.75rem">
           <a
-            href="#disciplines"
+            href="<?php echo $prefix; ?>disciplines"
             style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
             >Disciplines</a
           >
           <a
-            href="#equipe"
+            href="<?php echo $prefix; ?>equipe"
             style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
             >L'Équipe</a
           >
@@ -37,17 +43,17 @@
             >Tarifs</a
           >
           <a
-            href="#methode"
+            href="<?php echo $prefix; ?>methode"
             style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
             >Notre Méthode</a
           >
           <a
-            href="#temoignages"
+            href="<?php echo $prefix; ?>temoignages"
             style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
             >Témoignages</a
           >
           <a
-            href="#contact"
+            href="<?php echo $prefix; ?>contact"
             style="color: rgba(255, 255, 255, 0.8); text-decoration: none"
             >Contact</a
           >
