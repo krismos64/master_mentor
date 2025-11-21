@@ -115,10 +115,40 @@
 | Fichiers créés | 14 images optimisées |
 | Dossiers | certifications/, paiement/ |
 
-### ⏭️ Prochaines étapes
+---
 
-- **MM-15** : Mentions Légales (2 pts)
-  - En attente du contenu client
+### ✅ MM-15 : Page Mentions Légales & CGV
+
+- **Objectif** : Créer page légale complète (MM-25 + MM-26)
+- **Story points** : 2 pts
+- **Date** : 21 novembre 2025
+- **Réalisations** :
+  - Page mentions-legales.html créée avec structure HTML5 sémantique
+  - Header et footer identiques aux autres pages
+  - 11 articles CGV intégrés avec contenu client
+  - Informations légales corrigées :
+    - URL : https://mastermentor.fr
+    - SIRET : 919 234 567
+    - Email : contact@mastermentor.fr
+    - Hébergeur : OVH
+  - Meta robots : noindex, follow (page légale non indexable)
+  - Liens footer "Mentions Légales" ajoutés dans index.html et tarifs.html
+  - Sitemap.xml mis à jour (5 pages)
+- **Fichiers** :
+  - mentions-legales.html (nouveau, 564 lignes)
+  - index.html (footer mis à jour)
+  - tarifs.html (footer mis à jour)
+  - sitemap.xml (nouvelle entrée)
+- **Commits** : `90d4c83`
+
+### 📊 Résumé Sprint MM-15
+
+| Métrique | Valeur |
+|----------|--------|
+| Sous-tâches | 2/2 ✅ (MM-25, MM-26) |
+| Commits | 1 |
+| Fichiers modifiés | 4 (1 créé, 3 mis à jour) |
+| Lignes ajoutées | +564 |
 
 ---
 

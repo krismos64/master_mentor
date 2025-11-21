@@ -29,6 +29,7 @@ master_mentor/
 ├── tarifs.html                         # Page tarifs
 ├── popup-demo.html                     # Démo popup
 ├── Charte-Integrite-Academique.html    # Page charte
+├── mentions-legales.html               # Mentions légales & CGV
 ├── contact.php                         # Backend formulaire (sécurisé)
 ├── merci.html                          # Page confirmation après soumission
 ├── assets/
@@ -210,11 +211,12 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📊 Statistiques Projet
 
-- **6 pages HTML/PHP** (index, tarifs, popup-demo, charte, merci, contact.php)
+- **7 pages HTML/PHP** (index, tarifs, popup-demo, charte, mentions-legales, merci, contact.php)
 - **5 fichiers CSS** + versions minifiées (styles, integrations, tarifs, charte, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
 - **~1435 lignes** index.html (optimisé -22%)
+- **564 lignes** mentions-legales.html (page légale)
 - **241 lignes** contact.php (backend sécurisé)
 - **220 lignes** merci.html (page confirmation)
 - **7.6K JavaScript** main.js (3.7K minifié)
@@ -224,6 +226,16 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 ## 📝 Changelog
 
 ### Version 1.5 (19 Nov 2025) - 🔧 CORRECTIONS RETOUR CLIENT ✅
+
+- ✅ **MM-15** : Page Mentions Légales & CGV créée
+
+  - Nouvelle page mentions-legales.html avec 11 articles CGV
+  - Informations légales corrigées (URL, SIRET, Email, Hébergeur OVH)
+  - Header et footer identiques aux autres pages
+  - Meta robots : noindex, follow (page légale)
+  - Liens footer "Mentions Légales" ajoutés (index.html, tarifs.html)
+  - Sitemap.xml mis à jour (5 pages)
+  - Conformité RGPD et structure HTML5 sémantique
 
 - ✅ **MM-19** : Quiz interactif corrigé
 
