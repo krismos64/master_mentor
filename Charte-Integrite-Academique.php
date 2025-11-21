@@ -34,6 +34,7 @@
     <meta name="twitter:image" content="https://www.mastermentor.fr/assets/images/og-charte-mastermentor.jpg" />
 
     <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/common.min.css">
     <link rel="stylesheet" href="/assets/css/charte.min.css">
 
     <!-- Favicons multi-plateformes -->

@@ -63,6 +63,7 @@
     />
 
     <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/common.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
     <link rel="stylesheet" href="/assets/css/tarifs.min.css" />
 

@@ -11,6 +11,7 @@
     <link rel="canonical" href="https://www.mastermentor.fr/popup-demo.html" />
 
     <!-- Stylesheet externe -->
+    <link rel="stylesheet" href="/assets/css/common.min.css">
     <link rel="stylesheet" href="/assets/css/popup-demo.min.css">
 
     <!-- Favicons multi-plateformes -->

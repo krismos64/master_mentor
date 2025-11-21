@@ -16,6 +16,7 @@
     <link rel="canonical" href="https://mastermentor.fr/mentions-legales.html" />
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/common.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
 
     <!-- Favicons multi-plateformes -->
