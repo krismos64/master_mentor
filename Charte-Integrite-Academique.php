@@ -131,7 +131,7 @@
 
     <div class="container">
         <div class="header">
-            <div class="logo">Master<span>Mentor</span></div>
+            <div class="logo"><span>Master Mentor</span></div>
             <h1>Charte d'Intégrité Académique</h1>
             <p class="subtitle">Engagement de qualité, d'éthique et de respect des normes universitaires</p>
         </div>
