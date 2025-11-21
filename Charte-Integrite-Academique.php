@@ -126,6 +126,8 @@
     </script>
 </head>
 <body>
+    <?php include 'includes/header.php'; ?>
+
     <div class="container">
         <div class="header">
             <div class="logo">Master<span>Mentor</span></div>
@@ -382,5 +384,7 @@
             <p>Ce document constitue un engagement contractuel entre MasterMentor et l'étudiant accompagné.</p>
         </div>
     </div>
+
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>

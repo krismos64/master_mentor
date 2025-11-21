@@ -22,6 +22,8 @@
     <meta name="theme-color" content="#577086">
 </head>
 <body>
+    <?php include 'includes/header.php'; ?>
+
     <div class="demo-container">
         <h1 class="demo-title">🎯 Démo Popup Urgence</h1>
         <p class="demo-subtitle">Cliquez sur le bouton pour voir le popup en action</p>
@@ -84,5 +86,7 @@
             }
         });
     </script>
+
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>
