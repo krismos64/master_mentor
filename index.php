@@ -193,6 +193,15 @@
           order: -1;
           margin-bottom: 2rem;
         }
+        .hero-image-wrapper {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        .hero-image::before,
+        .hero-image::after {
+          width: 30%;
+          height: 30%;
+        }
         .hero-content {
           padding-right: 0;
           text-align: center;
@@ -342,23 +351,67 @@
         padding-right: 2rem;
       }
       .hero-image {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
       }
+      .hero-image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 1 / 1;
+      }
       .hero-image img {
         width: 100%;
-        height: auto;
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-strong);
-        max-height: 600px;
+        height: 100%;
         object-fit: cover;
-        transition: var(--transition);
+        border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+        box-shadow:
+          0 25px 70px rgba(87, 112, 134, 0.18),
+          0 12px 35px rgba(87, 112, 134, 0.12),
+          0 5px 15px rgba(87, 112, 134, 0.08);
+        transition: all 0.4s ease;
       }
       .hero-image img:hover {
         transform: translateY(-8px);
-        box-shadow: 0 24px 80px rgba(87, 112, 134, 0.2);
+        border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
+        box-shadow:
+          0 30px 80px rgba(87, 112, 134, 0.2),
+          0 15px 40px rgba(87, 112, 134, 0.15);
+      }
+      .hero-image::before {
+        content: '';
+        position: absolute;
+        top: -5%;
+        right: -5%;
+        width: 40%;
+        height: 40%;
+        background: linear-gradient(135deg, rgba(191, 4, 70, 0.15), rgba(217, 22, 86, 0.15));
+        border-radius: 50% 40% 60% 50% / 45% 55% 45% 55%;
+        z-index: -1;
+        animation: float 6s ease-in-out infinite;
+      }
+      .hero-image::after {
+        content: '';
+        position: absolute;
+        bottom: -8%;
+        left: -8%;
+        width: 35%;
+        height: 35%;
+        background: linear-gradient(135deg, rgba(15, 82, 170, 0.12), rgba(2, 47, 107, 0.12));
+        border-radius: 40% 60% 50% 50% / 55% 45% 55% 45%;
+        z-index: -1;
+        animation: float 8s ease-in-out infinite reverse;
+      }
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(5deg);
+        }
       }
       .hero h1 {
         font-size: 3rem;
@@ -750,15 +803,17 @@
         </div>
 
         <div class="hero-image">
-          <picture>
-            <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
-            <img src="assets/images/hero/hero-new.jpg"
-                 alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
-                 width="600"
-                 height="600"
-                 loading="eager"
-                 fetchpriority="high">
-          </picture>
+          <div class="hero-image-wrapper">
+            <picture>
+              <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
+              <img src="assets/images/hero/hero-new.jpg"
+                   alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
+                   width="600"
+                   height="600"
+                   loading="eager"
+                   fetchpriority="high">
+            </picture>
+          </div>
         </div>
       </div>
     </main>
