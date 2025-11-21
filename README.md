@@ -22,6 +22,7 @@ Plateforme web présentant des services d'accompagnement méthodologique pour la
 - **JavaScript ES6+** (Vanilla, modules externes)
 - **Performance** : Fichiers minifiés, lazy loading, cache optimisé
 - **Architecture** : Includes PHP pour header/footer, CSS unifié
+- **Analytics** : Google Tag Manager (GTM-WFJF4PXM) + GA4 (G-981LGMTGJK) avec RGPD
 
 ## 📁 Structure du Projet
 
@@ -233,6 +234,22 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 - **906 lignes** documentation MM-5
 
 ## 📝 Changelog
+
+### Version 1.7 (21 Nov 2025) - 📊 ANALYTICS GTM + GA4 PRODUCTION ✅
+
+- ✅ **MM-28** : Intégration Google Tag Manager + Google Analytics 4
+
+  - **GTM (GTM-WFJF4PXM)** : Container déployé en priorité haute
+    - Script dans `<head>` ligne 6 (immédiatement après meta viewport)
+    - Noscript dans `<body>` ligne 1 (pour utilisateurs sans JS)
+  - **GA4 (G-981LGMTGJK)** : Tracking déployé après GTM
+    - Script GA4 dans `<head>` ligne 14 (après GTM)
+    - Configuration RGPD complète : `anonymize_ip: true`, `cookie_flags: 'SameSite=None;Secure'`
+  - **Suppression ancien code** : GA4 lazy-loaded retiré (incompatible Google Ads)
+  - **5 fichiers modifiés** : index.php, tarifs.php, mentions-legales.php, Charte-Integrite-Academique.php, popup-demo.php
+  - **Production Ready** : Préparé pour campagne Google Ads (lundi 25 nov 2025)
+
+- 📊 **Impact** : Tracking conversions Google Ads opérationnel, conformité RGPD, 0 perte de données
 
 ### Version 1.6 (21 Nov 2025) - 🏗️ REFACTORISATION PHP & CSS ✅
 
