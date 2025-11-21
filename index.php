@@ -185,6 +185,21 @@
         .hero {
           min-height: 500px;
         }
+        .hero-container {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .hero-image {
+          order: -1;
+          margin-bottom: 2rem;
+        }
+        .hero-content {
+          padding-right: 0;
+          text-align: center;
+        }
+        .hero-features {
+          justify-content: center;
+        }
       }
       :root {
         --primary: #577086;
@@ -312,16 +327,38 @@
         background: var(--white);
         color: var(--dark);
         padding: 6rem 2rem;
-        text-align: center;
         border-bottom: 3px solid var(--secondary);
         min-height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      }
+      .hero-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+        align-items: center;
       }
       .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
+        padding-right: 2rem;
+      }
+      .hero-image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-strong);
+        max-height: 600px;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+      .hero-image img:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 80px rgba(87, 112, 134, 0.2);
       }
       .hero h1 {
         font-size: 3rem;
@@ -658,92 +695,16 @@
 
     <!-- Hero Section -->
     <main class="hero" id="main-content">
-      <div class="hero-content fade-in-up">
-        <h1>
-          Réussissez votre mémoire de master
-          <span class="hero-highlight">avec des enseignants à vos côtés</span>
-        </h1>
-        <p>
-          Un accompagnement personnalisé par des enseignants-chercheurs docteurs
-          jusqu'à votre réussite. Satisfait ou remboursé.
-        </p>
-
-        <!-- Images hero responsive -->
-        <div
-          style="
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-          "
-        >
-          <picture style="flex: 1; min-width: 280px; max-width: 480px">
-            <source
-              type="image/webp"
-              srcset="
-                /assets/images/hero/hero-400.webp   400w,
-                /assets/images/hero/hero-800.webp   800w,
-                /assets/images/hero/hero-1200.webp 1200w
-              "
-              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
-            />
-            <img
-              src="/assets/images/hero/hero-800.jpg"
-              srcset="
-                /assets/images/hero/hero-400.jpg   400w,
-                /assets/images/hero/hero-800.jpg   800w,
-                /assets/images/hero/hero-1200.jpg 1200w
-              "
-              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
-              alt="Enseignant-chercheur docteur accompagnant un étudiant pour son mémoire de Master 2"
-              width="1200"
-              height="800"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              style="
-                width: 100%;
-                height: auto;
-                border-radius: 16px;
-                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-              "
-            />
-          </picture>
-
-          <picture style="flex: 1; min-width: 280px; max-width: 480px">
-            <source
-              type="image/webp"
-              srcset="
-                /assets/images/hero/hero1-400.webp   400w,
-                /assets/images/hero/hero1-800.webp   800w,
-                /assets/images/hero/hero1-1200.webp 1200w
-              "
-              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
-            />
-            <img
-              src="/assets/images/hero/hero1-800.jpg"
-              srcset="
-                /assets/images/hero/hero1-400.jpg   400w,
-                /assets/images/hero/hero1-800.jpg   800w,
-                /assets/images/hero/hero1-1200.jpg 1200w
-              "
-              sizes="(min-width: 1024px) 480px, (min-width: 768px) 45vw, 90vw"
-              alt="Étudiante en Master 2 travaillant avec succès sur son mémoire grâce à l'accompagnement personnalisé"
-              width="1200"
-              height="800"
-              loading="eager"
-              decoding="async"
-              style="
-                width: 100%;
-                height: auto;
-                border-radius: 16px;
-                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-              "
-            />
-          </picture>
-        </div>
+      <div class="hero-container fade-in-up">
+        <div class="hero-content">
+          <h1>
+            Réussissez votre mémoire de master
+            <span class="hero-highlight">avec des enseignants à vos côtés</span>
+          </h1>
+          <p>
+            Un accompagnement personnalisé par des enseignants-chercheurs docteurs
+            jusqu'à votre réussite. Satisfait ou remboursé.
+          </p>
 
         <div class="hero-features">
           <div class="hero-feature">
@@ -785,6 +746,19 @@
             <div class="ekomi-stars">★★★★★</div>
             <div class="ekomi-text">Certifié eKomi</div>
           </div>
+        </div>
+        </div>
+
+        <div class="hero-image">
+          <picture>
+            <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
+            <img src="assets/images/hero/hero-new.jpg"
+                 alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
+                 width="600"
+                 height="600"
+                 loading="eager"
+                 fetchpriority="high">
+          </picture>
         </div>
       </div>
     </main>
