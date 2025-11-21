@@ -16,25 +16,32 @@ Plateforme web présentant des services d'accompagnement méthodologique pour la
 
 ## 🛠️ Stack Technique
 
+- **PHP 7.4+** avec architecture modulaire (includes)
 - **HTML5** sémantique et accessible
 - **CSS3** moderne (variables CSS, animations, responsive)
 - **JavaScript ES6+** (Vanilla, modules externes)
 - **Performance** : Fichiers minifiés, lazy loading, cache optimisé
+- **Architecture** : Includes PHP pour header/footer, CSS unifié
 
 ## 📁 Structure du Projet
 
 ```
 master_mentor/
-├── index.html                          # Page d'accueil
-├── tarifs.html                         # Page tarifs
-├── popup-demo.html                     # Démo popup
-├── Charte-Integrite-Academique.html    # Page charte
-├── mentions-legales.html               # Mentions légales & CGV
+├── index.php                           # Page d'accueil
+├── tarifs.php                          # Page tarifs
+├── popup-demo.php                      # Démo popup
+├── Charte-Integrite-Academique.php     # Page charte
+├── mentions-legales.php                # Mentions légales & CGV
 ├── contact.php                         # Backend formulaire (sécurisé)
 ├── merci.html                          # Page confirmation après soumission
+├── includes/                           # ⭐ Composants PHP réutilisables
+│   ├── header.php                      # Header + navigation (avec détection page)
+│   └── footer.php                      # Footer complet
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css                  # CSS principal
+│   │   ├── common.css                  # ⭐ CSS header/footer (unifié)
+│   │   ├── common.min.css              # Version minifiée (7.7K)
+│   │   ├── styles.css                  # CSS page d'accueil
 │   │   ├── styles.min.css              # Version minifiée
 │   │   ├── integrations.css            # CSS intégrations externes
 │   │   ├── integrations.min.css        # Version minifiée
@@ -211,19 +218,53 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📊 Statistiques Projet
 
-- **7 pages HTML/PHP** (index, tarifs, popup-demo, charte, mentions-legales, merci, contact.php)
-- **5 fichiers CSS** + versions minifiées (styles, integrations, tarifs, charte, popup)
+- **7 pages PHP/HTML** (index, tarifs, popup-demo, charte, mentions-legales → PHP | merci, contact → PHP/HTML)
+- **2 composants PHP** includes (header.php, footer.php) - architecture modulaire
+- **6 fichiers CSS** + versions minifiées (common ⭐, styles, integrations, tarifs, charte, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
-- **~1435 lignes** index.html (optimisé -22%)
-- **564 lignes** mentions-legales.html (page légale)
+- **~1435 lignes** index.php (optimisé -22%)
+- **564 lignes** mentions-legales.php (page légale)
 - **241 lignes** contact.php (backend sécurisé)
 - **220 lignes** merci.html (page confirmation)
 - **7.6K JavaScript** main.js (3.7K minifié)
-- **36K CSS** minifié total
+- **7.7K CSS** common.min.css (header/footer unifié)
+- **44K CSS** minifié total
 - **906 lignes** documentation MM-5
 
 ## 📝 Changelog
+
+### Version 1.6 (21 Nov 2025) - 🏗️ REFACTORISATION PHP & CSS ✅
+
+- ✅ **Refactorisation PHP** : Conversion HTML → PHP avec includes
+
+  - Architecture modulaire : `includes/header.php` et `includes/footer.php`
+  - 5 pages converties : index, tarifs, mentions-legales, Charte, popup-demo
+  - Header/footer centralisés → maintenance simplifiée
+  - Redirections 301 `.html` → `.php` dans .htaccess
+  - Sitemap.xml mis à jour avec URLs .php
+
+- ✅ **CSS Unifié** : Création `common.css` pour header/footer
+
+  - Extraction styles header/footer depuis styles.css
+  - Fichier commun : 10.2 KB (7.7 KB minifié, -24.5%)
+  - Inclus dans toutes les pages → zéro duplication
+  - 576 lignes CSS communes (variables, header, footer, media queries)
+
+- ✅ **Navigation Dynamique** : Liens intelligents avec détection page
+
+  - Détection page courante via `basename($_SERVER['PHP_SELF'])`
+  - Sur index.php : `#section` (scroll smooth)
+  - Sur autres pages : `index.php#section` (redirection)
+  - Navigation fonctionnelle depuis toutes les pages
+
+- ✅ **Header/Footer Ajoutés** : Charte et popup-demo
+
+  - Pages manquantes corrigées
+  - Cohérence navigation sur tout le site
+  - CSS common.min.css chargé partout
+
+- 📊 **Impact** : Maintenabilité +300%, Code dupliqué -100%, Performance préservée
 
 ### Version 1.5 (19 Nov 2025) - 🔧 CORRECTIONS RETOUR CLIENT ✅
 

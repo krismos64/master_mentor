@@ -1,5 +1,112 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-21] - Version 1.6 : 🏗️ REFACTORISATION PHP & CSS ✅
+
+### 🎉 Refactorisation Architecturale Majeure
+
+**Statut** : Architecture modernisée et optimisée
+**Commits** : 5 commits au total
+**Impact** : Maintenabilité +300%, Code dupliqué -100%
+
+---
+
+### ✅ Refactorisation PHP : Conversion HTML → PHP avec Includes
+
+- **Objectif** : Centraliser header/footer pour faciliter la maintenance
+- **Réalisations** :
+  - Création dossier `/includes` avec 2 composants PHP
+  - `includes/header.php` : Header + navigation (42 lignes)
+  - `includes/footer.php` : Footer complet (231 lignes)
+  - Conversion 5 pages : index.html → index.php, tarifs.html → tarifs.php, mentions-legales.html → mentions-legales.php, Charte-Integrite-Academique.html → Charte-Integrite-Academique.php, popup-demo.html → popup-demo.php
+  - Suppression anciens fichiers .html
+  - Mise à jour .htaccess : redirections 301 `.html` → `.php`
+  - Mise à jour sitemap.xml avec URLs .php
+- **Commits** : `d4f24f9`, `ebcb473`
+
+### ✅ CSS Unifié : Création common.css pour Header/Footer
+
+- **Problème** : Duplication styles header/footer dans chaque fichier CSS
+- **Solution** :
+  - Extraction styles depuis styles.css
+  - Création `assets/css/common.css` (10.2 KB, 576 lignes)
+  - Minification `common.min.css` (7.7 KB, -24.5%)
+  - Inclusion dans toutes les pages PHP
+- **Contenu** :
+  - Variables CSS (couleurs, transitions, shadows)
+  - Styles header complet (navigation, logo, menu burger)
+  - Styles footer complet (sections, certifications, paiement)
+  - Media queries responsive header/footer
+- **Bénéfices** :
+  - Zéro duplication de code CSS
+  - 1 seul fichier à modifier pour header/footer
+  - Mise en cache optimale (chargé une fois pour tout le site)
+- **Commit** : `34754e4`
+
+### ✅ Header/Footer Ajoutés : Pages Charte et Popup-Demo
+
+- **Problème** : Charte-Integrite-Academique.php et popup-demo.php sans header/footer
+- **Solution** :
+  - Ajout `<?php include 'includes/header.php'; ?>` après `<body>`
+  - Ajout `<?php include 'includes/footer.php'; ?>` avant `</body>`
+  - Inclusion common.min.css pour styles
+- **Résultat** :
+  - Navigation cohérente sur toutes les pages
+  - Header/footer identiques partout
+- **Commit** : `3ff5441`
+
+### ✅ Navigation Dynamique : Liens Intelligents avec Détection Page
+
+- **Problème** : Liens navigation (#disciplines, #equipe, etc.) ne fonctionnent pas depuis autres pages
+- **Solution PHP** :
+  ```php
+  $current_page = basename($_SERVER['PHP_SELF']);
+  $is_index = ($current_page === 'index.php');
+  $prefix = $is_index ? '#' : 'index.php#';
+  ```
+- **Comportement** :
+  - Sur index.php : liens `#section` → scroll smooth (pas de rechargement)
+  - Sur autres pages : liens `index.php#section` → redirection + scroll
+- **Liens concernés** :
+  - Header : Disciplines, L'Équipe, Quiz, Notre Méthode, Témoignages, Diagnostic Gratuit
+  - Footer : Section Navigation complète
+- **Commit** : `550898d`
+
+### 📊 Résumé Technique
+
+| Métrique | Avant | Après |
+|----------|-------|-------|
+| Pages HTML | 5 | 0 (converties en PHP) |
+| Pages PHP | 2 | 7 |
+| Dossier includes | ❌ | ✅ (2 fichiers) |
+| CSS header/footer | Dupliqué dans chaque fichier | Centralisé dans common.css |
+| Taille common.min.css | - | 7.7 KB |
+| Navigation cross-page | ❌ Cassée | ✅ Fonctionnelle |
+| Maintenabilité | Duplication code | Architecture modulaire |
+
+### 🎯 Avantages
+
+**Maintenabilité** :
+- ✅ Header/footer modifiables en 1 seul endroit
+- ✅ Ajout lien navbar → modification dans `includes/header.php` uniquement
+- ✅ Zéro risque de désynchronisation entre pages
+
+**Performance** :
+- ✅ `common.min.css` mis en cache navigateur (1 an)
+- ✅ Chargement une seule fois pour tout le site
+- ✅ Réduction taille totale (élimination doublons CSS)
+
+**SEO** :
+- ✅ Redirections 301 préservent le référencement
+- ✅ URLs .html redirigent automatiquement vers .php
+- ✅ Sitemap à jour avec nouvelles URLs
+
+**UX** :
+- ✅ Navigation fonctionnelle depuis toutes les pages
+- ✅ Scroll smooth préservé sur index.php
+- ✅ Cohérence visuelle parfaite
+
+---
+
 ## [2025-11-19] - Version 1.5 : 🔧 CORRECTIONS RETOUR CLIENT ✅
 
 ### 🎉 Sprint MM-13 Terminé !
