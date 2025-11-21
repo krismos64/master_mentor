@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Configuration email
-define('EMAIL_TO', 'c.mostefaoui@yahoo.fr');
+define('EMAIL_TO', 'contact@staka.fr');
 define('EMAIL_SUBJECT', '🎓 Nouveau diagnostic MasterMentor');
 define('EMAIL_FROM', 'noreply@mastermentor.fr'); 
 // Rate limiting : 1 envoi par minute par IP

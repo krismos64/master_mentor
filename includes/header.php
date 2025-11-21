@@ -35,6 +35,7 @@ $prefix = $is_index ? '#' : 'index.php#';
       <li><a href="tarifs.php">Tarifs</a></li>
       <li><a href="<?php echo $prefix; ?>methode">Notre Méthode</a></li>
       <li><a href="<?php echo $prefix; ?>temoignages">Témoignages</a></li>
+      <li><a href="<?php echo $prefix; ?>contact">Contact</a></li>
     </ul>
     <a href="<?php echo $prefix; ?>contact" class="cta-nav">Diagnostic Gratuit</a>
   </nav>
