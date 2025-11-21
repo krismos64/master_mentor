@@ -235,6 +235,33 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
+### Version 1.8 (21 Nov 2025) - 🎨 HERO SECTION RESPONSIVE MOBILE + EFFETS PREMIUM ✅
+
+- ✅ **MM-32** : Refonte complète Hero Section avec effets organiques et responsive mobile
+
+  - **Desktop (> 768px)** : Forme organique élégante avec effets premium
+    - Border-radius organique morphing : `42% 58% 55% 45% / 48% 62% 38% 52%`
+    - Blobs décoratifs subtils rose/bleu : `blur(50px)`, `opacity: 0.6`
+    - Animation float douce : `translate(-10px, -10px) rotate(2deg)`
+    - Container optimisé : `max-width: 500px` centré
+    - Ombres progressives pour effet 3D naturel
+    - Hover morphing fluide avec transition `cubic-bezier(0.4, 0, 0.2, 1)`
+
+  - **Mobile Tablette (≤ 768px)** : Image optimisée style Staka.fr
+    - Image : `max-width: 280px`, `max-height: 280px`
+    - Blobs réduits : `25%` width/height, `opacity: 0.3`, `blur(60px)`
+    - Grid → colonne unique avec image en premier (order: -1)
+    - Typography : h1 `1.8rem`, line-height `1.3`
+    - Features en colonne verticale, gap `0.75rem`
+
+  - **Mobile Petit (≤ 480px)** : UX optimale sans surcharge
+    - Image : `max-width: 240px`, `max-height: 240px`
+    - Blobs complètement supprimés (`display: none`)
+    - Typography réduite : h1 `1.6rem`, p `0.95rem`
+    - Padding optimisé : `2rem 1rem`
+
+- 📊 **Impact** : Forme organique prononcée, blobs subtils desktop, mobile optimisé 280px/240px, UX fluide tous écrans
+
 ### Version 1.7.1 (21 Nov 2025) - 🔧 CORRECTIONS CONFIG EMAIL + UX MOBILE ✅
 
 - ✅ **MM-30** : Email contact backend mis à jour
