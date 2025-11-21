@@ -235,6 +235,19 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
+### Version 1.7.1 (21 Nov 2025) - 🔧 CORRECTIONS CONFIG EMAIL + UX MOBILE ✅
+
+- ✅ **MM-30** : Email contact backend mis à jour
+  - `contact.php` ligne 26 : `c.mostefaoui@yahoo.fr` → `contact@staka.fr`
+  - Email professionnel officiel pour réception formulaires
+
+- ✅ **MM-31** : Lien Contact ajouté dans navigation mobile
+  - `includes/header.php` : nouveau lien "Contact" dans `.nav-links`
+  - Menu burger mobile : accès direct au formulaire contact
+  - Cohérence navigation desktop/mobile améliorée
+
+- 📊 **Impact** : Email professionnel + meilleure UX mobile
+
 ### Version 1.7 (21 Nov 2025) - 📊 ANALYTICS GTM + GA4 PRODUCTION ✅
 
 - ✅ **MM-28** : Intégration Google Tag Manager + Google Analytics 4

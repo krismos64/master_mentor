@@ -1,5 +1,73 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-21] - Version 1.7.1 : 🔧 CORRECTIONS CONFIG EMAIL + UX MOBILE ✅
+
+### 🎉 Corrections Rapides Critiques Retour Client
+
+**Statut** : Email backend + Navigation mobile corrigés
+**Commit** : `0e05af5`
+**Impact** : Email professionnel opérationnel + meilleure UX mobile
+
+---
+
+### ✅ MM-30 : Configuration Email Backend
+
+**Problème** : Email de réception formulaire contact sur adresse personnelle
+**Fichier** : `contact.php`
+
+**Modification ligne 26** :
+```php
+// Avant
+define('EMAIL_TO', 'c.mostefaoui@yahoo.fr');
+
+// Après
+define('EMAIL_TO', 'contact@staka.fr');
+```
+
+**Impact** :
+- ✅ Formulaires de contact reçus sur email professionnel officiel
+- ✅ Image de marque cohérente (domaine staka.fr)
+- ✅ Centralisation communications client
+
+---
+
+### ✅ MM-31 : Lien Contact dans Navigation Mobile
+
+**Problème** : Pas de lien "Contact" dans le menu burger mobile
+**Fichier** : `includes/header.php`
+
+**Modification ligne 38** :
+```html
+<ul class="nav-links">
+  <li><a href="<?php echo $prefix; ?>disciplines">Disciplines</a></li>
+  <li><a href="<?php echo $prefix; ?>equipe">L'Équipe</a></li>
+  <li><a href="<?php echo $prefix; ?>quiz">Quiz</a></li>
+  <li><a href="tarifs.php">Tarifs</a></li>
+  <li><a href="<?php echo $prefix; ?>methode">Notre Méthode</a></li>
+  <li><a href="<?php echo $prefix; ?>temoignages">Témoignages</a></li>
+  <li><a href="<?php echo $prefix; ?>contact">Contact</a></li> <!-- ✅ NOUVEAU -->
+</ul>
+```
+
+**Impact** :
+- ✅ Menu burger mobile : accès direct formulaire contact
+- ✅ Cohérence navigation desktop/mobile (même liens partout)
+- ✅ Meilleure UX : utilisateurs mobiles trouvent facilement le contact
+- ✅ Taux de conversion potentiellement amélioré (contact plus accessible)
+
+---
+
+### 📊 Résumé Technique
+
+| Métrique | Fichier | Modification |
+|----------|---------|--------------|
+| Email backend | contact.php | Ligne 26 : email personnel → contact@staka.fr |
+| Navigation mobile | includes/header.php | Ligne 38 : ajout lien Contact dans nav-links |
+| Fichiers modifiés | 2 | contact.php, includes/header.php |
+| Impact | Production | Email professionnel + UX mobile améliorée |
+
+---
+
 ## [2025-11-21] - Version 1.7 : 📊 ANALYTICS GTM + GA4 PRODUCTION ✅
 
 ### 🎉 Intégration Analytics Production Ready pour Google Ads
