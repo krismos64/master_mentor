@@ -1865,7 +1865,7 @@ section {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 150px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease forwards;
@@ -1956,7 +1956,7 @@ section {
   }
 
   .testimonial-image-wrapper {
-    max-width: 320px;
+    max-width: 120px;
   }
 
   /* Réduire taille des blobs sur mobile */
