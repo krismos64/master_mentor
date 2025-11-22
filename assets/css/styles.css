@@ -1862,6 +1862,7 @@ section {
 }
 
 .testimonial-image-wrapper {
+  display: block;
   position: relative;
   width: 100%;
   max-width: 400px;
