@@ -388,7 +388,7 @@
       .hero-image {
         position: relative;
         width: 100%;
-        max-width: 500px;
+        max-width: 250px;
         margin: 0 auto;
         display: flex;
         align-items: center;
