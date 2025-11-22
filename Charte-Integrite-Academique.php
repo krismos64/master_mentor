@@ -28,7 +28,7 @@
     <meta name="description" content="Charte d'intégrité académique MasterMentor : engagement éthique, respect normes universitaires, coaching méthodologique conforme, garantie zéro plagiat et IA." />
     <meta name="keywords" content="intégrité académique, éthique coaching, normes universitaires, anti-plagiat, garantie sans IA, coaching méthodologique" />
     <meta name="author" content="MasterMentor by Staka" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content="noindex, nofollow" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.mastermentor.fr/Charte-Integrite-Academique.html" />

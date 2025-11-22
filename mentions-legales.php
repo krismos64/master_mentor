@@ -29,7 +29,7 @@
       name="description"
       content="Mentions légales et conditions générales de vente de MasterMentor. Informations légales, CGV, protection des données personnelles."
     />
-    <meta name="robots" content="noindex, follow" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="author" content="MasterMentor by Staka" />
 
     <!-- Canonical URL -->
