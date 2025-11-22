@@ -1,7 +1,7 @@
 # ========================================
 # MasterMentor - Configuration Apache
-# Version: 1.0
-# Date: 14 novembre 2025
+# Version: 1.1
+# Date: 22 novembre 2025
 # Hébergement: OVH (Apache 2.4+)
 # ========================================
 
@@ -124,7 +124,7 @@ RewriteRule ^(.*)\.html$ $1.php [L,R=301]
     Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
     # Content Security Policy (sécurité renforcée)
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://i.ytimg.com https://www.mastermentor.fr data:; font-src 'self'; frame-src https://www.youtube.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://www.mastermentor.fr data:; font-src 'self'; frame-src https://www.youtube.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
 </IfModule>
 
 # ========================================
@@ -148,8 +148,8 @@ RewriteRule ^(.*)\.html$ $1.php [L,R=301]
 # ========================================
 # 7. PAGES ERREUR
 # ========================================
-ErrorDocument 404 /index.html
-ErrorDocument 500 /index.html
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
 
 # ========================================
 # 8. DÉSACTIVATION ETAGS

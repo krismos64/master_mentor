@@ -166,9 +166,9 @@
             "url": "https://www.mastermentor.fr/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.mastermentor.fr/assets/logos/logo-mastermentor.png",
-              "width": 250,
-              "height": 60
+              "url": "https://www.mastermentor.fr/assets/logos/logo-main-web.png",
+              "width": 500,
+              "height": 308
             },
             "description": "Coaching académique pour étudiants en Master 2 par des enseignants-chercheurs docteurs avec 17 ans d'expérience",
             "foundingDate": "2007",

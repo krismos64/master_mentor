@@ -1,10 +1,21 @@
 # MasterMentor - Robots.txt
 # Hébergement: OVH - mastermentor.fr
-# Date: 14 novembre 2025
+# Date: 22 novembre 2025
 
 User-agent: *
 Allow: /
-Disallow: /assets/
+
+# Autoriser les logos pour Google (Knowledge Panel)
+Allow: /assets/logos/
+Allow: /assets/images/og-mastermentor.jpg
+
+# Bloquer le reste des assets (CSS, JS)
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
+
+# Pages à exclure
 Disallow: /merci.html
+Disallow: /includes/
 
 Sitemap: https://mastermentor.fr/sitemap.xml
