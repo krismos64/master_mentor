@@ -80,9 +80,8 @@
       content="https://www.mastermentor.fr/assets/images/og-mastermentor.jpg"
     />
 
-    <!-- Preconnect domaines externes pour optimiser chargement -->
+    <!-- Preconnect YouTube pour chargement vidéo au clic -->
     <link rel="preconnect" href="https://www.youtube.com" crossorigin />
-    <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
 
     <!-- Preload image hero (LCP optimization) -->
     <link
@@ -417,14 +416,17 @@
             data-youtube-id="zxiQNT0CwK0"
             onclick="loadYouTubeVideo(this)"
           >
-            <!-- Thumbnail YouTube -->
-            <img
-              src="https://i.ytimg.com/vi/zxiQNT0CwK0/maxresdefault.jpg"
-              alt="MasterMentor - Notre Méthode d'Accompagnement"
-              width="1280"
-              height="720"
-              loading="lazy"
-            />
+            <!-- Thumbnail YouTube optimisée (locale) -->
+            <picture>
+              <source srcset="assets/images/youtube-thumbnail.webp" type="image/webp">
+              <img
+                src="assets/images/youtube-thumbnail.jpg"
+                alt="MasterMentor - Notre Méthode d'Accompagnement - Cliquez pour lancer la vidéo"
+                width="1280"
+                height="714"
+                loading="lazy"
+              />
+            </picture>
             <!-- Bouton Play -->
             <div class="video-play-btn">
               <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
