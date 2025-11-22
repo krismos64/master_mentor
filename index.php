@@ -195,7 +195,7 @@
           justify-content: center !important;
           justify-items: center !important;
         }
-        .hero-image-container {
+        .hero-image {
           display: none !important;
         }
         .hero-content {
@@ -229,7 +229,7 @@
           grid-template-columns: 1fr !important;
           gap: 0 !important;
         }
-        .hero-image-container {
+        .hero-image {
           display: none !important;
         }
         .hero-content {
@@ -385,89 +385,20 @@
       .hero-content {
         padding-right: 2rem;
       }
-      /* Hero Image Container - Design Organique */
-      .hero-image-container {
-        position: relative;
+      /* Hero Image - Simple */
+      .hero-image {
         width: 100%;
-        max-width: 220px;
+        max-width: 300px;
         margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
-      /* Blobs décoratifs */
-      .blob {
-        position: absolute;
-        border-radius: 50% 40% 60% 50% / 40% 50% 50% 60%;
-        z-index: 0;
-        will-change: transform;
-      }
-      .blob-blue {
-        width: 120px;
-        height: 120px;
-        background: #5BA4E6;
-        top: -20%;
-        left: -30%;
-        animation: floatBlob 8s ease-in-out infinite;
-      }
-      .blob-red {
-        width: 70px;
-        height: 70px;
-        background: #E63946;
-        top: -15%;
-        right: -15%;
-        border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
-        animation: floatBlob 10s ease-in-out infinite reverse;
-      }
-      .blob-gray {
-        width: 80px;
-        height: 80px;
-        background: #577086;
-        bottom: -15%;
-        left: -20%;
-        border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-        animation: floatBlob 12s ease-in-out infinite;
-      }
-      @keyframes floatBlob {
-        0%, 100% {
-          transform: translate(0, 0) rotate(0deg) scale(1);
-        }
-        33% {
-          transform: translate(-15px, -20px) rotate(5deg) scale(1.05);
-        }
-        66% {
-          transform: translate(10px, 15px) rotate(-5deg) scale(0.95);
-        }
-      }
-      /* Wrapper image avec forme organique */
-      .hero-image-wrapper {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .hero-image-wrapper:hover {
-        border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
-        transform: translateY(-8px);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-      }
-      .hero-image-wrapper picture {
+      .hero-image picture {
         display: block;
         width: 100%;
       }
-      .hero-image-wrapper img {
+      .hero-image img {
         width: 100%;
         height: auto;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
         display: block;
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .hero-image-wrapper:hover img {
-        transform: scale(1.05);
       }
       .hero h1 {
         font-size: 3rem;
@@ -888,21 +819,16 @@
         </div>
         </div>
 
-        <div class="hero-image-container">
-          <div class="blob blob-blue"></div>
-          <div class="blob blob-red"></div>
-          <div class="blob blob-gray"></div>
-          <div class="hero-image-wrapper">
-            <picture>
-              <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
-              <img src="assets/images/hero/hero-new.jpg"
-                   alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
-                   width="600"
-                   height="600"
-                   loading="eager"
-                   fetchpriority="high">
-            </picture>
-          </div>
+        <div class="hero-image">
+          <picture>
+            <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
+            <img src="assets/images/hero/hero-new.jpg"
+                 alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
+                 width="600"
+                 height="600"
+                 loading="eager"
+                 fetchpriority="high">
+          </picture>
         </div>
       </div>
     </main>
