@@ -183,64 +183,67 @@
           overflow: hidden;
         }
         .hero {
-          padding: 2.5rem 1.5rem;
+          padding: 2.5rem 1.5rem !important;
+          overflow-x: hidden !important;
+          min-height: auto !important;
         }
         .hero-container {
-          grid-template-columns: 1fr;
-          gap: 2rem;
+          grid-template-columns: 1fr !important;
+          gap: 0 !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          justify-content: center !important;
+          justify-items: center !important;
         }
         .hero-image {
-          order: -1;
-          padding: 0;
-          max-width: 280px;
-          margin: 0 auto 1.5rem;
-        }
-        .hero-image picture {
-          max-width: 100%;
-        }
-        .hero-image img {
-          max-height: 280px;
-        }
-        .hero-image::before,
-        .hero-image::after {
-          width: 25%;
-          height: 25%;
-          opacity: 0.3;
-          filter: blur(60px);
+          display: none !important;
         }
         .hero-content {
-          padding-right: 0;
-          text-align: center;
+          padding: 0 1rem !important;
+          padding-right: 0 !important;
+          text-align: center !important;
+          margin: 0 auto !important;
+          max-width: 600px !important;
+          width: 100% !important;
         }
         .hero h1 {
-          font-size: 1.8rem;
-          line-height: 1.3;
+          font-size: 1.8rem !important;
+          line-height: 1.3 !important;
         }
         .hero-features {
-          justify-content: center;
-          flex-direction: column;
-          gap: 0.75rem;
+          justify-content: center !important;
+          flex-direction: column !important;
+          gap: 0.75rem !important;
+          align-items: center !important;
+        }
+        .certification-badges {
+          justify-content: center !important;
+          width: 100% !important;
         }
       }
       @media (max-width: 480px) {
         .hero {
-          padding: 2rem 1rem;
+          padding: 2rem 1rem !important;
+        }
+        .hero-container {
+          grid-template-columns: 1fr !important;
+          gap: 0 !important;
         }
         .hero-image {
-          max-width: 240px;
+          display: none !important;
         }
-        .hero-image img {
-          max-height: 240px;
-        }
-        .hero-image::before,
-        .hero-image::after {
-          display: none;
+        .hero-content {
+          padding: 0 0.5rem !important;
+          padding-right: 0 !important;
+          text-align: center !important;
+          margin: 0 auto !important;
+          width: 100% !important;
         }
         .hero h1 {
-          font-size: 1.6rem;
+          font-size: 1.6rem !important;
         }
         .hero p {
-          font-size: 0.95rem;
+          font-size: 0.95rem !important;
         }
       }
       :root {
@@ -564,6 +567,32 @@
         transform: translateY(-2px);
         box-shadow: var(--shadow-medium);
       }
+      .certification-badges {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .cert-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        padding: 0.25rem;
+        transition: var(--transition);
+      }
+      .cert-badge:hover {
+        transform: translateY(-2px);
+        opacity: 0.8;
+      }
+      .cert-badge img {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+      }
+      .cert-badge-lg img {
+        height: 60px;
+      }
       .floating-buttons {
         position: fixed;
         bottom: 30px;
@@ -808,7 +837,7 @@
 
         <div class="hero-features">
           <div class="hero-feature">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
@@ -816,7 +845,7 @@
             <span>100% Docteurs</span>
           </div>
           <div class="hero-feature">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
@@ -824,7 +853,7 @@
             <span>Sans IA ni plagiat</span>
           </div>
           <div class="hero-feature">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
@@ -842,9 +871,13 @@
           <div class="trust-badge">17 ans d'expérience</div>
           <div class="trust-badge">100% Français</div>
           <div class="trust-badge">Paiement en 10 fois</div>
-          <div class="ekomi-badge">
-            <div class="ekomi-stars">★★★★★</div>
-            <div class="ekomi-text">Certifié eKomi</div>
+          <div class="certification-badges" role="group" aria-label="Certifications et avis clients">
+            <a href="https://www.ekomi.fr/" target="_blank" rel="noopener noreferrer" class="cert-badge cert-badge-lg" aria-label="Voir notre certification eKomi (nouvel onglet)">
+              <img src="assets/logos/certifications/ekomi.webp" alt="Certifié eKomi - 5 étoiles" width="160" height="80" loading="lazy">
+            </a>
+            <a href="https://fr.trustpilot.com/review/staka.fr" target="_blank" rel="noopener noreferrer" class="cert-badge" aria-label="Voir nos avis Trustpilot (nouvel onglet)">
+              <img src="assets/logos/certifications/trustpilot.webp" alt="Avis Trustpilot - Excellent" width="80" height="40" loading="lazy">
+            </a>
           </div>
         </div>
         </div>
