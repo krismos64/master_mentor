@@ -235,32 +235,32 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
-### Version 1.8 (21 Nov 2025) - 🎨 HERO SECTION RESPONSIVE MOBILE + EFFETS PREMIUM ✅
+### Version 1.9 (22 Nov 2025) - 📱 HERO RESPONSIVE MOBILE + LOGOS CERTIFICATIONS ✅
 
-- ✅ **MM-32** : Refonte complète Hero Section avec effets organiques et responsive mobile
+- ✅ **Hero Responsive Mobile/Tablette** :
+  - Image hero masquée sur mobile/tablette (≤768px)
+  - Texte parfaitement centré (`text-align: center`, `margin: 0 auto`)
+  - Grid en colonne unique, suppression espace blanc
+  - CSS avec `!important` pour écraser styles desktop
 
-  - **Desktop (> 768px)** : Forme organique élégante avec effets premium
-    - Border-radius organique morphing : `42% 58% 55% 45% / 48% 62% 38% 52%`
-    - Blobs décoratifs subtils rose/bleu : `blur(50px)`, `opacity: 0.6`
-    - Animation float douce : `translate(-10px, -10px) rotate(2deg)`
-    - Container optimisé : `max-width: 500px` centré
-    - Ombres progressives pour effet 3D naturel
-    - Hover morphing fluide avec transition `cubic-bezier(0.4, 0, 0.2, 1)`
+- ✅ **Logos Certifications** :
+  - Logo eKomi (60px) avec lien vers ekomi.fr
+  - Logo Trustpilot (30px) avec lien vers avis Staka
+  - Background transparent, effet hover subtil
 
-  - **Mobile Tablette (≤ 768px)** : Image optimisée style Staka.fr
-    - Image : `max-width: 280px`, `max-height: 280px`
-    - Blobs réduits : `25%` width/height, `opacity: 0.3`, `blur(60px)`
-    - Grid → colonne unique avec image en premier (order: -1)
-    - Typography : h1 `1.8rem`, line-height `1.3`
-    - Features en colonne verticale, gap `0.75rem`
+- ✅ **Accessibilité améliorée** :
+  - SVG : `aria-hidden="true"` + `focusable="false"`
+  - Liens externes : `aria-label` indiquant nouvel onglet
+  - Alt text enrichis
 
-  - **Mobile Petit (≤ 480px)** : UX optimale sans surcharge
-    - Image : `max-width: 240px`, `max-height: 240px`
-    - Blobs complètement supprimés (`display: none`)
-    - Typography réduite : h1 `1.6rem`, p `0.95rem`
-    - Padding optimisé : `2rem 1rem`
+- 📊 **Impact** : UX mobile parfaite, badges confiance visibles, WCAG 2.1 conforme
 
-- 📊 **Impact** : Forme organique prononcée, blobs subtils desktop, mobile optimisé 280px/240px, UX fluide tous écrans
+### Version 1.8 (21 Nov 2025) - 🎨 HERO SECTION EFFETS PREMIUM ✅
+
+- ✅ **MM-32** : Forme organique desktop avec blobs décoratifs
+  - Border-radius morphing au hover
+  - Blobs pastel subtils avec animation float
+  - Image optimisée responsive (280px tablette, 240px mobile)
 
 ### Version 1.7.1 (21 Nov 2025) - 🔧 CORRECTIONS CONFIG EMAIL + UX MOBILE ✅
 

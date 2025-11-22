@@ -1,5 +1,85 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-22] - Version 1.9 : 📱 HERO RESPONSIVE MOBILE + LOGOS CERTIFICATIONS ✅
+
+### 🎉 Hero Section Optimisée Mobile avec Badges Certifications
+
+**Statut** : Hero responsive parfait avec logos eKomi/Trustpilot
+**Commit** : `b787cc0`
+**Impact** : UX mobile améliorée, image masquée, texte centré, badges certifications visibles
+
+---
+
+### ✅ Responsive Hero Mobile/Tablette (≤768px)
+
+**Problème résolu** : Image hero décalait le texte sur la droite en mode mobile
+
+**Solution** :
+- Image hero masquée (`display: none !important`)
+- Texte parfaitement centré (`text-align: center`, `margin: 0 auto`)
+- Grid en colonne unique (`grid-template-columns: 1fr`)
+- Suppression espace blanc (gap: 0, overflow-x: hidden)
+
+**CSS Media Queries** :
+```css
+@media (max-width: 768px) {
+  .hero-image { display: none !important; }
+  .hero-content {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 600px !important;
+  }
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+}
+```
+
+---
+
+### ✅ Logos Certifications eKomi & Trustpilot
+
+**Ajout dans section hero** :
+- Logo eKomi (60px) avec lien vers ekomi.fr
+- Logo Trustpilot (30px) avec lien vers avis Staka
+- Background transparent, effet hover subtil
+
+**HTML** :
+```html
+<div class="certification-badges" role="group" aria-label="Certifications et avis clients">
+  <a href="https://www.ekomi.fr/" class="cert-badge cert-badge-lg">
+    <img src="assets/logos/certifications/ekomi.webp" alt="Certifié eKomi - 5 étoiles">
+  </a>
+  <a href="https://fr.trustpilot.com/review/staka.fr" class="cert-badge">
+    <img src="assets/logos/certifications/trustpilot.webp" alt="Avis Trustpilot - Excellent">
+  </a>
+</div>
+```
+
+---
+
+### ✅ Améliorations Accessibilité
+
+- SVG icônes : `aria-hidden="true"` + `focusable="false"`
+- Liens externes : `aria-label` indiquant nouvel onglet
+- Container badges : `role="group"` + `aria-label`
+- Alt text enrichis : "5 étoiles", "Excellent"
+
+---
+
+### 📊 Résumé Technique
+
+| Modification | Fichier | Impact |
+|--------------|---------|--------|
+| Image masquée mobile | index.php | UX mobile améliorée |
+| Texte centré | index.php | Layout propre |
+| Logos certifications | index.php | Confiance +++ |
+| Accessibilité SVG | index.php | WCAG 2.1 |
+| Accessibilité liens | index.php | Lecteurs d'écran |
+
+---
+
 ## [2025-11-21] - Version 1.8 : 🎨 HERO SECTION RESPONSIVE MOBILE + EFFETS PREMIUM ✅
 
 ### 🎉 Refonte Complète Hero avec Forme Organique et Responsive Optimisé
