@@ -83,9 +83,9 @@ nav {
 }
 
 .logo-img {
-  height: 160px;
+  height: 80px;
   width: auto;
-  max-width: 480px;
+  max-width: 240px;
   object-fit: contain;
 }
 
