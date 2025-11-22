@@ -195,7 +195,7 @@
           justify-content: center !important;
           justify-items: center !important;
         }
-        .hero-image {
+        .hero-image-container {
           display: none !important;
         }
         .hero-content {
@@ -229,7 +229,7 @@
           grid-template-columns: 1fr !important;
           gap: 0 !important;
         }
-        .hero-image {
+        .hero-image-container {
           display: none !important;
         }
         .hero-content {
@@ -385,82 +385,93 @@
       .hero-content {
         padding-right: 2rem;
       }
-      .hero-image {
+      /* Hero Image Container - Design Organique */
+      .hero-image-container {
         position: relative;
         width: 100%;
-        max-width: 250px;
+        max-width: 350px;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .hero-image picture {
+      /* Blobs décoratifs */
+      .blob {
+        position: absolute;
+        border-radius: 50% 40% 60% 50% / 40% 50% 50% 60%;
+        filter: blur(40px);
+        opacity: 0.7;
+        z-index: 0;
+        will-change: transform;
+      }
+      .blob-blue {
+        width: 180px;
+        height: 180px;
+        background: linear-gradient(135deg, #E8F4FF 0%, #B8D4F0 100%);
+        top: -20%;
+        left: -25%;
+        animation: floatBlob 8s ease-in-out infinite;
+      }
+      .blob-red {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #FFE8EA 0%, #E63946 50%);
+        top: -15%;
+        right: -10%;
+        border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+        animation: floatBlob 10s ease-in-out infinite reverse;
+        opacity: 0.6;
+      }
+      .blob-gray {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
+        bottom: -15%;
+        left: -15%;
+        border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+        animation: floatBlob 12s ease-in-out infinite;
+        opacity: 0.5;
+      }
+      @keyframes floatBlob {
+        0%, 100% {
+          transform: translate(0, 0) rotate(0deg) scale(1);
+        }
+        33% {
+          transform: translate(-15px, -20px) rotate(5deg) scale(1.05);
+        }
+        66% {
+          transform: translate(10px, 15px) rotate(-5deg) scale(0.95);
+        }
+      }
+      /* Wrapper image avec forme organique */
+      .hero-image-wrapper {
         position: relative;
+        z-index: 1;
+        width: 100%;
+        border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .hero-image-wrapper:hover {
+        border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
+        transform: translateY(-8px);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+      }
+      .hero-image-wrapper picture {
         display: block;
         width: 100%;
       }
-      .hero-image img {
+      .hero-image-wrapper img {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
-        box-shadow:
-          0 25px 65px rgba(87, 112, 134, 0.16),
-          0 12px 32px rgba(87, 112, 134, 0.12),
-          0 6px 16px rgba(87, 112, 134, 0.08);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       }
-      .hero-image img:hover {
-        border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
-        transform: translateY(-8px);
-        box-shadow:
-          0 35px 85px rgba(87, 112, 134, 0.2),
-          0 18px 42px rgba(87, 112, 134, 0.15),
-          0 8px 20px rgba(87, 112, 134, 0.1);
-      }
-      .hero-image::before {
-        content: '';
-        position: absolute;
-        top: -5%;
-        right: -5%;
-        width: 30%;
-        height: 30%;
-        background: linear-gradient(135deg,
-          rgba(255, 192, 203, 0.15),
-          rgba(255, 182, 193, 0.1));
-        border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-        z-index: -1;
-        filter: blur(50px);
-        animation: float 8s ease-in-out infinite;
-        opacity: 0.6;
-      }
-      .hero-image::after {
-        content: '';
-        position: absolute;
-        bottom: -8%;
-        left: -8%;
-        width: 35%;
-        height: 35%;
-        background: linear-gradient(135deg,
-          rgba(200, 230, 255, 0.15),
-          rgba(173, 216, 230, 0.1));
-        border-radius: 50% 50% 45% 55% / 45% 55% 45% 55%;
-        z-index: -1;
-        filter: blur(50px);
-        animation: float 10s ease-in-out infinite reverse;
-        opacity: 0.6;
-      }
-      @keyframes float {
-        0%, 100% {
-          transform: translate(0, 0) rotate(0deg);
-        }
-        33% {
-          transform: translate(-10px, -10px) rotate(2deg);
-        }
-        66% {
-          transform: translate(8px, 8px) rotate(-2deg);
-        }
+      .hero-image-wrapper:hover img {
+        transform: scale(1.05);
       }
       .hero h1 {
         font-size: 3rem;
@@ -881,16 +892,21 @@
         </div>
         </div>
 
-        <div class="hero-image">
-          <picture>
-            <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
-            <img src="assets/images/hero/hero-new.jpg"
-                 alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
-                 width="600"
-                 height="600"
-                 loading="eager"
-                 fetchpriority="high">
-          </picture>
+        <div class="hero-image-container">
+          <div class="blob blob-blue"></div>
+          <div class="blob blob-red"></div>
+          <div class="blob blob-gray"></div>
+          <div class="hero-image-wrapper">
+            <picture>
+              <source srcset="assets/images/hero/hero-new.webp" type="image/webp">
+              <img src="assets/images/hero/hero-new.jpg"
+                   alt="Étudiante en Master 2 travaillant sur son mémoire avec accompagnement MasterMentor"
+                   width="600"
+                   height="600"
+                   loading="eager"
+                   fetchpriority="high">
+            </picture>
+          </div>
         </div>
       </div>
     </main>
