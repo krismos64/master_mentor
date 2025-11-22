@@ -399,15 +399,13 @@
       .blob {
         position: absolute;
         border-radius: 50% 40% 60% 50% / 40% 50% 50% 60%;
-        filter: blur(40px);
-        opacity: 0.7;
         z-index: 0;
         will-change: transform;
       }
       .blob-blue {
         width: 120px;
         height: 120px;
-        background: linear-gradient(135deg, #E8F4FF 0%, #B8D4F0 100%);
+        background: #5BA4E6;
         top: -20%;
         left: -30%;
         animation: floatBlob 8s ease-in-out infinite;
@@ -415,22 +413,20 @@
       .blob-red {
         width: 70px;
         height: 70px;
-        background: linear-gradient(135deg, #FFE8EA 0%, #E63946 50%);
+        background: #E63946;
         top: -15%;
         right: -15%;
         border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
         animation: floatBlob 10s ease-in-out infinite reverse;
-        opacity: 0.6;
       }
       .blob-gray {
         width: 80px;
         height: 80px;
-        background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
+        background: #577086;
         bottom: -15%;
         left: -20%;
         border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
         animation: floatBlob 12s ease-in-out infinite;
-        opacity: 0.5;
       }
       @keyframes floatBlob {
         0%, 100% {
