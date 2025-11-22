@@ -1830,6 +1830,28 @@
       <h2 class="section-title">Ils ont réussi avec MasterMentor</h2>
       <p class="section-subtitle">Découvrez les témoignages de nos étudiants</p>
 
+      <!-- Images témoignages -->
+      <div class="testimonials-images">
+        <div class="testimonials-images-grid">
+          <picture class="testimonial-image-wrapper">
+            <source srcset="assets/images/testimonials/temoignage-1.webp" type="image/webp">
+            <img src="assets/images/testimonials/temoignage-1.jpg"
+                 alt="Étudiant Master 2 accompagné par MasterMentor - Témoignage de réussite"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </picture>
+          <picture class="testimonial-image-wrapper">
+            <source srcset="assets/images/testimonials/temoignage-2.webp" type="image/webp">
+            <img src="assets/images/testimonials/temoignage-2.jpg"
+                 alt="Étudiante en Master accompagnée - Succès académique MasterMentor"
+                 loading="lazy"
+                 width="400"
+                 height="300">
+          </picture>
+        </div>
+      </div>
+
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="testimonial-rating">★★★★★</div>
