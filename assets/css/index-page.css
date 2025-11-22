@@ -783,7 +783,7 @@ nav {
 
   /* Hero Section Mobile */
   .hero {
-    margin-top: 100px !important;
+    margin-top: 200px !important;
     padding: 0.5rem 1rem !important;
     overflow-x: hidden !important;
     min-height: auto !important;
@@ -887,7 +887,7 @@ nav {
 
 @media (max-width: 480px) {
   .hero {
-    margin-top: 95px !important;
+    margin-top: 190px !important;
     padding: 0.5rem 0.75rem !important;
   }
 
