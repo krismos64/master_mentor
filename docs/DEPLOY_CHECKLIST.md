@@ -93,6 +93,7 @@ mastermentor.fr/
 ### Permissions Recommandées
 
 **Fichiers HTML, PHP, CSS, JS, XML, TXT** :
+
 ```bash
 chmod 644 index.html
 chmod 644 tarifs.html
@@ -108,6 +109,7 @@ chmod 644 assets/js/*.js
 ```
 
 **Dossiers** :
+
 ```bash
 chmod 755 assets/
 chmod 755 assets/css/
@@ -118,6 +120,7 @@ chmod 755 assets/logos/
 ```
 
 **Images et fichiers binaires** :
+
 ```bash
 chmod 644 assets/images/*
 chmod 644 assets/icons/*
@@ -125,6 +128,7 @@ chmod 644 assets/logos/*
 ```
 
 ### Résumé Permissions
+
 - **644** (rw-r--r--) : Fichiers HTML, PHP, CSS, JS, images → Lecture publique, écriture propriétaire
 - **755** (rwxr-xr-x) : Dossiers → Exécution + lecture publique, écriture propriétaire
 
@@ -153,7 +157,7 @@ chmod 644 assets/logos/*
 - [ ] **11.** Formulaire contact visible et stylisé
 - [ ] **12.** Validation côté client fonctionne (champs obligatoires)
 - [ ] **13.** Envoi formulaire réussi (pas d'erreur PHP)
-- [ ] **14.** Email reçu sur `c.mostefaoui@yahoo.fr` avec toutes les données
+- [ ] **14.** Email reçu sur `contact@staka.fr` avec toutes les données
 - [ ] **15.** Email confirmation client reçu (si configuré)
 
 ### 4.4 Interactivité (3 points)
@@ -181,14 +185,14 @@ chmod 644 assets/logos/*
 
 ### Tests Automatiques
 
-| Outil | URL | Objectif |
-|-------|-----|----------|
-| **PageSpeed Insights** | https://pagespeed.web.dev/ | Performance, Accessibility, SEO |
-| **GTmetrix** | https://gtmetrix.com/ | Performance globale |
-| **SSL Labs** | https://www.ssllabs.com/ssltest/ | Sécurité SSL/TLS |
-| **Security Headers** | https://securityheaders.com/ | Headers sécurité |
-| **W3C HTML Validator** | https://validator.w3.org/nu/ | Validation HTML5 |
-| **Mobile-Friendly Test** | https://search.google.com/test/mobile-friendly | Compatibilité mobile |
+| Outil                    | URL                                            | Objectif                        |
+| ------------------------ | ---------------------------------------------- | ------------------------------- |
+| **PageSpeed Insights**   | https://pagespeed.web.dev/                     | Performance, Accessibility, SEO |
+| **GTmetrix**             | https://gtmetrix.com/                          | Performance globale             |
+| **SSL Labs**             | https://www.ssllabs.com/ssltest/               | Sécurité SSL/TLS                |
+| **Security Headers**     | https://securityheaders.com/                   | Headers sécurité                |
+| **W3C HTML Validator**   | https://validator.w3.org/nu/                   | Validation HTML5                |
+| **Mobile-Friendly Test** | https://search.google.com/test/mobile-friendly | Compatibilité mobile            |
 
 ### Tests Manuels
 
@@ -202,17 +206,20 @@ chmod 644 assets/logos/*
 ## 📊 6. CRITÈRES DE SUCCÈS
 
 ### Performance (Lighthouse)
+
 - ✅ **Performance** : 85-92
 - ✅ **Accessibility** : 90+
 - ✅ **Best Practices** : 90+
 - ✅ **SEO** : 85+
 
 ### Sécurité
+
 - ✅ Headers sécurité actifs (X-XSS-Protection, X-Frame-Options, etc.)
 - ✅ SSL/TLS Grade A ou A+
 - ✅ Aucune erreur console navigateur
 
 ### Fonctionnel
+
 - ✅ Formulaire envoie emails correctement
 - ✅ Quiz interactif fonctionne sans erreur
 - ✅ Menu burger mobile opérationnel
@@ -225,6 +232,7 @@ chmod 644 assets/logos/*
 ### Upload fichiers modifiés uniquement (via FTP)
 
 **Exemple : Mise à jour CSS**
+
 ```bash
 # 1. Connexion FTP
 # 2. Naviguer vers /assets/css/
@@ -233,6 +241,7 @@ chmod 644 assets/logos/*
 ```
 
 **Exemple : Ajout nouvelle page**
+
 ```bash
 # 1. Uploader nouvelle-page.html à la racine
 # 2. Mettre à jour sitemap.xml (ajouter URL)
@@ -258,20 +267,24 @@ git push origin v1.2
 ## ⚠️ 8. POINTS DE VIGILANCE
 
 ### Emails
+
 - **Problème potentiel** : Si `EMAIL_FROM = noreply@mastermentor.fr`, risque de rejet par serveurs emails
-- **Solution actuelle** : `EMAIL_FROM = c.mostefaoui@yahoo.fr` (validé ✅)
+- **Solution actuelle** : `EMAIL_FROM = contact@staka.fr` (validé ✅)
 - **Alternative** : Configurer SMTP externe (Gmail, SendGrid, Mailgun)
 
 ### Rate Limiting
+
 - **Mécanisme** : Fichier `/tmp/contact_rate_limit.txt` stocke IPs
 - **Surveillance** : Vérifier fonctionnement après 1er envoi
 - **Alternative** : Utiliser base SQLite ou session PHP
 
 ### Propagation DNS
+
 - **Nouveau domaine** : Peut prendre 24-48h pour propagation mondiale
 - **Test anticipé** : Modifier fichier `/etc/hosts` local pour tester avant propagation
 
 ### PHP Version
+
 - **Minimum requis** : PHP 7.4+
 - **Recommandé** : PHP 8.1+ pour performances optimales
 - **Vérification** : cPanel → Sélection version PHP
@@ -281,11 +294,13 @@ git push origin v1.2
 ## 📚 9. DOCUMENTATION COMPLÉMENTAIRE
 
 ### Fichiers Documentation
+
 - `/docs/MM-6-Validation-W3C.md` : Rapport validation HTML5
 - `/docs/MM-5-Formulaire-contact-FormSubmit.md` : Documentation formulaire PHP
 - `/docs/MM-4-Integrations-externes.md` : Google Analytics, Trustpilot
 
 ### Liens Utiles
+
 - **Manager OVH** : https://www.ovh.com/manager/
 - **cPanel OVH** : https://[votre-cluster].hosting.ovh.net:2083/
 - **Google Search Console** : https://search.google.com/search-console
@@ -296,6 +311,7 @@ git push origin v1.2
 ## ✅ VALIDATION FINALE
 
 **Déploiement réussi si :**
+
 - ✅ 25/25 points checklist post-déploiement validés
 - ✅ Lighthouse 85+ sur tous les scores
 - ✅ 0 erreur console navigateur
@@ -314,6 +330,7 @@ git push origin v1.2
 ## 🚀 COMMANDES FTP RAPIDES
 
 ### Connexion FileZilla
+
 ```
 Hôte : ftp.mastermentor.fr ou ftp.cluster0XX.hosting.ovh.net
 Protocole : FTPS (FTP over TLS)
@@ -323,6 +340,7 @@ Mot de passe : [fourni par OVH]
 ```
 
 ### Upload Rapide (ligne de commande alternative)
+
 ```bash
 # Alternative : lftp (à installer : brew install lftp)
 lftp -u username,password ftps://ftp.mastermentor.fr
