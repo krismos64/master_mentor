@@ -238,6 +238,16 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
+### Version 2.3 (22 Nov 2025) - 🎬 MINIATURE YOUTUBE OPTIMISÉE ✅
+
+- ✅ **MM-38 : Miniature YouTube locale optimisée** :
+  - Image convertie : 5.6 MB PNG → 91 KB WebP (**-98%**)
+  - Format `<picture>` avec WebP + JPEG fallback
+  - Chargement local (suppression requête externe ytimg.com)
+  - CSS corrigé : `aspect-ratio: 16/9` + support `<picture>`
+
+- 📊 **Impact** : Performance améliorée, 1 requête externe en moins, LCP optimisé
+
 ### Version 2.2 (22 Nov 2025) - 🏗️ FOOTER REFONTE COMPACT + BADGES CONFIANCE ✅
 
 - ✅ **MM-35 : Footer restructuré** :

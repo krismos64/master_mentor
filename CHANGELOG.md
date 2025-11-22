@@ -1,5 +1,77 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-22] - Version 2.3 : 🎬 MINIATURE YOUTUBE OPTIMISÉE ✅
+
+### 🎉 Miniature Vidéo Locale Haute Performance
+
+**Statut** : Image YouTube optimisée et servie localement
+**Ticket Jira** : MM-38
+**Impact** : -98% taille image, -1 requête externe, performance améliorée
+
+---
+
+### ✅ MM-38 : Miniature YouTube Optimisée
+
+**Problème** : Image miniature chargée depuis ytimg.com (requête externe + pas de contrôle qualité)
+
+**Solution** :
+
+| Métrique | Avant | Après | Gain |
+|----------|-------|-------|------|
+| Taille | 5.6 MB (PNG) | 91 KB (WebP) | **-98%** |
+| Format | PNG externe | WebP + JPEG local | Modern |
+| Dimensions | 2752x1536 | 1280x714 | Optimisé |
+| Requêtes | ytimg.com | Local | -1 externe |
+
+**Bonnes pratiques appliquées (Context7 - web.dev)** :
+- `<picture>` avec WebP prioritaire + JPEG fallback
+- `loading="lazy"` (vidéo sous le fold)
+- Dimensions explicites `width`/`height` (évite CLS)
+- Preconnect i.ytimg.com supprimé
+
+**HTML** :
+```html
+<picture>
+  <source srcset="assets/images/youtube-thumbnail.webp" type="image/webp">
+  <img src="assets/images/youtube-thumbnail.jpg"
+       alt="MasterMentor - Cliquez pour lancer la vidéo"
+       width="1280" height="714" loading="lazy" />
+</picture>
+```
+
+**CSS corrigé** :
+```css
+.video-embed {
+  aspect-ratio: 16/9;  /* Remplace height: 0 + padding-bottom */
+  overflow: hidden;
+}
+
+.video-embed picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+```
+
+---
+
+### 📁 Fichiers Modifiés/Créés
+
+| Fichier | Action |
+|---------|--------|
+| `assets/images/youtube-thumbnail.webp` | Créé (91 KB) |
+| `assets/images/youtube-thumbnail.jpg` | Créé (148 KB) |
+| `index.php` | Thumbnail locale + suppression preconnect |
+| `assets/css/index-page.css` | Support picture element |
+| `assets/css/styles.css` | aspect-ratio + picture |
+
+### 🔗 Commits
+
+- `53e91e8` - feat(MM-38): Miniature YouTube optimisée locale
+- `20f9e24` - fix(MM-38): Correction CSS miniature YouTube
+
+---
+
 ## [2025-11-22] - Version 2.2 : 🏗️ FOOTER REFONTE COMPACT + BADGES CONFIANCE ✅
 
 ### 🎉 Footer Restructuré avec Badges de Confiance Premium
