@@ -1845,87 +1845,124 @@ section {
   margin-top: 3rem;
 }
 
-/* ===== Images Témoignages - Design Premium ===== */
+/* ===== Images Témoignages - Design Organique Premium ===== */
 .testimonials-images {
   max-width: 1200px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem;
   padding: 0 2rem;
 }
 
 .testimonials-images-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 4rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-items: center;
 }
 
 .testimonial-image-wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
+.testimonial-image-wrapper:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/* Image avec forme organique */
+.testimonial-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effet morphing */
+.testimonial-image-wrapper:hover img {
+  border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Blob décoratif coloré derrière l'image */
 .testimonial-image-wrapper::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.1) 0%,
-    transparent 50%
-  );
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(135deg,
+    rgba(103, 126, 134, 0.3) 0%,
+    rgba(87, 112, 134, 0.2) 100%);
+  border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+  top: 10%;
+  left: -8%;
   z-index: 1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  filter: blur(20px);
+  animation: float 8s ease-in-out infinite;
 }
 
-.testimonial-image-wrapper:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+/* Blob secondaire pour l'image 2 (couleur différente) */
+.testimonial-image-wrapper:nth-child(2)::before {
+  background: linear-gradient(135deg,
+    rgba(229, 62, 62, 0.3) 0%,
+    rgba(202, 138, 4, 0.2) 100%);
+  left: auto;
+  right: -8%;
+  border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
+  animation: float 10s ease-in-out infinite reverse;
 }
 
-.testimonial-image-wrapper:hover::before {
-  opacity: 1;
+/* Animation douce des blobs */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(-15px, -15px) rotate(3deg);
+  }
+  66% {
+    transform: translate(10px, 10px) rotate(-3deg);
+  }
 }
 
-.testimonial-image-wrapper img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.testimonial-image-wrapper:hover img {
-  transform: scale(1.05);
+/* Animation entrée au scroll */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Images Témoignages */
 @media (max-width: 768px) {
-  .testimonials-images-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .testimonial-image-wrapper img {
-    height: 250px;
-  }
-
   .testimonials-images {
     padding: 0 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
-}
 
-@media (max-width: 480px) {
-  .testimonial-image-wrapper img {
-    height: 200px;
+  .testimonials-images-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .testimonial-image-wrapper {
-    border-radius: 12px;
+    max-width: 320px;
+  }
+
+  /* Réduire taille des blobs sur mobile */
+  .testimonial-image-wrapper::before {
+    width: 85%;
+    height: 85%;
+    filter: blur(15px);
   }
 }
 
