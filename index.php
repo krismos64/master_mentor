@@ -389,7 +389,7 @@
       .hero-image-container {
         position: relative;
         width: 100%;
-        max-width: 350px;
+        max-width: 220px;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -405,29 +405,29 @@
         will-change: transform;
       }
       .blob-blue {
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
         background: linear-gradient(135deg, #E8F4FF 0%, #B8D4F0 100%);
         top: -20%;
-        left: -25%;
+        left: -30%;
         animation: floatBlob 8s ease-in-out infinite;
       }
       .blob-red {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         background: linear-gradient(135deg, #FFE8EA 0%, #E63946 50%);
         top: -15%;
-        right: -10%;
+        right: -15%;
         border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
         animation: floatBlob 10s ease-in-out infinite reverse;
         opacity: 0.6;
       }
       .blob-gray {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
         bottom: -15%;
-        left: -15%;
+        left: -20%;
         border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
         animation: floatBlob 12s ease-in-out infinite;
         opacity: 0.5;
