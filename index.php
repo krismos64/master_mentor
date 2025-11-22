@@ -371,9 +371,8 @@
         margin-top: 80px;
         background: var(--white);
         color: var(--dark);
-        padding: 6rem 2rem;
-        border-bottom: 3px solid var(--secondary);
-        min-height: 700px;
+        padding: 4rem 2rem 2rem;
+        min-height: 600px;
       }
       .hero-container {
         max-width: 1400px;
