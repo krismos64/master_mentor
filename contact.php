@@ -214,7 +214,7 @@ $emailBody = "
         </div>
         <div class='footer'>
             <p><strong>MasterMentor</strong> - Coaching Mémoire Master 2</p>
-            <p>📞 +33 6 15 07 81 52 | 📧 c.mostefaoui@yahoo.fr</p>
+            <p>📞 +33 6 15 07 81 52 | 📧 contact@staka.fr</p>
             <p style='font-size: 12px; color: #999;'>Email automatique généré le " . date('d/m/Y à H:i') . "</p>
         </div>
     </div>
