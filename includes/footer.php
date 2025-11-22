@@ -14,8 +14,9 @@ $prefix = $is_index ? '#' : 'index.php#';
             src="assets/logos/logo-main.png"
             alt="MasterMentor"
             class="logo-img-footer"
+            width="220"
+            height="auto"
           />
-          <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
         </div>
         <p>
           Master Mentor au service de la réussite de votre mémoire depuis

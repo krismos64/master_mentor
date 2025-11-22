@@ -13,10 +13,9 @@ $prefix = $is_index ? '#' : 'index.php#';
           src="assets/logos/logo-main.png"
           alt="MasterMentor - Retour à l'accueil"
           class="logo-img"
-          width="180"
+          width="240"
           height="auto"
         />
-        <span class="logo-subtitle">by Staka - 17 ans d'expérience</span>
       </a>
     </div>
     <button
