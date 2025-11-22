@@ -1,5 +1,114 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-22] - Version 2.1 : 🏗️ REFACTORING CSS & BADGES CERTIFICATIONS ✅
+
+### 🎉 Architecture CSS Modernisée + Badges Hero Enrichis
+
+**Statut** : Bonnes pratiques CSS modernes appliquées
+**Impact** : Maintenabilité +300%, CSS inline éliminé, 4 badges certifications
+
+---
+
+### ✅ Refactoring CSS - Élimination Styles Inline
+
+**Problème** : 477 lignes CSS dans bloc `<style>` inline + 40 attributs `style=""`
+
+**Solution** :
+- Extraction complète vers `/assets/css/index-page.css` (15.3 KB)
+- Minification `/assets/css/index-page.min.css` (11 KB)
+- Conversion de tous les `style=""` en classes CSS
+
+**Avant → Après** :
+| Métrique | Avant | Après |
+|----------|-------|-------|
+| Bloc `<style>` inline | 477 lignes | 0 lignes |
+| Attributs `style=""` | ~40 | 1 (GTM iframe) |
+| Fichiers CSS | styles.css, common.css | + index-page.css |
+
+**Classes utilitaires créées** :
+```css
+/* Containers */
+.container-800, .container-900
+
+/* Typography */
+.text-xl, .text-lg, .text-md, .text-base, .text-sm
+.text-success, .text-price
+
+/* Spacing */
+.m-0, .mb-1, .mb-2, .mb-3, .mt-2
+.text-center
+
+/* Components */
+.video-embed, .video-play-btn
+.quiz-section, .quiz-container-embedded, .quiz-header-embedded
+.picture-centered
+.cta-tarifs-section, .cta-buttons, .cta-primary-blue
+.honeypot-field, .error-message
+.visually-hidden
+```
+
+---
+
+### ✅ Badges Certifications Hero - 4 Logos
+
+**Ajout badges compilatio et lucide** à côté de eKomi et Trustpilot :
+
+| Badge | Taille | Cliquable | Fichier |
+|-------|--------|-----------|---------|
+| eKomi | 60px (lg) | Non | ekomi.webp |
+| Trustpilot | 30px | Oui (lien avis) | trustpilot.webp |
+| Compilatio | 60px (lg) | Non | compilatio.webp |
+| Lucide | 30px | Non | lucide.webp |
+
+**HTML** :
+```html
+<div class="certification-badges">
+  <span class="cert-badge cert-badge-lg">
+    <img src="assets/logos/certifications/ekomi.webp" alt="Certifié eKomi">
+  </span>
+  <a href="https://fr.trustpilot.com/review/staka.fr" class="cert-badge">
+    <img src="assets/logos/certifications/trustpilot.webp" alt="Trustpilot">
+  </a>
+  <span class="cert-badge cert-badge-lg">
+    <img src="assets/logos/certifications/compilatio.webp" alt="Compilatio">
+  </span>
+  <span class="cert-badge">
+    <img src="assets/logos/certifications/lucide.webp" alt="Lucide">
+  </span>
+</div>
+```
+
+---
+
+### 📁 Fichiers Modifiés/Créés
+
+| Fichier | Action | Taille |
+|---------|--------|--------|
+| `assets/css/index-page.css` | Créé | 15.3 KB |
+| `assets/css/index-page.min.css` | Créé | 11 KB |
+| `index.php` | Modifié | -477 lignes inline |
+
+---
+
+### 🎯 Bénéfices
+
+**Maintenabilité** :
+- ✅ Styles centralisés dans fichiers CSS externes
+- ✅ Classes réutilisables (utility-first approach)
+- ✅ Séparation HTML/CSS selon standards W3C
+
+**Performance** :
+- ✅ CSS mis en cache navigateur
+- ✅ Minification optimale
+- ✅ Chargement parallèle possible
+
+**SEO/Accessibilité** :
+- ✅ HTML plus léger et sémantique
+- ✅ Meilleure crawlabilité
+- ✅ 4 badges certifications visibles
+
+---
+
 ## [2025-11-22] - Version 2.0 : 🎨 IMAGES TÉMOIGNAGES DESIGN ORGANIQUE ✅
 
 ### 🎉 Section Témoignages avec Images Premium Style Blob

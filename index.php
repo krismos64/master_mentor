@@ -107,487 +107,10 @@
       media="(max-width: 767px)"
     />
 
-    <!-- Critical CSS inline (above-the-fold) pour optimiser FCP -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: #0f52aa;
-        color: #fff;
-        padding: 8px 16px;
-        text-decoration: none;
-        z-index: 9999;
-        transition: top 0.3s;
-      }
-      .skip-link:focus {
-        top: 0;
-      }
-      a:focus,
-      button:focus,
-      input:focus,
-      textarea:focus,
-      select:focus {
-        outline: 2px solid #0f52aa;
-        outline-offset: 2px;
-      }
-      .menu-toggle:focus {
-        outline: 2px solid #0f52aa;
-        outline-offset: 4px;
-        border-radius: 4px;
-      }
-      @media (max-width: 768px) {
-        .menu-toggle {
-          display: flex;
-        }
-        .nav-links {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 280px;
-          height: 100vh;
-          background: #fff;
-          flex-direction: column;
-          padding: 5rem 0 2rem;
-          box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-          transition: right 0.3s ease;
-          z-index: 1000;
-          overflow-y: auto;
-        }
-        .nav-links.active {
-          right: 0;
-        }
-        body::before {
-          content: "";
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s ease;
-          z-index: 999;
-        }
-        body.menu-open::before {
-          opacity: 1;
-          visibility: visible;
-        }
-        body.menu-open {
-          overflow: hidden;
-        }
-        .hero {
-          padding: 2.5rem 1.5rem !important;
-          overflow-x: hidden !important;
-          min-height: auto !important;
-        }
-        .hero-container {
-          grid-template-columns: 1fr !important;
-          gap: 0 !important;
-          width: 100% !important;
-          max-width: 100% !important;
-          justify-content: center !important;
-          justify-items: center !important;
-        }
-        .hero-image {
-          display: none !important;
-        }
-        .hero-content {
-          padding: 0 1rem !important;
-          padding-right: 0 !important;
-          text-align: center !important;
-          margin: 0 auto !important;
-          max-width: 600px !important;
-          width: 100% !important;
-        }
-        .hero h1 {
-          font-size: 1.8rem !important;
-          line-height: 1.3 !important;
-        }
-        .hero-features {
-          justify-content: center !important;
-          flex-direction: column !important;
-          gap: 0.75rem !important;
-          align-items: center !important;
-        }
-        .certification-badges {
-          justify-content: center !important;
-          width: 100% !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .hero {
-          padding: 2rem 1rem !important;
-        }
-        .hero-container {
-          grid-template-columns: 1fr !important;
-          gap: 0 !important;
-        }
-        .hero-image {
-          display: none !important;
-        }
-        .hero-content {
-          padding: 0 0.5rem !important;
-          padding-right: 0 !important;
-          text-align: center !important;
-          margin: 0 auto !important;
-          width: 100% !important;
-        }
-        .hero h1 {
-          font-size: 1.6rem !important;
-        }
-        .hero p {
-          font-size: 0.95rem !important;
-        }
-      }
-      :root {
-        --primary: #577086;
-        --primary-light: #6b7899;
-        --secondary: #0f52aa;
-        --success: #577086;
-        --dark: #577086;
-        --gray: #4b5563;
-        --light-bg: #ffffff;
-        --white: #ffffff;
-        --icon-red: #bf0446;
-        --icon-blue: #022f6b;
-        --radius-sm: 16px;
-        --radius-md: 24px;
-        --radius-lg: 32px;
-        --radius-xl: 48px;
-        --shadow-soft: 0 8px 32px rgba(87, 112, 134, 0.08);
-        --shadow-medium: 0 12px 48px rgba(87, 112, 134, 0.12);
-        --shadow-strong: 0 20px 64px rgba(87, 112, 134, 0.16);
-        --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        line-height: 1.6;
-        color: var(--dark);
-        overflow-x: hidden;
-        background: var(--white);
-      }
-      header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        box-shadow: var(--shadow-soft);
-        z-index: 1000;
-        transition: var(--transition);
-      }
-      nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1.25rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--dark);
-      }
-      .logo span {
-        color: var(--secondary);
-      }
-      .logo-subtitle {
-        font-size: 0.7rem;
-        color: var(--gray);
-        font-weight: normal;
-        display: block;
-        margin-top: -5px;
-      }
-      .nav-links {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-      }
-      .nav-links a {
-        text-decoration: none;
-        color: var(--dark);
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-      .nav-links a:hover {
-        color: var(--secondary);
-      }
-      .cta-nav {
-        background: linear-gradient(135deg, #25d366, #128c7e);
-        color: var(--white);
-        padding: 0.875rem 1.75rem;
-        border-radius: var(--radius-xl);
-        font-weight: 600;
-        text-decoration: none;
-        transition: var(--transition);
-        box-shadow: var(--shadow-soft);
-      }
-      .cta-nav:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-      }
-      .menu-toggle {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 2rem;
-        height: 2rem;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1001;
-      }
-      .menu-toggle span {
-        width: 2rem;
-        height: 0.25rem;
-        background: var(--secondary);
-        border-radius: 10px;
-        transition: all 0.3s linear;
-        position: relative;
-        transform-origin: 1px;
-      }
-      .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg);
-      }
-      .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-        transform: translateX(20px);
-      }
-      .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-      .hero {
-        margin-top: 80px;
-        background: var(--white);
-        color: var(--dark);
-        padding: 4rem 2rem 2rem;
-        min-height: 600px;
-      }
-      .hero-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 4rem;
-        align-items: center;
-      }
-      .hero-content {
-        padding-right: 2rem;
-      }
-      /* Hero Image - Simple */
-      .hero-image {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      .hero-image picture {
-        display: block;
-        width: 100%;
-      }
-      .hero-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-        color: var(--dark);
-      }
-      .hero-highlight {
-        color: var(--secondary);
-        display: block;
-      }
-      .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 2rem;
-        color: var(--gray);
-      }
-      .hero-features {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin: 2rem 0;
-      }
-      .hero-feature {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1.5px solid rgba(15, 82, 170, 0.2);
-        padding: 0.875rem 1.75rem;
-        border-radius: var(--radius-xl);
-        color: var(--dark);
-        transition: var(--transition);
-        box-shadow: var(--shadow-soft);
-      }
-      .hero-feature:hover {
-        transform: translateY(-2px);
-        border-color: var(--secondary);
-        box-shadow: var(--shadow-medium);
-      }
-      .hero-feature svg {
-        width: 24px;
-        height: 24px;
-        fill: var(--icon-blue);
-      }
-      .cta-primary {
-        display: inline-block;
-        background: linear-gradient(135deg, #25d366, #128c7e);
-        color: var(--white);
-        padding: 1.25rem 3.5rem;
-        border-radius: var(--radius-xl);
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: var(--transition);
-        box-shadow: var(--shadow-medium);
-        position: relative;
-        overflow: hidden;
-      }
-      .cta-primary::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent
-        );
-        transition: left 0.6s;
-      }
-      .cta-primary:hover::before {
-        left: 100%;
-      }
-      .cta-primary:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: var(--shadow-strong);
-      }
-      .trust-badges {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
-        flex-wrap: wrap;
-      }
-      .trust-badge {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
-        color: var(--dark);
-        padding: 0.625rem 1.25rem;
-        border-radius: var(--radius-md);
-        font-size: 0.9rem;
-        font-weight: 600;
-        border: 1px solid rgba(107, 114, 128, 0.1);
-        box-shadow: var(--shadow-soft);
-        transition: var(--transition);
-      }
-      .trust-badge:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-medium);
-      }
-      .certification-badges {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 0.5rem;
-      }
-      .cert-badge {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        padding: 0.25rem;
-        transition: var(--transition);
-      }
-      .cert-badge:hover {
-        transform: translateY(-2px);
-        opacity: 0.8;
-      }
-      .cert-badge img {
-        height: 30px;
-        width: auto;
-        object-fit: contain;
-      }
-      .cert-badge-lg img {
-        height: 60px;
-      }
-      .floating-buttons {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 999;
-      }
-      .floating-btn {
-        width: 64px;
-        height: 64px;
-        border-radius: var(--radius-lg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        box-shadow: var(--shadow-medium);
-        transition: var(--transition);
-        cursor: pointer;
-        position: relative;
-      }
-      .floating-btn:hover {
-        transform: translateY(-4px) scale(1.05);
-        box-shadow: var(--shadow-strong);
-      }
-      .whatsapp-btn {
-        background: #25d366;
-        color: white;
-      }
-      .phone-btn {
-        background: var(--icon-blue);
-        color: white;
-      }
-      .floating-btn svg {
-        width: 32px;
-        height: 32px;
-        fill: white;
-      }
-      .floating-btn-tooltip {
-        position: absolute;
-        right: 70px;
-        background: var(--dark);
-        color: white;
-        padding: 8px 15px;
-        border-radius: 8px;
-        white-space: nowrap;
-        font-size: 0.9rem;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-      }
-      .floating-btn:hover .floating-btn-tooltip {
-        opacity: 1;
-      }
-    </style>
+    <!-- Stylesheet principal page d'accueil -->
+    <link rel="stylesheet" href="/assets/css/index-page.min.css" />
 
-    <!-- Stylesheets externes (lazy loaded - non-blocking) -->
+    <!-- Stylesheets externes -->
     <link
       rel="stylesheet"
       href="/assets/css/styles.min.css"
@@ -809,12 +332,18 @@
           <div class="trust-badge">100% Français</div>
           <div class="trust-badge">Paiement en 10 fois</div>
           <div class="certification-badges" role="group" aria-label="Certifications et avis clients">
-            <a href="https://www.ekomi.fr/" target="_blank" rel="noopener noreferrer" class="cert-badge cert-badge-lg" aria-label="Voir notre certification eKomi (nouvel onglet)">
+            <span class="cert-badge cert-badge-lg">
               <img src="assets/logos/certifications/ekomi.webp" alt="Certifié eKomi - 5 étoiles" width="160" height="80" loading="lazy">
-            </a>
+            </span>
             <a href="https://fr.trustpilot.com/review/staka.fr" target="_blank" rel="noopener noreferrer" class="cert-badge" aria-label="Voir nos avis Trustpilot (nouvel onglet)">
               <img src="assets/logos/certifications/trustpilot.webp" alt="Avis Trustpilot - Excellent" width="80" height="40" loading="lazy">
             </a>
+            <span class="cert-badge cert-badge-lg">
+              <img src="assets/logos/certifications/compilatio.webp" alt="Partenaire Compilatio - Anti-plagiat" width="171" height="80" loading="lazy">
+            </span>
+            <span class="cert-badge">
+              <img src="assets/logos/certifications/lucide.webp" alt="Partenaire Lucide - Intégrité académique" width="302" height="80" loading="lazy">
+            </span>
           </div>
         </div>
         </div>
@@ -887,12 +416,6 @@
             class="video-embed youtube-facade"
             data-youtube-id="zxiQNT0CwK0"
             onclick="loadYouTubeVideo(this)"
-            style="
-              cursor: pointer;
-              position: relative;
-              background: #000;
-              aspect-ratio: 16/9;
-            "
           >
             <!-- Thumbnail YouTube -->
             <img
@@ -901,30 +424,9 @@
               width="1280"
               height="720"
               loading="lazy"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-              "
             />
             <!-- Bouton Play -->
-            <div
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 68px;
-                height: 48px;
-                background: rgba(255, 0, 0, 0.8);
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s;
-              "
-            >
+            <div class="video-play-btn">
               <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
                 <path
                   d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
@@ -1075,7 +577,7 @@
       </p>
 
       <!-- Photo d'équipe -->
-      <picture style="display: block; max-width: 800px; margin: 2rem auto">
+      <picture class="picture-centered">
         <source type="image/webp" srcset="/assets/images/team/team-800.webp" />
         <img
           src="/assets/images/team/team-800.jpg"
@@ -1084,12 +586,6 @@
           height="533"
           loading="lazy"
           decoding="async"
-          style="
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-          "
         />
       </picture>
 
@@ -1295,99 +791,32 @@
     </section>
 
     <!-- Section Quiz Intégré -->
-    <section
-      id="quiz"
-      style="
-        padding: 5rem 2rem;
-        background: linear-gradient(
-          135deg,
-          rgba(15, 82, 170, 0.03) 0%,
-          rgba(2, 47, 107, 0.03) 100%
-        );
-      "
-    >
-      <div style="max-width: 900px; margin: 0 auto">
-        <div style="text-align: center; margin-bottom: 3rem">
-          <h2
-            style="font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem"
-          >
+    <section id="quiz" class="quiz-section">
+      <div class="container-900">
+        <div class="text-center mb-3">
+          <h2 class="text-xl mb-2">
             Testez vos connaissances en méthodologie
           </h2>
-          <p style="font-size: 1.2rem; color: var(--gray)">
+          <p class="text-base">
             Quiz de 2 minutes •
-            <span style="color: #25d366; font-weight: 600"
-              >Gagnez une consultation gratuite !</span
-            >
+            <span class="text-success">Gagnez une consultation gratuite !</span>
           </p>
         </div>
 
-        <div
-          class="quiz-container-embedded"
-          style="
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-strong);
-            overflow: hidden;
-          "
-        >
-          <div
-            class="quiz-header-embedded"
-            style="
-              background: linear-gradient(
-                135deg,
-                var(--primary) 0%,
-                #6b7899 100%
-              );
-              color: var(--white);
-              padding: 2rem;
-              text-align: center;
-            "
-          >
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem">
-              Quiz Méthodologie de Recherche
-            </h3>
-            <p style="font-size: 1rem; opacity: 0.9">
-              6 questions sur les fondamentaux
-            </p>
-            <div
-              class="progress-bar-quiz"
-              style="
-                height: 8px;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 4px;
-                margin-top: 1.5rem;
-                overflow: hidden;
-              "
-            >
-              <div
-                class="progress-fill-quiz"
-                id="progressBarQuiz"
-                style="
-                  height: 100%;
-                  background: #25d366;
-                  border-radius: 4px;
-                  width: 0%;
-                  transition: width 0.5s ease;
-                "
-              ></div>
+        <div class="quiz-container-embedded">
+          <div class="quiz-header-embedded">
+            <h3>Quiz Méthodologie de Recherche</h3>
+            <p>6 questions sur les fondamentaux</p>
+            <div class="progress-bar-quiz">
+              <div class="progress-fill-quiz" id="progressBarQuiz"></div>
             </div>
           </div>
 
-          <div
-            class="quiz-content-embedded"
-            id="quizContentEmbedded"
-            style="padding: 2.5rem 2rem"
-          >
+          <div class="quiz-content-embedded" id="quizContentEmbedded">
             <!-- Questions will be inserted here by JavaScript -->
           </div>
 
-          <div
-            class="results-container-embedded"
-            id="resultsContainerEmbedded"
-            style="display: none; text-align: center; padding: 2rem"
-          >
+          <div class="results-container-embedded" id="resultsContainerEmbedded">
             <!-- Results will be inserted here -->
           </div>
         </div>
@@ -1518,7 +947,7 @@
                 </p>
                 <div class="faq-highlight">
                   <strong>MasterMentor garantit</strong>
-                  <p style="margin: 0">
+                  <p class="m-0">
                     Un travail 100% humain, vérifié par Compilatio et certifié
                     par Lucide.ai.
                   </p>
@@ -1544,7 +973,7 @@
                 </p>
                 <div class="faq-highlight">
                   <strong>MasterMentor développe VOTRE voix académique</strong>
-                  <p style="margin: 0">
+                  <p class="m-0">
                     Avec un accompagnement personnalisé qui respecte votre style
                     et votre réflexion.
                   </p>
@@ -1573,7 +1002,7 @@
                 </p>
                 <div class="faq-highlight">
                   <strong>MasterMentor vérifie chaque source</strong>
-                  <p style="margin: 0">
+                  <p class="m-0">
                     Et vous forme à la recherche bibliographique rigoureuse avec
                     de vraies bases de données (Web of Science, Scopus).
                   </p>
@@ -1599,7 +1028,7 @@
                 </p>
                 <div class="faq-highlight">
                   <strong>MasterMentor vous prépare à la soutenance</strong>
-                  <p style="margin: 0">
+                  <p class="m-0">
                     Avec des simulations et vous aide à maîtriser parfaitement
                     VOTRE recherche.
                   </p>
@@ -1635,7 +1064,7 @@
                     Lucide.ai
                   </li>
                 </ul>
-                <p style="margin-top: 1rem">
+                <p class="mt-2">
                   <strong>Nous développons VOS compétences</strong> de
                   chercheur, pas votre dépendance à l'IA. C'est VOTRE mémoire,
                   VOTRE réussite, VOTRE diplôme.
@@ -1660,7 +1089,7 @@
                 </p>
                 <div class="faq-highlight">
                   <strong>Nos mentors aiment la recherche</strong>
-                  <p style="margin: 0">
+                  <p class="m-0">
                     Et seront ravis de vous faire progresser, quel que soit
                     votre point de départ. Sans jugement, avec bienveillance.
                   </p>
@@ -1692,7 +1121,7 @@
                     personnalisé selon durée et intensité
                   </li>
                 </ul>
-                <p style="margin-top: 1rem">
+                <p class="mt-2">
                   Le diagnostic gratuit de 30 minutes nous permet d'établir un
                   devis précis adapté à votre situation.
                   <strong>Paiement en 10 fois sans frais.</strong>
@@ -1713,42 +1142,17 @@
     </section>
 
     <!-- Section CTA Tarifs -->
-    <section
-      style="
-        padding: 4rem 2rem;
-        background: linear-gradient(
-          135deg,
-          rgba(37, 211, 102, 0.05),
-          rgba(18, 140, 126, 0.05)
-        );
-        text-align: center;
-      "
-    >
-      <div style="max-width: 800px; margin: 0 auto">
-        <h2 style="font-size: 2.2rem; color: var(--dark); margin-bottom: 1rem">
-          Découvrez Nos Formules d'Accompagnement
-        </h2>
-        <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem">
+    <section class="cta-tarifs-section">
+      <div class="container-800">
+        <h2>Découvrez Nos Formules d'Accompagnement</h2>
+        <p>
           Accompagnement ponctuel, relecture experte, préparation soutenance ou
           accompagnement complet.<br />
-          <strong style="color: var(--success)">À partir de 35€/heure</strong> -
+          <strong class="text-price">À partir de 35€/heure</strong> -
           Devis personnalisé gratuit
         </p>
-        <div
-          style="
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-          "
-        >
-          <a
-            href="tarifs.php"
-            class="cta-primary"
-            style="
-              background: linear-gradient(135deg, var(--icon-blue), #1e73e8);
-            "
-          >
+        <div class="cta-buttons">
+          <a href="tarifs.php" class="cta-primary cta-primary-blue">
             📋 Voir les formules et tarifs
           </a>
           <a
@@ -1869,7 +1273,7 @@
             type="text"
             name="website"
             id="website"
-            style="display: none !important; position: absolute; left: -9999px"
+            class="honeypot-field"
             tabindex="-1"
             autocomplete="off"
           />
@@ -1877,46 +1281,19 @@
           <div class="form-group">
             <label for="name">Nom et Prénom *</label>
             <input type="text" id="name" name="nom" required />
-            <span
-              class="error-message"
-              id="name-error"
-              style="
-                display: none;
-                color: #dc3545;
-                font-size: 0.875rem;
-                margin-top: 0.25rem;
-              "
-            ></span>
+            <span class="error-message" id="name-error"></span>
           </div>
 
           <div class="form-group">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" required />
-            <span
-              class="error-message"
-              id="email-error"
-              style="
-                display: none;
-                color: #dc3545;
-                font-size: 0.875rem;
-                margin-top: 0.25rem;
-              "
-            ></span>
+            <span class="error-message" id="email-error"></span>
           </div>
 
           <div class="form-group">
             <label for="phone">Téléphone *</label>
             <input type="tel" id="phone" name="telephone" required />
-            <span
-              class="error-message"
-              id="phone-error"
-              style="
-                display: none;
-                color: #dc3545;
-                font-size: 0.875rem;
-                margin-top: 0.25rem;
-              "
-            ></span>
+            <span class="error-message" id="phone-error"></span>
           </div>
 
           <div class="form-group">
@@ -1934,16 +1311,7 @@
               <option value="Informatique">Informatique</option>
               <option value="Autre">Autre</option>
             </select>
-            <span
-              class="error-message"
-              id="discipline-error"
-              style="
-                display: none;
-                color: #dc3545;
-                font-size: 0.875rem;
-                margin-top: 0.25rem;
-              "
-            ></span>
+            <span class="error-message" id="discipline-error"></span>
           </div>
 
           <div class="form-group">
