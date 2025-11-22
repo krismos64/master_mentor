@@ -406,7 +406,7 @@
         </div>
 
         <div class="footer">
-            <p><strong>MasterMentor © 2024 - Tous droits réservés</strong></p>
+            <p><strong>MasterMentor © 2025 - Tous droits réservés</strong></p>
             <p>Charte d'Intégrité Académique - Document confidentiel</p>
             <p>Ce document constitue un engagement contractuel entre MasterMentor et l'étudiant accompagné.</p>
         </div>
