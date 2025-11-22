@@ -388,7 +388,7 @@
       /* Hero Image - Simple */
       .hero-image {
         width: 100%;
-        max-width: 300px;
+        max-width: 600px;
         margin: 0 auto;
       }
       .hero-image picture {
