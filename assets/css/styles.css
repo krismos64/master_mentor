@@ -2596,8 +2596,8 @@ footer {
   .hero {
     /* CLS Fix mobile: min-height auto pour petits écrans */
     min-height: auto;
-    margin-top: 70px;
-    padding: 1.5rem 1rem 1rem;
+    margin-top: 90px;
+    padding: 1rem 1rem 0.5rem;
   }
 
   .hero h1 {

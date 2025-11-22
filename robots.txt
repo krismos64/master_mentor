@@ -9,13 +9,19 @@ Allow: /
 Allow: /assets/logos/
 Allow: /assets/images/og-mastermentor.jpg
 
-# Bloquer le reste des assets (CSS, JS)
+# Pages à NE PAS indexer (seule la page d'accueil doit apparaître)
+Disallow: /tarifs.php
+Disallow: /Charte-Integrite-Academique.php
+Disallow: /popup-demo.php
+Disallow: /mentions-legales.php
+Disallow: /merci.html
+Disallow: /contact.php
+Disallow: /test-mail.php
+
+# Bloquer assets non essentiels
 Disallow: /assets/css/
 Disallow: /assets/js/
 Disallow: /assets/fonts/
-
-# Pages à exclure
-Disallow: /merci.html
 Disallow: /includes/
 
 Sitemap: https://mastermentor.fr/sitemap.xml
