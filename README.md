@@ -73,6 +73,7 @@ master_mentor/
 - **Menu burger** : Navigation mobile avec overlay
 - **Animations** : Transitions fluides au scroll (Intersection Observer)
 - **Smooth scroll** : Défilement doux vers les ancres
+- **Images témoignages** : Design organique avec formes blob, animations premium (morphing, float)
 
 ### 📊 Modules Interactifs
 

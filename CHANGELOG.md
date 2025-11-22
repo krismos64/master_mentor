@@ -1,5 +1,71 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-22] - Version 2.0 : 🎨 IMAGES TÉMOIGNAGES DESIGN ORGANIQUE ✅
+
+### 🎉 Section Témoignages avec Images Premium Style Blob
+
+**Statut** : Design organique moderne avec formes fluides
+**Ticket Jira** : MM-33
+**Impact** : UX premium, animations sophistiquées, responsive optimisé
+
+---
+
+### ✅ Images Témoignages - Design Organique
+
+**Nouvelles fonctionnalités** :
+- 2 images côte à côte centrées dans section témoignages
+- Formes organiques asymétriques (blob shapes)
+- Blobs colorés animés en arrière-plan
+- Effet morphing au hover (changement de forme)
+
+**CSS Design Premium** :
+```css
+.testimonial-image-wrapper img {
+  border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-image-wrapper:hover img {
+  border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
+  transform: translateY(-5px);
+}
+```
+
+---
+
+### ✅ Animations Premium
+
+| Animation | Durée | Effet |
+|-----------|-------|-------|
+| Float blobs | 8s/10s | Mouvement doux arrière-plan |
+| FadeInUp | 0.8s | Apparition progressive |
+| Morphing hover | 0.4s | Changement forme organique |
+
+**Blobs colorés** :
+- Image 1 : Bleu-gris `rgba(103, 126, 134, 0.3)`
+- Image 2 : Rouge-orange `rgba(229, 62, 62, 0.3)`
+
+---
+
+### ✅ Responsive Optimisé
+
+| Device | Taille images | Layout |
+|--------|---------------|--------|
+| Desktop | 150px | Côte à côte, gap 2rem |
+| Tablette | 100px | Côte à côte, gap 1rem |
+| Mobile | 100px | Côte à côte, gap 1rem |
+
+---
+
+### 📁 Fichiers Modifiés
+
+- `index.php` : HTML images avec `<picture>` WebP/JPEG
+- `assets/css/styles.css` : CSS design organique complet
+- `assets/css/styles.min.css` : Version minifiée
+- `assets/images/testimonials/` : Images optimisées
+
+---
+
 ## [2025-11-22] - Version 1.9 : 📱 HERO RESPONSIVE MOBILE + LOGOS CERTIFICATIONS ✅
 
 ### 🎉 Hero Section Optimisée Mobile avec Badges Certifications
