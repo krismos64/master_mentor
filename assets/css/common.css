@@ -83,16 +83,16 @@ nav {
 }
 
 .logo-img {
-  height: 60px;
+  height: 80px;
   width: auto;
-  max-width: 180px;
+  max-width: 240px;
   object-fit: contain;
 }
 
 .logo-img-footer {
-  height: 50px;
+  height: 70px;
   width: auto;
-  max-width: 160px;
+  max-width: 220px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
