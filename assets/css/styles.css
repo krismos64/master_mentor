@@ -1950,12 +1950,12 @@ section {
   }
 
   .testimonials-images-grid {
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    gap: 1rem;
   }
 
   .testimonial-image-wrapper {
-    max-width: 120px;
+    max-width: 100px;
   }
 
   /* Réduire taille des blobs sur mobile */
