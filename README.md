@@ -238,6 +238,22 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📝 Changelog
 
+### Version 2.2 (22 Nov 2025) - 🏗️ FOOTER REFONTE COMPACT + BADGES CONFIANCE ✅
+
+- ✅ **MM-35 : Footer restructuré** :
+  - Logo MasterMentor dans colonne séparée (fond blanc, couleurs originales, 120px)
+  - Nouvelle colonne "À propos" avec description + moyens de paiement (28px)
+  - 4 badges certification centrés en ligne sous les colonnes (desktop)
+  - eKomi et Compilatio en taille x2, Trustpilot et Lucide taille standard
+  - Styles inline supprimés → classes CSS dans `common.css`
+  - Responsive mobile optimisé (badges en wrap, margin-left: 0)
+
+- ✅ **Correction merci.html** :
+  - Liens `index.html` → `index.php` (meta refresh + bouton)
+  - Countdown synchronisé : 10s → 5s (aligné avec meta refresh)
+
+- 📊 **Impact** : Footer professionnel, badges confiance visibles, maintenabilité améliorée
+
 ### Version 2.1 (22 Nov 2025) - 🏗️ REFACTORING CSS & BADGES CERTIFICATIONS ✅
 
 - ✅ **Refactoring CSS complet** :

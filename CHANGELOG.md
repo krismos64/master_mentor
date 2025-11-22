@@ -1,5 +1,80 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-22] - Version 2.2 : 🏗️ FOOTER REFONTE COMPACT + BADGES CONFIANCE ✅
+
+### 🎉 Footer Restructuré avec Badges de Confiance Premium
+
+**Statut** : Footer professionnel avec 4 colonnes + badges centrés
+**Ticket Jira** : MM-35
+**Impact** : UX améliorée, badges confiance visibles, maintenabilité +100%
+
+---
+
+### ✅ MM-35 : Refonte Footer Compact Badges de Confiance
+
+**Structure Footer Refondée (4 colonnes)** :
+
+| Colonne | Contenu |
+|---------|---------|
+| Logo | MasterMentor (fond blanc, 120px, couleurs originales) |
+| À propos | Description + moyens de paiement (Visa, Mastercard, PayPal) |
+| Navigation | 6 liens vers sections principales |
+| Nos Garanties | 5 garanties avec checkmarks |
+
+**Badges Certification Centrés** :
+- Position : Ligne horizontale sous les 4 colonnes (desktop)
+- eKomi (60px) + Trustpilot (30px) + Compilatio (60px) + Lucide (30px)
+- `margin-left: 300px` pour alignement sous colonnes (pas sous logo)
+- Responsive : `margin-left: 0` + `flex-wrap` sur mobile
+
+**Classes CSS Créées** :
+```css
+.footer-section-logo     /* Colonne logo fixe */
+.footer-logo-container   /* Container logo */
+.footer-certifications-row /* Badges en ligne centrés */
+.payment-title-inline    /* Titre paiement */
+.payment-icons-inline    /* Icônes paiement 28px */
+.footer-nav-list         /* Liste navigation */
+.footer-nav-link         /* Lien navigation */
+.footer-guarantees-list  /* Liste garanties */
+.footer-link-disabled    /* Lien désactivé */
+.mt-1                    /* Margin-top 1rem */
+```
+
+---
+
+### ✅ Correction merci.html
+
+**Problème** : Liens vers `index.html` au lieu de `index.php`
+
+**Corrections** :
+| Élément | Avant | Après |
+|---------|-------|-------|
+| Meta refresh | `url=index.html` | `url=index.php` |
+| Bouton retour | `href="index.html"` | `href="index.php"` |
+| Countdown JS | 10 secondes | 5 secondes |
+
+---
+
+### 📁 Fichiers Modifiés
+
+| Fichier | Action |
+|---------|--------|
+| `includes/footer.php` | Structure HTML refondée |
+| `assets/css/common.css` | Classes footer utilitaires |
+| `assets/css/common.min.css` | Version minifiée |
+| `assets/css/styles.css` | Styles synchronisés |
+| `assets/css/styles.min.css` | Version minifiée |
+| `merci.html` | Liens corrigés |
+
+### 🔗 Commits
+
+- `c33c80d` - feat(MM-35): Refonte footer compact badges de confiance
+- `564eb0e` - fix(MM-35): Agrandissement logos moyens de paiement
+- `fc5edf6` - fix: Correction liens merci.html
+
+---
+
 ## [2025-11-22] - Version 2.1 : 🏗️ REFACTORING CSS & BADGES CERTIFICATIONS ✅
 
 ### 🎉 Architecture CSS Modernisée + Badges Hero Enrichis
