@@ -154,9 +154,9 @@ footer .logo-subtitle {
 /* Header Actions - Groupe CTA + téléphone en haut à droite */
 .header-actions {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
   position: absolute;
   top: 0.5rem;
   right: 2rem;
