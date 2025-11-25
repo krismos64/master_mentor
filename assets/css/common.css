@@ -145,6 +145,41 @@ footer .logo-subtitle {
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }
 
+/* Phone Number */
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--secondary);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.phone-number:hover {
+  background: var(--secondary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 82, 170, 0.25);
+}
+
+.phone-number svg {
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.phone-number:hover svg {
+  transform: rotate(15deg);
+}
+
+.phone-text {
+  white-space: nowrap;
+}
+
 /* Menu Burger Mobile */
 .menu-toggle {
   display: none;
@@ -468,6 +503,22 @@ footer {
   /* Masquer le CTA desktop */
   .cta-nav {
     display: none;
+  }
+
+  /* Numéro téléphone mobile - Version compacte */
+  .phone-number {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    border-width: 1.5px;
+  }
+
+  .phone-text {
+    display: none;
+  }
+
+  .phone-number svg {
+    width: 22px;
+    height: 22px;
   }
 
   /* Menu mobile - Overlay fullscreen */
