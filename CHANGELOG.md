@@ -1,5 +1,81 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-25] - Version 2.5 : 📞 NUMÉRO TÉLÉPHONE HEADER ✅
+
+### 🎉 Ajout Numéro de Téléphone Cliquable dans le Header
+
+**Statut** : Numéro de téléphone professionnel intégré
+**Commit** : ad07b7b
+**Impact** : Contact direct facilité, UX améliorée, conversion optimisée
+
+---
+
+### ✅ Numéro Téléphone dans Header
+
+**Fonctionnalités** :
+- Bouton cliquable avec lien `tel:+33184255678`
+- Icône SVG téléphone (20x20 desktop, 22x22 mobile)
+- Animation hover : rotation icône + background bleu
+- Positionnement : entre navigation et bouton CTA
+
+**Design Desktop** :
+```css
+.phone-number {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 24px;
+}
+
+.phone-number:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 82, 170, 0.25);
+}
+```
+
+**Responsive Mobile** (≤768px) :
+- Texte masqué (`.phone-text { display: none; }`)
+- Icône seule avec padding réduit
+- Taille icône augmentée (22px)
+- Border plus fine (1.5px)
+
+**Accessibilité** :
+- `aria-label="Appelez-nous au 01 84 25 56 78"`
+- `aria-hidden="true"` sur l'icône SVG
+- Lien sémantique `<a href="tel:...">`
+
+---
+
+### 📁 Fichiers Modifiés
+
+| Fichier | Action | Lignes |
+|---------|--------|--------|
+| `includes/header.php` | Ajout numéro téléphone | +6 |
+| `assets/css/common.css` | Styles phone-number | +34 |
+| `assets/css/common.min.css` | Version minifiée | +1 |
+
+**Tailles CSS** :
+- Original : 12.7 KB
+- Minifié : 9.4 KB (-25.9%)
+
+---
+
+### 🎯 Bénéfices
+
+**Conversion** :
+- ✅ Appel direct en 1 clic (mobile)
+- ✅ Numéro visible en permanence (sticky header)
+- ✅ Design attractif avec animation hover
+
+**UX** :
+- ✅ Position stratégique (à côté du CTA)
+- ✅ Responsive optimisé (icône seule mobile)
+- ✅ Cohérence design avec bouton Diagnostic Gratuit
+
+---
+
 ## [2025-11-22] - Version 2.3 : 🎬 MINIATURE YOUTUBE OPTIMISÉE ✅
 
 ### 🎉 Miniature Vidéo Locale Haute Performance
