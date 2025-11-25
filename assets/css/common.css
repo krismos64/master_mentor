@@ -573,7 +573,7 @@ footer {
 
   /* Overlay pour fermer le menu */
   body::before {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
