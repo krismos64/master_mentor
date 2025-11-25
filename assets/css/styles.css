@@ -1929,14 +1929,8 @@ section {
   }
 
   .testimonial-image-wrapper {
-    max-width: 100px;
-  }
-
-  /* Réduire taille des blobs sur mobile */
-  .testimonial-image-wrapper::before {
-    width: 85%;
-    height: 85%;
-    filter: blur(15px);
+    width: 100px;
+    height: 100px;
   }
 }
 
