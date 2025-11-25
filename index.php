@@ -112,6 +112,12 @@
     <!-- Stylesheets externes -->
     <link
       rel="stylesheet"
+      href="/assets/css/common.min.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <link
+      rel="stylesheet"
       href="/assets/css/styles.min.css"
       media="print"
       onload="this.media='all'; this.onload=null;"
