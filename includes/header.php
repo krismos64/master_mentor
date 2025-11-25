@@ -35,6 +35,8 @@ $prefix = $is_index ? '#' : 'index.php#';
       <li><a href="<?php echo $prefix; ?>methode">Notre Méthode</a></li>
       <li><a href="<?php echo $prefix; ?>temoignages">Témoignages</a></li>
       <li><a href="<?php echo $prefix; ?>contact">Contact</a></li>
+      <li class="mobile-only"><a href="tel:+33184255678" class="phone-link-mobile">📞 +33 1 84 25 56 78</a></li>
+      <li class="mobile-only"><a href="<?php echo $prefix; ?>contact" class="cta-mobile">Diagnostic Gratuit</a></li>
     </ul>
     <div class="header-actions">
       <a href="tel:+33184255678" class="phone-number" aria-label="Appelez-nous au +33 1 84 25 56 78">

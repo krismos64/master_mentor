@@ -51,11 +51,11 @@ header {
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem 2rem 0.75rem 2rem;
+  padding: 0.75rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -84,9 +84,10 @@ nav {
 }
 
 .logo-img {
-  height: 42px;
+  height: 40px;
+  max-height: 40px;
   width: auto;
-  max-width: 160px;
+  max-width: 150px;
   object-fit: contain;
 }
 
@@ -115,16 +116,19 @@ footer .logo-subtitle {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
   justify-content: center;
+  flex: 1;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--dark);
   font-weight: 500;
+  font-size: 0.9rem;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -134,12 +138,14 @@ footer .logo-subtitle {
 .cta-nav {
   background: linear-gradient(135deg, #25d366, #128c7e);
   color: var(--white);
-  padding: 0.875rem 1.75rem;
+  padding: 0.65rem 1.25rem;
   border-radius: var(--radius-xl);
   font-weight: 600;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: var(--transition);
   box-shadow: var(--shadow-soft);
+  white-space: nowrap;
 }
 
 .cta-nav:hover {
@@ -147,12 +153,13 @@ footer .logo-subtitle {
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }
 
-/* Header Actions - Groupe CTA + téléphone à droite */
+/* Header Actions - Téléphone + CTA sur une ligne */
 .header-actions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
 /* Phone Number - Version discrète */
@@ -162,13 +169,14 @@ footer .logo-subtitle {
   gap: 0.35rem;
   color: var(--gray);
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-decoration: none;
-  padding: 0.35rem 0.65rem;
+  padding: 0.5rem 0.85rem;
   border: 1px solid rgba(87, 112, 134, 0.25);
   border-radius: 12px;
   transition: var(--transition);
-  opacity: 0.75;
+  opacity: 0.85;
+  white-space: nowrap;
 }
 
 .phone-number:hover {
@@ -193,6 +201,11 @@ footer .logo-subtitle {
 .phone-text {
   white-space: nowrap;
   font-size: 0.8rem;
+}
+
+/* Éléments visibles uniquement en mobile */
+.mobile-only {
+  display: none;
 }
 
 /* Menu Burger Mobile */
@@ -518,6 +531,25 @@ footer {
   /* Masquer le groupe header-actions sur mobile */
   .header-actions {
     display: none;
+  }
+
+  /* Afficher les éléments mobile-only dans le menu */
+  .mobile-only {
+    display: block;
+  }
+
+  .phone-link-mobile {
+    color: var(--secondary) !important;
+    font-weight: 600 !important;
+  }
+
+  .cta-mobile {
+    background: linear-gradient(135deg, #25d366, #128c7e) !important;
+    color: var(--white) !important;
+    font-weight: 600 !important;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1rem !important;
   }
 
   /* Menu mobile - Overlay fullscreen */
