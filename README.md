@@ -33,6 +33,7 @@ master_mentor/
 ├── popup-demo.php                      # Démo popup
 ├── Charte-Integrite-Academique.php     # Page charte
 ├── mentions-legales.php                # Mentions légales & CGV
+├── cgu.php                             # Conditions générales d'utilisation
 ├── contact.php                         # Backend formulaire (sécurisé)
 ├── merci.html                          # Page confirmation après soumission
 ├── includes/                           # ⭐ Composants PHP réutilisables
@@ -71,11 +72,12 @@ master_mentor/
 ### 🎨 Design & UX
 
 - **Design moderne** : Interface épurée et professionnelle
+- **Navbar optimisée** : Logo 58px, numéro de téléphone discret, layout horizontal compact
 - **Responsive** : Optimisé mobile/tablette/desktop
 - **Menu burger** : Navigation mobile avec overlay
 - **Animations** : Transitions fluides au scroll (Intersection Observer)
 - **Smooth scroll** : Défilement doux vers les ancres
-- **Images témoignages** : Design organique avec formes blob, animations premium (morphing, float)
+- **Images témoignages** : Images circulaires avec effet hover subtil
 
 ### 📊 Modules Interactifs
 
@@ -222,13 +224,14 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 ## 📊 Statistiques Projet
 
-- **7 pages PHP/HTML** (index, tarifs, popup-demo, charte, mentions-legales → PHP | merci, contact → PHP/HTML)
+- **8 pages PHP/HTML** (index, tarifs, popup-demo, charte, mentions-legales, cgu → PHP | merci, contact → PHP/HTML)
 - **2 composants PHP** includes (header.php, footer.php) - architecture modulaire
 - **7 fichiers CSS** + versions minifiées (common ⭐, index-page ⭐, styles, integrations, tarifs, charte, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
 - **~1435 lignes** index.php (optimisé -22%)
 - **564 lignes** mentions-legales.php (page légale)
+- **299 lignes** cgu.php (conditions générales d'utilisation)
 - **241 lignes** contact.php (backend sécurisé)
 - **220 lignes** merci.html (page confirmation)
 - **7.6K JavaScript** main.js (3.7K minifié)
@@ -237,6 +240,47 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 - **906 lignes** documentation MM-5
 
 ## 📝 Changelog
+
+### Version 2.6 (25 Nov 2025) - 🎨 NAVBAR REDESIGN + UX MOBILE + CGU ✅
+
+- ✅ **Restructuration Navbar Desktop** :
+  - Logo agrandi progressivement : 40px → 58px (sans impacter hauteur navbar)
+  - Numéro de téléphone ajouté : +33 1 84 25 56 78 (style discret, icône SVG)
+  - Layout horizontal compact sur une seule ligne
+  - Navigation centrée avec flexbox optimisé
+  - Phone number : bordure subtile, hover effect, `aria-label` accessible
+
+- ✅ **Optimisations UX Mobile** :
+  - Hero section : espacement mobile réduit de 200px → 100px
+  - Navbar : numéro de téléphone et CTA dans menu burger (classe `.mobile-only`)
+
+- ✅ **Images Témoignages Simplifiées** :
+  - Suppression effets blob organiques complexes
+  - Transformation en cercles parfaits (border-radius: 50%)
+  - Containers carrés : 150x150px desktop, 100x100px mobile
+  - Image cropping optimisé : `object-fit: cover` + `object-position: center top`
+  - Effet hover subtil préservé
+
+- ✅ **Footer - Conformité Légale** :
+  - Lien "Politique de Confidentialité" supprimé
+  - Lien CGU activé et pointant vers cgu.php
+
+- ✅ **Page CGU Créée** :
+  - Nouvelle page `cgu.php` (299 lignes)
+  - 11 articles légaux : contenu, informations précontractuelles, commande, devis, rétractation, prix, paiement, propriété intellectuelle, médiation, loi applicable, RGPD
+  - Style professionnel adapté (modèle mentions-legales.php)
+  - Header/footer PHP includes
+  - Meta robots : noindex, nofollow
+
+- 📊 **Fichiers modifiés** :
+  - `/assets/css/common.css` - Navbar structure et phone number styling
+  - `/includes/header.php` - HTML navbar avec phone number et mobile-only items
+  - `/assets/css/index-page.css` - Hero mobile spacing (ligne 786)
+  - `/assets/css/styles.css` - Testimonial images circles
+  - `/includes/footer.php` - Suppression lien Politique, activation CGU
+  - `/cgu.php` - Nouvelle page légale créée
+
+- 📊 **Impact** : UX améliorée, design épuré, navbar optimisée, conformité légale renforcée
 
 ### Version 2.3 (22 Nov 2025) - 🎬 MINIATURE YOUTUBE OPTIMISÉE ✅
 

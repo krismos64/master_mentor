@@ -1,5 +1,200 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-25] - Version 2.6 : 🎨 NAVBAR REDESIGN + UX MOBILE + CGU ✅
+
+### 🎉 Refonte Navbar Desktop/Mobile + Optimisations UX
+
+**Statut** : Navbar restructurée, images témoignages simplifiées, page CGU créée
+**Commits** : 15 commits (45e5a00 → 4efd3c8)
+**Impact** : UX améliorée, design épuré, conformité légale renforcée
+
+---
+
+### ✅ Restructuration Navbar Desktop - Tout sur une ligne
+
+**Objectif** : Layout horizontal optimisé avec logo, menu, téléphone et CTA parfaitement alignés
+
+**Modifications** :
+
+1. **Logo agrandi progressivement** :
+   - 40px → 45px → 52px → **58px** (+45% total)
+   - max-width: 150px → 220px
+   - Navbar conserve même hauteur (padding: 0.75rem fixe)
+
+2. **Layout horizontal unique** :
+   ```
+   [Logo 58px] [Menu centré] [📞 Téléphone] [CTA]
+   ```
+   - `flex-direction: row` pour header-actions
+   - Menu : `flex: 1` pour centrage automatique
+   - Gap optimisé : 1.5rem entre blocs
+
+3. **Optimisations menu** :
+   - Police réduite : 0.9rem
+   - Gap : 2rem → 1.5rem
+   - `white-space: nowrap` pour stabilité
+
+4. **CTA réduit** :
+   - Padding : 0.875rem 1.75rem → 0.65rem 1.25rem
+   - Font-size : 0.9rem
+   - Plus compact, mieux équilibré
+
+5. **Téléphone optimisé** :
+   - Font-size : 0.85rem
+   - Padding : 0.5rem 0.85rem
+   - Opacity : 0.85 pour discrétion
+   - Format : `+33 1 84 25 56 78`
+
+**Responsive mobile** :
+- Téléphone et CTA dans menu burger (classe `mobile-only`)
+- Header-actions masqué sur mobile
+- Téléphone bleu avec emoji 📞
+- CTA avec gradient vert
+
+**Commits** :
+- `45e5a00` - Téléphone au-dessus du CTA
+- `84f7183` - Tout sur une ligne horizontale
+- `e4a2fa3` - Réduction logo 42px
+- `33ed005` - Logo 45px
+- `0ecbc0b` - Logo 52px
+- `da805ae` - Logo 58px (+45% total)
+- `4a1d22e` - Restructuration complète navbar
+
+---
+
+### ✅ Optimisations UX Mobile
+
+**Hero mobile** :
+- Margin-top : 200px → **100px** (-50%)
+- Meilleure utilisation espace écran
+- Hero s'affiche plus haut après navbar
+
+**Commit** : `c727464`
+
+---
+
+### ✅ Images Témoignages - Cercles Simples
+
+**Objectif** : Remplacer design blob complexe par cercles classiques professionnels
+
+**Avant** :
+- Border-radius organique : `42% 58% 55% 45% / 48% 62% 38% 52%`
+- Pseudo-éléments `::before` avec blobs colorés
+- Animation float 8s/10s
+- Effet morphing hover
+
+**Après** :
+- **Cercles parfaits** : `border-radius: 50%`
+- Conteneur carré : 150px x 150px (desktop), 100px x 100px (mobile)
+- `overflow: hidden` + `object-fit: cover`
+- `object-position: center top` (visages centrés en haut)
+- Ombre simple : `0 8px 16px rgba(0,0,0,0.1)`
+- Hover : élévation légère sans morphing
+
+**Bénéfices** :
+- Design épuré et professionnel
+- -43 lignes CSS (blobs, animations supprimés)
+- Performance améliorée (pas d'animations complexes)
+- Cercles parfaits desktop/mobile/tablette
+
+**Commits** :
+- `e6f8906` - Transformation blob → cercles
+- `e698f0c` - Cercles parfaits (non ovales)
+- `761a4f8` - Centrage haut images
+- `26ceebe` - Cercles parfaits mobile/tablette
+
+---
+
+### ✅ Footer - Suppression Lien Politique
+
+**Modification** :
+- Suppression span "Politique de Confidentialité"
+- Footer links : Charte → Mentions → CGU (3 liens)
+
+**Commit** : `8597629`
+
+---
+
+### ✅ Page CGU - Conditions Générales d'Utilisation
+
+**Objectif** : Créer page légale professionnelle sur modèle mentions-legales.php
+
+**Fichier créé** : `cgu.php` (299 lignes)
+
+**Structure** :
+- Header et footer PHP includes
+- Style inline identique à mentions-legales.php
+- SEO : noindex, nofollow
+- Design responsive
+
+**Contenu (11 articles)** :
+1. Contenu et champ d'application
+2. Informations précontractuelles
+3. Commande
+4. Devis (2 jours, 20 pages/jour)
+5. Rétractation et remboursement
+6. Prix (TTC, 300 mots/page)
+7. Paiement
+8. Propriété intellectuelle (suppression 30j)
+9. Médiation et litiges (ODR UE)
+10. Loi applicable (CISG exclue)
+11. RGPD - Protection données
+
+**Footer** :
+- Lien CGU activé (remplace span désactivé)
+
+**Commit** : `4efd3c8`
+
+---
+
+### 📁 Fichiers Modifiés/Créés
+
+| Fichier | Action | Impact |
+|---------|--------|--------|
+| `assets/css/common.css` | Navbar restructurée | +65 lignes |
+| `assets/css/common.min.css` | Re-minifié | 9.9 KB |
+| `assets/css/index-page.css` | Hero mobile optimisé | margin-top -50% |
+| `assets/css/index-page.min.css` | Re-minifié | 12.5 KB |
+| `assets/css/styles.css` | Images témoignages simplifiées | -43 lignes |
+| `assets/css/styles.min.css` | Re-minifié | 37.3 KB |
+| `includes/header.php` | Mobile-only items | +2 lignes |
+| `includes/footer.php` | Politique supprimée, CGU activé | -1 ligne |
+| `cgu.php` | **Créé** | 299 lignes |
+
+---
+
+### 📊 Résumé Technique
+
+| Métrique | Avant | Après |
+|----------|-------|-------|
+| Logo navbar | 40px | 58px (+45%) |
+| Navbar layout | 2 lignes | 1 ligne horizontale |
+| Hero mobile margin-top | 200px | 100px (-50%) |
+| Images témoignages | Blobs organiques | Cercles parfaits |
+| Footer links | 4 (1 désactivé) | 3 actifs |
+| Pages légales | mentions-legales.php | + cgu.php |
+
+---
+
+### 🎯 Bénéfices
+
+**UX** :
+- ✅ Navbar compacte et équilibrée
+- ✅ Tous éléments alignés sur une ligne (desktop)
+- ✅ Hero mobile plus accessible (-100px)
+- ✅ Images témoignages professionnelles
+
+**Performance** :
+- ✅ CSS optimisé (-43 lignes blobs)
+- ✅ Pas d'animations complexes
+- ✅ Chargement plus rapide
+
+**Légal** :
+- ✅ CGU complètes et accessibles
+- ✅ Conformité renforcée
+
+---
+
 ## [2025-11-25] - Version 2.5 : 📞 NUMÉRO TÉLÉPHONE HEADER ✅
 
 ### 🎉 Ajout Numéro de Téléphone Cliquable dans le Header
