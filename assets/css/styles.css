@@ -1889,64 +1889,21 @@ section {
   animation-delay: 0.2s;
 }
 
-/* Image avec forme organique */
+/* Image ronde classique */
 .testimonial-image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
   position: relative;
-  z-index: 2;
-  border-radius: 42% 58% 55% 45% / 48% 62% 38% 52%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Hover effet morphing */
+/* Hover simple */
 .testimonial-image-wrapper:hover img {
-  border-radius: 58% 42% 48% 52% / 52% 38% 62% 48%;
   transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-/* Blob décoratif coloré derrière l'image */
-.testimonial-image-wrapper::before {
-  content: '';
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  background: linear-gradient(135deg,
-    rgba(103, 126, 134, 0.3) 0%,
-    rgba(87, 112, 134, 0.2) 100%);
-  border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
-  top: 10%;
-  left: -8%;
-  z-index: 1;
-  filter: blur(20px);
-  animation: float 8s ease-in-out infinite;
-}
-
-/* Blob secondaire pour l'image 2 (couleur différente) */
-.testimonial-image-wrapper:nth-child(2)::before {
-  background: linear-gradient(135deg,
-    rgba(229, 62, 62, 0.3) 0%,
-    rgba(202, 138, 4, 0.2) 100%);
-  left: auto;
-  right: -8%;
-  border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%;
-  animation: float 10s ease-in-out infinite reverse;
-}
-
-/* Animation douce des blobs */
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  33% {
-    transform: translate(-15px, -15px) rotate(3deg);
-  }
-  66% {
-    transform: translate(10px, 10px) rotate(-3deg);
-  }
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Animation entrée au scroll */
