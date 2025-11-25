@@ -100,7 +100,7 @@ $prefix = $is_index ? '#' : 'index.php#';
         >Charte d'Intégrité Académique</a
       >
       <a href="mentions-legales.php">Mentions Légales</a>
-      <span class="footer-link-disabled" aria-disabled="true">CGU</span>
+      <a href="cgu.php">CGU</a>
     </div>
 
     <div class="footer-bottom">
