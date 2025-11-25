@@ -1878,30 +1878,32 @@ section {
 .testimonial-image-wrapper {
   display: block;
   position: relative;
-  width: 100%;
-  max-width: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease forwards;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .testimonial-image-wrapper:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-/* Image ronde classique */
+/* Image dans cercle parfait */
 .testimonial-image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  position: relative;
-  border-radius: 50%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Hover simple */
-.testimonial-image-wrapper:hover img {
+.testimonial-image-wrapper:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
