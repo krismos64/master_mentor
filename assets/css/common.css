@@ -53,11 +53,9 @@ nav {
   margin: 0 auto;
   padding: 0.5rem 2rem 0.75rem 2rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
-  position: relative;
+  gap: 2rem;
 }
 
 .logo {
@@ -119,9 +117,7 @@ footer .logo-subtitle {
   display: flex;
   gap: 2rem;
   list-style: none;
-  width: 100%;
   justify-content: center;
-  margin-top: 0.75rem;
 }
 
 .nav-links a {
@@ -151,15 +147,12 @@ footer .logo-subtitle {
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }
 
-/* Header Actions - Groupe CTA + téléphone en haut à droite */
+/* Header Actions - Groupe CTA + téléphone à droite */
 .header-actions {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.5rem;
-  position: absolute;
-  top: 0.5rem;
-  right: 2rem;
 }
 
 /* Phone Number - Version discrète */
