@@ -1,3 +1,4 @@
+<?php require_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -81,9 +82,9 @@
     />
 
     <!-- Stylesheet externe -->
-    <link rel="stylesheet" href="/assets/css/common.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.min.css" />
-    <link rel="stylesheet" href="/assets/css/tarifs.min.css" />
+    <link rel="stylesheet" href="/assets/css/common.min.css?v=<?= ASSETS_VERSION ?>">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?v=<?= ASSETS_VERSION ?>" />
+    <link rel="stylesheet" href="/assets/css/tarifs.min.css?v=<?= ASSETS_VERSION ?>" />
 
     <!-- Favicons multi-plateformes -->
     <link

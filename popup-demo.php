@@ -1,3 +1,4 @@
+<?php require_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,8 +33,8 @@
     <link rel="canonical" href="https://mastermentor.fr/popup-demo" />
 
     <!-- Stylesheet externe -->
-    <link rel="stylesheet" href="/assets/css/common.min.css">
-    <link rel="stylesheet" href="/assets/css/popup-demo.min.css">
+    <link rel="stylesheet" href="/assets/css/common.min.css?v=<?= ASSETS_VERSION ?>">
+    <link rel="stylesheet" href="/assets/css/popup-demo.min.css?v=<?= ASSETS_VERSION ?>">
 
     <!-- Favicons multi-plateformes -->
     <link rel="icon" sizes="16x16 32x32 48x48" type="image/x-icon" href="/favicon.ico">

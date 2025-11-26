@@ -1,3 +1,4 @@
+<?php require_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -36,9 +37,9 @@
     <link rel="canonical" href="https://mastermentor.fr/cgu" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/common.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.min.css" />
-    <link rel="stylesheet" href="/assets/css/legal.min.css" />
+    <link rel="stylesheet" href="/assets/css/common.min.css?v=<?= ASSETS_VERSION ?>">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?v=<?= ASSETS_VERSION ?>" />
+    <link rel="stylesheet" href="/assets/css/legal.min.css?v=<?= ASSETS_VERSION ?>" />
 
     <!-- Favicons multi-plateformes -->
     <link
@@ -211,6 +212,6 @@
     <!-- Footer -->
     <?php include 'includes/footer.php'; ?>
 
-    <script defer src="assets/js/main.min.js"></script>
+    <script defer src="assets/js/main.min.js?v=<?= ASSETS_VERSION ?>"></script>
   </body>
 </html>

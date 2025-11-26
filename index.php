@@ -1,3 +1,4 @@
+<?php require_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -107,34 +108,34 @@
     />
 
     <!-- Stylesheet principal page d'accueil -->
-    <link rel="stylesheet" href="/assets/css/index-page.min.css" />
+    <link rel="stylesheet" href="/assets/css/index-page.min.css?v=<?= ASSETS_VERSION ?>" />
 
     <!-- Stylesheets externes -->
     <link
       rel="stylesheet"
-      href="/assets/css/common.min.css"
+      href="/assets/css/common.min.css?v=<?= ASSETS_VERSION ?>"
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
     <link
       rel="stylesheet"
-      href="/assets/css/styles.min.css"
+      href="/assets/css/styles.min.css?v=<?= ASSETS_VERSION ?>"
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
     <noscript
-      ><link rel="stylesheet" href="/assets/css/common.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.min.css"
+      ><link rel="stylesheet" href="/assets/css/common.min.css?v=<?= ASSETS_VERSION ?>">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?v=<?= ASSETS_VERSION ?>"
     /></noscript>
 
     <link
       rel="stylesheet"
-      href="/assets/css/integrations.min.css"
+      href="/assets/css/integrations.min.css?v=<?= ASSETS_VERSION ?>"
       media="print"
       onload="this.media='all'; this.onload=null;"
     />
     <noscript
-      ><link rel="stylesheet" href="/assets/css/integrations.min.css"
+      ><link rel="stylesheet" href="/assets/css/integrations.min.css?v=<?= ASSETS_VERSION ?>"
     /></noscript>
 
     <!-- Favicons multi-plateformes -->
@@ -1707,7 +1708,7 @@
       }
     </script>
 
-    <script defer src="assets/js/main.min.js"></script>
-    <script defer src="assets/js/quiz.min.js"></script>
+    <script defer src="assets/js/main.min.js?v=<?= ASSETS_VERSION ?>"></script>
+    <script defer src="assets/js/quiz.min.js?v=<?= ASSETS_VERSION ?>"></script>
   </body>
 </html>
