@@ -8,7 +8,7 @@ $prefix = $is_index ? '#' : 'index.php#';
 <header>
   <nav>
     <div class="logo">
-      <a href="index.php" title="Retour à l'accueil">
+      <a href="/" title="Retour à l'accueil">
         <img
           src="assets/logos/logo-main.png"
           alt="MasterMentor - Retour à l'accueil"
@@ -31,7 +31,7 @@ $prefix = $is_index ? '#' : 'index.php#';
       <li><a href="<?php echo $prefix; ?>disciplines">Disciplines</a></li>
       <li><a href="<?php echo $prefix; ?>equipe">L'Équipe</a></li>
       <li><a href="<?php echo $prefix; ?>quiz">Quiz</a></li>
-      <li><a href="tarifs.php">Tarifs</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
       <li><a href="<?php echo $prefix; ?>methode">Notre Méthode</a></li>
       <li><a href="<?php echo $prefix; ?>temoignages">Témoignages</a></li>
       <li><a href="<?php echo $prefix; ?>contact">Contact</a></li>

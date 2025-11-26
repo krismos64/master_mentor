@@ -1,0 +1,117 @@
+/**
+ * legal.css - Styles pour pages légales (CGU, Mentions Légales)
+ * MasterMentor by Staka
+ *
+ * Utilisé par : cgu.php, mentions-legales.php
+ */
+
+/* ============================================
+   BODY PADDING (pour navbar fixe)
+   ============================================ */
+body {
+  padding-top: 80px;
+}
+
+/* ============================================
+   CONTAINER PRINCIPAL
+   ============================================ */
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+.legal-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--primary);
+}
+
+.legal-header h1 {
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.legal-header p {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+
+/* ============================================
+   SECTIONS LÉGALES
+   ============================================ */
+.legal-section {
+  margin-bottom: 3rem;
+}
+
+.legal-section h2 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.legal-section:first-of-type h2 {
+  border-top: none;
+  padding-top: 0;
+}
+
+.legal-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.legal-section ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legal-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   BOX INFORMATIVE
+   ============================================ */
+.legal-info-box {
+  background: linear-gradient(135deg, rgba(15, 82, 170, 0.05) 0%, rgba(2, 47, 107, 0.05) 100%);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.legal-info-box p {
+  margin-bottom: 0.5rem;
+}
+
+.legal-info-box strong {
+  color: var(--primary);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .legal-container {
+    padding: 2rem 1rem;
+  }
+
+  .legal-header h1 {
+    font-size: 2rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.5rem;
+  }
+}

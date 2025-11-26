@@ -31,7 +31,7 @@
     <meta name="robots" content="noindex, nofollow" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.mastermentor.fr/Charte-Integrite-Academique.html" />
+    <link rel="canonical" href="https://mastermentor.fr/charte-integrite-academique" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />

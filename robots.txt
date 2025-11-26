@@ -10,13 +10,21 @@ Allow: /assets/logos/
 Allow: /assets/images/og-mastermentor.jpg
 
 # Pages à NE PAS indexer (seule la page d'accueil doit apparaître)
+Disallow: /tarifs
+Disallow: /charte-integrite-academique
+Disallow: /popup-demo
+Disallow: /mentions-legales
+Disallow: /cgu
+Disallow: /merci
+Disallow: /contact
+Disallow: /test-mail
+
+# Legacy URLs (redirections 301 configurées dans .htaccess)
 Disallow: /tarifs.php
-Disallow: /Charte-Integrite-Academique.php
-Disallow: /popup-demo.php
+Disallow: /cgu.php
 Disallow: /mentions-legales.php
-Disallow: /merci.html
-Disallow: /contact.php
-Disallow: /test-mail.php
+Disallow: /charte-integrite-academique.php
+Disallow: /Charte-Integrite-Academique.php
 
 # Bloquer assets non essentiels
 Disallow: /assets/css/

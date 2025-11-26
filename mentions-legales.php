@@ -33,11 +33,12 @@
     <meta name="author" content="MasterMentor by Staka" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mastermentor.fr/mentions-legales.html" />
+    <link rel="canonical" href="https://mastermentor.fr/mentions-legales" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/common.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="/assets/css/legal.min.css" />
 
     <!-- Favicons multi-plateformes -->
     <link
@@ -61,85 +62,6 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#577086" />
-
-    <style>
-      body {
-        padding-top: 80px;
-      }
-      .legal-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
-        background: var(--white);
-      }
-      .legal-header {
-        text-align: center;
-        margin-bottom: 3rem;
-        padding-bottom: 2rem;
-        border-bottom: 2px solid var(--primary);
-      }
-      .legal-header h1 {
-        font-size: 2.5rem;
-        color: var(--dark);
-        margin-bottom: 1rem;
-      }
-      .legal-header p {
-        font-size: 1.1rem;
-        color: var(--gray);
-      }
-      .legal-section {
-        margin-bottom: 3rem;
-      }
-      .legal-section h2 {
-        font-size: 1.8rem;
-        color: var(--dark);
-        margin-bottom: 1rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(107, 114, 128, 0.2);
-      }
-      .legal-section:first-of-type h2 {
-        border-top: none;
-        padding-top: 0;
-      }
-      .legal-section p {
-        font-size: 1rem;
-        line-height: 1.8;
-        color: var(--dark);
-        margin-bottom: 1rem;
-      }
-      .legal-section ul {
-        margin-left: 2rem;
-        margin-bottom: 1rem;
-      }
-      .legal-section li {
-        margin-bottom: 0.5rem;
-        line-height: 1.8;
-      }
-      .legal-info-box {
-        background: linear-gradient(135deg, rgba(15, 82, 170, 0.05) 0%, rgba(2, 47, 107, 0.05) 100%);
-        border-left: 4px solid var(--primary);
-        padding: 1.5rem;
-        margin: 2rem 0;
-        border-radius: 8px;
-      }
-      .legal-info-box p {
-        margin-bottom: 0.5rem;
-      }
-      .legal-info-box strong {
-        color: var(--primary);
-      }
-      @media (max-width: 768px) {
-        .legal-container {
-          padding: 2rem 1rem;
-        }
-        .legal-header h1 {
-          font-size: 2rem;
-        }
-        .legal-section h2 {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -148,25 +70,14 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Skip link pour accessibilité clavier -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
     <?php include 'includes/header.php'; ?>
 
     <!-- Main Content -->
     <main class="legal-container" id="main-content">
       <div class="legal-header">
         <h1>Mentions Légales & Conditions Générales de Vente</h1>
-        <p>Dernière mise à jour : 21 novembre 2025</p>
       </div>
 
-      <!-- Informations légales -->
-      <div class="legal-info-box">
-        <p><strong>Site Internet :</strong> <a href="https://mastermentor.fr" target="_blank">https://mastermentor.fr</a></p>
-        <p><strong>Email :</strong> <a href="mailto:contact@mastermentor.fr">contact@mastermentor.fr</a></p>
-        <p><strong>SIRET :</strong> 919 234 567</p>
-        <p><strong>Hébergeur :</strong> OVH</p>
-      </div>
 
       <!-- Préambule -->
       <section class="legal-section">

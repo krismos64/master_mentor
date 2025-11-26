@@ -37,13 +37,9 @@
       content="tarifs coaching master 2, prix accompagnement mémoire, 35 euros heure, paiement flexible, formules coaching"
     />
     <meta name="author" content="MasterMentor by Staka" />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.mastermentor.fr/tarifs.html" />
+    <link rel="canonical" href="https://mastermentor.fr/tarifs" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />

@@ -49,7 +49,7 @@ $prefix = $is_index ? '#' : 'index.php#';
         <div class="footer-nav-list">
           <a href="<?php echo $prefix; ?>disciplines" class="footer-nav-link">Disciplines</a>
           <a href="<?php echo $prefix; ?>equipe" class="footer-nav-link">L'Équipe</a>
-          <a href="tarifs.php" class="footer-nav-link">Tarifs</a>
+          <a href="/tarifs" class="footer-nav-link">Tarifs</a>
           <a href="<?php echo $prefix; ?>methode" class="footer-nav-link">Notre Méthode</a>
           <a href="<?php echo $prefix; ?>temoignages" class="footer-nav-link">Témoignages</a>
           <a href="<?php echo $prefix; ?>contact" class="footer-nav-link">Contact</a>
@@ -96,11 +96,9 @@ $prefix = $is_index ? '#' : 'index.php#';
     </div>
 
     <div class="footer-links">
-      <a href="Charte-Integrite-Academique.php"
-        >Charte d'Intégrité Académique</a
-      >
-      <a href="mentions-legales.php">Mentions Légales</a>
-      <a href="cgu.php">CGU</a>
+      <a href="/charte-integrite-academique">Charte d'Intégrité Académique</a>
+      <a href="/mentions-legales">Mentions Légales</a>
+      <a href="/cgu">CGU</a>
     </div>
 
     <div class="footer-bottom">

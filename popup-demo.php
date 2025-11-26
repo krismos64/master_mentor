@@ -29,7 +29,7 @@
     <meta name="robots" content="noindex, nofollow" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.mastermentor.fr/popup-demo.html" />
+    <link rel="canonical" href="https://mastermentor.fr/popup-demo" />
 
     <!-- Stylesheet externe -->
     <link rel="stylesheet" href="/assets/css/common.min.css">

@@ -19,10 +19,28 @@ RewriteCond %{HTTP_HOST} ^www\.mastermentor\.fr$ [NC]
 RewriteRule ^(.*)$ https://mastermentor.fr/$1 [L,R=301]
 
 # ========================================
-# 3. REDIRECTION .html → .php (301 Permanent)
+# 3. URLs PROPRES (SEO-friendly, sans extension .php)
 # ========================================
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)\.html$ $1.php [L,R=301]
+# Masquer l'extension .php pour des URLs propres
+# Ex: /tarifs → tarifs.php, /cgu → cgu.php
+
+# Ne pas appliquer si c'est un fichier ou dossier existant
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Réécriture URL propre → fichier .php
+RewriteRule ^([a-z0-9-]+)/?$ $1.php [L,NC]
+
+# Redirection 301 : .php → URL propre (évite contenu dupliqué)
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Redirection 301 : .html → URL propre (legacy)
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Cas spécial : Charte avec majuscules → minuscules
+RewriteRule ^Charte-Integrite-Academique/?$ /charte-integrite-academique [R=301,L,NC]
 
 # ========================================
 # 4. COMPRESSION GZIP

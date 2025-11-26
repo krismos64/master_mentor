@@ -282,9 +282,6 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Skip link pour accessibilité clavier -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
     <?php include 'includes/header.php'; ?>
 
     <!-- Hero Section -->
