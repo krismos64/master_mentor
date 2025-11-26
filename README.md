@@ -52,8 +52,7 @@ master_mentor/
 │   │   ├── integrations.css            # CSS intégrations externes
 │   │   ├── integrations.min.css        # Version minifiée
 │   │   ├── tarifs.css                  # CSS page tarifs
-│   │   ├── charte.css                  # CSS page charte
-│   │   ├── legal.css                   # ⭐ CSS pages légales (CGU, Mentions)
+│   │   ├── legal.css                   # ⭐ CSS pages légales (CGU, Mentions, Charte)
 │   │   ├── legal.min.css               # Version minifiée
 │   │   └── popup-demo.css              # CSS popup démo
 │   ├── js/
@@ -224,7 +223,7 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 - **8 pages PHP/HTML** (index, tarifs, popup-demo, charte, mentions-legales, cgu → PHP | merci, contact → PHP/HTML)
 - **2 composants PHP** includes (header.php, footer.php) - architecture modulaire
-- **7 fichiers CSS** + versions minifiées (common ⭐, index-page ⭐, styles, integrations, tarifs, charte, popup)
+- **6 fichiers CSS** + versions minifiées (common ⭐, index-page ⭐, styles, integrations, tarifs, legal ⭐, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
 - **~1435 lignes** index.php (optimisé -22%)
@@ -249,8 +248,10 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 
 - ✅ **Refactoring CSS Pages Légales** :
   - CSS inline extrait vers `assets/css/legal.css`
-  - Version minifiée : 1.2 KB (-50%)
-  - Fichier partagé par cgu.php et mentions-legales.php
+  - Version minifiée : 2 KB
+  - Fichier partagé par cgu.php, mentions-legales.php et charte-integrite-academique.php
+  - Suppression fichiers `charte.css` et `charte.min.css` (obsolètes)
+  - Classes ajoutées : `.legal-success-box`, `.legal-warning-box`, `.legal-principle-box`
 
 - ✅ **Corrections SEO** :
   - URLs canoniques mises à jour
