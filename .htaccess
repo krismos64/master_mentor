@@ -1,9 +1,24 @@
 # ========================================
 # MasterMentor - Configuration Apache
-# Version: 1.1
-# Date: 22 novembre 2025
+# Version: 1.2
+# Date: 26 novembre 2025
 # Hébergement: OVH (Apache 2.4+)
 # ========================================
+
+# Cache refresh trick - Force OVH cluster cache invalidation
+<IfModule mod_headers.c>
+    Header set X-Force-Refresh "20251126-v2"
+    Header set X-Cache-Buster "force-reload"
+</IfModule>
+
+# Force PHP files to never be cached by OVH
+<FilesMatch "\.php$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </IfModule>
+</FilesMatch>
 
 # ========================================
 # 1. REDIRECTION HTTPS (Force SSL)
