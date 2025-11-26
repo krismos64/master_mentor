@@ -1,5 +1,113 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-26] - Version 2.7 : 🔗 URLs PROPRES SEO-FRIENDLY ✅
+
+### 🎉 URLs Propres + Refactoring CSS Pages Légales
+
+**Statut** : URLs sans extension .php, CSS externalisé, SEO optimisé
+**Commits** : 3 commits (8942216 → e7dc18a)
+**Impact** : SEO amélioré, URLs professionnelles, maintenabilité renforcée
+
+---
+
+### ✅ URLs Propres SEO-Friendly (Google Best Practices)
+
+**Objectif** : URLs simples et descriptives sans extension .php
+
+| Avant | Après |
+|-------|-------|
+| `/tarifs.php` | `/tarifs` |
+| `/cgu.php` | `/cgu` |
+| `/mentions-legales.php` | `/mentions-legales` |
+| `/Charte-Integrite-Academique.php` | `/charte-integrite-academique` |
+
+**Configuration .htaccess** :
+```apache
+# Réécriture URL propre → fichier .php
+RewriteRule ^([a-z0-9-]+)/?$ $1.php [L,NC]
+
+# Redirection 301 : .php → URL propre
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+```
+
+**Bénéfices SEO** :
+- URLs plus courtes et mémorisables
+- Pas d'extension technique visible
+- Slugs en minuscules avec tirets
+- Redirections 301 pour éviter contenu dupliqué
+
+---
+
+### ✅ Refactoring CSS Pages Légales
+
+**Problème** : CSS inline dupliqué dans cgu.php et mentions-legales.php (~77 lignes chacun)
+
+**Solution** :
+- Création `assets/css/legal.css` (2.3 KB)
+- Création `assets/css/legal.min.css` (1.2 KB, -50%)
+- Suppression CSS inline des deux pages
+
+**Impact** :
+- cgu.php : 295 → 216 lignes (-79)
+- mentions-legales.php : 300 → 225 lignes (-75)
+- CSS mis en cache navigateur
+
+---
+
+### ✅ Renommage Fichier Charte
+
+- `Charte-Integrite-Academique.php` → `charte-integrite-academique.php`
+- Slug en minuscules (bonnes pratiques SEO)
+- Redirection 301 pour anciennes URLs
+
+---
+
+### ✅ Router PHP pour Développement Local
+
+**Fichier** : `router.php`
+
+**Usage** : `php -S localhost:8000 router.php`
+
+**Fonction** : Simule le comportement du .htaccess Apache pour tester les URLs propres en local
+
+---
+
+### 📁 Fichiers Modifiés/Créés
+
+| Fichier | Action |
+|---------|--------|
+| `.htaccess` | Règles mod_rewrite URLs propres |
+| `assets/css/legal.css` | **Créé** - CSS pages légales |
+| `assets/css/legal.min.css` | **Créé** - Version minifiée |
+| `router.php` | **Créé** - Routeur dev local |
+| `cgu.php` | CSS externalisé, canonical mis à jour |
+| `mentions-legales.php` | CSS externalisé, canonical mis à jour |
+| `charte-integrite-academique.php` | **Renommé** (minuscules) |
+| `includes/header.php` | Liens URLs propres |
+| `includes/footer.php` | Liens URLs propres |
+| `robots.txt` | URLs propres ajoutées |
+| `tarifs.php` | Canonical et robots corrigés |
+
+---
+
+### 🎯 Bénéfices
+
+**SEO** :
+- ✅ URLs conformes aux recommandations Google
+- ✅ Slugs descriptifs et cohérents
+- ✅ Redirections 301 préservent le référencement
+
+**Maintenabilité** :
+- ✅ CSS pages légales centralisé
+- ✅ Fichier unique à modifier pour 2 pages
+
+**Performance** :
+- ✅ CSS mis en cache (chargé une fois)
+- ✅ -50% taille CSS minifié
+
+---
+
 ## [2025-11-25] - Version 2.6 : 🎨 NAVBAR REDESIGN + UX MOBILE + CGU ✅
 
 ### 🎉 Refonte Navbar Desktop/Mobile + Optimisations UX
