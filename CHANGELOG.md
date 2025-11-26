@@ -5,7 +5,7 @@
 ### 🎉 URLs Propres + Refactoring CSS Pages Légales
 
 **Statut** : URLs sans extension .php, CSS externalisé, SEO optimisé
-**Commits** : 3 commits (8942216 → e7dc18a)
+**Commits** : 6 commits (8942216 → c2a13b6)
 **Impact** : SEO amélioré, URLs professionnelles, maintenabilité renforcée
 
 ---
@@ -41,12 +41,21 @@ RewriteRule ^ /%1 [R=301,L]
 
 ### ✅ Refactoring CSS Pages Légales
 
-**Problème** : CSS inline dupliqué dans cgu.php et mentions-legales.php (~77 lignes chacun)
+**Problème** : CSS inline dupliqué et fichiers CSS séparés pour chaque page légale
 
 **Solution** :
-- Création `assets/css/legal.css` (2.3 KB)
-- Création `assets/css/legal.min.css` (1.2 KB, -50%)
-- Suppression CSS inline des deux pages
+- Création `assets/css/legal.css` unifié pour toutes les pages légales
+- Version minifiée `legal.min.css` (2 KB)
+- Suppression CSS inline de cgu.php et mentions-legales.php
+- Suppression fichiers `charte.css` et `charte.min.css` (obsolètes)
+- Page charte harmonisée avec le même CSS que CGU et Mentions Légales
+
+**Classes CSS ajoutées** :
+- `.legal-success-box` : encadré vert (garanties, points positifs)
+- `.legal-warning-box` : encadré rouge (avertissements, interdictions)
+- `.legal-principle-box` : encadré gris (principes)
+- `.legal-important-box` : encadré bleu (informations importantes)
+- `.legal-contact-info` : bloc contact centré
 
 **Impact** :
 - cgu.php : 295 → 216 lignes (-79)
@@ -78,12 +87,14 @@ RewriteRule ^ /%1 [R=301,L]
 | Fichier | Action |
 |---------|--------|
 | `.htaccess` | Règles mod_rewrite URLs propres |
-| `assets/css/legal.css` | **Créé** - CSS pages légales |
-| `assets/css/legal.min.css` | **Créé** - Version minifiée |
+| `assets/css/legal.css` | **Créé** - CSS unifié pages légales |
+| `assets/css/legal.min.css` | **Créé** - Version minifiée (2 KB) |
+| `assets/css/charte.css` | **Supprimé** - Remplacé par legal.css |
+| `assets/css/charte.min.css` | **Supprimé** - Remplacé par legal.min.css |
 | `router.php` | **Créé** - Routeur dev local |
 | `cgu.php` | CSS externalisé, canonical mis à jour |
 | `mentions-legales.php` | CSS externalisé, canonical mis à jour |
-| `charte-integrite-academique.php` | **Renommé** (minuscules) |
+| `charte-integrite-academique.php` | **Refactorisé** - CSS legal.css + classes harmonisées |
 | `includes/header.php` | Liens URLs propres |
 | `includes/footer.php` | Liens URLs propres |
 | `robots.txt` | URLs propres ajoutées |
