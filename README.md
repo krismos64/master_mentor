@@ -22,20 +22,22 @@ Plateforme web présentant des services d'accompagnement méthodologique pour la
 - **JavaScript ES6+** (Vanilla, modules externes)
 - **Performance** : Fichiers minifiés, lazy loading, cache optimisé
 - **Architecture** : Includes PHP pour header/footer, CSS unifié
+- **URLs propres** : SEO-friendly sans extension .php (ex: `/tarifs`, `/cgu`)
 - **Analytics** : Google Tag Manager (GTM-WFJF4PXM) + GA4 (G-981LGMTGJK) avec RGPD
 
 ## 📁 Structure du Projet
 
 ```
 master_mentor/
-├── index.php                           # Page d'accueil
-├── tarifs.php                          # Page tarifs
-├── popup-demo.php                      # Démo popup
-├── Charte-Integrite-Academique.php     # Page charte
-├── mentions-legales.php                # Mentions légales & CGV
-├── cgu.php                             # Conditions générales d'utilisation
+├── index.php                           # Page d'accueil (/)
+├── tarifs.php                          # Page tarifs (/tarifs)
+├── popup-demo.php                      # Démo popup (/popup-demo)
+├── charte-integrite-academique.php     # Page charte (/charte-integrite-academique)
+├── mentions-legales.php                # Mentions légales (/mentions-legales)
+├── cgu.php                             # CGU (/cgu)
 ├── contact.php                         # Backend formulaire (sécurisé)
 ├── merci.html                          # Page confirmation après soumission
+├── router.php                          # Routeur dev local (URLs propres)
 ├── includes/                           # ⭐ Composants PHP réutilisables
 │   ├── header.php                      # Header + navigation (avec détection page)
 │   └── footer.php                      # Footer complet
@@ -51,6 +53,8 @@ master_mentor/
 │   │   ├── integrations.min.css        # Version minifiée
 │   │   ├── tarifs.css                  # CSS page tarifs
 │   │   ├── charte.css                  # CSS page charte
+│   │   ├── legal.css                   # ⭐ CSS pages légales (CGU, Mentions)
+│   │   ├── legal.min.css               # Version minifiée
 │   │   └── popup-demo.css              # CSS popup démo
 │   ├── js/
 │   │   ├── main.js                     # Core UI (formulaire AJAX, animations, menu)
@@ -111,25 +115,19 @@ master_mentor/
 
 ### Lancement Local
 
-**Option 1 : Serveur local simple (Python)**
+**Recommandé : Serveur PHP avec routeur (URLs propres)**
 
 ```bash
-# Python 3
-python3 -m http.server 8000
+# Avec URLs propres (/tarifs, /cgu, etc.)
+php -S localhost:8000 router.php
 
 # Ouvrir http://localhost:8000
 ```
 
-**Option 2 : Live Server (VSCode)**
+**Alternative : Serveur PHP simple**
 
 ```bash
-# Installer Live Server extension
-# Clic droit sur index.html → "Open with Live Server"
-```
-
-**Option 3 : Serveur PHP**
-
-```bash
+# Sans URLs propres (utiliser .php dans les URLs)
 php -S localhost:8000
 ```
 
@@ -240,6 +238,26 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 - **906 lignes** documentation MM-5
 
 ## 📝 Changelog
+
+### Version 2.7 (26 Nov 2025) - 🔗 URLs PROPRES SEO-FRIENDLY ✅
+
+- ✅ **URLs Propres SEO-friendly** :
+  - Suppression extension .php dans les URLs (`/tarifs`, `/cgu`, `/mentions-legales`)
+  - Règles mod_rewrite dans .htaccess avec redirections 301
+  - Fichier renommé : `charte-integrite-academique.php` (minuscules)
+  - Routeur PHP pour développement local (`router.php`)
+
+- ✅ **Refactoring CSS Pages Légales** :
+  - CSS inline extrait vers `assets/css/legal.css`
+  - Version minifiée : 1.2 KB (-50%)
+  - Fichier partagé par cgu.php et mentions-legales.php
+
+- ✅ **Corrections SEO** :
+  - URLs canoniques mises à jour
+  - robots.txt avec nouvelles URLs
+  - Liens internes convertis (header/footer)
+
+- 📊 **Impact** : URLs professionnelles, SEO amélioré, maintenabilité renforcée
 
 ### Version 2.6 (25 Nov 2025) - 🎨 NAVBAR REDESIGN + UX MOBILE + CGU ✅
 
