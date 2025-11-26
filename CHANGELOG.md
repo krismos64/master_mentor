@@ -1,5 +1,70 @@
 # Changelog - Projet MasterMentor
 
+## [2025-11-26] - Version 2.8 : 🔄 VERSIONING CSS/JS AUTOMATIQUE ✅
+
+### 🎉 Cache-Busting Automatique
+
+**Statut** : Système de versioning automatique pour CSS/JS
+**Impact** : Les utilisateurs voient immédiatement les mises à jour sans vider leur cache
+
+---
+
+### ✅ Système de Versioning Automatique
+
+**Problème** : Cache navigateur et CDN OVH conservant les anciennes versions CSS/JS
+
+**Solution** : Fichier `includes/config.php` central
+
+```php
+// Version automatique basée sur le dernier fichier modifié
+define('ASSETS_VERSION', date('Ymd.His', $last_modified));
+```
+
+**Résultat dans le HTML** :
+```html
+<!-- Avant -->
+<link rel="stylesheet" href="/assets/css/styles.min.css">
+
+<!-- Après -->
+<link rel="stylesheet" href="/assets/css/styles.min.css?v=20251126.121100">
+```
+
+**Avantages** :
+- Version change automatiquement quand un CSS/JS est modifié
+- Pas besoin d'incrémenter manuellement
+- Cache navigateur respecté mais invalidé à chaque changement
+- Format lisible dans DevTools : `YYYYMMDD.HHMMSS`
+
+---
+
+### ✅ Headers Anti-Cache OVH
+
+**Fichier** : `.htaccess` (version 1.2)
+
+```apache
+# Force PHP files to never be cached by OVH
+<FilesMatch "\.php$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+</FilesMatch>
+```
+
+---
+
+### 📁 Fichiers Créés/Modifiés
+
+| Fichier | Action |
+|---------|--------|
+| `includes/config.php` | **Créé** - Versioning automatique CSS/JS |
+| `index.php` | Ajout `?v=<?= ASSETS_VERSION ?>` |
+| `tarifs.php` | Ajout versioning |
+| `cgu.php` | Ajout versioning |
+| `mentions-legales.php` | Ajout versioning |
+| `charte-integrite-academique.php` | Ajout versioning |
+| `popup-demo.php` | Ajout versioning |
+| `.htaccess` | Headers anti-cache OVH |
+
+---
+
 ## [2025-11-26] - Version 2.7 : 🔗 URLs PROPRES SEO-FRIENDLY ✅
 
 ### 🎉 URLs Propres + Refactoring CSS Pages Légales

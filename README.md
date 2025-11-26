@@ -39,6 +39,7 @@ master_mentor/
 ├── merci.html                          # Page confirmation après soumission
 ├── router.php                          # Routeur dev local (URLs propres)
 ├── includes/                           # ⭐ Composants PHP réutilisables
+│   ├── config.php                      # ⭐ Configuration globale + versioning CSS/JS
 │   ├── header.php                      # Header + navigation (avec détection page)
 │   └── footer.php                      # Footer complet
 ├── assets/
@@ -222,7 +223,7 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 ## 📊 Statistiques Projet
 
 - **8 pages PHP/HTML** (index, tarifs, popup-demo, charte, mentions-legales, cgu → PHP | merci, contact → PHP/HTML)
-- **2 composants PHP** includes (header.php, footer.php) - architecture modulaire
+- **3 composants PHP** includes (config.php, header.php, footer.php) - architecture modulaire
 - **6 fichiers CSS** + versions minifiées (common ⭐, index-page ⭐, styles, integrations, tarifs, legal ⭐, popup)
 - **2 modules JavaScript** (main.js, quiz.js) + versions minifiées
 - **168 lignes .gitignore** (11 catégories protégées)
@@ -237,6 +238,20 @@ npx terser assets/js/quiz.js -o assets/js/quiz.min.js -c -m
 - **906 lignes** documentation MM-5
 
 ## 📝 Changelog
+
+### Version 2.8 (26 Nov 2025) - 🔄 VERSIONING CSS/JS AUTOMATIQUE ✅
+
+- ✅ **Système de Cache-Busting Automatique** :
+  - Fichier `includes/config.php` centralisant la version des assets
+  - Version basée sur la date de dernière modification des fichiers CSS/JS
+  - Format : `?v=YYYYMMDD.HHMMSS` (ex: `?v=20251126.121100`)
+  - Pas besoin d'incrémenter manuellement la version
+
+- ✅ **Headers Anti-Cache OVH** :
+  - `.htaccess` v1.2 avec headers `Cache-Control: no-store` sur fichiers PHP
+  - Header `X-Force-Refresh` pour invalidation cache cluster OVH
+
+- 📊 **Impact** : Mises à jour CSS/JS visibles immédiatement pour tous les utilisateurs
 
 ### Version 2.7 (26 Nov 2025) - 🔗 URLs PROPRES SEO-FRIENDLY ✅
 
