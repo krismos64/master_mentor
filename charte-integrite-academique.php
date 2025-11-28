@@ -354,7 +354,7 @@ header("Expires: 0");
         </div>
 
         <div class="legal-warning-box">
-          <strong>⚠️ Important :</strong> Le non-respect de cette charte peut entraîner l'interruption immédiate de l'accompagnement sans remboursement et, le cas échéant, la notification des autorités académiques compétentes.
+          <strong>⚠️ Important :</strong> Le non-respect de cette charte peut entraîner l'interruption immédiate de l'accompagnement et un remboursement au prorata.
         </div>
       </section>
 
